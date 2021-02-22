@@ -1,0 +1,11 @@
+node_modules
+.htaccess
+index.php
+license.txt
+readme.html
+xmlrpc.php
+wp-*
+!wp-content/
+!wp-content/plugins
+!wp-content/themes
+package-lock.json

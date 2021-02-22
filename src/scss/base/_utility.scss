@@ -1,0 +1,12 @@
+.show-pc {
+  @include viewport($breakpoint-mobile) {
+    display: none
+  }
+}
+
+.show-sp {
+  display: none;
+  @include viewport($breakpoint-mobile) {
+    display: block 
+  }
+}

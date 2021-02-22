@@ -1,0 +1,30 @@
+//antialiased,subpixel-antialiased,none
+$font-smoothing: antialiased;
+
+//colors
+$white: #fff;
+$black: #000;
+$red: #B30000;
+$red-100: #C90000;
+$blue: #3467BD;
+
+$text-rendering: auto;
+$hiragino: "Hiragino Sans";
+$font-yugothic: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
+$base-font-family: $hiragino, $font-yugothic, "メイリオ", Meiryo, sans-serif;
+$base-font-size: 14px;
+$base-font-weight: 400;
+$base-font-color: $black;
+$base-background-color: $black;
+$base-letter-spacing: 0.06em;
+
+$breakpoint-mobile: 767px;
+$breakpoint-mobile-l: 425px;
+
+$image-path: '../images';
+$font-path: '../lib/fonts';
+
+$site-size: 1168px + 60px;
+
+$timing-function: ease-out;
+$duration: 300ms;
