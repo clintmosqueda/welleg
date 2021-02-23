@@ -1,6 +1,5 @@
 node_modules
 .htaccess
-index.php
 license.txt
 readme.html
 xmlrpc.php
