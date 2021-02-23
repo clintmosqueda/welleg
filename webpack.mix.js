@@ -10,5 +10,6 @@ mix
 .copyDirectory('src/images/', 'wp-content/themes/welleg/assets/images/');
 
 mix.browserSync({
-  proxy: 'localhost:8888',
+  proxy: 'http://localhost:8888/welleg/',
+  files: ["wp-content/**/*.css", "wp-content/**/*.php", "wp-content/**/*.js"],
 });
