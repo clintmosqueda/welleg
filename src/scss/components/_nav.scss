@@ -22,6 +22,10 @@
     margin: 0 auto;
     opacity: 0;
     transition: opacity $duration $timing-function;
+
+    @include viewport($breakpoint-mobile) {
+      content: normal;
+    }
   }
 
   &:hover {

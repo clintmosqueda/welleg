@@ -1,0 +1,28 @@
+.social-icon-list {
+  display: flex;
+}
+
+.social-icon-item {
+  padding: 0 5px;
+
+  .header-social & {
+    &:first-of-type {
+      padding-left: 0;
+    }
+  }
+}
+
+.social-icon-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid $white;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:before {
+    font-size: 35px;
+  }
+}

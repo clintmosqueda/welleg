@@ -1,0 +1,112 @@
+.footer-top {
+  overflow: hidden;
+  position: relative;
+}
+
+.footer-top-text {
+  font-family: $alegreya;
+  font-size: 120px;
+  text-shadow:
+   -1px -1px 0 $gainsboro,  
+    1px -1px 0 $gainsboro,
+    -1px 1px 0 $gainsboro,
+     1px 1px 0 $gainsboro;
+  color: $white;
+  width: 1706px;
+  position: absolute;
+  left: 50%;
+  bottom: 7px;
+  transform: translate(-50%, 0%);
+  z-index: 1;
+
+  @include viewport($breakpoint-mobile) {
+    font-size: 88px;
+  }
+}
+
+.footer-top-image {
+  width: 116px;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  z-index: 2;
+
+  @include viewport($breakpoint-mobile) {
+    width: 102px;
+  }
+}
+
+.footer-top-heading {
+  text-align: center;
+  margin: 0 0 35px;
+}
+
+.footer-top-heading-text {
+  @include viewport($breakpoint-mobile) {
+    width: 184px;
+  }
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @include viewport($breakpoint-mobile) {
+    display: block;
+  }
+}
+
+.footer-bottom {
+  padding: 100px 0 160px;
+}
+
+.footer-shoplist {
+  width: 360px;
+
+  .shoplist-title,
+  .shoplist-link {
+    color: $base-font-color;
+  }
+
+  @include viewport($breakpoint-mobile) {
+    width: 280px;
+  }
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+
+  .footer-social-text {
+    font-size: 12px;
+    display: inline-block;
+    padding: 0 25px 0 0;
+
+    @include viewport($breakpoint-mobile) {
+      text-decoration: underline;
+      padding: 0 0 40px 0;
+    }
+  }
+
+  .social-icon-item {
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
+
+  .social-icon-icon {
+    border: 1px solid $nero;
+    
+    &:before {
+      color: $nero;
+    }
+  }
+
+  @include viewport($breakpoint-mobile) {
+    display: block;
+    border-top: 1px solid $gainsboro;
+    margin: 57px 0 0;
+    padding: 57px 0 0;
+  }
+}
