@@ -380,3 +380,35 @@ a {
 .making {
   position: relative;
 }
+
+.department {
+  background-color: #EBEFEF;
+}
+
+.department-heading {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.department-wrap {
+  display: flex;
+}
+
+.department-branch {
+  width: calc(100%/3);
+}
+
+.branch-image {
+  display: block;
+  width: 111px;
+  margin-bottom: 10px;
+}
+
+.branch-heading {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.branch-text {
+  font-size: 13px;
+}

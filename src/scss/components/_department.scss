@@ -1,0 +1,16 @@
+.department {
+  background-color: $zircon;
+}
+
+.department-heading {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.department-wrap {
+  display: flex;
+}
+
+.department-branch {
+  width: calc(100%/3);
+}
