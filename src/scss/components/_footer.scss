@@ -59,6 +59,10 @@
 
 .footer-bottom {
   padding: 100px 0 160px;
+
+  @include viewport($breakpoint-mobile) {
+    padding: 100px 0 83px;
+  }
 }
 
 .footer-shoplist {
@@ -109,4 +113,11 @@
     margin: 57px 0 0;
     padding: 57px 0 0;
   }
+}
+
+.footer-copyright {
+  font-family: $alegreya;
+  font-size: 12px;
+  color: #bbb;
+  padding: 37px 0 0;
 }

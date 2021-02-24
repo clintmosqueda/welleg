@@ -16,6 +16,7 @@
           <span class="footer-social-text">プライバシーポリシー</span>
           <?php import_part('social-icons'); ?>
         </div>
+        <p class="footer-copyright show-sp">&copy; Welleg inc. 2021</p>
       </div>
     </div>
   </footer>
