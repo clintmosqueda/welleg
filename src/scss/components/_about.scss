@@ -1,0 +1,67 @@
+.about {
+  padding: 160px 0;
+  background-color: $zircon;
+}
+
+.about-wrapper {
+  background-color: $echo-blue;
+}
+
+.about-content {
+  padding: 108px 68px 85px 120px;
+  position: relative;
+  min-height: 607px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-text-content {
+  order: 1;
+  padding: 50px 0 0;
+}
+
+.about-heading {
+  font-size: 24px;
+  line-height: 1.7;
+  color: $white;
+  padding: 44px 0 66px;
+}
+
+.about-btn {
+  .button-text {
+    color: $white;
+  }
+}
+
+.about-image-content {
+  position: relative;
+  width: 501px;
+  height: 416px;
+  order: 2;
+}
+
+.about-image-item {
+  position: absolute;
+
+  &:first-of-type {
+    left: 0;
+    top: 47px;
+    z-index: 1;
+  }
+
+  &:nth-of-type(2) {
+    left: 20%;
+    top: 0;
+    z-index: 2;
+  }
+
+  &:last-of-type {
+    right: -2%;
+    top: 19%;
+    z-index: 3;
+  }
+}
+
+.about-image-img {
+  width: 376px;
+}

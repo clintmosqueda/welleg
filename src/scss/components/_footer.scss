@@ -1,3 +1,11 @@
+.footer {
+  padding: 200px 0 160px;
+
+  @include viewport($breakpoint-mobile) {
+    padding: 120px 0 83px;
+  }
+}
+
 .footer-top {
   overflow: hidden;
   position: relative;
@@ -58,11 +66,7 @@
 }
 
 .footer-bottom {
-  padding: 100px 0 160px;
-
-  @include viewport($breakpoint-mobile) {
-    padding: 100px 0 83px;
-  }
+  padding: 100px 0 0;
 }
 
 .footer-shoplist {
