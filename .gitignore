@@ -7,4 +7,5 @@ wp-*
 !wp-content/
 !wp-content/plugins
 !wp-content/themes
+wp-content/themes/**/assets/*
 package-lock.json

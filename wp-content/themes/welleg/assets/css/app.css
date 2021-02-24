@@ -86,6 +86,141 @@ a {
 @media all and (max-width: 767px) {
   .wrapper {
     width: 100%;
-    padding: 0 15px;
+    padding: 0 19px;
+  }
+}
+
+.making {
+  position: relative;
+}
+
+.process {
+  position: relative;
+  z-index: 1;
+}
+.process::before {
+  height: 100%;
+  background-color: #EBEFEF;
+  width: 50vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  content: "";
+}
+@media all and (max-width: 767px) {
+  .process::before {
+    display: none;
+  }
+}
+.process.is-even::before {
+  left: auto;
+  right: 0;
+}
+
+.process-block {
+  display: flex;
+  padding: 156px 0;
+}
+@media all and (max-width: 767px) {
+  .process-block {
+    display: block;
+    padding: 0;
+  }
+}
+
+.process-frame,
+.process-content {
+  width: calc(100%/2);
+}
+@media all and (max-width: 767px) {
+  .process-frame,
+.process-content {
+    width: 100%;
+  }
+}
+
+.process-frame {
+  display: flex;
+  position: relative;
+}
+@media all and (max-width: 767px) {
+  .process-frame {
+    background-color: #D3DEE0;
+    padding: 56px;
+  }
+}
+
+.process-image {
+  width: 360px;
+  display: block;
+}
+@media all and (max-width: 767px) {
+  .process-image {
+    width: 100%;
+  }
+}
+
+.process-image-text {
+  position: absolute;
+  top: 50%;
+  right: -15px;
+  transform: translateY(-50%);
+}
+@media all and (max-width: 767px) {
+  .process-image-text {
+    right: 45px;
+    width: 22px;
+  }
+}
+
+.process-wrap {
+  width: 360px;
+}
+
+.process-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.process-label {
+  font-size: 13px;
+  color: #93B6C7;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.process-heading {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.process-text {
+  font-size: 15px;
+}
+
+.is-even .process-block {
+  flex-direction: row-reverse;
+}
+@media all and (max-width: 767px) {
+  .is-even .process-block {
+    display: block;
+  }
+}
+.is-even .process-content {
+  justify-content: flex-start;
+}
+.is-even .process-frame {
+  justify-content: flex-end;
+}
+.is-even .process-image-text {
+  right: auto;
+  left: -15px;
+}
+@media all and (max-width: 767px) {
+  .is-even .process-image-text {
+    left: auto;
+    right: 45px;
   }
 }
