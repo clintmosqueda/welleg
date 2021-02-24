@@ -2,11 +2,14 @@
 $font-smoothing: antialiased;
 
 //colors
-$white: #fff;
-$black: #000;
-$red: #B30000;
-$red-100: #C90000;
-$blue: #3467BD;
+$nero: #191919;
+$gainsboro: #e5E5E5;
+$echo-blue: #93B6C7;
+$zircon: #EBEFEF;
+$zumthor: #D3DEE0;
+$jordy-blue: #6CB6D8;
+$solitude: #D6E2E7;
+$submarine: #D6E2E7;
 
 $text-rendering: auto;
 $hiragino: "Hiragino Sans";
@@ -14,8 +17,7 @@ $font-yugothic: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, 
 $base-font-family: $hiragino, $font-yugothic, "メイリオ", Meiryo, sans-serif;
 $base-font-size: 14px;
 $base-font-weight: 400;
-$base-font-color: $black;
-$base-background-color: $black;
+$base-font-color: $nero;
 $base-letter-spacing: 0.06em;
 
 $breakpoint-mobile: 767px;
