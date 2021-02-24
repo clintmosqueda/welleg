@@ -10,7 +10,7 @@
  */
 get_header(); ?>
 <main class="main">
-    julie test test test
+    <?php import_part('vision'); ?>
 </main>
 <?php
 get_footer();
