@@ -1,0 +1,47 @@
+.nav {
+  position: relative;
+  z-index: 2;
+}
+
+.nav-item {
+  padding: 0 10px;
+  display: inline-block;
+  position: relative;
+
+  &:before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background-image: url(#{$image-path}/nav-hover-icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -13px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    opacity: 0;
+    transition: opacity $duration $timing-function;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  @include viewport($breakpoint-mobile) {
+    display: block;
+    padding: 8px 0;
+  }
+}
+
+.nav-link {
+  font-size: 12px;
+  color: $nero;
+
+  @include viewport($breakpoint-mobile) {
+    color: $white;
+    font-size: 17px;
+  }
+}
