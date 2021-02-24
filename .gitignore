@@ -9,3 +9,4 @@ wp-*
 !wp-content/themes
 wp-content/themes/**/assets/*
 package-lock.json
+mix-manifest.json
