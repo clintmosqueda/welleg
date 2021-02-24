@@ -58,6 +58,8 @@
     </a>
     <span class="header-logo-text">キレイなあしを創る。</span>
   </div>
+  <div class="header-content">
+  </div>
   <div class="header-nav">
     <nav class="nav">
       <ul class="nav-list">
