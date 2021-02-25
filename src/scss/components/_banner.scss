@@ -1,0 +1,30 @@
+.banner {
+  padding: 0 60px;
+}
+
+.banner-content {
+  position: relative;
+}
+
+.banner-img {
+  width: 100%;
+}
+
+.banner-text {
+  color: $white;
+  font-size: 28px;
+  position: absolute;
+  bottom: 130px;
+  left: 60px;
+}
+
+.banner-scroll {
+  position: absolute;
+  right: 60px;
+  bottom: 80px;
+  width: 124px;
+}
+
+.banner-scroll-img {
+  width: 100%;
+}

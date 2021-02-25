@@ -1,0 +1,78 @@
+.vision {
+  background-color: $zircon;
+  padding: 0 0 171px;
+
+  @include viewport($breakpoint-mobile) {
+    padding: 0;
+  }
+}
+
+.vision-img-img {
+  width: 100%;
+}
+
+.vision-wrapper {
+  background-color: $white;
+  margin-top: -100px;
+  position: relative;
+  padding-bottom: 70px;
+
+  @include viewport($breakpoint-mobile) {
+    background: none;
+  }
+}
+
+.vision-content-mainwrap {
+  padding: 0 70px;
+
+  @include viewport($breakpoint-mobile) {
+    background-color: $white;
+    padding: 0 40px 40px;
+  }
+}
+
+.vision-content {
+  padding: 90px 0;
+  display: flex;
+  justify-content: space-between;
+
+  @include viewport($breakpoint-mobile) {
+    padding: 40px 0;
+    display: block;
+  }
+}
+
+.vision-heading {
+  font-size: 24px;
+  line-height: 1.8;
+  margin: 43px 0 0;
+
+  @include viewport($breakpoint-mobile) {
+    font-size: 20px;
+  }
+}
+
+.vision-content-right {
+  width: 420px;
+  padding: 15px 0 0;
+
+  @include viewport($breakpoint-mobile) {
+    width: auto;
+  }
+}
+
+.vision-text {
+  line-height: 1.7;
+
+  @include viewport($breakpoint-mobile) {
+    font-size: 13px;
+  }
+}
+
+.vision-btn {
+  text-align:center;
+
+  @include viewport($breakpoint-mobile) {
+    text-align: left;
+  }
+}
