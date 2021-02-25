@@ -1,5 +1,6 @@
 node_modules
 .htaccess
+.DS_Store
 license.txt
 readme.html
 xmlrpc.php
@@ -7,6 +8,6 @@ wp-*
 !wp-content/
 !wp-content/plugins
 !wp-content/themes
-wp-content/themes/**/assets/*
+wp-content/themes/*/assets/*
 package-lock.json
 mix-manifest.json

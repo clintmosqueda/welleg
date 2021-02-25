@@ -10,9 +10,7 @@
  */
 get_header(); ?>
 <main class="main">
-  <div class="side-copyright show-pc">
-    <p class="side-copyright-text">&copy; Welleg inc. 2021</p>
-  </div>
+  <?php import_part('side-copyright'); ?>
   <section class="banner">
     <div class="banner-content">
       <img class="banner-img show-pc" src="<?php echo resolve_asset_url('/images/banner-img.jpg');?>" alt=""/>

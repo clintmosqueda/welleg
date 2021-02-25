@@ -22,7 +22,8 @@
   margin-top: -30px;
 
   @include viewport($breakpoint-mobile) {
-    width: 207px;
+    min-width: 207px;
+    width: 50%;
     margin-top: -105px;
   }
 }
@@ -42,10 +43,6 @@
 
 .aim-img-img {
   width: 100%;
-
-  @include viewport($breakpoint-mobile) {
-    width: 338px;
-  }
 }
 
 .aim-heading {
