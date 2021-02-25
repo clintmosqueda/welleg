@@ -1,0 +1,11 @@
+.news-block {
+  width: 314px;
+  display: inline-block;
+  margin: 0 0 60px 53px;
+
+  @include viewport($breakpoint-mobile) {
+    display: block;
+    margin: 0 0 30px;
+    width: auto;
+  }
+}

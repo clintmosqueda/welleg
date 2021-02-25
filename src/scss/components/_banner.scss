@@ -1,5 +1,9 @@
 .banner {
   padding: 0 60px;
+
+  @include viewport($breakpoint-mobile) {
+    padding: 0;
+  }
 }
 
 .banner-content {
@@ -16,6 +20,14 @@
   position: absolute;
   bottom: 130px;
   left: 60px;
+
+  @include viewport($breakpoint-mobile) {
+    font-size: 21px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    bottom: 186px;
+  }
 }
 
 .banner-scroll {
@@ -23,6 +35,12 @@
   right: 60px;
   bottom: 80px;
   width: 124px;
+
+  @include viewport($breakpoint-mobile) {
+    width: 84px;
+    right: 35px;
+    bottom: 46px;
+  }
 }
 
 .banner-scroll-img {

@@ -1,9 +1,11 @@
 .vision {
   background-color: $zircon;
   padding: 0 0 171px;
+  margin: 100px 0 0;
 
   @include viewport($breakpoint-mobile) {
     padding: 0;
+    margin: 60px 0 0;
   }
 }
 

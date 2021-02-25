@@ -1,0 +1,93 @@
+.aim-wrapper {
+  position: relative;
+  width: 1140px;
+  margin: 0 auto;
+
+  @include viewport($breakpoint-mobile) {
+    width: auto;
+  }
+}
+
+.aim-img-top-wrapper {
+  display: flex;
+  justify-content: flex-end;
+
+  @include viewport($breakpoint-mobile) {
+    justify-content: flex-start;
+  }
+}
+
+.aim-img-top {
+  width: 420px;
+  margin-top: -30px;
+
+  @include viewport($breakpoint-mobile) {
+    width: 207px;
+    margin-top: -105px;
+  }
+}
+
+.aim-img-top-img {
+  width: 100%;
+}
+
+.aim-img-wrap {
+  flex: 0 0 600px;
+
+  @include viewport($breakpoint-mobile) {
+    flex: 0;
+    width: auto;
+  }
+}
+
+.aim-img-img {
+  width: 100%;
+
+  @include viewport($breakpoint-mobile) {
+    width: 338px;
+  }
+}
+
+.aim-heading {
+  font-size: 24px;
+  line-height: 1.7;
+  padding: 40px 0 60px;
+
+  @include viewport($breakpoint-mobile) {
+    font-size: 20px;
+    padding: 30px 0;
+  }
+}
+
+.aim-content-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -20px;
+
+  @include viewport($breakpoint-mobile) {
+    display: block;
+    margin: 0;
+    padding: 40px 0 0 37px;
+  }
+}
+
+.aim-text-wrap {
+  padding: 20px 0 0 120px;
+
+  @include viewport($breakpoint-mobile) {
+    padding: 50px 37px 0 0;
+  }
+}
+
+.aim-text {
+  line-height: 1.7;
+
+  @include viewport($breakpoint-mobile) {
+    font-size: 13px;
+  }
+}
+
+.aim-btn {
+  margin: 50px 0 0;
+}

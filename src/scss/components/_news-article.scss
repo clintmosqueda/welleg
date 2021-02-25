@@ -1,0 +1,22 @@
+.news-article-link {
+  color: $nero;
+}
+
+.news-article-image {
+  width: 100%;
+}
+
+.news-article-heading {
+  line-height: 1.7;
+  padding: 20px 0;
+}
+
+.news-article-date {
+  font-size: 14px;
+}
+
+.news-article-textwrap {
+  @include viewport($breakpoint-mobile) {
+    padding: 0 20px;
+  }
+}

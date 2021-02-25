@@ -6,6 +6,10 @@
   width: 60px;
   display: flex;
   align-items: center;
+
+  @include viewport($breakpoint-mobile) {
+    display: none;
+  }
 }
 
 .side-copyright-text {

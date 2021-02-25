@@ -1,6 +1,7 @@
 <section class="vision">
   <div class="vision-img-wrap">
-    <img class="vision-img-img" src="<?php echo resolve_asset_url('/images/vision-img.jpg');?>" alt=""/>
+    <img class="vision-img-img show-pc" src="<?php echo resolve_asset_url('/images/vision-img.jpg');?>" alt=""/>
+    <img class="vision-img-img show-sp" src="<?php echo resolve_asset_url('/images/vision-img-sp.jpg');?>" alt=""/>
   </div>
   <div class="vision-wrapper wrapper">
     <div class="vision-content-mainwrap">
@@ -25,7 +26,7 @@
             'front_circle_color' => '#84ADC3',
             'link' => '/',
             'arrow_color' => '#84B5C5',
-          )); 
+          ));
         ?>
       </div>
   </div>
