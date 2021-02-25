@@ -624,9 +624,10 @@ body {
   width: 1706px;
   position: absolute;
   left: 50%;
-  bottom: 7px;
+  bottom: -20px;
   transform: translate(-50%, 0%);
   z-index: 1;
+  line-height: 0.5;
 }
 @media all and (max-width: 767px) {
   .footer-top-text {
