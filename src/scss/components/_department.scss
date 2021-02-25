@@ -2,6 +2,10 @@
   background-color: $zircon;
 }
 
+.department-block {
+  padding: 20px 0;
+}
+
 .department-heading {
   font-size: 20px;
   margin-bottom: 10px;
@@ -9,8 +13,11 @@
 
 .department-wrap {
   display: flex;
+  flex-wrap: wrap;
+  margin: 0 -34px
 }
 
 .department-branch {
-  width: calc(100%/3);
+  width: calc((100%/3) - 68px);
+  margin: 0 34px
 }

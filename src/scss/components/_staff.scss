@@ -1,0 +1,26 @@
+.staff {
+
+}
+
+.staff-block {
+  padding: 10px 0;
+}
+
+.staff-heading {
+  font-size: 20px;
+  margin-bottom: 22px;
+}
+
+.staff-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.staff-member {
+  width: 460px;
+
+  &:nth-child(even) {
+    margin-top: 121px;
+  }
+}

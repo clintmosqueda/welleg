@@ -1,0 +1,36 @@
+.member {
+
+}
+
+.member-frame {
+  width: 100%;
+  height: 306px;
+  margin-bottom: 22px;
+}
+
+.member-image {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.member-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.member-link {
+  display: block;
+  flex-grow: 4;
+}
+
+.member-heading {
+  text-decoration: underline;
+}
+
+.member-label {
+  font-size: 12px;
+}

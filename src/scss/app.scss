@@ -1,6 +1,7 @@
-@import 'base/reset';
 @import 'base/variables';
+@import 'base/reset';
 @import 'base/mixins';
+@import 'base/base';
 @import 'base/utility';
 @import 'base/wrapper';
 
@@ -8,7 +9,11 @@
 @import 'components/header';
 @import 'components/nav';
 @import 'components/icomoon';
+
 @import 'components/making';
 @import 'components/department';
 @import 'components/branch';
+@import 'components/staff';
+@import 'components/member';
+
 
