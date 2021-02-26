@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+<main class="main">
+  <?php import_part('heading-page');?>
   <section class="department">
     <div class="wrapper">
       <div class="department-block">
@@ -88,5 +90,6 @@
       </div>
     </div>
   </section>
+<main>
 <?php
 get_footer();
