@@ -20,7 +20,15 @@
 .staff-member {
   width: 460px;
 
-  &:nth-child(even) {
+  &:nth-child(2) {
     margin-top: 121px;
+  }
+
+  &:nth-child(2n+3) {
+    margin-top: -32px;
+  }
+
+  &:nth-child(2n+4) {
+    margin-top: 89px;
   }
 }

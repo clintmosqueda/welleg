@@ -53,7 +53,7 @@
 <div class="wrap js-wrap">
   <header class="header js-header">
     <div class="header-logo">
-      <a href="" class="header-logo-link">
+      <a href="<?php echo resolve_url();?>" class="header-logo-link">
         <img class="header-logo-img" alt="" src="<?php echo resolve_asset_url('/images/logo.svg');?>"/>
       </a>
       <span class="header-logo-text">キレイなあしを創る。</span>
@@ -64,22 +64,22 @@
         <nav class="nav">
           <ul class="nav-list">
             <li class="nav-item">
-              <a class="nav-link js-nav-link" href="">トップページ</a>
+              <a class="nav-link js-nav-link" href="<?php echo resolve_url();?>">トップページ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-nav-link" href=""> 靴づくりのこと</a>
+              <a class="nav-link js-nav-link" href="<?php echo resolve_url('making');?>"> 靴づくりのこと</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-nav-link" href=""> 私たちについて</a>
+              <a class="nav-link js-nav-link" href="<?php echo resolve_url('about');?>"> 私たちについて</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-nav-link" href=""> 採用情報</a>
+              <a class="nav-link js-nav-link" href="<?php echo resolve_url('recruit');?>"> 採用情報</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-nav-link" href="">お知らせ </a>
+              <a class="nav-link js-nav-link" href="<?php echo resolve_url('news');?>">お知らせ </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-nav-link" href="">お問い合わせ</a>
+              <a class="nav-link js-nav-link" href="<?php echo resolve_url('contact');?>">お問い合わせ</a>
             </li>
           </ul>
         </nav> 

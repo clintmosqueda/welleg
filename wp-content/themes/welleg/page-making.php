@@ -43,6 +43,10 @@
       'process_name_image' => '/images/process-price.svg',
     )) ?>
   </div>
+
+  <div class="making-vision">
+    <?php import_part('vision'); ?>
+  </div>
 </section>
 
 <?php
