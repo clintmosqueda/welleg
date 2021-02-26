@@ -1,0 +1,84 @@
+.news {
+  position: relative;
+  margin: 100px 0 0;
+
+  @include viewport($breakpoint-mobile) {
+    overflow: hidden;
+  }
+}
+
+.news-content-wrap {
+
+}
+
+.news-heading-wrap {
+  position: relative;
+}
+
+.news-heading {
+  font-size: 36px;
+  padding: 20px 0 0;
+
+  @include viewport($breakpoint-mobile) {
+    font-size: 20px;
+  }
+}
+
+.news-heading-en {
+  position: absolute;
+  right: -21%;
+  top: 0;
+  font-size: 128px;
+  font-family: $alegreya;
+  text-shadow:
+   -1px -1px 0 $gainsboro,
+    1px -1px 0 $gainsboro,
+    -1px 1px 0 $gainsboro,
+     1px 1px 0 $gainsboro;
+  color: $white;
+
+  @include viewport($breakpoint-mobile) {
+    font-size: 88px;
+    width: 650px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    z-index: 1;
+    top: 3.3%;
+  }
+}
+
+.news-list-wrap {
+  margin: 120px 0 0;
+
+  @include viewport($breakpoint-mobile) {
+    position: relative;
+    z-index: 2;
+    margin: 80px 0 0;
+  }
+}
+
+.news-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -34px;
+
+  @include viewport($breakpoint-mobile) {
+    display: block;
+    margin: 0;
+  }
+}
+
+.news-btn {
+  text-align: center;
+
+  .button-svg-wrap {
+    width: 214px;
+    height: 214px;
+
+    @include viewport($breakpoint-mobile) {
+      width: 150px;
+      height: 150px;
+    }
+  }
+}

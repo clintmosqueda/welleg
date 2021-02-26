@@ -23,6 +23,10 @@
     padding: 50px 40px;
     display: block;
   }
+
+  @include viewport($breakpoint-mobile-l) {
+    padding: 50px 30px;
+  }
 }
 
 .about-text-content {
@@ -59,6 +63,11 @@
     height: 227px;
     margin: 0 auto;
   }
+
+  @include viewport($breakpoint-mobile-l) {
+    width: 214px;
+    height: 177px;
+  }
 }
 
 .about-image-item {
@@ -88,5 +97,9 @@
 
   @include viewport($breakpoint-mobile) {
     width: 187px;
+  }
+
+  @include viewport($breakpoint-mobile-l) {
+    width: 150px;
   }
 }

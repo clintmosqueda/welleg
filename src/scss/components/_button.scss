@@ -1,78 +1,86 @@
 .button-svg-wrap {
-    width: 96px;
-    height: 96px;
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-  
-    .button-circle {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      transform: scaleY(-1) rotate(-100deg);
-    }
-  
-    .button-circle-gray {
-      z-index: 1;
-    }
-  
-    .button-circle-blue {
-      z-index: 2;
-      stroke-dasharray: 105 350;
-      animation: strokeDefaultCircleBack 0.5s linear forwards;
-    }
-  
-    @include viewport($breakpoint-mobile) {
-      width: 56px;
-      height: 56px;
-    }
-  }
-  
-  .button-arrow {
+  width: 96px;
+  height: 96px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+
+  .button-circle {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleY(-1) rotate(-100deg);
   }
-  
-  .button-link {
-    display: inline-block;
-  
-    &:hover {
-      .button-circle-blue {
-        animation: strokeDefaultCircle 0.5s linear forwards;
-      }
+
+  .button-circle-gray {
+    z-index: 1;
+  }
+
+  .button-circle-blue {
+    z-index: 2;
+    stroke-dasharray: 105 350;
+    animation: strokeDefaultCircleBack 0.5s linear forwards;
+  }
+
+  @include viewport($breakpoint-mobile) {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+.button-arrow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.button-circle-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: $echo-blue;
+}
+
+.button-link {
+  display: inline-block;
+
+  &:hover {
+    .button-circle-blue {
+      animation: strokeDefaultCircle 0.5s linear forwards;
     }
   }
-  
-  .button-text {
-    font-size: 15px;
-    color: #84B5C5;
-    padding: 0 0 0 10px;
-    display: inline-block;
-    vertical-align: middle;
-  }
-  
-  @keyframes strokeDefaultCircle{
-      0%{
-        stroke-dasharray: 105 350;
-      }
-      100%{
-        stroke-dasharray: 471.305 0;
-      //stroke-dashoffset: 471.305;
-      }
-  }
-  
-  @keyframes strokeDefaultCircleBack{
-      0%{
-      
-      stroke-dasharray: 471.305 0;
-      //stroke-dashoffset: 135;
-      }
-      100%{
+}
+
+.button-text {
+  font-size: 15px;
+  color: #84B5C5;
+  padding: 0 0 0 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@keyframes strokeDefaultCircle{
+    0%{
       stroke-dasharray: 105 350;
-      //stroke-dashoffset: 471.305;
-      }
-  }
+    }
+    100%{
+      stroke-dasharray: 471.305 0;
+    //stroke-dashoffset: 471.305;
+    }
+}
+
+@keyframes strokeDefaultCircleBack{
+    0%{
+
+    stroke-dasharray: 471.305 0;
+    //stroke-dashoffset: 135;
+    }
+    100%{
+    stroke-dasharray: 105 350;
+    //stroke-dashoffset: 471.305;
+    }
+}

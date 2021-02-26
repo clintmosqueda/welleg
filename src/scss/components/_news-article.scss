@@ -1,3 +1,11 @@
+.news-article {
+  width: 314px;
+
+  @include viewport($breakpoint-mobile) {
+    width: auto;
+  }
+}
+
 .news-article-link {
   color: $nero;
 }
