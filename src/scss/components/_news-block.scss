@@ -1,11 +1,13 @@
 .news-block {
-  width: 314px;
+  //width: 314px;
   display: inline-block;
-  margin: 0 0 60px 53px;
+  padding: 0 34px 60px 34px;
+  flex-shrink: 0;
+  flex-grow: 0;
 
   @include viewport($breakpoint-mobile) {
     display: block;
-    margin: 0 0 30px;
+    padding: 0 0 50px;
     width: auto;
   }
 }
