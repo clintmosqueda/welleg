@@ -53,36 +53,36 @@
             'modifier' => 'staff-member',
             'url' => '',
             'image' => '/images/staff-image1.jpg',
-            'heading' => '人によってちがう履き心地を、 どうしたら最適化できるか。',
-            'label' => '宮本 浩子 クリエイティブ',
+            'heading' => '人によってちがう履き心地を、<br>どうしたら最適化できるか。',
+            'label' => '宮本 浩子<br>クリエイティブ',
           ))?>
           <?php import_part('member', array(
             'modifier' => 'staff-member',
             'url' => '',
             'image' => '/images/staff-image2.jpg',
-            'heading' => '人によってちがう履き心地を、 どうしたら最適化できるか。',
-            'label' => '宮本 浩子 クリエイティブ',
+            'heading' => '人によってちがう履き心地を、<br>どうしたら最適化できるか。',
+            'label' => '宮本 浩子<br>クリエイティブ',
           ))?>
           <?php import_part('member', array(
             'modifier' => 'staff-member',
             'url' => '',
             'image' => '/images/staff-image3.jpg',
-            'heading' => '人によってちがう履き心地を、 どうしたら最適化できるか。',
-            'label' => '宮本 浩子 クリエイティブ',
+            'heading' => '人によってちがう履き心地を、<br>どうしたら最適化できるか。',
+            'label' => '宮本 浩子<br>クリエイティブ',
           ))?>
           <?php import_part('member', array(
             'modifier' => 'staff-member',
             'url' => '',
             'image' => '/images/staff-image4.jpg',
-            'heading' => '人によってちがう履き心地を、 どうしたら最適化できるか。',
-            'label' => '宮本 浩子 クリエイティブ',
+            'heading' => '人によってちがう履き心地を、<br>どうしたら最適化できるか。',
+            'label' => '宮本 浩子<br>クリエイティブ',
           ))?>
           <?php import_part('member', array(
             'modifier' => 'staff-member',
             'url' => '',
             'image' => '/images/staff-image5.jpg',
-            'heading' => '人によってちがう履き心地を、 どうしたら最適化できるか。',
-            'label' => '宮本 浩子 クリエイティブ',
+            'heading' => '人によってちがう履き心地を、<br>どうしたら最適化できるか。',
+            'label' => '宮本 浩子<br>クリエイティブ',
           ))?>
         </div>
       </div>
