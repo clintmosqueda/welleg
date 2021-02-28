@@ -1,0 +1,43 @@
+.privacy {
+
+}
+
+.privacy-block {
+  max-width: 667px;
+  width: 100%;
+  padding-top: 20px;
+
+  @include viewport($breakpoint-mobile) {
+    padding: 46px 15px 0
+  }
+}
+
+.privacy-heading {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 42px;
+
+  @include viewport($breakpoint-mobile) {
+    font-size: 15px;
+  }
+}
+
+.privacy-text {
+  font-size: 15px;
+  line-height: 2.1;
+  font-weight: 300;
+  white-space: pre-line;
+
+  @include viewport($breakpoint-mobile) {
+    font-size: 13px;
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 131px;
+  }
+
+  a {
+    color: $echo-blue;
+    text-decoration: underline;
+  }
+}

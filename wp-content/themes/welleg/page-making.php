@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 <main class="main">
+<?php import_part('side-copyright'); ?>
   <?php import_part('heading-page', array(
     'modifier' => '',
     'image' => '/images/heading-making.svg',
