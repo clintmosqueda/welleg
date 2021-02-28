@@ -84,3 +84,60 @@
     //stroke-dashoffset: 471.305;
     }
 }
+
+.button-round {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-round-block {
+  flex-shrink: 0;
+  position: relative;
+  width: 214px;
+  height: 214px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    .button-round-blue {
+      stroke-dashoffset: 0;
+      animation: strokeProgress 0.5s linear forwards;
+    }
+  }
+}
+
+.button-round-svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0
+}
+
+.button-round-gray {
+
+}
+.button-round-blue {
+  stroke-dasharray: 669;
+  stroke-dashoffset: 565;
+  transform: rotate(197deg);
+  // animation: strokeProgress 0.5s linear forwards;
+}
+
+.button-round-text {
+  font-weight: 600;
+  font-size: 15px;
+  color: $echo-blue;
+}
+
+@keyframes strokeProgress{
+  0%{
+    stroke-dashoffset: 565;
+  }
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
