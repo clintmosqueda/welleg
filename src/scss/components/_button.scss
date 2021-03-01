@@ -24,6 +24,12 @@
     animation: strokeDefaultCircleBack 0.5s linear forwards;
   }
 
+  &:hover {
+    .button-circle-blue {
+      animation: strokeDefaultCircle 0.5s linear forwards;
+    }
+  }
+
   @include viewport($breakpoint-mobile) {
     width: 56px;
     height: 56px;
@@ -47,12 +53,6 @@
 
 .button-link {
   display: inline-block;
-
-  &:hover {
-    .button-circle-blue {
-      animation: strokeDefaultCircle 0.5s linear forwards;
-    }
-  }
 }
 
 .button-text {
@@ -65,7 +65,7 @@
 
 @keyframes strokeDefaultCircle{
     0%{
-      stroke-dasharray: 105 350;
+      stroke-dasharray: 105 471.305;
     }
     100%{
       stroke-dasharray: 471.305 0;
@@ -80,7 +80,7 @@
     //stroke-dashoffset: 135;
     }
     100%{
-    stroke-dasharray: 105 350;
+    stroke-dasharray: 105 471.305;
     //stroke-dashoffset: 471.305;
     }
 }

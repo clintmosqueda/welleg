@@ -65,85 +65,24 @@ get_header(); ?>
         <a class="index-news-btn" href="">お知らせ一覧</a>
       </div>
       <ul class="index-news-list">
-        <li class="news-block">
-          <article class="news-article">
-            <a class="news-article-link" href="">
-              <figure class="news-article-image-wrap">
-                <img class="news-article-image" src="<?php echo resolve_asset_url('/images/news-img1.jpg');?>" alt=""/>
-              </figure>
-              <div class="news-article-textwrap">
-                <h3 class="news-article-heading">コーポレートサイトをリニューアルしました。この文章はダミーです。</h3>
-                <time class="news-article-date" datetime="">2012.10.24</time>
-              </div>
-            </a>
-          </article>
-        </li>
-        <li class="news-block">
-          <article class="news-article">
-            <a class="news-article-link" href="">
-              <figure class="news-article-image-wrap">
-                <img class="news-article-image" src="<?php echo resolve_asset_url('/images/news-img4.jpg');?>" alt=""/>
-              </figure>
-              <div class="news-article-textwrap">
-                <h3 class="news-article-heading">コーポレートサイトをリニューアルしました。この文章はダミーです。</h3>
-                <time class="news-article-date" datetime="">2012.10.24</time>
-              </div>
-            </a>
-          </article>
-        </li>
-        <li class="news-block">
-          <article class="news-article">
-            <a class="news-article-link" href="">
-              <figure class="news-article-image-wrap">
-                <img class="news-article-image" src="<?php echo resolve_asset_url('/images/news-img2.jpg');?>" alt=""/>
-              </figure>
-              <div class="news-article-textwrap">
-                <h3 class="news-article-heading">コーポレートサイトをリニューアルしました。この文章はダミーです。</h3>
-                <time class="news-article-date" datetime="">2012.10.24</time>
-              </div>
-            </a>
-          </article>
-        </li>
-        <li class="news-block">
-          <article class="news-article">
-            <a class="news-article-link" href="">
-              <figure class="news-article-image-wrap">
-                <img class="news-article-image" src="<?php echo resolve_asset_url('/images/news-img5.jpg');?>" alt=""/>
-              </figure>
-              <div class="news-article-textwrap">
-                <h3 class="news-article-heading">コーポレートサイトをリニューアルしました。この文章はダミーです。</h3>
-                <time class="news-article-date" datetime="">2012.10.24</time>
-              </div>
-            </a>
-          </article>
-        </li>
-        <li class="news-block">
-          <article class="news-article">
-            <a class="news-article-link" href="">
-              <figure class="news-article-image-wrap">
-                <img class="news-article-image" src="<?php echo resolve_asset_url('/images/news-img3.jpg');?>" alt=""/>
-              </figure>
-              <div class="news-article-textwrap">
-                <h3 class="news-article-heading">コーポレートサイトをリニューアルしました。この文章はダミーです。</h3>
-                <time class="news-article-date" datetime="">2012.10.24</time>
-              </div>
-            </a>
-          </article>
-        </li>
-        <li class="news-block">
-          <article class="news-article">
-            <a class="news-article-link" href="">
-              <figure class="news-article-image-wrap">
-                <img class="news-article-image" src="<?php echo resolve_asset_url('/images/news-img6.jpg');?>" alt=""/>
-              </figure>
-              <div class="news-article-textwrap">
-                <h3 class="news-article-heading">コーポレートサイトをリニューアルしました。この文章はダミーです。</h3>
-                <time class="news-article-date" datetime="">2012.10.24</time>
-              </div>
-            </a>
-          </article>
-        </li>
+        <?php
+          $args = array(
+            'post_type'      => NEWS_POST_TYPE,
+            'orderby'        => 'post_date',
+            'order'          => 'DESC',
+            'post_status'    => 'publish',
+            'posts_per_page' => 6
+          );
+
+          $index_news = new WP_Query( $args );
+        ?>
+        <?php while ($index_news->have_posts()) : $index_news->the_post(); ?>
+          <li class="news-block">
+            <?php import_part('news-article'); ?>
+          </li>
+        <?php endwhile; ?>
       </ul>
+      <?php wp_reset_postdata(); ?>
     </div>
   </section>
   <section class="about">
@@ -178,6 +117,11 @@ get_header(); ?>
         </div>
       </div>
     </div>
+</section>
+
+<section class="ig">
+
+  <?php echo do_shortcode( '[instagram-feed showheader=false showfollow=false]' ); ?>
 </section>
 </main>
 <?php

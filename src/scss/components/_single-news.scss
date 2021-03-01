@@ -3,3 +3,132 @@
     display: none;
   }
 }
+
+.single-news-wrap {
+  padding: 150px 0;
+  width: 70%;
+  background-color: $white;
+  position: relative;
+  z-index: 2;
+  overflow: scroll;
+  // overflow: hidden;
+
+
+
+  @include viewport($breakpoint-mobile) {
+    width: 90%;
+    padding: 150px 0;
+  }
+}
+
+.single-news-wrapper {
+  padding: 0 120px;
+  background-color: $white;
+  position: relative;
+  overflow: hidden;
+
+  // &:after {
+  //   content: '';
+  //   width: 70%;
+  //   height: 100%;
+  //   background-color: $white;
+  //   position: absolute;
+  //   right: 0;
+  //   bottom: 0;
+  //   z-index: 1;
+  // }
+
+  @include viewport($breakpoint-mobile) {
+    padding: 0 27px;
+  }
+}
+
+.single-news-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 100px;
+
+  @include viewport($breakpoint-mobile) {
+    display: block;
+  }
+}
+
+.single-news-title {
+  font-size: 22px;
+  line-height: 1.7;
+  flex: 0 0 70%;
+
+  @include viewport($breakpoint-mobile) {
+    font-size: 17px;
+    padding: 0 0 15px;
+    flex: 0;
+  }
+}
+
+.single-news-content {
+  h2 {
+    font-size: 20px;
+    line-height: 1.7;
+    padding: 0 0 50px;
+  }
+
+  p {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  .wp-caption {
+    margin: 90px auto;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    @include viewport($breakpoint-mobile) {
+      width: 100% !important;
+    }
+  }
+
+  .wp-caption-text {
+    font-size: 11px;
+    padding: 10px 0 0;
+  }
+}
+
+.single-news-share {
+  border-top: 1px solid $gainsboro;
+  border-bottom: 1px solid $gainsboro;
+  margin: 100px 0;
+  padding: 100px 0;
+  text-align: center;
+
+  .social-icon-icon {
+    color: $nero;
+    border: 1px solid $nero;
+  }
+
+  .social-icon-list {
+    justify-content: center;
+  }
+}
+
+.single-new-share-heading {
+  font-size: 15px;
+  padding: 0 0 27px;
+}
+
+.single-news-btn {
+  text-align: center;
+
+  .button-svg-wrap {
+    width: 214px;
+    height: 214px;
+
+    @include viewport($breakpoint-mobile) {
+      width: 150px;
+      height: 150px;
+    }
+  }
+}

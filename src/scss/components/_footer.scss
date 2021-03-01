@@ -11,6 +11,10 @@
   position: relative;
 }
 
+.footer-top-image-wrap {
+  position: relative;
+}
+
 .footer-top-text {
   font-family: $alegreya;
   font-size: 120px;
@@ -30,6 +34,7 @@
 
   @include viewport($breakpoint-mobile) {
     font-size: 88px;
+    bottom: 30px;
   }
 }
 

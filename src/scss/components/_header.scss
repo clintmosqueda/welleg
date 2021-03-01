@@ -50,7 +50,7 @@
     font-size: 0;
     width: 37px;
     height: 10px;
-    
+
     &:before {
       position: absolute;
       left: 15px;
@@ -89,7 +89,7 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity $duration $timing-function, visibility $duration $timing-function;
-    
+
     .is-open & {
       opacity: 1;
       visibility: visible;
