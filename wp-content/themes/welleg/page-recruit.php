@@ -1,4 +1,11 @@
 <?php get_header(); ?>
+<main class="main">
+<?php import_part('side-copyright'); ?>
+  <?php import_part('heading-page', array(
+    'modifier' => '',
+    'image' => '/images/heading-recruit.svg',
+    'heading' => '採用情報'
+  ));?>
   <section class="department">
     <div class="wrapper">
       <div class="department-block">
@@ -85,8 +92,28 @@
             'label' => '宮本 浩子<br>クリエイティブ',
           ))?>
         </div>
+        <div class="staff-button">
+          <?php import_part('button-round', array(
+            'modifier' => '',
+            'back_circle_color' => '#e5e5e5',
+            'front_circle_color' => '#84ADC3',
+            'link' => '/',
+            'text' => '読み込む',
+          ));
+          ?>
+        </div>
       </div>
     </div>
   </section>
+  <section class="position">
+    <div class="wrapper">
+      <h2 class="position-heading">募集職種</h2>
+    </div>
+    <div class="position-accordions">
+      <?php import_part('accordion')?>
+      <?php import_part('accordion')?>
+    </div>
+  </section>
+<main>
 <?php
 get_footer();

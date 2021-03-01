@@ -1,7 +1,22 @@
 .making {
   position: relative;
+
+  @include viewport($breakpoint-mobile) {
+    margin-top: -42px;
+  }
 }
 
 .making-process {
   margin-bottom: 180px;
+
+  @include viewport($breakpoint-mobile) {
+    margin-bottom: 79px;
+  }
+}
+
+.making-vision {
+  @include viewport($breakpoint-mobile) {
+    background-color: $zircon;
+    padding-top: 20px;
+  }
 }

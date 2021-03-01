@@ -2,6 +2,10 @@
   position: relative;
   z-index: 1;
 
+  @include viewport($breakpoint-mobile) {
+    margin-bottom: 53px;
+  }
+
   &::before {
     height: 100%;
     background-color: $zircon; 
@@ -51,6 +55,7 @@
   @include viewport($breakpoint-mobile) {
     background-color: $zumthor;
     padding: 56px;
+    margin-bottom: 63px;
   }
 }
 
@@ -76,7 +81,12 @@
 }
 
 .process-wrap {
-  width: 360px;
+  max-width: 360px;
+  width: 100%;
+
+  @include viewport($breakpoint-mobile) {
+    padding: 0 18px;
+  }
 }
 
 .process-content {
@@ -91,6 +101,23 @@
   color: $echo-blue;
   display: inline-block;
   margin-bottom: 46px;
+  position: relative;
+  padding-left: 50px;
+
+  @include viewport($breakpoint-mobile) {
+    margin-bottom: 37px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    content: '';
+    height: 1px;
+    width: 34px;
+    background-color: $echo-blue;
+    transform: translateY(-50%);
+  }
 }
 
 .process-heading {
@@ -98,11 +125,22 @@
   margin-bottom: 33px;
   font-weight: 500;
   line-height: 2;
+
+  @include viewport($breakpoint-mobile) {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 17px;
+  }
 }
 
 .process-text {
   font-size: 15px;
   line-height: 2;
+
+  @include viewport($breakpoint-mobile) {
+    font-size: 13px;
+    font-weight: 300;
+  }
 }
 
 .is-even {
