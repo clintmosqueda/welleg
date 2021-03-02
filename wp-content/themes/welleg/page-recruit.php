@@ -61,35 +61,40 @@
             'url' => '',
             'image' => '/images/staff-image1.jpg',
             'heading' => '人によってちがう履き心地を、<br>どうしたら最適化できるか。',
-            'label' => '宮本 浩子<br>クリエイティブ',
+            'name' => '宮本 浩子',
+            'position' => 'クリエイティブ',
           ))?>
           <?php import_part('member', array(
             'modifier' => 'staff-member',
             'url' => '',
             'image' => '/images/staff-image2.jpg',
             'heading' => '人によってちがう履き心地を、<br>どうしたら最適化できるか。',
-            'label' => '宮本 浩子<br>クリエイティブ',
+            'name' => '宮本 浩子',
+            'position' => 'クリエイティブ',
           ))?>
           <?php import_part('member', array(
             'modifier' => 'staff-member',
             'url' => '',
             'image' => '/images/staff-image3.jpg',
             'heading' => '人によってちがう履き心地を、<br>どうしたら最適化できるか。',
-            'label' => '宮本 浩子<br>クリエイティブ',
+            'name' => '宮本 浩子',
+            'position' => 'クリエイティブ',
           ))?>
           <?php import_part('member', array(
             'modifier' => 'staff-member',
             'url' => '',
             'image' => '/images/staff-image4.jpg',
             'heading' => '人によってちがう履き心地を、<br>どうしたら最適化できるか。',
-            'label' => '宮本 浩子<br>クリエイティブ',
+            'name' => '宮本 浩子',
+            'position' => 'クリエイティブ',
           ))?>
           <?php import_part('member', array(
             'modifier' => 'staff-member',
             'url' => '',
             'image' => '/images/staff-image5.jpg',
             'heading' => '人によってちがう履き心地を、<br>どうしたら最適化できるか。',
-            'label' => '宮本 浩子<br>クリエイティブ',
+            'name' => '宮本 浩子',
+            'position' => 'クリエイティブ',
           ))?>
         </div>
         <div class="staff-button">
@@ -112,6 +117,7 @@
     <div class="position-accordions">
       <?php import_part('accordion')?>
       <?php import_part('accordion')?>
+      <!--?php import_part('accordion')?-->
     </div>
   </section>
 <main>

@@ -1,16 +1,16 @@
-<section class="accordion">
+<section class="accordion js-accordion">
   <div class="wrapper">
     <div class="accordion-block">
-      <div class="accordion-top">
+      <div class="accordion-top js-accordion-trigger">
         <div class="accordion-left">
-          <h2 class="accordion-title">Webデザイナー</h2>
+          <h2 class="accordion-title"><span class="accordion-title-icon"></span> Webデザイナー</h2>
         </div>
         <div class="accordion-right">
           <p class="accordion-description">この仕事の魅力や特徴を1行で記載します。</p>
         </div>
       </div>
-      <div class="accordion-wrap">
-        <div class="accordion-body">
+      <div class="accordion-wrap js-accordion-wrap">
+        <div class="accordion-body js-accordion-body">
           <div class="accordion-left"></div>
           <div class="accordion-right">
             <h3 class="accordion-label">仕事内容</h3>

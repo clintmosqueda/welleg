@@ -7,6 +7,7 @@ import Hack from './components/hack';
 import Router from './components/router';
 import HomeController from './controllers/home-controller';
 import ArchiveNewsController from './controllers/archivenews-controller';
+import RecruitController from './controllers/recruit-controller';
 
 new Hack();
 
@@ -18,6 +19,10 @@ let routes = [
   {
     id: 'post-type-archive-news',
     controller: ArchiveNewsController,
+  },
+  {
+    id: 'recruit-page',
+    controller: RecruitController
   }
 ];
 
