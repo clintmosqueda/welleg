@@ -1,5 +1,7 @@
 .single-news {
-  .header {
+  visibility: hidden;
+  .header,
+  .footer {
     display: none;
   }
 }
@@ -11,9 +13,6 @@
   position: relative;
   z-index: 2;
   overflow: scroll;
-  // overflow: hidden;
-
-
 
   @include viewport($breakpoint-mobile) {
     width: 90%;
@@ -26,17 +25,6 @@
   background-color: $white;
   position: relative;
   overflow: hidden;
-
-  // &:after {
-  //   content: '';
-  //   width: 70%;
-  //   height: 100%;
-  //   background-color: $white;
-  //   position: absolute;
-  //   right: 0;
-  //   bottom: 0;
-  //   z-index: 1;
-  // }
 
   @include viewport($breakpoint-mobile) {
     padding: 0 27px;

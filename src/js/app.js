@@ -7,6 +7,7 @@ import Hack from './components/hack';
 import Router from './components/router';
 import HomeController from './controllers/home-controller';
 import ArchiveNewsController from './controllers/archivenews-controller';
+import SingleNewsController from './controllers/singlenews-controller';
 
 new Hack();
 
@@ -18,7 +19,11 @@ let routes = [
   {
     id: 'post-type-archive-news',
     controller: ArchiveNewsController,
-  }
+  },
+  {
+    id: 'single-news',
+    controller: SingleNewsController,
+  },
 ];
 
 let router = new Router(routes);
