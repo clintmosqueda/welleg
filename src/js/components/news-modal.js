@@ -6,29 +6,20 @@ export default class NewsModal {
   }
 
   init() {
-    window.addEventListener('load', () => {
-      this.target.forEach((item) => {
-        let nextEl = item.nextElementSibling;
-        if(window.location.href.includes(`#${nextEl.id}`)) {
-          nextEl.classList.add('is-open');
-        }
-        else {
-          nextEl.classList.remove('is-open');
-        }
-      });
-
-    })
-
     this.target.forEach((item) => {
       let nextEl = item.nextElementSibling;
+      let href = item.href;
 
-      item.addEventListener('click', () => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
         nextEl.classList.toggle('is-open');
+        history.pushState({}, '', href);
       });
 
       nextEl.firstElementChild.addEventListener('click', () => {
         nextEl.classList.remove('is-open');
-        history.replaceState(null, null, ' ');
+        //history.replaceState(null, null, window.location.href);
+        history.back();
       })
 
 
@@ -36,8 +27,9 @@ export default class NewsModal {
 
     this.btn.forEach((item) => {
       item.addEventListener('click', () => {
-        console.log('shit');
         item.parentElement.classList.remove('is-open');
+        //history.replaceState(null, null, window.location.href);
+        history.back()
       });
     });
   }
