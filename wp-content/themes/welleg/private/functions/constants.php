@@ -14,11 +14,10 @@ $load_release_hash = function () {
 };
 
 define('ANTICACHE_HASH', $load_release_hash());
-define('TOPICS_POST_TYPE', 'topics');
+define('STAFF_POST_TYPE', 'staff');
 define('NEWS_POST_TYPE', 'news');
 define( 'NEWS_SLUG', 'news' );
 // define('TOPICS_POST_TYPE_TAG', 'topics-tag');
-define('TOPICS_POST_TYPE_CATEGORY', 'topics-category');
 define('NEWS_POST_TYPE_CATEGORY', 'news-category');
 
 // define('BLOG_POST_TYPE', 'blog');

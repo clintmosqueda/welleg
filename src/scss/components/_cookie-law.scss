@@ -1,0 +1,76 @@
+#cookie-law-info-bar {
+  background-color: transparent!important;
+  box-shadow: none!important;
+  text-align: left!important;
+  padding: 0 19px 20px 20px!important;
+
+  @include viewport($breakpoint-mobile) {
+    padding-left: 19px!important;
+  }
+}
+
+.cookie-law-container {
+  display: inline-flex;
+  align-items: center;
+  background-color: $white;
+  border: 1px solid $nero;
+  padding: 22px 25px 24px 73px;
+  position: relative;
+
+  @include viewport($breakpoint-mobile) {
+    display: block;
+    padding: 17px 10px 33px 64px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 12px;
+    left: 9px;
+    content: '';
+    height: 47px;
+    width: 60px;
+    display: block;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('#{$image-path}/cookie.jpg');
+
+    @include viewport($breakpoint-mobile) {
+      height: 43px;
+      width: 56px;
+      top: 15px;
+      left: 7px;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    font-weight: inherit;
+    cursor: pointer;
+    word-break: break-all;
+  }
+}
+
+.cookie-law-content {
+  margin-right: 28px;
+}
+
+.cookie-law-message {
+  font-size: 12px;
+  letter-spacing: -0.015em;
+  line-height: 1.9;
+
+  @include viewport($breakpoint-mobile) {
+    margin-bottom: 19px;
+  }
+}
+
+.cookie-law-btn {
+  a {
+    font-size: 14px;
+  }
+
+  .cookie_action_close_header {
+    margin-right: 30px;
+  }
+}

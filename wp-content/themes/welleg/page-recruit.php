@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php get_header(); 
+global $post;
+?>
 <main class="main">
 <?php import_part('side-copyright'); ?>
   <?php import_part('heading-page', array(
@@ -51,51 +53,43 @@
       </div>
     </div>
   </section>
+
+  <?php
+  $staff_query = query_staff();
+  if($staff_query->have_posts()): ?>
   <section class="staff">
     <div class="wrapper">
       <div class="staff-block">
         <h2 class="staff-heading">スタッフ紹介</h2>
         <div class="staff-members">
+          <?php
+          while($staff_query->have_posts()):
+          $staff_query->the_post();
+          $message = get_field('message', get_the_ID());
+          $staf_position = get_field('staf_position', get_the_ID());
+          $staff_picture = get_sub_field('staff_picture', get_the_ID());
+          if( have_rows('staff_info', get_the_ID()) ): 
+            while( have_rows('staff_info', get_the_ID()) ): the_row();
+              $staff_picture = get_sub_field('staff_picture', get_the_ID());
+              break;
+            endwhile;
+          endif;
+          if( have_rows('descriptions', get_the_ID()) ): 
+            while( have_rows('descriptions', get_the_ID()) ): the_row();
+              $title = get_sub_field('title', get_the_ID());
+            endwhile;
+          endif;
+          ?>
           <?php import_part('member', array(
             'modifier' => 'staff-member',
-            'url' => '',
-            'image' => '/images/staff-image1.jpg',
-            'heading' => '人によってちがう履き心地を、<br>どうしたら最適化できるか。',
-            'name' => '宮本 浩子',
-            'position' => 'クリエイティブ',
+            'url' => get_permalink(),
+            'image' => $staff_picture,
+            'heading' => $message,
+            'name' => get_the_title(),
+            'position' => $staf_position,
           ))?>
-          <?php import_part('member', array(
-            'modifier' => 'staff-member',
-            'url' => '',
-            'image' => '/images/staff-image2.jpg',
-            'heading' => '人によってちがう履き心地を、<br>どうしたら最適化できるか。',
-            'name' => '宮本 浩子',
-            'position' => 'クリエイティブ',
-          ))?>
-          <?php import_part('member', array(
-            'modifier' => 'staff-member',
-            'url' => '',
-            'image' => '/images/staff-image3.jpg',
-            'heading' => '人によってちがう履き心地を、<br>どうしたら最適化できるか。',
-            'name' => '宮本 浩子',
-            'position' => 'クリエイティブ',
-          ))?>
-          <?php import_part('member', array(
-            'modifier' => 'staff-member',
-            'url' => '',
-            'image' => '/images/staff-image4.jpg',
-            'heading' => '人によってちがう履き心地を、<br>どうしたら最適化できるか。',
-            'name' => '宮本 浩子',
-            'position' => 'クリエイティブ',
-          ))?>
-          <?php import_part('member', array(
-            'modifier' => 'staff-member',
-            'url' => '',
-            'image' => '/images/staff-image5.jpg',
-            'heading' => '人によってちがう履き心地を、<br>どうしたら最適化できるか。',
-            'name' => '宮本 浩子',
-            'position' => 'クリエイティブ',
-          ))?>
+          <?php endwhile; ?>
+          <?php wp_reset_postdata(); ?>
         </div>
         <div class="staff-button">
           <?php import_part('button-round', array(
@@ -110,6 +104,7 @@
       </div>
     </div>
   </section>
+  <?php endif; ?>
   <section class="position">
     <div class="wrapper">
       <h2 class="position-heading">募集職種</h2>

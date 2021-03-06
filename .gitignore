@@ -9,5 +9,6 @@ wp-*
 !wp-content/plugins
 !wp-content/themes
 wp-content/themes/*/assets/*
+wp-content/uploads/*
 package-lock.json
 mix-manifest.json
