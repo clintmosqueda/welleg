@@ -12,6 +12,10 @@
     width: 180px;
     font-size: 13px;
     font-weight: 600;
+
+    @include viewport($breakpoint-mobile) {
+      width: 93px;
+    }
   }
 
   dd {

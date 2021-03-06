@@ -1,4 +1,4 @@
-.single-news {
+.single {
   visibility: hidden;
   .header,
   .footer {
@@ -6,7 +6,7 @@
   }
 }
 
-.single-news-wrap {
+.single-wrap {
   padding: 150px 0;
   width: 70%;
   background-color: $white;
@@ -20,7 +20,7 @@
   }
 }
 
-.single-news-wrapper {
+.single-wrapper {
   padding: 0 120px;
   background-color: $white;
   position: relative;
@@ -31,21 +31,33 @@
   }
 }
 
-.single-news-heading {
+.single-heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 0 100px;
+
+  &.single-heading-sdg {
+    padding: 0 0 40px;
+
+    @include viewport($breakpoint-mobile) {
+      padding: 0 0 10px;
+    }
+  }
 
   @include viewport($breakpoint-mobile) {
     display: block;
   }
 }
 
-.single-news-title {
+.single-title {
   font-size: 22px;
   line-height: 1.7;
   flex: 0 0 70%;
+
+  &.single-title-sdg {
+    flex: 0 0 100%;
+  }
 
   @include viewport($breakpoint-mobile) {
     font-size: 17px;
@@ -54,16 +66,21 @@
   }
 }
 
-.single-news-content {
+.single-content {
   h2 {
     font-size: 20px;
     line-height: 1.7;
     padding: 0 0 50px;
+    font-weight: 600;
   }
 
   p {
     font-size: 17px;
     line-height: 1.7;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 13px;
+    }
   }
 
   .wp-caption {
@@ -85,7 +102,23 @@
   }
 }
 
-.single-news-share {
+.single-content-img-wrap {
+  text-align: center;
+
+  &.single-content-img-wrap-sdg {
+    margin: 0 0 100px;
+
+    @include viewport($breakpoint-mobile) {
+      margin: 0 0 50px;
+    }
+  }
+}
+
+.single-content-img {
+  max-width: 100%;
+}
+
+.single-share {
   border-top: 1px solid $gainsboro;
   border-bottom: 1px solid $gainsboro;
   margin: 100px 0;
@@ -102,12 +135,12 @@
   }
 }
 
-.single-new-share-heading {
+.single-share-heading {
   font-size: 15px;
   padding: 0 0 27px;
 }
 
-.single-news-btn {
+.single-btn {
   text-align: center;
 
   .button-svg-wrap {
@@ -118,5 +151,23 @@
       width: 150px;
       height: 150px;
     }
+  }
+
+  &.single-btn-sdg {
+    margin: 70px 0 0;
+  }
+}
+
+.single-sdg-icon {
+  width: 228px;
+  margin: 0 0 90px;
+
+  .single-sdg-icon-img {
+    width: 100%;
+  }
+
+  @include viewport($breakpoint-mobile) {
+    width: 180px;
+    margin: 0 0 60px;
   }
 }

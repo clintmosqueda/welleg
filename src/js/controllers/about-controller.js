@@ -1,6 +1,9 @@
 import $ from 'jquery';
 import 'slick-carousel/slick/slick';
 import BaseController from './base-controller';
+import Modal from '../components/modal.js';
+import popState from '../components/popstate.js';
+import singleRedirectModal from '../components/single-redirect-modal.js';
 
 export default class AboutController extends BaseController {
   init() {
@@ -15,5 +18,12 @@ export default class AboutController extends BaseController {
         autoplaySpeed: 2000,
       });
     });
+
+    new Modal('.js-article-link', '.js-modal-close');
+    popState();
+
+    singleRedirectModal();
+
+
   }
 }

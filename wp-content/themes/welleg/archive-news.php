@@ -1,14 +1,18 @@
 <?php get_header(); ?>
 <main class="main">
   <?php import_part('side-copyright'); ?>
+  <?php import_part('heading-page', array(
+    'modifier' => '',
+    'image' => '/images/heading-news.svg',
+    'heading' => 'お知らせ'
+  ));?>
   <section class="news">
-    <p class="news-heading-en">News News News</p>
     <div class="news-wrapper wrapper">
       <div class="news-content-wrap">
-        <div class="news-heading-wrap">
+        <!-- <div class="news-heading-wrap">
           <img class="news-footprint" src="<?php echo resolve_asset_url('/images/footprint.svg'); ?>" alt=""/>
           <h2 class="news-heading">お知らせ</h2>
-        </div>
+        </div> -->
         <div class="news-list-wrap">
           <ul class="news-list js-news-list">
             <?php if (have_posts()) : ?>

@@ -17,6 +17,7 @@ body {
 	background-color: $base-background-color;
 	word-break: break-all;
 	overflow-x: hidden;
+	min-width: 1320px;
 
 	@include viewport($breakpoint-mobile) {
 		min-width: initial ;

@@ -9,33 +9,51 @@
   <section class="about-slider">
     <div class="about-slider-list">
       <div class="about-slider-item">
-        <div class="about-slider-image-wrap">
+        <div class="about-slider-image-wrap show-pc">
           <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider1.jpg');?>" alt=""/>
         </div>
-      </div>
-      <div class="about-slider-item">
-        <div class="about-slider-image-wrap">
-          <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider2.jpg');?>" alt=""/>
+        <div class="about-slider-image-wrap show-sp">
+          <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider3-sp.jpg');?>" alt=""/>
         </div>
       </div>
       <div class="about-slider-item">
-        <div class="about-slider-image-wrap">
+        <div class="about-slider-image-wrap show-pc">
           <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider2.jpg');?>" alt=""/>
+        </div>
+        <div class="about-slider-image-wrap show-sp">
+          <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider3-sp.jpg');?>" alt=""/>
         </div>
       </div>
       <div class="about-slider-item">
-        <div class="about-slider-image-wrap">
+        <div class="about-slider-image-wrap show-pc">
           <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider1.jpg');?>" alt=""/>
         </div>
-      </div>
-      <div class="about-slider-item">
-        <div class="about-slider-image-wrap">
-          <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider2.jpg');?>" alt=""/>
+        <div class="about-slider-image-wrap show-sp">
+          <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider3-sp.jpg');?>" alt=""/>
         </div>
       </div>
       <div class="about-slider-item">
-        <div class="about-slider-image-wrap">
+        <div class="about-slider-image-wrap show-pc">
           <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider2.jpg');?>" alt=""/>
+        </div>
+        <div class="about-slider-image-wrap show-sp">
+          <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider3-sp.jpg');?>" alt=""/>
+        </div>
+      </div>
+      <div class="about-slider-item">
+        <div class="about-slider-image-wrap show-pc">
+          <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider1.jpg');?>" alt=""/>
+        </div>
+        <div class="about-slider-image-wrap show-sp">
+          <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider3-sp.jpg');?>" alt=""/>
+        </div>
+      </div>
+      <div class="about-slider-item">
+        <div class="about-slider-image-wrap show-pc">
+          <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider2.jpg');?>" alt=""/>
+        </div>
+        <div class="about-slider-image-wrap show-sp">
+          <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider3-sp.jpg');?>" alt=""/>
         </div>
       </div>
     </div>
@@ -68,11 +86,12 @@
         </p>
         <p class="about-statement-slogan">キレイなあしを創る</p>
       </div>
-      <img class="about-statement-image" src="<?php echo resolve_asset_url('/images/boy-girl.png') ?>" alt=""/>
+      <img class="about-statement-image show-pc" src="<?php echo resolve_asset_url('/images/boy-girl.png') ?>" alt=""/>
     </div>
   </section>
   <section class="about-banner">
-    <img class="about-banner-image" src="<?php echo resolve_asset_url('/images/about-banner.jpg') ?>" alt=""/>
+    <img class="about-banner-image show-pc" src="<?php echo resolve_asset_url('/images/about-banner.jpg') ?>" alt=""/>
+    <img class="about-banner-image show-sp" src="<?php echo resolve_asset_url('/images/about-banner-sp.jpg') ?>" alt=""/>
   </section>
   <section class="about-business">
     <div class="about-business-wrapper wrapper">

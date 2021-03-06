@@ -1,6 +1,16 @@
+.about-slider {
+  @include viewport($breakpoint-mobile) {
+   margin: -30px 0 0;
+  }
+}
+
 .about-slider-image-wrap {
   width: 580px;
   padding: 0 10px;
+
+  @include viewport($breakpoint-mobile) {
+    width: 320px;
+  }
 }
 
 .about-slider-image {
@@ -9,17 +19,31 @@
 
 .about-statement {
   padding: 100px 0 150px;
+
+  @include viewport($breakpoint-mobile) {
+    padding: 100px 0 80px;
+  }
 }
 
 .about-statement-wrapper {
   display: flex;
   position: relative;
   justify-content: space-between;
+
+  @include viewport($breakpoint-mobile) {
+    display: block;
+    padding: 0 39px;
+  }
 }
 
 .about-statement-heading {
   font-size: 20px;
   font-weight: 600;
+
+  @include viewport($breakpoint-mobile) {
+    font-size: 16px;
+    padding: 0 0 48px;
+  }
 }
 
 .about-statement-image,
@@ -28,17 +52,31 @@
   left: 0;
   bottom: -20px;
   width: 139px;
+
+  @include viewport($breakpoint-mobile) {
+    position: static;
+    margin: 50px auto 0;
+    display: block;
+  }
 }
 
 .about-statement-text {
   font-size: 17px;
   line-height: 1.7;
   padding: 0 0 50px;
+
+  @include viewport($breakpoint-mobile) {
+    font-size: 13px;
+  }
 }
 
 .about-statement-slogan {
   font-size: 36px;
   font-weight: 600;
+
+  @include viewport($breakpoint-mobile) {
+    font-size: 20px;
+  }
 }
 
 .about-banner {
@@ -53,27 +91,49 @@
   position: relative;
   display: flex;
   justify-content: flex-end;
+
+  @include viewport($breakpoint-mobile) {
+    display: block;
+    padding: 0 39px;
+  }
 }
 
 .about-business-wrap {
   width: 60%;
+
+  @include viewport($breakpoint-mobile) {
+    width: 100%;
+  }
 }
 
 .about-action {
   padding: 150px 0;
   margin: 100px 0;
   background-color: $zircon;
+
+  @include viewport($breakpoint-mobile) {
+    padding: 70px 0;
+  }
 }
 
 .about-action-heading {
   font-size: 20px;
   padding: 0 0 130px;
   font-weight: 600;
+
+  @include viewport($breakpoint-mobile) {
+    font-size: 16px;
+    padding: 0 19px 60px;
+  }
 }
 
 .about-action-content {
   display: flex;
   justify-content: space-between;
+
+  @include viewport($breakpoint-mobile) {
+    display: block;
+  }
 }
 
 .about-intelligence-heading,
@@ -81,11 +141,26 @@
   font-size: 20px;
   margin: 0 0 75px;
   font-weight: 600;
+
+  @include viewport($breakpoint-mobile) {
+    font-size: 16px;
+    margin: 0 0 50px;
+  }
+}
+
+.about-intelligence-wrapper {
+  @include viewport($breakpoint-mobile) {
+    padding: 0 39px;
+  }
 }
 
 .about-intelligence-content {
   display: flex;
   justify-content: space-between;
+
+  @include viewport($breakpoint-mobile) {
+    display: block;
+  }
 }
 
 .about-intelligence-content-left,
@@ -95,6 +170,16 @@
 
 .about-history {
   margin: 100px 0 0;
+
+  @include viewport($breakpoint-mobile) {
+    margin: 80px 0 0;
+  }
+}
+
+.about-history-wrapper {
+  @include viewport($breakpoint-mobile) {
+    padding: 0 39px;
+  }
 }
 
 .about-history-btn {
@@ -104,6 +189,11 @@
   .button-svg-wrap {
     width: 214px;
     height: 214px;
+
+    @include viewport($breakpoint-mobile) {
+      width: 150px;
+      height: 150px;
+    }
   }
 }
 
@@ -111,20 +201,46 @@
   margin: 100px 0 0;
   padding: 100px 0;
   background-color: $zircon;
+
+  @include viewport($breakpoint-mobile) {
+    padding: 60px 0 20px;
+  }
 }
 
 .about-sdg-heading {
   font-size: 20px;
   font-weight: 600;
   margin: 0 0 80px;
+
+  @include viewport($breakpoint-mobile) {
+    font-size: 16px;
+    padding: 0 19px;
+  }
 }
 
 .about-sdg-news-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  columns: 3;
+  column-gap: 57.4%;
+
+  @include viewport($breakpoint-mobile) {
+    columns: initial;
+    column-gap: 0;
+  }
 }
 
 .about-sdg-block {
-  flex: 0 0 460px;
+  padding: 0 0 100px 0;
+  display: inline-block;
+
+  &:nth-child(3) {
+    padding-top: 124px;
+
+    @include viewport($breakpoint-mobile) {
+      padding-top: 0;
+    }
+  }
+
+  @include viewport($breakpoint-mobile) {
+    padding: 0 0 50px 0;
+  }
 }

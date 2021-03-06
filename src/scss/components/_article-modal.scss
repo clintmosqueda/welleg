@@ -24,7 +24,7 @@
 .article-modal-close-btn {
   position: absolute;
   top: 30px;
-  left: calc(30% - 50px);
+  right: 71%;
   z-index: 6;
   width: 37px;
   height: 10px;
@@ -53,7 +53,7 @@
   }
 
   @include viewport($breakpoint-mobile) {
-    left: calc(20% - 70px);
+    right: 90%;
     transform: scale(0.75);
   }
 }

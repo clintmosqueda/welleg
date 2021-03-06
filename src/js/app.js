@@ -6,9 +6,11 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 import Hack from './components/hack';
 import Router from './components/router';
 import HomeController from './controllers/home-controller';
-import ArchiveNewsController from './controllers/archivenews-controller';
-import SingleNewsController from './controllers/singlenews-controller';
+import ArchiveNewsController from './controllers/archive-news-controller';
+import RecruitController from './controllers/recruit-controller';
+import SingleNewsController from './controllers/single-news-controller';
 import AboutController from './controllers/about-controller';
+import SingleSdgController from './controllers/single-sdg-controller';
 
 new Hack();
 
@@ -22,12 +24,20 @@ let routes = [
     controller: ArchiveNewsController,
   },
   {
+    id: 'recruit-page',
+    controller: RecruitController
+  },
+  {
     id: 'single-news',
     controller: SingleNewsController,
   },
   {
     id: 'about-page',
     controller: AboutController,
+  },
+  {
+    id: 'single-sdg',
+    controller: SingleSdgController,
   },
 ];
 

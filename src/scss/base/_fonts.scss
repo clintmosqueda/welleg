@@ -1,0 +1,8 @@
+@font-face {
+  font-family: $ttcommons;
+  src: url('#{$font-path}/ttcommons/TTCommons-Regular.woff2') format('woff2'),
+      url('#{$font-path}/ttcommons/TTCommons-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

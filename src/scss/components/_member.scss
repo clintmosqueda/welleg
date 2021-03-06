@@ -6,6 +6,11 @@
   width: 100%;
   height: 306px;
   margin-bottom: 24px;
+
+  @include viewport($breakpoint-mobile) {
+    height: 224px;
+    margin-bottom: 17px;
+  }
 }
 
 .member-image {
@@ -20,10 +25,19 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
+
+  @include viewport($breakpoint-mobile) {
+    display: block;
+    padding-left: 18px;
+  }
 }
 
 .member-link {
   display: inline-block;
+
+  @include viewport($breakpoint-mobile) {
+    margin-bottom: 15px;
+  }
 }
 
 .member-heading {
@@ -32,10 +46,44 @@
   font-weight: 600;
   letter-spacing: 0.03em;
   line-height: 2;
+
+  @include viewport($breakpoint-mobile) {
+    font-size: 15px;
+    text-decoration: none;
+    line-height: 1.8;
+  }
 }
 
-.member-label {
+.member-info {}
+
+.member-name,
+.member-position {
   font-size: 12px;
   line-height: 1.6;
   letter-spacing: 0.04em;
+  display: block;
+  position: relative;
+
+  @include viewport($breakpoint-mobile) {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.member-position {
+  @include viewport($breakpoint-mobile) {
+    padding-left: 17px;
+  }
+
+  &::before {
+    @include viewport($breakpoint-mobile) {
+      position: absolute;
+      top: 4px;
+      left: 6px;
+      content: '';
+      width: 1px;
+      height: 10px;
+      background-color: $nero;
+    }
+  }
 }

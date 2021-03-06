@@ -1,0 +1,116 @@
+.form {
+  padding-top: 56px;
+
+  @include viewport($breakpoint-mobile) {
+    padding-top: 34px;
+  }
+}
+
+.form-fieldset {
+  margin-bottom: 31px;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 11px;
+
+  span {
+    color: $echo-blue;
+  }
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  display: block;
+  background-color: $zircon;
+  border: none;
+  border-radius: 3px;
+  font-size: 15px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.form-input {
+  height: 56px;
+  padding: 0 23px;
+}
+
+.form-textarea {
+  height: 270px;
+  resize: none;
+  padding: 20px 23px;
+
+  &::placeholder {
+    word-break: break-all;
+  }
+}
+
+.form-agree {
+  display: flex;
+  align-items: center;
+  border: 1px solid $gainsboro;
+  padding: 34px 21px 35px;
+  margin: 48px 0 88px;
+
+  @include viewport($breakpoint-mobile) {
+    padding: 24px 21px 27px;
+    margin-bottom: 58px;
+  }
+}
+
+.form-custom-label {
+  flex-shrink: 0;
+  margin-right: 16px;
+
+  input {
+    display: none;
+  }
+}
+
+.form-custom-checkbox {
+  background-color: #F1F4F5;
+  border: 1px solid #D4DEDE;
+  position: relative;
+  display: block;
+  width: 17px;
+  height: 17px;
+}
+
+.form-text {
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 0.048em;
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+.form-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 214px;
+  height: 214px;
+  background-color: $echo-blue;
+  color: $white;
+  border: none;
+  border-radius: 50%;
+  margin: 0 auto;
+  cursor: pointer;
+  font-size: 15px;
+
+  @include viewport($breakpoint-mobile) {
+    width: 150px;
+    height: 150px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

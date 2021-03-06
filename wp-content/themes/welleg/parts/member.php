@@ -3,7 +3,8 @@ if ( empty( $modifier ) ) { $modifier = ''; }
 if ( empty( $url ) ) { $url = ''; }
 if ( empty( $image ) ) { $image = ''; }
 if ( empty( $heading ) ) { $heading = ''; }
-if ( empty( $label ) ) { $label = ''; }
+if ( empty( $name ) ) { $name = ''; }
+if ( empty( $position ) ) { $position = ''; }
 ?>
 
 <article class="member <?php echo $modifier;?>">
@@ -14,6 +15,9 @@ if ( empty( $label ) ) { $label = ''; }
     <a class="member-link" href="<?php echo $url;?>">
       <h3 class="member-heading"><?php echo $heading;?></h3>
     </a>
-    <span class="member-label"><?php echo $label;?></span>
+    <div class="member-info">
+      <span class="member-name"><?php echo $name;?></span>
+      <span class="member-position"><?php echo $position;?></span>
+    </div>
   </div>
 </article>

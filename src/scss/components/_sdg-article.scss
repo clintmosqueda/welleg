@@ -1,3 +1,27 @@
+.sdg-article {
+  width: 460px;
+
+  @include viewport($breakpoint-mobile) {
+    width: auto;
+  }
+}
+
 .sdg-article-image {
   width: 100%;
+}
+
+.sdg-article-heading {
+  padding: 20px 0 4px;
+  font-size: 15px;
+  position: relative;
+  display: inline-block;
+
+  &:after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    border-bottom: 1px solid $nero;
+  }
 }

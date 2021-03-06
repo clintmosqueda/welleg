@@ -4,6 +4,10 @@
 @import 'base/base';
 @import 'base/utility';
 @import 'base/wrapper';
+@import 'base/fonts';
+
+@import "~slick-carousel/slick/slick.scss";
+@import "~slick-carousel/slick/slick-theme.scss";
 
 @import 'components/process';
 @import 'components/header';
@@ -19,11 +23,16 @@
 @import 'components/position';
 @import 'components/accordion';
 @import 'components/privacy';
+
 @import 'components/about';
 @import 'components/about-business-block';
 @import 'components/about-action-block';
 @import 'components/description-list';
 @import 'components/sdg-article';
+
+@import 'components/contact';
+@import 'components/form';
+
 
 @import 'components/social-icon';
 @import 'components/shoplist';
@@ -41,6 +50,6 @@
 @import 'components/news';
 @import 'components/news-block';
 @import 'components/news-article';
-@import 'components/single-news';
+@import 'components/single';
 @import 'components/instagram-section';
 

@@ -4,6 +4,10 @@
 
 .department-block {
   padding: 130px 0 72px;
+
+  @include viewport($breakpoint-mobile) {
+    padding: 69px 20px 72px;
+  }
 }
 
 .department-heading {
@@ -11,15 +15,30 @@
   margin-bottom: 74px;
   font-weight: 600;
   letter-spacing: 0.09em;
+
+  @include viewport($breakpoint-mobile) {
+    font-size: 16px;
+    margin-bottom: 48px;
+  }
 }
 
 .department-wrap {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -34px
+  margin: 0 -34px;
+
+  @include viewport($breakpoint-mobile) {
+    display: block;
+    margin: 0
+  }
 }
 
 .department-branch {
   width: calc((100%/3) - 68px);
   margin: 0 34px 88px;
+
+  @include viewport($breakpoint-mobile) {
+    width: 100%;
+    margin: 0 0 49px;
+  }
 }
