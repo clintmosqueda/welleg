@@ -1,4 +1,7 @@
-export default class NewsModal {
+import CONST from '../constants/index';
+import { scrollAble, scrollLock } from "./scroll-able-lock";
+
+export default class Modal {
   constructor(target, btn, modal) {
     this.target = document.querySelectorAll(target);
     this.btn = document.querySelectorAll(btn);
@@ -12,14 +15,21 @@ export default class NewsModal {
 
       item.addEventListener('click', (e) => {
         e.preventDefault();
-        nextEl.classList.toggle('is-open');
-        history.pushState({}, '', href);
+        nextEl.classList.toggle(CONST.OPEN_CLASS);
+        history.pushState({ 'prevUrl': window.location.href }, '', href);
+        if(nextEl.classList.contains(CONST.OPEN_CLASS)) {
+          console.log('open');
+          scrollLock();
+        } else {
+          scrollAble();
+        }
       });
 
       nextEl.firstElementChild.addEventListener('click', () => {
-        nextEl.classList.remove('is-open');
+        nextEl.classList.remove(CONST.OPEN_CLASS);
         //history.replaceState(null, null, window.location.href);
         history.back();
+        scrollAble();
       })
 
 
@@ -27,9 +37,10 @@ export default class NewsModal {
 
     this.btn.forEach((item) => {
       item.addEventListener('click', () => {
-        item.parentElement.classList.remove('is-open');
+        item.parentElement.classList.remove(CONST.OPEN_CLASS);
         //history.replaceState(null, null, window.location.href);
-        history.back()
+        history.back();
+        scrollAble();
       });
     });
   }

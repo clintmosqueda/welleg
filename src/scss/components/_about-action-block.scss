@@ -1,0 +1,30 @@
+.about-action-block {
+  width: 314px;
+  height: 314px;
+  background-color: $white;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &:nth-of-type(2) {
+    margin-top: -56px;
+  }
+}
+
+.about-action-block-title {
+  font-family: $poppins;
+  font-size : 32px;
+  color: $white;
+  text-transform: uppercase;
+  text-shadow:
+   -1px -1px 0 $echo-blue,
+    1px -1px 0 $echo-blue,
+    -1px 1px 0 $echo-blue,
+     1px 1px 0 $echo-blue;
+}
+
+.about-action-block-text {
+  font-size: 13px;
+  line-height: 1.5;
+}

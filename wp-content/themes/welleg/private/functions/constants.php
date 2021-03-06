@@ -17,9 +17,12 @@ define('ANTICACHE_HASH', $load_release_hash());
 define('TOPICS_POST_TYPE', 'topics');
 define('NEWS_POST_TYPE', 'news');
 define( 'NEWS_SLUG', 'news' );
+define('SDG_POST_TYPE', 'sdg');
+define( 'SDG_SLUG', 'sdg' );
 // define('TOPICS_POST_TYPE_TAG', 'topics-tag');
 define('TOPICS_POST_TYPE_CATEGORY', 'topics-category');
 define('NEWS_POST_TYPE_CATEGORY', 'news-category');
+define('SDG_POST_TYPE_CATEGORY', 'sdg-category');
 
 // define('BLOG_POST_TYPE', 'blog');
 // define('BLOG_POST_TYPE_TAG', 'blog-tag');

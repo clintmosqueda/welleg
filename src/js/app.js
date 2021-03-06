@@ -8,6 +8,7 @@ import Router from './components/router';
 import HomeController from './controllers/home-controller';
 import ArchiveNewsController from './controllers/archivenews-controller';
 import SingleNewsController from './controllers/singlenews-controller';
+import AboutController from './controllers/about-controller';
 
 new Hack();
 
@@ -23,6 +24,10 @@ let routes = [
   {
     id: 'single-news',
     controller: SingleNewsController,
+  },
+  {
+    id: 'about-page',
+    controller: AboutController,
   },
 ];
 

@@ -1,105 +1,130 @@
-.about {
-  padding: 160px 0;
-  background-color: $zircon;
-
-  @include viewport($breakpoint-mobile) {
-    padding: 80px 0;
-  }
+.about-slider-image-wrap {
+  width: 580px;
+  padding: 0 10px;
 }
 
-.about-wrapper {
-
+.about-slider-image {
+  width: 100%;
 }
 
-.about-content {
-  padding: 108px 68px 85px 120px;
+.about-statement {
+  padding: 100px 0 150px;
+}
+
+.about-statement-wrapper {
+  display: flex;
   position: relative;
-  min-height: 607px;
+  justify-content: space-between;
+}
+
+.about-statement-heading {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.about-statement-image,
+.about-business-image {
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  width: 139px;
+}
+
+.about-statement-text {
+  font-size: 17px;
+  line-height: 1.7;
+  padding: 0 0 50px;
+}
+
+.about-statement-slogan {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.about-banner {
+  margin: 0 0 50px;
+}
+
+.about-banner-image {
+  width: 100%;
+}
+
+.about-business-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about-business-wrap {
+  width: 60%;
+}
+
+.about-action {
+  padding: 150px 0;
+  margin: 100px 0;
+  background-color: $zircon;
+}
+
+.about-action-heading {
+  font-size: 20px;
+  padding: 0 0 130px;
+  font-weight: 600;
+}
+
+.about-action-content {
   display: flex;
   justify-content: space-between;
-  background-color: $echo-blue;
-
-  @include viewport($breakpoint-mobile) {
-    padding: 50px 40px;
-    display: block;
-  }
-
-  @include viewport($breakpoint-mobile-l) {
-    padding: 50px 30px;
-  }
 }
 
-.about-text-content {
-  order: 1;
-  padding: 50px 0 0;
+.about-intelligence-heading,
+.about-history-heading {
+  font-size: 20px;
+  margin: 0 0 75px;
+  font-weight: 600;
 }
 
-.about-heading {
-  font-size: 24px;
-  line-height: 1.7;
-  color: $white;
-  padding: 44px 0 66px;
-
-  @include viewport($breakpoint-mobile) {
-    font-size: 20px;
-    padding: 26px 0 42px;
-  }
+.about-intelligence-content {
+  display: flex;
+  justify-content: space-between;
 }
 
-.about-btn {
-  .button-text {
-    color: $white;
-  }
+.about-intelligence-content-left,
+.about-intelligence-content-right {
+  flex: 0 0 47%;
 }
 
-.about-image-content {
-  position: relative;
-  width: 501px;
-  height: 416px;
-  order: 2;
+.about-history {
+  margin: 100px 0 0;
+}
 
-  @include viewport($breakpoint-mobile) {
-    width: 270px;
-    height: 227px;
-    margin: 0 auto;
-  }
+.about-history-btn {
+  text-align: center;
+  margin: 80px 0 0;
 
-  @include viewport($breakpoint-mobile-l) {
+  .button-svg-wrap {
     width: 214px;
-    height: 177px;
+    height: 214px;
   }
 }
 
-.about-image-item {
-  position: absolute;
-
-  &:first-of-type {
-    left: 0;
-    top: 47px;
-    z-index: 1;
-  }
-
-  &:nth-of-type(2) {
-    left: 20%;
-    top: 0;
-    z-index: 2;
-  }
-
-  &:last-of-type {
-    right: -2%;
-    top: 19%;
-    z-index: 3;
-  }
+.about-sdg {
+  margin: 100px 0 0;
+  padding: 100px 0;
+  background-color: $zircon;
 }
 
-.about-image-img {
-  width: 376px;
+.about-sdg-heading {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 80px;
+}
 
-  @include viewport($breakpoint-mobile) {
-    width: 187px;
-  }
+.about-sdg-news-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
-  @include viewport($breakpoint-mobile-l) {
-    width: 150px;
-  }
+.about-sdg-block {
+  flex: 0 0 460px;
 }

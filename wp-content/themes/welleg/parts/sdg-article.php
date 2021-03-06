@@ -5,24 +5,21 @@
 ?>
 <?php
   if(is_front_page()) {
-    $url = get_site_url() . '/news/' . $post_slug;
+    $url = get_site_url() . '/sdg/' . $post_slug;
   } else {
     $url = $post_slug;
   }
 ?>
 
-<article class="news-article">
-  <a class="news-article-link js-article-link" href="<?php echo $url; ?>">
-    <figure class="news-article-image-wrap">
-      <img class="news-article-image" src="<?php echo get_eyecatch_data(get_the_id()); ?>" alt=""/>
+<article class="sdg-article">
+  <a class="sdg-article-link js-news-article-link" href="<?php echo $url; ?>">
+    <figure class="sdg-article-image-wrap">
+      <img class="sdg-article-image" src="<?php echo get_eyecatch_data(get_the_id()); ?>" alt=""/>
     </figure>
-    <h3 class="news-article-heading"><?php echo get_the_title(); ?></h3>
-    <time class="news-article-date" datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y/m/d'); ?></time>
-
-
+    <h3 class="sdg-article-heading"><?php echo get_the_title(); ?></h3>
   </a>
 
-  <div id="news-<?php echo the_ID(); ?>" class="article-modal js-modal">
+  <div id="sdg-<?php echo the_ID(); ?>" class="article-modal js-news-modal">
     <div class="article-modal-content js-modal-content">
       <div class="single-news-wrap">
         <div class="single-news-wrapper">
@@ -31,6 +28,9 @@
             <time class="single-news-date" datetime="<?php echo get_the_date('Y.m.d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
           </div>
           <div class="single-news-content">
+            <figure class="single-news-image-wrap">
+              <img class="single-news-article-image" src="<?php echo get_eyecatch_data(get_the_id()); ?>" alt=""/>
+            </figure>
             <?php the_content(); ?>
           </div>
           <div class="single-news-share">
@@ -57,6 +57,6 @@
         </div>
       </div>
     </div>
-    <div class="article-modal-close-btn js-modal-close"></div>
+    <div class="article-modal-close-btn js-news-close"></div>
   </div>
 </article>
