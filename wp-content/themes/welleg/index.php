@@ -85,26 +85,26 @@ get_header(); ?>
       <?php wp_reset_postdata(); ?>
     </div>
   </section>
-  <section class="about">
-    <div class="about-wrapper wrapper">
-      <div class="about-content">
-        <div class="about-image-content">
-          <div class="about-image-item">
-            <img class="about-image-img" src="<?php echo resolve_asset_url('/images/about-img1.png');?>" alt=""/>
+  <section class="index-about">
+    <div class="index-about-wrapper wrapper">
+      <div class="index-about-content">
+        <div class="index-about-image-content">
+          <div class="index-about-image-item">
+            <img class="index-about-image-img" src="<?php echo resolve_asset_url('/images/about-img1.png');?>" alt=""/>
           </div>
-          <div class="about-image-item">
-            <img class="about-image-img" src="<?php echo resolve_asset_url('/images/about-img2.png');?>" alt=""/>
+          <div class="index-about-image-item">
+            <img class="index-about-image-img" src="<?php echo resolve_asset_url('/images/about-img2.png');?>" alt=""/>
           </div>
-          <div class="about-image-item">
-            <img class="about-image-img" src="<?php echo resolve_asset_url('/images/about-img3.png');?>" alt=""/>
+          <div class="index-about-image-item">
+            <img class="index-about-image-img" src="<?php echo resolve_asset_url('/images/about-img3.png');?>" alt=""/>
           </div>
         </div>
-        <div class="about-text-content">
-          <img class="about-footprint" src="<?php echo resolve_asset_url('/images/footprint-light.svg');?>" alt=""/>
-          <h2 class="about-heading">
+        <div class="index-about-text-content">
+          <img class="index-about-footprint" src="<?php echo resolve_asset_url('/images/footprint-light.svg');?>" alt=""/>
+          <h2 class="index-about-heading">
             1925年から、靴のことばかりを<br/>考えてきました。
           </h2>
-          <div class="about-btn">
+          <div class="index-about-btn">
             <?php import_part('button', array(
                 'text' => '私たちについて',
                 'back_circle_color' => '#e5e5e5',
@@ -119,9 +119,14 @@ get_header(); ?>
     </div>
 </section>
 
-<section class="ig">
-
+<section class="instagram-section show-pc">
   <?php echo do_shortcode( '[instagram-feed showheader=false showfollow=false]' ); ?>
+  <div class="instagram-section-wrapper wrapper">
+    <a class="instagram-btn" href="">
+      <span class="instagram-btn-icon icon-instagram"></span>
+      <span class="instagram-btn-text">Instagram</span>
+    </a>
+  </div>
 </section>
 </main>
 <?php

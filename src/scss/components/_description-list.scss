@@ -1,0 +1,42 @@
+.description-list {
+  display: flex;
+  border-top: 1px solid $gainsboro;
+  padding: 30px 0;
+  line-height: 1.7;
+
+  &:last-of-type {
+    border-bottom: 1px solid $gainsboro;
+  }
+
+  dt {
+    width: 180px;
+    font-size: 13px;
+    font-weight: 600;
+
+    @include viewport($breakpoint-mobile) {
+      width: 93px;
+    }
+  }
+
+  dd {
+    font-size: 13px;
+    font-weight: 300;
+
+    span {
+      display: block;
+      position: relative;
+      padding: 0 0 0 8px;
+
+      &:before {
+        content: '';
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        background-color: $nero;
+        position: absolute;
+        left: 0;
+        top: 9px;
+      }
+    }
+  }
+}

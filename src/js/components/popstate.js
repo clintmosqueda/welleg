@@ -1,9 +1,9 @@
-export default function newsPopState() {
+export default function popState() {
   window.addEventListener('popstate', (event) => {
     console.log(event.state);
     let url = window.location.href;
 
-    let newsArticles = document.querySelectorAll('.js-news-article-link')
+    let newsArticles = document.querySelectorAll('.js-article-link')
     newsArticles.forEach((item) => {
       let nextEl = item.nextElementSibling;
       let href = item.href;

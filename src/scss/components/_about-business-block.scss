@@ -1,0 +1,41 @@
+.about-business-block {
+  padding: 30px 0;
+  border-top: 1px solid $gainsboro;
+
+  &:last-of-type {
+    border-bottom: 1px solid $gainsboro;
+  }
+}
+
+.about-business-block-tag {
+  font-size: 13px;
+  color: $echo-blue;
+}
+
+.about-business-block-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0 0;
+
+  @include viewport($breakpoint-mobile) {
+    display: block;
+  }
+}
+
+.about-business-block-title {
+  font-size: 22px;
+  flex: 0 0 auto;
+  padding: 20px 0 0 20px;
+  font-weight: 600;
+
+  @include viewport($breakpoint-mobile) {
+    font-size: 17px;
+    padding: 0 0 20px;
+  }
+}
+
+.about-business-block-text {
+  font-size: 13px;
+  line-height: 1.5;
+  flex: 0 0 300px;
+}

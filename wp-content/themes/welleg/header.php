@@ -17,7 +17,7 @@
 
   <link rel="shortcut icon" href="<?php echo resolve_asset_url('/images/favicon/favicon.ico'); ?>">
   <link rel="stylesheet" href="<?php echo resolve_asset_url('/css/app.css'); ?>">
-  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Poppins&display=swap" rel="stylesheet">
 
   <script>
   let isIOS = /iPad/.test(navigator.platform) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
@@ -48,7 +48,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<input id="base-url" type="hidden" value="<?php echo resolve_url(); ?>" /> 
+<input id="base-url" type="hidden" value="<?php echo resolve_url(); ?>" />
 
 <div class="wrap js-wrap">
   <header class="header js-header">
@@ -82,7 +82,7 @@
               <a class="nav-link js-nav-link" href="<?php echo resolve_url('contact');?>">お問い合わせ</a>
             </li>
           </ul>
-        </nav> 
+        </nav>
         <img class="header-nav-img show-pc" alt="" src="<?php echo resolve_asset_url('/images/nav-img.png');?>"/>
       </div>
       <div class="header-shoplist show-sp">

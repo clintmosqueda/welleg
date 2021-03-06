@@ -1,28 +1,15 @@
 import $ from 'jquery';
 import 'slick-carousel/slick/slick';
 import BaseController from './base-controller';
-import NewsModal from '../components/news-modal.js';
-import newsPopState from '../components/news-popstate.js';
-
-
+import Modal from '../components/modal.js';
+import popState from '../components/popstate.js';
 
 export default class HomeController extends BaseController {
   init() {
     console.log('home');
-    new NewsModal('.js-news-article-link', '.js-news-close');
+    new Modal('.js-article-link', '.js-modal-close');
 
-    newsPopState();
-
-    // setTimeout(() => {
-    //   $(".swiper-slide").each(function(){
-    //   let x = $(this).find('img').attr('src');
-    //   //let shit = $(this).find('.sbi_item');
-    //   $(this).attr('background-image', `url(${x})`);
-    //   //console.log(x);
-    // });
-    // }, 1000)
-
-
+    popState();
 
     $('.slide-wrapper').slick({
       slidesToShow: 7,
@@ -30,12 +17,6 @@ export default class HomeController extends BaseController {
       //autoplay: true,
       autoplaySpeed: 2000,
     });
-
-
-
-
-
-
   }
 }
 

@@ -1,0 +1,101 @@
+.index-about {
+  padding: 160px 0;
+  background-color: $zircon;
+
+  @include viewport($breakpoint-mobile) {
+    padding: 80px 0;
+  }
+}
+
+.index-about-content {
+  padding: 108px 68px 85px 120px;
+  position: relative;
+  min-height: 607px;
+  display: flex;
+  justify-content: space-between;
+  background-color: $echo-blue;
+
+  @include viewport($breakpoint-mobile) {
+    padding: 50px 40px;
+    display: block;
+  }
+
+  @include viewport($breakpoint-mobile-l) {
+    padding: 50px 30px;
+  }
+}
+
+.index-about-text-content {
+  order: 1;
+  padding: 50px 0 0;
+}
+
+.index-about-heading {
+  font-size: 24px;
+  line-height: 1.7;
+  color: $white;
+  padding: 44px 0 66px;
+
+  @include viewport($breakpoint-mobile) {
+    font-size: 20px;
+    padding: 26px 0 42px;
+  }
+}
+
+.index-about-btn {
+  .button-text {
+    color: $white;
+  }
+}
+
+.index-about-image-content {
+  position: relative;
+  width: 501px;
+  height: 416px;
+  order: 2;
+
+  @include viewport($breakpoint-mobile) {
+    width: 270px;
+    height: 227px;
+    margin: 0 auto;
+  }
+
+  @include viewport($breakpoint-mobile-l) {
+    width: 214px;
+    height: 177px;
+  }
+}
+
+.index-about-image-item {
+  position: absolute;
+
+  &:first-of-type {
+    left: 0;
+    top: 47px;
+    z-index: 1;
+  }
+
+  &:nth-of-type(2) {
+    left: 20%;
+    top: 0;
+    z-index: 2;
+  }
+
+  &:last-of-type {
+    right: -2%;
+    top: 19%;
+    z-index: 3;
+  }
+}
+
+.index-about-image-img {
+  width: 376px;
+
+  @include viewport($breakpoint-mobile) {
+    width: 187px;
+  }
+
+  @include viewport($breakpoint-mobile-l) {
+    width: 150px;
+  }
+}
