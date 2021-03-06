@@ -67,3 +67,32 @@
     margin-top: 19px;
   }
 }
+
+.staff-related {
+ background-color: $zircon;
+ overflow: hidden;
+}
+
+.staff-related-block {
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 170px 0 158px;
+}
+
+.staff-related-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 74px;
+  letter-spacing: 0.08em;
+}
+
+.staff-related-members {
+  display: flex;
+}
+
+.staff-related-member {
+  width: 460px;
+  flex-shrink: 0;
+  margin-right: 80px;
+}

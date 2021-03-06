@@ -9,7 +9,7 @@ if ( empty( $position ) ) { $position = ''; }
 
 <article class="member <?php echo $modifier;?>">
   <div class="member-frame">
-    <div class="member-image" style="background-image: url('<?php echo resolve_asset_url($image);?>')"></div>
+    <div class="member-image" style="background-image: url('<?php echo $image;?>')"></div>
   </div>
   <div class="member-content">
     <a class="member-link" href="<?php echo $url;?>">

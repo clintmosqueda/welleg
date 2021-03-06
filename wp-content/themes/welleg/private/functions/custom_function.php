@@ -15,12 +15,13 @@ function get_first_paragraph(){
   return string_limit($str, 130);
 }
 
-function query_topics() {
+function query_staff() {
   $args = array(
-    'post_type'      => TOPICS_POST_TYPE,
+    'post_type'      => STAFF_POST_TYPE,
     'post_status'    => 'publish',
-    'posts_per_page' => 4,
+    'posts_per_page' => -1,
     'order'          => 'DESC',
+    'orderby'        => 'post_date',
   );
 
   return new WP_Query( $args );
