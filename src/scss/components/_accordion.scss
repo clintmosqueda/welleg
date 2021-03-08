@@ -128,11 +128,23 @@
 }
 
 .accordion-text {
-  white-space: pre-line;
   font-size: 13px;
   font-weight: 300;
   line-height: 1.8;
   margin-bottom: 49px;
+
+  p {
+    margin-bottom: 23px;
+  }
+
+  strong {
+    display: block;
+    font-size: 15px;
+  }
+
+  br {
+    display: block;
+  }
 }
 
 .accordion-button {
