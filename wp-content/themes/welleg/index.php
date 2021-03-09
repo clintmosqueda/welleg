@@ -24,12 +24,12 @@ get_header(); ?>
   <section class="aim">
     <div class="aim-wrapper">
       <div class="aim-img-top-wrapper">
-        <div class="aim-img-top">
+        <div class="aim-img-top js-observe">
           <img class="aim-img-top-img show-pc" src="<?php echo resolve_asset_url('/images/aim-img1.jpg');?>" alt=""/>
           <img class="aim-img-top-img show-sp" src="<?php echo resolve_asset_url('/images/aim-img1-sp.jpg');?>" alt=""/>
         </div>
       </div>
-      <div class="aim-content-wrap">
+      <div class="aim-content-wrap js-observe">
         <div class="aim-img-wrap">
           <img class="aim-img-img show-pc" src="<?php echo resolve_asset_url('/images/aim-img2.jpg');?>" alt=""/>
           <img class="aim-img-img show-sp" src="<?php echo resolve_asset_url('/images/aim-img2-sp.jpg');?>" alt=""/>
@@ -64,7 +64,7 @@ get_header(); ?>
         <h2 class="index-news-heading">新着情報</h2>
         <a class="index-news-btn" href="">お知らせ一覧</a>
       </div>
-      <ul class="index-news-list">
+      <ul class="index-news-list js-observe">
         <?php
           $args = array(
             'post_type'      => NEWS_POST_TYPE,
@@ -86,7 +86,7 @@ get_header(); ?>
     </div>
   </section>
   <section class="index-about">
-    <div class="index-about-wrapper wrapper">
+    <div class="index-about-wrapper wrapper js-observe">
       <div class="index-about-content">
         <div class="index-about-image-content">
           <div class="index-about-image-item">

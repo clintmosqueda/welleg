@@ -35,3 +35,6 @@ $site-size: 1080px + 60px;
 
 $timing-function: ease-out;
 $duration: 300ms;
+$fade-duration: 0.8s;
+$fade-delay: 0.3s;
+$fade-timing-function: cubic-bezier(0.470, 0.000, 0.745, 0.715);

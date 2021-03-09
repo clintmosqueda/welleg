@@ -21,6 +21,10 @@
   width: 420px;
   margin-top: -30px;
 
+  &.is-active {
+    animation: fade-in-bottom $fade-duration $fade-timing-function both;
+  }
+
   @include viewport($breakpoint-mobile) {
     min-width: 207px;
     width: 50%;
@@ -34,6 +38,10 @@
 
 .aim-img-wrap {
   flex: 0 0 600px;
+
+  .is-active & {
+    animation: fade-in-bottom $fade-duration $fade-timing-function both;
+  }
 
   @include viewport($breakpoint-mobile) {
     flex: 0;
@@ -71,6 +79,10 @@
 
 .aim-text-wrap {
   padding: 20px 0 0 120px;
+
+  .is-active & {
+    animation: fade-in-bottom $fade-duration $fade-timing-function both;
+  }
 
   @include viewport($breakpoint-mobile) {
     padding: 50px 37px 0 0;
