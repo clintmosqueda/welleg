@@ -110,9 +110,23 @@ global $post;
       <h2 class="position-heading">募集職種</h2>
     </div>
     <div class="position-accordions">
-      <?php import_part('accordion')?>
-      <?php import_part('accordion')?>
-      <!--?php import_part('accordion')?-->
+      <?php if( have_rows('recruitment', 'option') ): ?>
+        <?php while( have_rows('recruitment', 'option') ): the_row();
+        $title = get_sub_field('job_title', 'option');
+        $description = get_sub_field('job_description', 'option');
+        $qualifications = get_sub_field('job_qualifications', 'option');
+        $qualifications_clean = str_replace(array('<p>','</p>', '<br>'),'',$qualifications);
+        $url = get_sub_field('url', 'option');
+        ?>
+        <?php import_part('accordion', array(
+          'modifier' => '',
+          'title' => $title,
+          'description' => $description,
+          'qualifications' => $qualifications,
+          'url' => $url,
+        ))?>
+        <?php endwhile; ?>
+      <?php endif; ?>
     </div>
   </section>
 <main>
