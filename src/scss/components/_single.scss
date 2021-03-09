@@ -1,10 +1,11 @@
-// .single {
-//   visibility: hidden;
-//   .header,
-//   .footer {
-//     display: none;
-//   }
-// }
+.single-news,
+.single-sdg {
+  visibility: hidden;
+  .header,
+  .footer {
+    display: none;
+  }
+}
 
 .single-wrap {
   padding: 150px 0;
