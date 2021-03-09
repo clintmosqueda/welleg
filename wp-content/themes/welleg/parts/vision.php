@@ -1,10 +1,10 @@
 <section class="vision">
-  <div class="vision-img-wrap">
+  <div class="vision-img-wrap js-observe">
     <img class="vision-img-img show-pc" src="<?php echo resolve_asset_url('/images/vision-img.jpg');?>" alt=""/>
     <img class="vision-img-img show-sp" src="<?php echo resolve_asset_url('/images/vision-img-sp.jpg');?>" alt=""/>
   </div>
   <div class="vision-wrapper wrapper">
-    <div class="vision-content-mainwrap">
+    <div class="vision-content-mainwrap js-observe">
       <div class="vision-content">
         <div class="vision-content-left">
           <img class="vision-footprint" src="<?php echo resolve_asset_url('/images/footprint.svg');?>" alt=""/>

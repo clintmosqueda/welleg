@@ -5,6 +5,16 @@
   flex-shrink: 0;
   flex-grow: 0;
 
+  .is-active & {
+    animation: fade-in $fade-duration $fade-timing-function both;
+  }
+
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}n) {
+      animation-delay: #{$i * 0.3}s;
+    }
+  }
+
   @include viewport($breakpoint-mobile) {
     display: block;
     padding: 0 0 50px;

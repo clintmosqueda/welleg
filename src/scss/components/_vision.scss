@@ -9,8 +9,16 @@
   }
 }
 
+.vision-img-wrap {
+  overflow: hidden;
+}
+
 .vision-img-img {
   width: 100%;
+
+  .is-active & {
+    animation: scale-out-center $fade-duration $fade-timing-function both;
+  }
 }
 
 .vision-wrapper {
@@ -54,9 +62,19 @@
   }
 }
 
+.vision-content-left {
+  .is-active & {
+    animation: fade-in 0.5s $fade-timing-function both;
+  }
+}
+
 .vision-content-right {
   width: 420px;
   padding: 15px 0 0;
+
+  .is-active & {
+    animation: fade-in 0.5s 0.6s $fade-timing-function both;
+  }
 
   @include viewport($breakpoint-mobile) {
     width: auto;
@@ -73,6 +91,10 @@
 
 .vision-btn {
   text-align:center;
+
+  .is-active & {
+    animation: fade-in 0.5s 0.9s $fade-timing-function both;
+  }
 
   @include viewport($breakpoint-mobile) {
     text-align: left;
