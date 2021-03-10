@@ -11,6 +11,7 @@ import RecruitController from './controllers/recruit-controller';
 import SingleNewsController from './controllers/single-news-controller';
 import AboutController from './controllers/about-controller';
 import SingleSdgController from './controllers/single-sdg-controller';
+import SingleStaffController from './controllers/single-staff-controller';
 
 new Hack();
 
@@ -38,6 +39,10 @@ let routes = [
   {
     id: 'single-sdg',
     controller: SingleSdgController,
+  },
+  {
+    id: 'single-staff',
+    controller: SingleStaffController,
   },
 ];
 
