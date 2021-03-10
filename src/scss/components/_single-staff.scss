@@ -15,6 +15,10 @@
 .single-staff-header {
   text-align: center;
   padding: 142px 0 123px;
+
+  @include viewport($breakpoint-mobile) {
+    padding: 105px 0 65px;
+  }
 }
 
 .single-staff-heading {
@@ -23,15 +27,30 @@
   line-height: 2;
   letter-spacing: 0.03em;
   margin-bottom: 35px;
+
+  @include viewport($breakpoint-mobile) {
+    font-size: 17px;
+    margin-bottom: 19px;
+    line-height: 1.8;
+  }
 }
 
 .single-staff-icon {
   margin-bottom: 43px;
 
+  @include viewport($breakpoint-mobile) {
+    margin-bottom: 29px;
+  }
+
   .icon {
     font-size: 10px;
     display: inline-block;
     margin: 0 2px;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 7px;
+      margin: 0 1px;
+    }
 
     &:nth-child(1) {
       color: $jordy-blue;
@@ -58,6 +77,12 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 159px;
+
+  @include viewport($breakpoint-mobile) {
+    padding: 0 28px;
+    height: 319px;
+    margin-bottom: 59px;
+  }
 }
 
 .single-staff-image {
@@ -68,6 +93,17 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @include viewport($breakpoint-mobile) {
+    height: 186px;
+  }
+}
+
+.single-staff-block {
+  @include viewport($breakpoint-mobile) {
+    padding: 0 19px;
+    margin-bottom: 56px;
+  }
 }
 
 .single-staff-content {
@@ -76,22 +112,39 @@
   margin: 0 auto;
   display: flex;
   margin-bottom: 119px;
+
+  @include viewport($breakpoint-mobile) {
+    display: block;
+    margin-bottom: 21px;
+  }
 }
 
 .single-staff-content-heading {
   width: 360px;
   flex-shrink: 0;
+
+  @include viewport($breakpoint-mobile) {
+    padding: 0 18px;
+  }
 }
 
 .single-staff-content-text {
   width: 100%;
   padding-top: 10px;
+
+  @include viewport($breakpoint-mobile) {
+    padding: 12px 19px 0
+  }
 }
 
 .single-staff-content-title {
   font-size: 20px;
   font-weight: 600;
   line-height: 2;
+
+  @include viewport($breakpoint-mobile) {
+    font-size: 15px;
+  }
 }
 
 .single-staff-par {
@@ -99,9 +152,13 @@
   line-height: 2.15;
   letter-spacing: 0.04em;
 
+  @include viewport($breakpoint-mobile) {
+    font-size: 15px;
+  }
+
   p {
     &:not(:last-of-type) {
-      margin-bottom: 36px
+      margin-bottom: 21px
     }
   }
 }

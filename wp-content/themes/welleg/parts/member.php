@@ -7,17 +7,15 @@ if ( empty( $name ) ) { $name = ''; }
 if ( empty( $position ) ) { $position = ''; }
 ?>
 
-<article class="member <?php echo $modifier;?>">
+<a href="<?php echo $url;?>" class="member <?php echo $modifier;?>">
   <div class="member-frame">
     <div class="member-image" style="background-image: url('<?php echo $image;?>')"></div>
   </div>
   <div class="member-content">
-    <a class="member-link" href="<?php echo $url;?>">
-      <h3 class="member-heading"><?php echo $heading;?></h3>
-    </a>
+    <h3 class="member-heading"><?php echo $heading;?></h3>
     <div class="member-info">
       <span class="member-name"><?php echo $name;?></span>
       <span class="member-position"><?php echo $position;?></span>
     </div>
   </div>
-</article>
+</a>

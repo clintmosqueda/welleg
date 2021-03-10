@@ -69,18 +69,19 @@ global $post;
           'post__not_in'   => array( get_the_ID() ),
         );
         $related_args = new WP_Query( $args );
-
-        $message = get_field('message', get_the_ID());
-        $staf_position = get_field('staf_position', get_the_ID());
-        if( have_rows('descriptions', get_the_ID()) ): 
-          while( have_rows('descriptions', get_the_ID()) ): the_row();
-            $title = get_sub_field('title', get_the_ID());
-            $staff_picture = get_sub_field('staff_picture', get_the_ID());
-          endwhile;
-        endif;
       ?>
       <div class="staff-related-members">
-        <?php while( $related_args->have_posts()) : $related_args->the_post(); ?>
+        <?php while( $related_args->have_posts()) : $related_args->the_post();
+          $message = get_field('message', get_the_ID());
+          $staf_position = get_field('staf_position', get_the_ID());
+          if( have_rows('staff_info', get_the_ID()) ): 
+            while( have_rows('staff_info', get_the_ID()) ): the_row();
+              $staff_picture = get_sub_field('staff_picture');
+              break;
+            endwhile;
+          endif;
+        ?>
+          <div>
           <?php import_part('member', array(
             'modifier' => 'staff-related-member',
             'url' => get_permalink(),
@@ -89,32 +90,9 @@ global $post;
             'name' => get_the_title(),
             'position' => $staf_position,
           ))?>
+          </div>
         <?php endwhile; ?>
         <?php wp_reset_postdata(); ?>
-        <!--?php import_part('member', array(
-          'modifier' => 'staff-related-member',
-          'url' => '',
-          'image' => '/images/staff-image2.jpg',
-          'heading' => '人によってちがう履き心地を、<br>どうしたら最適化できるか。',
-          'name' => '宮本 浩子',
-          'position' => 'クリエイティブ',
-        ))?-->
-        <!--?php import_part('member', array(
-          'modifier' => 'staff-related-member',
-          'url' => '',
-          'image' => '/images/staff-image2.jpg',
-          'heading' => '人によってちがう履き心地を、<br>どうしたら最適化できるか。',
-          'name' => '宮本 浩子',
-          'position' => 'クリエイティブ',
-        ))?-->
-        <!--?php import_part('member', array(
-          'modifier' => 'staff-related-member',
-          'url' => '',
-          'image' => '/images/staff-image2.jpg',
-          'heading' => '人によってちがう履き心地を、<br>どうしたら最適化できるか。',
-          'name' => '宮本 浩子',
-          'position' => 'クリエイティブ',
-        ))?-->
       </div>
     </div>
   </div>
