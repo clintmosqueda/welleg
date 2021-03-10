@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import 'slick-carousel/slick/slick';
+import Swiper from 'swiper/bundle';
+import 'swiper/swiper-bundle.css';
 import BaseController from './base-controller';
 import Modal from '../components/modal.js';
 import popState from '../components/popstate.js';
@@ -11,11 +12,13 @@ export default class HomeController extends BaseController {
 
     popState();
 
-    $('.slide-wrapper').slick({
-      slidesToShow: 7,
-      slidesToScroll: 1,
-      //autoplay: true,
-      autoplaySpeed: 2000,
+    const swiper = new Swiper('.swiper-container', {
+      slidesPerView: 'auto',
+      spaceBetween: 4,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+      },
     });
   }
 }

@@ -3,12 +3,26 @@
   justify-content: space-between;
   padding: 40px 60px;
   align-items: center;
+  transition: position 0.5s ease-in-out;
+
+  &.sticky {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 50;
+    width: 100%;
+    background-color: $white;
+  }
 
   @include viewport($breakpoint-mobile) {
     padding: 25px 19px;
     display: block;
-    position: relative;
     z-index: 2;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: $white;
   }
 }
 

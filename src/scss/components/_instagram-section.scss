@@ -5,34 +5,30 @@
   padding: 200px 0 0;
   position: relative;
 
-  .slick-prev {
-    left: 0;
+  .swiper-slide {
+    width: 194px;
+    margin: 0 4px 0 0;
   }
 
-  .slick-next {
-    right: 0;
-  }
+  .instagram-section-wrap {
+    &.is-active {
+      #sb_instagram {
+        animation: fade-in $fade-duration $fade-timing-function both;
+      }
 
-  .slick-arrow {
-    z-index: 50;
-  }
-
-  .slick-slide {
-    width: 198px !important;
-  }
-
-  .slide {
-    padding: 0 2px;
-    width: 100%;
+      .instagram-btn {
+        animation: fade-in $fade-duration 0.3s $fade-timing-function both;
+      }
+    }
   }
 
   #sb_instagram {
+    opacity: 0;
 
     .sbi_photo {
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      height: 194px !important;
 
       img {
         display: none;
@@ -42,7 +38,8 @@
   }
 
   #sb_instagram #sbi_images .sbi_item {
-    width: 100% !important;
+    width: 194px !important;
+    height: 194px !important;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -66,6 +63,7 @@
     position: absolute;
     right: 0;
     bottom: -80px;
+    z-index: 2;
   }
 
   .instagram-btn-icon {

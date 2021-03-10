@@ -120,12 +120,14 @@ get_header(); ?>
 </section>
 
 <section class="instagram-section show-pc">
-  <?php echo do_shortcode( '[instagram-feed showheader=false showfollow=false]' ); ?>
-  <div class="instagram-section-wrapper wrapper">
-    <a class="instagram-btn" href="">
-      <span class="instagram-btn-icon icon-instagram"></span>
-      <span class="instagram-btn-text">Instagram</span>
-    </a>
+  <div class="instagram-section-wrap js-observe">
+    <?php echo do_shortcode( '[instagram-feed showheader=false showfollow=false]' ); ?>
+    <div class="instagram-section-wrapper wrapper">
+      <a class="instagram-btn" href="">
+        <span class="instagram-btn-icon icon-instagram"></span>
+        <span class="instagram-btn-text">Instagram</span>
+      </a>
+    </div>
   </div>
 </section>
 </main>

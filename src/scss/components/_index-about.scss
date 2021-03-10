@@ -32,7 +32,7 @@
 
 .index-about-footprint {
   .is-active & {
-    animation: fade-in $fade-duration 0.3s $fade-timing-function both;
+    animation: fade-in $fade-duration $fade-timing-function both;
   }
 }
 
@@ -43,7 +43,7 @@
   padding: 44px 0 66px;
 
   .is-active & {
-    animation: fade-in $fade-duration 0.6s $fade-timing-function both;
+    animation: fade-in $fade-duration 0.3s $fade-timing-function both;
   }
 
   @include viewport($breakpoint-mobile) {
@@ -58,7 +58,7 @@
   }
 
   .is-active & {
-    animation: fade-in $fade-duration 0.9s $fade-timing-function both;
+    animation: fade-in $fade-duration 0.6s $fade-timing-function both;
   }
 }
 
@@ -89,7 +89,7 @@
     z-index: 1;
 
     .is-active & {
-      animation: index-image1 $fade-duration $fade-timing-function both;
+      animation: index-image1 $fade-duration 0.9s $fade-timing-function both;
     }
 
   }
@@ -100,7 +100,7 @@
     z-index: 2;
 
     .is-active & {
-      animation: index-image2 $fade-duration 0.6s $fade-timing-function both;
+      animation: index-image2 $fade-duration 1.3s $fade-timing-function both;
     }
   }
 
@@ -110,7 +110,7 @@
     z-index: 3;
 
     .is-active & {
-      animation: index-image3 $fade-duration 0.9s $fade-timing-function both;
+      animation: index-image3 $fade-duration 1.6s $fade-timing-function both;
     }
   }
 }
