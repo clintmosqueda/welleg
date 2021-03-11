@@ -5,9 +5,17 @@
   padding: 200px 0 0;
   position: relative;
 
+  @include viewport($breakpoint-mobile) {
+    padding: 80px 0 130px;
+  }
+
   .swiper-slide {
     width: 194px;
     margin: 0 4px 0 0;
+
+    @include viewport($breakpoint-mobile) {
+      width: 164px;
+    }
   }
 
   .instagram-section-wrap {
@@ -44,6 +52,11 @@
     background-position: center;
     background-repeat: no-repeat;
     padding: 0 !important;
+
+    @include viewport($breakpoint-mobile) {
+      width: 164px !important;
+      height: 164px !important;
+    }
   }
 
   .instagram-section-wrapper {
@@ -64,6 +77,12 @@
     right: 0;
     bottom: -80px;
     z-index: 2;
+
+    @include viewport($breakpoint-mobile) {
+      left: 0;
+      margin: 0 auto;
+      bottom: -130px;
+    }
   }
 
   .instagram-btn-icon {

@@ -119,7 +119,7 @@ get_header(); ?>
     </div>
 </section>
 
-<section class="instagram-section show-pc">
+<section class="instagram-section">
   <div class="instagram-section-wrap js-observe">
     <?php echo do_shortcode( '[instagram-feed showheader=false showfollow=false]' ); ?>
     <div class="instagram-section-wrapper wrapper">

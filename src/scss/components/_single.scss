@@ -105,13 +105,10 @@
 
 .single-content-img-wrap {
   text-align: center;
+  margin: 0 0 100px;
 
-  &.single-content-img-wrap-sdg {
-    margin: 0 0 100px;
-
-    @include viewport($breakpoint-mobile) {
-      margin: 0 0 50px;
-    }
+  @include viewport($breakpoint-mobile) {
+    margin: 0 0 50px;
   }
 }
 
@@ -159,16 +156,23 @@
   }
 }
 
-.single-sdg-icon {
-  width: 228px;
+.single-sdg-logo {
   margin: 0 0 90px;
 
-  .single-sdg-icon-img {
-    width: 100%;
-  }
-
   @include viewport($breakpoint-mobile) {
-    width: 180px;
     margin: 0 0 60px;
+  }
+}
+
+.single-sdg-logo-list {
+  display: flex;
+}
+
+.single-sdg-logo-link {
+  display: block;
+  transition: opacity 0.5s ease-in-out;
+
+  &:hover {
+    opacity: 0.6;
   }
 }

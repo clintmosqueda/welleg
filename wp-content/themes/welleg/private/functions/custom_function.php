@@ -45,7 +45,7 @@ function load_more_post() {
   wp_enqueue_script('jquery');
 
   // register our main script but do not enqueue it yet
-  wp_register_script( 'loadmore', get_site_url() . '/src/js/components/loadmore.js', array('jquery') );
+  wp_register_script( 'loadmore', get_template_directory_uri() . '/assets/js/loadmore.js', array('jquery') );
 
   // now the most interesting part
   // we have to pass parameters to myloadmore.js script but we can get the parameters values only in PHP

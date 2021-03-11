@@ -19,6 +19,14 @@ export default class HomeController extends BaseController {
       autoplay: {
         delay: 2500,
       },
+      breakpoints: {
+        320: {
+          spaceBetween: 3,
+        },
+        768: {
+          spaceBetween: 4,
+        },
+      }
     });
   }
 }

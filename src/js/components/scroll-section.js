@@ -11,9 +11,9 @@ export default class ScrollSection {
         if (entry.isIntersecting) {
           entry.target.classList.add('is-active');
         }
-        else {
-          entry.target.classList.remove('is-active');
-        }
+        // else {
+        //   entry.target.classList.remove('is-active');
+        // }
 
       });
     }, {

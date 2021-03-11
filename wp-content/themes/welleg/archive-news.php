@@ -13,7 +13,7 @@
           <img class="news-footprint" src="<?php echo resolve_asset_url('/images/footprint.svg'); ?>" alt=""/>
           <h2 class="news-heading">お知らせ</h2>
         </div> -->
-        <div class="news-list-wrap">
+        <div class="news-list-wrap js-observe">
           <ul class="news-list js-news-list">
             <?php if (have_posts()) : ?>
 

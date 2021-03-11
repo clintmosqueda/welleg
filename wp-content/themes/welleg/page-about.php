@@ -126,7 +126,7 @@
           </div>
         </div>
       </div>
-      <img class="about-business-image" src="<?php echo resolve_asset_url('/images/boy-girl.png') ?>" alt=""/>
+      <img class="about-business-image" src="<?php echo resolve_asset_url('/images/calendar.png') ?>" alt=""/>
     </div>
   </section>
   <section class="about-action">
@@ -249,7 +249,7 @@
       </div>
     </div>
   </section>
-  <section class="about-sdg">
+  <section class="about-sdg" id="sdg">
     <div class="about-sdg-wrapper wrapper">
       <h2 class="about-sdg-heading">SDGsの取り組み</h2>
       <ul class="about-sdg-news-list">

@@ -9,7 +9,7 @@
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 50;
+    z-index: 19;
     width: 100%;
     background-color: $white;
   }
@@ -131,6 +131,14 @@
 
 .header-social {
   margin: 40px 0 0;
+
+  .social-icon-sub-item-content {
+    background-color: #767e82;
+
+    &:after {
+      border-color: #767e82 transparent transparent transparent;
+    }
+  }
 }
 
 .header-shoplist {
