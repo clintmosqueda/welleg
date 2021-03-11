@@ -28,14 +28,26 @@
     white-space: nowrap;
     letter-spacing: 0.09em;
     pointer-events: none;
+
+    @include viewport($breakpoint-mobile) {
+      font-size: 88px;
+    }
   }
 
   &::before {
     top: -22px;
+
+    @include viewport($breakpoint-mobile) {
+      top: -12px;
+    }
   }
 
   &::after {
     bottom: -45px;
+
+    @include viewport($breakpoint-mobile) {
+      bottom: -17px;
+    }
   }
 }
 
@@ -44,6 +56,10 @@
   text-transform: uppercase;
   font-family: $ttcommons;
   margin-bottom: 33px;
+
+  @include viewport($breakpoint-mobile) {
+    font-size: 26px;
+  }
 }
 
 .page-404-par {
@@ -51,15 +67,28 @@
   font-size: 15px;
   line-height: 2;
   margin-bottom: 31px;
+
+  @include viewport($breakpoint-mobile) {
+    font-size: 13px;
+  }
 }
 
 .page-404-link {
   display: block;
   margin-bottom: 57px;
   text-decoration: underline;
+  font-size: 15px;
+
+  @include viewport($breakpoint-mobile) {
+    font-size: 13px;
+  }
 }
 
 .page-404-image {
   display: block;
   width: 284px;
+
+  @include viewport($breakpoint-mobile) {
+    width: 208px;
+  }
 }
