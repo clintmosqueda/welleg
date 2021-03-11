@@ -8,12 +8,16 @@ export default class SingleStaffController extends BaseController {
     $(document).ready(function() {
       $('.staff-related-members').slick({
         infinite: true,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 4000,
         variableWidth: true,
         cssEase: 'ease-out',
-        speed: 500
+        speed: 500,
+        dots: true,
+        appendDots: $('.staff-related-slick-dots'),
+        appendArrows: $('.staff-related-slick-nav')
       })
     })
+    
   }
 }

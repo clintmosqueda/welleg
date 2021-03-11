@@ -110,7 +110,7 @@
   &:hover {
     .button-round-blue {
       stroke-dashoffset: 0;
-      animation: strokeProgress 0.5s linear forwards;
+      animation: strokeProgress 0.7s linear forwards;
     }
   }
 }
@@ -130,7 +130,7 @@
   stroke-dasharray: 669;
   stroke-dashoffset: 565;
   transform: rotate(197deg);
-  // animation: strokeProgress 0.5s linear forwards;
+  animation: strokeProgressReverse 0.7s linear forwards;
 }
 
 .button-round-text {
@@ -145,5 +145,14 @@
   }
   100%{
     stroke-dashoffset: 0;
+  }
+}
+
+@keyframes strokeProgressReverse{
+  0%{
+    stroke-dashoffset: 0;
+  }
+  100%{
+    stroke-dashoffset: 565;
   }
 }

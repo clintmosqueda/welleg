@@ -14,10 +14,10 @@
 
 .single-staff-header {
   text-align: center;
-  padding: 142px 0 123px;
+  padding: 142px 54px 123px;
 
   @include viewport($breakpoint-mobile) {
-    padding: 105px 0 65px;
+    padding: 105px 54px 65px;
   }
 }
 

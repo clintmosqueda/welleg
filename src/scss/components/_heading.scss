@@ -37,6 +37,9 @@
 .heading-footprint {
   font-size: 10px;
   display: inline-block;
+  animation: footsteps 0.5s ease-in forwards;
+  opacity: 0;
+  transform: scale(1.5);
 
   @include viewport($breakpoint-mobile) {
     font-size: 7px;
@@ -46,7 +49,19 @@
     color: $jordy-blue;
   }
   &:nth-of-type(2) {
+    animation-delay: 100ms;
     color: $solitude;
+  }
+}
+
+@keyframes footsteps {
+  0% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
