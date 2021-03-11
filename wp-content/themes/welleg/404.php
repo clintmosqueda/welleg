@@ -1,15 +1,9 @@
-<?php
-/**
- * The template for displaying 404 pages (not found).
- *
- * @see https://codex.wordpress.org/Creating_an_Error_404_Page
- */
-get_header(); ?>
-
+<?php get_header(); ?>
 <div class="page-404">
-  <h1 class="page-404-heading">404 <span>Page not Found</span></h1>
-  <a class="page-404-link" href="<?php echo resolve_url();?>">トップページへ戻る </a>
+  <h1 class="page-404-heading">Page not Found</h1>
+  <p class="page-404-par">ページが見つかりませんでした。<br>トップページまで一緒に歩きませんか？</p>
+  <a class="page-404-link" href="<?php echo resolve_url();?>">トップページ</a>
+  <img class="page-404-image" src="<?php echo resolve_asset_url('/images/404.png');?>" alt="">
 </div>
-
 <?php
 get_footer();
