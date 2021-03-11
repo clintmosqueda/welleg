@@ -7,53 +7,55 @@
     'heading' => '靴づくりのこと'
   ));?>
   <section class="about-slider">
-    <div class="about-slider-list">
-      <div class="about-slider-item">
-        <div class="about-slider-image-wrap show-pc">
-          <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider1.jpg');?>" alt=""/>
+    <div class="swiper-container">
+      <div class="about-slider-list swiper-wrapper">
+        <div class="about-slider-item swiper-slide">
+          <div class="about-slider-image-wrap show-pc">
+            <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider1.jpg');?>" alt=""/>
+          </div>
+          <div class="about-slider-image-wrap show-sp">
+            <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider3-sp.jpg');?>" alt=""/>
+          </div>
         </div>
-        <div class="about-slider-image-wrap show-sp">
-          <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider3-sp.jpg');?>" alt=""/>
+        <div class="about-slider-item swiper-slide">
+          <div class="about-slider-image-wrap show-pc">
+            <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider2.jpg');?>" alt=""/>
+          </div>
+          <div class="about-slider-image-wrap show-sp">
+            <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider3-sp.jpg');?>" alt=""/>
+          </div>
         </div>
-      </div>
-      <div class="about-slider-item">
-        <div class="about-slider-image-wrap show-pc">
-          <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider2.jpg');?>" alt=""/>
+        <div class="about-slider-item swiper-slide">
+          <div class="about-slider-image-wrap show-pc">
+            <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider1.jpg');?>" alt=""/>
+          </div>
+          <div class="about-slider-image-wrap show-sp">
+            <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider3-sp.jpg');?>" alt=""/>
+          </div>
         </div>
-        <div class="about-slider-image-wrap show-sp">
-          <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider3-sp.jpg');?>" alt=""/>
+        <div class="about-slider-item swiper-slide">
+          <div class="about-slider-image-wrap show-pc">
+            <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider2.jpg');?>" alt=""/>
+          </div>
+          <div class="about-slider-image-wrap show-sp">
+            <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider3-sp.jpg');?>" alt=""/>
+          </div>
         </div>
-      </div>
-      <div class="about-slider-item">
-        <div class="about-slider-image-wrap show-pc">
-          <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider1.jpg');?>" alt=""/>
+        <div class="about-slider-item swiper-slide">
+          <div class="about-slider-image-wrap show-pc">
+            <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider1.jpg');?>" alt=""/>
+          </div>
+          <div class="about-slider-image-wrap show-sp">
+            <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider3-sp.jpg');?>" alt=""/>
+          </div>
         </div>
-        <div class="about-slider-image-wrap show-sp">
-          <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider3-sp.jpg');?>" alt=""/>
-        </div>
-      </div>
-      <div class="about-slider-item">
-        <div class="about-slider-image-wrap show-pc">
-          <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider2.jpg');?>" alt=""/>
-        </div>
-        <div class="about-slider-image-wrap show-sp">
-          <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider3-sp.jpg');?>" alt=""/>
-        </div>
-      </div>
-      <div class="about-slider-item">
-        <div class="about-slider-image-wrap show-pc">
-          <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider1.jpg');?>" alt=""/>
-        </div>
-        <div class="about-slider-image-wrap show-sp">
-          <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider3-sp.jpg');?>" alt=""/>
-        </div>
-      </div>
-      <div class="about-slider-item">
-        <div class="about-slider-image-wrap show-pc">
-          <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider2.jpg');?>" alt=""/>
-        </div>
-        <div class="about-slider-image-wrap show-sp">
-          <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider3-sp.jpg');?>" alt=""/>
+        <div class="about-slider-item swiper-slide">
+          <div class="about-slider-image-wrap show-pc">
+            <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider2.jpg');?>" alt=""/>
+          </div>
+          <div class="about-slider-image-wrap show-sp">
+            <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider3-sp.jpg');?>" alt=""/>
+          </div>
         </div>
       </div>
     </div>

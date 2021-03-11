@@ -33,3 +33,9 @@ body {
     right: 0;
   }
 }
+
+main {
+  @include viewport($breakpoint-mobile) {
+    padding: 81px 0 0;
+  }
+}

@@ -34,14 +34,14 @@ if ( ! empty( $header_data ) && $settings['showheader'] && $settings['headerouts
 }
 ?>
 
-<div id="sb_instagram" class="sbi sbi_col_<?php echo esc_attr( $cols_setting ); ?> <?php echo esc_attr( $additional_classes ); ?> slide-container"<?php echo $feed_styles; ?> data-feedid="<?php echo esc_attr( $feed_id ); ?>" data-res="<?php echo esc_attr( $image_resolution_setting ); ?>" data-cols="<?php echo esc_attr( $cols_setting ); ?>" data-num="<?php echo esc_attr( $num_setting ); ?>" data-shortcode-atts="<?php echo esc_attr( $shortcode_atts ); ?>" <?php echo $other_atts; ?>>
+<div id="sb_instagram" class="swiper-container sbi sbi_col_<?php echo esc_attr( $cols_setting ); ?> <?php echo esc_attr( $additional_classes ); ?> slide-container"<?php echo $feed_styles; ?> data-feedid="<?php echo esc_attr( $feed_id ); ?>" data-res="<?php echo esc_attr( $image_resolution_setting ); ?>" data-cols="<?php echo esc_attr( $cols_setting ); ?>" data-num="<?php echo esc_attr( $num_setting ); ?>" data-shortcode-atts="<?php echo esc_attr( $shortcode_atts ); ?>" <?php echo $other_atts; ?>>
 	<?php
 	if ( ! empty( $header_data ) && $settings['showheader'] && !$settings['headeroutside'] ) {
 		include sbi_get_feed_template_part( 'header', $settings );
 	}
 	?>
 
-    <div class="slide-wrapper" id="sbi_images">
+    <div class="slide-wrapper swiper-wrapper" id="sbi_images">
 		<?php
 		if ( ! in_array( 'ajaxPostLoad', $flags, true ) ) {
 			$this->posts_loop( $posts, $settings );
