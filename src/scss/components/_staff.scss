@@ -71,13 +71,31 @@
 .staff-related {
  background-color: $zircon;
  overflow: hidden;
+ padding-top: 170px;
+ padding-bottom: 158px;
+
+ @include viewport($breakpoint-mobile) {
+   padding-top: 67px;
+   padding-bottom: 81px;
+ }
+}
+
+.staff-related-wrap {
+  position: relative;
+  width: 1080px;
+  margin: 0 auto;
 }
 
 .staff-related-block {
-  // max-width: 1080px;
+  width: 1440px;
   // width: 100%;
-  margin: 0 auto;
-  padding: 170px 0 158px 12.4%;
+  position: relative;
+  
+  // padding-left: 12.4%;
+
+  @include viewport($breakpoint-mobile) {
+    padding-left:21px;
+  }
 }
 
 .staff-related-title {
@@ -85,10 +103,17 @@
   font-weight: 600;
   margin-bottom: 74px;
   letter-spacing: 0.08em;
+
+  @include viewport($breakpoint-mobile) {
+    font-size: 16px;
+    margin-bottom: 49px;
+    padding-left: 20px;
+  }
 }
 
 .staff-related-members {
   display: flex;
+  position: relative;
   
   .slick-slide {
     &:focus,
@@ -96,21 +121,86 @@
       outline: none;
     }
   }
+}
 
-  .slick-prev {
-    display: none;
+.staff-related-slick-pager  {
+  @include viewport($breakpoint-mobile) {
+    padding: 0 20px;
+    position: relative;
+  }
+}
+
+.staff-related-slick-dots {
+  display: none;
+  position: relative;
+  margin-top: 38px;
+  margin-bottom: 32px;
+
+  @include viewport($breakpoint-mobile) {
+    display: block;
   }
 
+  .slick-dots {
+    position: relative;
+    width: 100%;
+    display: flex;
+    height: 1px;
+    background-color: #E5E5E5;
+    bottom: auto;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    li {
+      flex-grow: 1;
+      height: 1px;
+      margin: 0;
+      transition: all 300ms ease-in-out;
+    }
+
+    button {
+      display: none;
+    }
+  }
+
+  .slick-active {
+    background-color: $echo-blue;
+  }
+}
+
+.staff-related-slick-nav {
+  position: absolute;
+  top: 52.3%;
+  width: 100%;
+  left: 0;
+  transform: translateY(-50%);
+
+  @include viewport($breakpoint-mobile) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    transform: none;
+  } 
+
+  .slick-prev,
   .slick-next {
+    position: absolute;
     width: 96px;
     height: 96px;
     background-color: $white;
-    top: 41%;
-    transform: translateY(-50%);
-    right: auto;
-    left: 75.7%;
     border-radius: 50%;
     font-size: 0;
+
+    @include viewport($breakpoint-mobile) {
+      position: relative;
+      width: 64px;
+      height: 64px;
+      margin: 0 12px;
+    }
 
     &:hover,
     &:focus,
@@ -125,21 +215,64 @@
       left: 50%;
       transform: translate(-50%, -50%);
       display: block;
-      width: 23px;
-      height: 6px;
+      width: 26px;
+      height: 7px;
       background-position: center;
       background-repeat: no-repeat;
-      background-size: contain;
+      background-size: cover;
       background-image: url('#{$image-path}/slick-arrow-staff.png');
       z-index: 1;
+
+      @include viewport($breakpoint-mobile) {
+        width: 18px;
+        height: 7px;
+        background-size: contain;
+      }
     }
   }
+
+  .slick-next {
+    top: 41%;
+    transform: translateY(-50%);
+    right: auto;
+    left: 88.3%;
+
+    @include viewport($breakpoint-mobile) {
+      position: relative;
+      transform: none;
+      top: auto;
+      left: auto;
+    }
+  }
+
+  .slick-prev {
+    opacity: 0;
+    pointer-events: none;
+
+    @include viewport($breakpoint-mobile) {
+      display: block;
+      pointer-events: auto;
+      opacity: 1;
+      left: auto;
+      top: auto;
+      transform: none;
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) scale(-1,1);
+    }
+  } 
 }
 
 .staff-related-member {
   width: 460px;
   flex-shrink: 0;
   margin-right: 80px;
+
+  @include viewport($breakpoint-mobile) {
+    width: 300px;
+    margin-right: 36px;
+  }
 
   .member-heading {
     text-decoration: none;

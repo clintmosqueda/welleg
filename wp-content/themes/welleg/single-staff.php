@@ -57,43 +57,49 @@ global $post;
     </div>
   </section>
   <div class="staff-related">
-    <div class="staff-related-block">
-      <h2 class="staff-related-title">他のスタッフも読む</h2>
-      <?php 
-        $args = array(
-          'post_type'      => STAFF_POST_TYPE,
-          'orderby'        => 'post_date',
-          'order'          => 'DESC',
-          'post_status'    => 'publish',
-          'posts_per_page' => -1,
-          'post__not_in'   => array( get_the_ID() ),
-        );
-        $related_args = new WP_Query( $args );
-      ?>
-      <div class="staff-related-members">
-        <?php while( $related_args->have_posts()) : $related_args->the_post();
-          $message = get_field('message', get_the_ID());
-          $staf_position = get_field('staf_position', get_the_ID());
-          if( have_rows('staff_info', get_the_ID()) ): 
-            while( have_rows('staff_info', get_the_ID()) ): the_row();
-              $staff_picture = get_sub_field('staff_picture');
-              break;
-            endwhile;
-          endif;
+    <div class="staff-related-wrap">
+      <div class="staff-related-block">
+        <h2 class="staff-related-title">他のスタッフも読む</h2>
+        <?php 
+          $args = array(
+            'post_type'      => STAFF_POST_TYPE,
+            'orderby'        => 'post_date',
+            'order'          => 'DESC',
+            'post_status'    => 'publish',
+            'posts_per_page' => -1,
+            'post__not_in'   => array( get_the_ID() ),
+          );
+          $related_args = new WP_Query( $args );
         ?>
-          <div>
-          <?php import_part('member', array(
-            'modifier' => 'staff-related-member',
-            'url' => get_permalink(),
-            'image' => $staff_picture,
-            'heading' => $message,
-            'name' => get_the_title(),
-            'position' => $staf_position,
-          ))?>
-          </div>
-        <?php endwhile; ?>
-        <?php wp_reset_postdata(); ?>
+        <div class="staff-related-members">
+          <?php while( $related_args->have_posts()) : $related_args->the_post();
+            $message = get_field('message', get_the_ID());
+            $staf_position = get_field('staf_position', get_the_ID());
+            if( have_rows('staff_info', get_the_ID()) ): 
+              while( have_rows('staff_info', get_the_ID()) ): the_row();
+                $staff_picture = get_sub_field('staff_picture');
+                break;
+              endwhile;
+            endif;
+          ?>
+            <div class="staff-related-members-block">
+            <?php import_part('member', array(
+              'modifier' => 'staff-related-member',
+              'url' => get_permalink(),
+              'image' => $staff_picture,
+              'heading' => $message,
+              'name' => get_the_title(),
+              'position' => $staf_position,
+            ))?>
+            </div>
+          <?php endwhile; ?>
+          <?php wp_reset_postdata(); ?>
+        </div>
       </div>
+      <div class="staff-related-slick-pager">
+      <div class="staff-related-slick-dots"></div>
+      <div class="staff-related-slick-nav"></div>
+    </div>
     </div>
   </div>
 </main>
