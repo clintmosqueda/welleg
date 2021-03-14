@@ -21,6 +21,9 @@ global $post;
                 <span class="single-staff-position"><?php the_field('staf_position'); ?></span>
               <?php endif; ?>
             </div>
+            <div class="single-staff-scroll">
+              <?php import_part('scroll-discover'); ?>
+            </div>
           </div>
 
           <?php if( have_rows('staff_info') ): ?>

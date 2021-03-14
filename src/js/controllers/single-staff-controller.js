@@ -8,7 +8,7 @@ export default class SingleStaffController extends BaseController {
     $(document).ready(function() {
       $('.staff-related-members').slick({
         infinite: true,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 4000,
         variableWidth: true,
         cssEase: 'ease-out',

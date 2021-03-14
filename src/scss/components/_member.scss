@@ -10,7 +10,6 @@
 .member-frame {
   width: 100%;
   height: 306px;
-  margin-bottom: 24px;
 
   @include viewport($breakpoint-mobile) {
     height: 200px;
@@ -27,6 +26,7 @@
 }
 
 .member-content {
+  padding-top: 24px;
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
