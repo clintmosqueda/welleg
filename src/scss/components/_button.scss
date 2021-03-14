@@ -4,6 +4,7 @@
   position: relative;
   display: inline-block;
   vertical-align: middle;
+  cursor: pointer;
 
   .button-circle {
     position: absolute;
@@ -24,11 +25,11 @@
     animation: strokeDefaultCircleBack 0.5s linear forwards;
   }
 
-  // &:hover {
-  //   .button-circle-blue {
-  //     animation: strokeDefaultCircle 0.5s linear forwards;
-  //   }
-  // }
+  &:hover {
+    .button-circle-blue {
+      animation: strokeDefaultCircle 0.5s linear forwards;
+    }
+  }
 
   @include viewport($breakpoint-mobile) {
     width: 56px;

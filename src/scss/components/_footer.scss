@@ -13,24 +13,33 @@
 
 .footer-top-image-wrap {
   position: relative;
+  overflow: hidden;
 }
 
 .footer-top-text {
   font-family: $alegreya;
   font-size: 120px;
+  color: $white;
+  width: 1706px;
+  position: absolute;
+  left: 50%;
+  bottom: -110px;
+  transform: translate(-50%, 0%);
+  z-index: 1;
+  white-space: nowrap;
   text-shadow:
    -1px -1px 0 $gainsboro,
     1px -1px 0 $gainsboro,
     -1px 1px 0 $gainsboro,
      1px 1px 0 $gainsboro;
-  color: $white;
-  width: 1706px;
-  position: absolute;
-  left: 50%;
-  bottom: 10px;
-  transform: translate(-50%, 0%);
-  z-index: 1;
-  white-space: nowrap;
+  transition: bottom 1s 1s $sec-timing-function;
+
+
+  .is-active & {
+    bottom: 10px;
+  }
+
+
 
   @include viewport($breakpoint-mobile) {
     font-size: 88px;
@@ -44,6 +53,11 @@
   display: block;
   position: relative;
   z-index: 2;
+  opacity: 0;
+
+  .is-active & {
+    animation: fade-in 1s 0.3s $sec-timing-function both;
+  }
 
   @include viewport($breakpoint-mobile) {
     width: 102px;
@@ -53,6 +67,11 @@
 .footer-top-heading {
   text-align: center;
   margin: 0 0 35px;
+  opacity: 0;
+
+  .is-active & {
+    animation: fade-in 1s 0.6s $sec-timing-function both;
+  }
 }
 
 .footer-top-heading-text {

@@ -21,11 +21,11 @@
   .instagram-section-wrap {
     &.is-active {
       #sb_instagram {
-        animation: fade-in $fade-duration $fade-timing-function both;
+        animation: fade-in 1s $sec-timing-function both;
       }
 
       .instagram-btn {
-        animation: fade-in $fade-duration 0.3s $fade-timing-function both;
+        animation: fade-in 1s 0.3s $sec-timing-function both;
       }
     }
   }
@@ -69,6 +69,7 @@
     display: block;
     border-radius: 50%;
     background-color: $echo-blue;
+    border: 1px solid $echo-blue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,6 +78,17 @@
     right: 0;
     bottom: -80px;
     z-index: 2;
+    transition: border 0.5s ease-out, background-color 0.5s ease-out;
+
+    &:hover {
+      background-color: #fff;
+      border: 1px solid $echo-blue;
+
+      .instagram-btn-icon,
+      .instagram-btn-text {
+        color: #5f8598;
+      }
+    }
 
     @include viewport($breakpoint-mobile) {
       left: 0;
@@ -91,6 +103,7 @@
     display: block;
     height: 45px;
     line-height: 45px;
+    transition: color 0.5s ease-out;
   }
 
   .instagram-btn-text {
@@ -98,6 +111,7 @@
     display: block;
     text-transform: uppercase;
     padding: 10px 0 0;
+    transition: color 0.5s ease-out;
   }
 }
 

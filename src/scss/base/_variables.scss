@@ -4,7 +4,7 @@ $alegreya: 'Alegreya Sans', sans-serif;
 $poppins: 'Poppins', sans-serif;
 
 //colors
-$nero: #191919;
+$nero: #37383C;
 $gainsboro: #e5E5E5;
 $echo-blue: #93B6C7;
 $zircon: #EBEFEF;
@@ -34,6 +34,7 @@ $font-path: '../lib/fonts';
 $site-size: 1080px + 60px;
 
 $timing-function: ease-out;
+$sec-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 $duration: 300ms;
 $fade-duration: 0.8s;
 $fade-delay: 0.3s;

@@ -23,7 +23,7 @@
   opacity: 0;
 
   &.is-active {
-    animation: fade-in-bottom $fade-duration $fade-timing-function both;
+    animation: fade-in-bottom 1s $sec-timing-function both;
   }
 
   @include viewport($breakpoint-mobile) {
@@ -41,7 +41,7 @@
   flex: 0 0 600px;
 
   .is-active & {
-    animation: fade-in-bottom $fade-duration $fade-timing-function both;
+    animation: fade-in-bottom 1s $sec-timing-function both;
   }
 
   @include viewport($breakpoint-mobile) {
@@ -82,7 +82,7 @@
   padding: 20px 0 0 120px;
 
   .is-active & {
-    animation: fade-in-bottom $fade-duration $fade-timing-function both;
+    animation: fade-in-bottom 1s $sec-timing-function both;
   }
 
   @include viewport($breakpoint-mobile) {

@@ -61,7 +61,7 @@
     </div>
   </section>
   <section class="about-statement">
-    <div class="about-statement-wrapper wrapper">
+    <div class="about-statement-wrapper wrapper js-observe">
       <h2 class="about-statement-heading">ステートメント</h2>
       <div class="about-statement-content">
         <p class="about-statement-text">
@@ -88,16 +88,16 @@
         </p>
         <p class="about-statement-slogan">キレイなあしを創る</p>
       </div>
-      <img class="about-statement-image show-pc" src="<?php echo resolve_asset_url('/images/boy-girl.png') ?>" alt=""/>
+      <img class="about-statement-image show-pc js-observe" src="<?php echo resolve_asset_url('/images/boy-girl.png') ?>" alt=""/>
     </div>
   </section>
-  <section class="about-banner">
+  <section class="about-banner js-observe">
     <img class="about-banner-image show-pc" src="<?php echo resolve_asset_url('/images/about-banner.jpg') ?>" alt=""/>
     <img class="about-banner-image show-sp" src="<?php echo resolve_asset_url('/images/about-banner-sp.jpg') ?>" alt=""/>
   </section>
   <section class="about-business">
     <div class="about-business-wrapper wrapper">
-      <div class="about-business-wrap">
+      <div class="about-business-wrap js-observe">
         <div class="about-business-block">
           <p class="about-business-block-tag">企業理念</p>
           <div class="about-business-block-content">
@@ -126,13 +126,13 @@
           </div>
         </div>
       </div>
-      <img class="about-business-image" src="<?php echo resolve_asset_url('/images/calendar.png') ?>" alt=""/>
+      <img class="about-business-image js-observe" src="<?php echo resolve_asset_url('/images/calendar.png') ?>" alt=""/>
     </div>
   </section>
   <section class="about-action">
     <div class="about-action-wrapper wrapper">
       <h2 class="about-action-heading">行動指針</h2>
-      <div class="about-action-content">
+      <div class="about-action-content js-observe">
         <div class="about-action-block">
           <h3 class="about-action-block-title">Challenge</h3>
           <p class="about-action-block-text">
@@ -155,7 +155,7 @@
     </div>
   </section>
   <section class="about-intelligence">
-    <div class="about-intelligence-wrapper wrapper">
+    <div class="about-intelligence-wrapper wrapper js-observe">
       <h2 class="about-intelligence-heading">企業情報</h2>
       <div class="about-intelligence-content">
         <div class="about-intelligence-content-left">
@@ -205,7 +205,7 @@
     </div>
   </section>
   <section class="about-history">
-    <div class="about-history-wrapper wrapper">
+    <div class="about-history-wrapper wrapper js-observe">
       <h2 class="about-history-heading">沿革</h2>
       <div class="about-history-content js-about-history">
         <?php
@@ -242,7 +242,7 @@
   <section class="about-sdg" id="sdg">
     <div class="about-sdg-wrapper wrapper">
       <h2 class="about-sdg-heading">SDGsの取り組み</h2>
-      <ul class="about-sdg-news-list">
+      <ul class="about-sdg-news-list js-observe">
         <?php
           $args = array(
             'post_type'      => SDG_POST_TYPE,

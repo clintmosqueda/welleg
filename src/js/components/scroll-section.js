@@ -17,7 +17,7 @@ export default class ScrollSection {
 
       });
     }, {
-        rootMargin: (window.matchMedia("(orientation: landscape)").matches) ? '-50px 200px -50px 200px' : '-300px 200px -300px 200px'
+        rootMargin: (window.matchMedia("(orientation: landscape)").matches) ? '-50px 200px -50px 200px' : '-100px 200px -100px 200px'
     });
 
     document.querySelectorAll(this.target).forEach((e) => {
