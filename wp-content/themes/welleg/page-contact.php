@@ -9,7 +9,10 @@
   <section class="contact">
     <div class="wrapper">
       <div class="contact-block">
-        <div class="contact-form">
+        <?php while (have_posts()) : the_post(); ?>
+          <?php remove_filter ('the_content', 'wpautop'); the_content();?>
+        <?php endwhile; ?>
+        <!-- <div class="contact-form">
           <p class="contact-text">お買い上げいただいた商品についてのお問い合わせはこちらよりお願いいたします。
           <a href="">Dummy Link Address</a></p>
           <hr class="contact-hr">
@@ -43,7 +46,7 @@
             </div>
             <button class="form-submit">送信する</button>
           </form>
-        </div>
+        </div> -->
         <aside class="contact-aside">
           <h3 class="contact-label">株式会社Welleg</h3>
           <p class="contact-info">〒760-0064 

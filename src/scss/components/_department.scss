@@ -36,22 +36,9 @@
 .department-branch {
   width: calc((100%/3) - 68px);
   margin: 0 34px 88px;
-  transform: translateY(75px);
-  opacity: 0;
-  transition: all 1s ease-out;
 
   @include viewport($breakpoint-mobile) {
     width: 100%;
     margin: 0 0 49px;
-  }
-}
-
-@for $i from 1 through 6 {
-  .is-show .department-branch {
-    &:nth-child(#{$i}) {
-      opacity: 1;
-      transform: translateY(0);
-      transition-delay: #{$i*100}ms;
-    }
   }
 }
