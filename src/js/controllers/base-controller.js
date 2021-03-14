@@ -15,6 +15,18 @@ export default class BaseController {
       new Chillax(el);
     });
 
+    // let footerTopText = document.querySelector('.js-footer-top-text');
+
+    // let characters = footerTopText.textContent.split("");
+    // footerTopText.innerHTML = "";
+
+    // characters.forEach((el, i) => {
+    //   console.log(el);
+    //   let node = document.createElement("span");
+    //   node.innerHTML = el;
+    //   footerTopText.appendChild(node);
+    // })
+
     this.init();
   }
 

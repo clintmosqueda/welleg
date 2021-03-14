@@ -11,10 +11,10 @@
 get_header(); ?>
 <main class="main">
   <?php import_part('side-copyright'); ?>
-  <section class="banner">
+  <section class="banner js-observe">
     <div class="banner-content">
-      <img class="banner-img show-pc" src="<?php echo resolve_asset_url('/images/banner-img.jpg');?>" alt=""/>
-      <img class="banner-img show-sp" src="<?php echo resolve_asset_url('/images/banner-img-sp.jpg');?>" alt=""/>
+      <img class="banner-img show-pc" src="<?php echo resolve_asset_url('/images/mv-new.jpg');?>" alt=""/>
+      <img class="banner-img show-sp" src="<?php echo resolve_asset_url('/images/mv-new-sp.jpg');?>" alt=""/>
       <p class="banner-text">てくてく、いい靴と、いい人生。</p>
       <div class="banner-scroll">
         <img class="banner-scroll-img" src="<?php echo resolve_asset_url('/images/banner-scroll.png');?>" alt=""/>
@@ -123,7 +123,7 @@ get_header(); ?>
   <div class="instagram-section-wrap js-observe">
     <?php echo do_shortcode( '[instagram-feed showheader=false showfollow=false]' ); ?>
     <div class="instagram-section-wrapper wrapper">
-      <a class="instagram-btn" href="">
+      <a class="instagram-btn" href="https://www.instagram.com/shashaligaya/" target="_blank">
         <span class="instagram-btn-icon icon-instagram"></span>
         <span class="instagram-btn-text">Instagram</span>
       </a>

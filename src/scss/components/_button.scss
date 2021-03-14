@@ -4,6 +4,7 @@
   position: relative;
   display: inline-block;
   vertical-align: middle;
+  cursor: pointer;
 
   .button-circle {
     position: absolute;
@@ -53,6 +54,12 @@
 
 .button-link {
   display: inline-block;
+
+  &:hover {
+    .button-circle-blue {
+      animation: strokeDefaultCircle 0.5s linear forwards;
+    }
+  }
 }
 
 .button-text {

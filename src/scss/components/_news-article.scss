@@ -1,6 +1,17 @@
 .news-article {
   width: 314px;
 
+  &:hover {
+    .news-article-image {
+      transform: scale(1.1);
+    }
+
+    .news-article-heading,
+    .news-article-date {
+      opacity: 0.7;
+    }
+  }
+
   @include viewport($breakpoint-mobile) {
     width: auto;
   }
@@ -12,15 +23,22 @@
 
 .news-article-image {
   width: 100%;
+  transition: transform 0.5s $sec-timing-function;
+}
+
+.news-article-image-wrap {
+  overflow: hidden;
 }
 
 .news-article-heading {
   line-height: 1.7;
   padding: 20px 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .news-article-date {
   font-size: 14px;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .news-article-textwrap {

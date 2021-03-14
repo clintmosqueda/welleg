@@ -33,5 +33,36 @@ export default class AboutController extends BaseController {
     singleRedirectModal();
 
 
+    let historyBtn = document.querySelector('.js-history-btn');
+    const showMore = () => {
+      let listData = Array.prototype.slice.call(document.querySelectorAll('.js-about-history dl:not(.shown)')).slice(0, 4);
+      for (let i=0; i < listData.length; i++)
+      {
+        listData[i].className  = 'description-list shown';
+      }
+      hideReadMore();
+    }
+
+    const hideReadMore = () => {
+      let hiddenElements = Array.prototype.slice.call(document.querySelectorAll('.js-about-history dl:not(.shown)'));
+      if(hiddenElements.length == 0)
+      {
+        historyBtn.parentElement.style.display = 'none';
+      }
+      else
+      {
+        historyBtn.parentElement.style.display = 'block';
+      }
+    }
+
+    window.addEventListener('load', showMore);
+    historyBtn.addEventListener('click', showMore);
+
+    let modal = document.querySelector('.js-modal');
+    let sdgSingleBtn = document.querySelector('.js-single-sdg-btn');
+    sdgSingleBtn.addEventListener('click', () => {
+      modal.classList.remove('is-open');
+    })
+
   }
 }

@@ -4,11 +4,12 @@
   if ( empty( $front_circle_color ) ) { $front_circle_color = ''; }
   //if ( empty( $link ) ) { $link = ''; }
   if ( empty( $arrow_color ) ) { $arrow_color = ''; }
+  if ( empty( $class_name ) ) { $class_name = ''; }
 ?>
 <?php if (!empty($link)) : ?>
-<a class="button-link" href="<?php echo $link; ?>">
+<a class="button-link <?php echo (!empty($link) && !empty($class_name)) ? "$class_name" : null; ?>" href="<?php echo $link; ?>">
 <?php endif; ?>
-    <div class="button-svg-wrap">
+    <div class="button-svg-wrap <?php echo (empty($link) && !empty($class_name)) ? "$class_name" : null; ?>">
       <svg class="button-circle button-circle-gray" viewBox="0 0 200 200">
           <path d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0" stroke="<?php echo $back_circle_color; ?>" stroke-width="1" fill="none" />
       </svg>

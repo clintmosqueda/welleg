@@ -4,15 +4,22 @@
   padding: 40px 60px;
   align-items: center;
   transition: position 0.5s ease-in-out;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 19;
+  width: 100%;
+  background-color: $white;
+  min-width: 1280px;
 
-  &.sticky {
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 19;
-    width: 100%;
-    background-color: $white;
-  }
+  // &.sticky {
+  //   position: fixed;
+  //   left: 0;
+  //   top: 0;
+  //   z-index: 19;
+  //   width: 100%;
+  //   background-color: $white;
+  // }
 
   @include viewport($breakpoint-mobile) {
     padding: 25px 19px;
@@ -23,6 +30,7 @@
     top: 0;
     width: 100%;
     background-color: $white;
+    min-width: 0;
   }
 }
 
@@ -33,6 +41,11 @@
 
 .header-logo-link {
   display: inline-block;
+  transition: opacity 0.5s ease-in-out;
+
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .header-logo-img {
