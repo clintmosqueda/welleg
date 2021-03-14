@@ -207,43 +207,33 @@
   <section class="about-history">
     <div class="about-history-wrapper wrapper">
       <h2 class="about-history-heading">沿革</h2>
-      <div class="about-history-content">
-        <dl class="description-list">
-          <dt>1925年</dt>
-          <dd>
-            植村武市 高松市丸亀町において履物商「ひしや商店」開業
-          </dd>
-        </dl>
-        <dl class="description-list">
-          <dt>1946年</dt>
-          <dd>
-            植村勇 継承、高松市丸亀町において履物卸売に専業
-          </dd>
-        </dl>
-        <dl class="description-list">
-          <dt>1950年</dt>
-          <dd>
-            <span>資本金200万円にて、株式会社菱屋商店を設立 </span>
-            <span>月星化成株式会社と代理店契約、総合履物類の卸売に変更 </span>
-            <span>資本金400万円に増資 </span>
-          </dd>
-        </dl>
-        <dl class="description-list">
-          <dt>1952年</dt>
-          <dd>
-            <span>社名を株式会社菱屋に変更</span>
-            <span>高松市古馬場町に新社屋竣工、移転(菱屋第一ビル)、店舗、倉庫、社員寮、鉄筋三階建、延面積2000㎡</span>
-          </dd>
-        </dl>
+      <div class="about-history-content js-about-history">
+        <?php
+          if( have_rows('history') ):
+            while( have_rows('history') ) : the_row();
+              $history_year = get_sub_field('history_year');
+              $history_description = get_sub_field('history_description');
+          ?>
+            <dl class="description-list hidden">
+              <dt><?php echo $history_year; ?></dt>
+              <dd>
+                <?php echo $history_description; ?>
+              </dd>
+            </dl>
+          <?php
+              endwhile;
+              else :
+          endif;
+        ?>
       </div>
       <div class="about-history-btn">
         <?php
           import_part('button', array(
-            'link' => '/',
             'circle_text' => '読み込む',
             'back_circle_color' => '#e5e5e5',
             'front_circle_color' => '#84ADC3',
             'arrow_color' => '#84B5C5',
+            'class_name' => 'js-history-btn',
           ));
         ?>
       </div>

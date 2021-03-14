@@ -4,6 +4,14 @@
   padding: 30px 0;
   line-height: 1.7;
 
+  &.hidden {
+    display: none;
+  }
+
+  &.shown {
+    display: flex;
+  }
+
   &:last-of-type {
     border-bottom: 1px solid $gainsboro;
   }

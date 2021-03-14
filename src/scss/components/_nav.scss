@@ -28,7 +28,8 @@
     }
   }
 
-  &:hover {
+  &:hover,
+  &.is-active {
     &::before {
       opacity: 1;
     }

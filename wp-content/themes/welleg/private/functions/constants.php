@@ -26,3 +26,8 @@ define('SDG_POST_TYPE_CATEGORY', 'sdg-category');
 // define('BLOG_POST_TYPE', 'blog');
 // define('BLOG_POST_TYPE_TAG', 'blog-tag');
 // define('BLOG_POST_TYPE_CATEGORY', 'blog-category');
+
+define( 'ABOUT_PAGE', 'about');
+define( 'MAKING_PAGE', 'making');
+define( 'RECRUIT_PAGE', 'recruit');
+define( 'CONTACT_PAGE', 'contact');
