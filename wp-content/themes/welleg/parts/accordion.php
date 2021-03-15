@@ -6,7 +6,7 @@ if ( empty( $qualifications ) ) { $qualifications = ''; }
 if ( empty( $url ) ) { $url = ''; }
 ?>
 
-<section class="accordion js-accordion">
+<section class="accordion js-accordion <?php echo $modifier?>">
   <div class="wrapper">
     <div class="accordion-block">
       <div class="accordion-top js-accordion-trigger">

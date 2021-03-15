@@ -1,0 +1,20 @@
+.js-animateIn {
+  transform: translateY(0);
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 1;
+  
+  &.is-hidden {
+    opacity: 0;
+    transform: translateY(75px);
+  }
+
+  &.js-translate-right {
+    transform: translateX(0) translateY(-50%);
+
+    &.is-hidden {
+      transform: translateX(-50px);
+    }
+  }
+}
+
+

@@ -11,40 +11,40 @@ global $post;
   <section class="department">
     <div class="wrapper">
       <div class="department-block">
-        <h2 class="department-heading">部署紹介</h2>
+        <h2 class="department-heading is-hidden js-animateIn">部署紹介</h2>
         <div class="department-wrap">
           <?php import_part('branch', array(
-            'modifier' => 'department-branch',
+            'modifier' => 'department-branch is-hidden js-animateIn',
             'image' => '/images/department-image.png',
             'heading' => '商品部',
             'text' => 'ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。',
           ))?>
           <?php import_part('branch', array(
-            'modifier' => 'department-branch',
+            'modifier' => 'department-branch is-hidden js-animateIn',
             'image' => '/images/department-image.png',
             'heading' => 'クリエイティブ',
             'text' => 'ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。',
           ))?>
           <?php import_part('branch', array(
-            'modifier' => 'department-branch',
+            'modifier' => 'department-branch is-hidden js-animateIn',
             'image' => '/images/department-image.png',
             'heading' => 'セールス',
             'text' => 'ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。',
           ))?>
           <?php import_part('branch', array(
-            'modifier' => 'department-branch',
+            'modifier' => 'department-branch is-hidden js-animateIn',
             'image' => '/images/department-image.png',
             'heading' => 'カスタマー＆デリバリー',
             'text' => 'ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。',
           ))?>
           <?php import_part('branch', array(
-            'modifier' => 'department-branch',
+            'modifier' => 'department-branch is-hidden js-animateIn',
             'image' => '/images/department-image.png',
             'heading' => 'システム',
             'text' => 'ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。',
           ))?>
           <?php import_part('branch', array(
-            'modifier' => 'department-branch',
+            'modifier' => 'department-branch is-hidden js-animateIn',
             'image' => '/images/department-image.png',
             'heading' => '経理・総務',
             'text' => 'ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。',
@@ -60,7 +60,7 @@ global $post;
   <section class="staff">
     <div class="wrapper">
       <div class="staff-block">
-        <h2 class="staff-heading">スタッフ紹介</h2>
+        <h2 class="staff-heading is-hidden js-animateIn">スタッフ紹介</h2>
         <div class="staff-members">
           <?php
           while($staff_query->have_posts()):
@@ -81,7 +81,7 @@ global $post;
           endif;
           ?>
           <?php import_part('member', array(
-            'modifier' => 'staff-member',
+            'modifier' => 'staff-member is-hidden js-animateIn',
             'url' => get_permalink(),
             'image' => $staff_picture,
             'heading' => $message,
@@ -91,7 +91,7 @@ global $post;
           <?php endwhile; ?>
           <?php wp_reset_postdata(); ?>
         </div>
-        <div class="staff-button">
+        <div class="staff-button is-hidden js-animateIn">
           <?php import_part('button-round', array(
             'modifier' => '',
             'back_circle_color' => '#e5e5e5',
@@ -107,7 +107,7 @@ global $post;
   <?php endif; ?>
   <section class="position">
     <div class="wrapper">
-      <h2 class="position-heading">募集職種</h2>
+      <h2 class="position-heading is-hidden js-animateIn">募集職種</h2>
     </div>
     <div class="position-accordions">
       <?php if( have_rows('recruitment', 'option') ): ?>
@@ -118,6 +118,7 @@ global $post;
         $qualifications_clean = str_replace(array('<p>','</p>', '<br>'),'',$qualifications);
         $url = get_sub_field('url', 'option');
         ?>
+        <div class="is-hidden js-animateIn">
         <?php import_part('accordion', array(
           'modifier' => '',
           'title' => $title,
@@ -125,10 +126,11 @@ global $post;
           'qualifications' => $qualifications,
           'url' => $url,
         ))?>
+        </div>
         <?php endwhile; ?>
       <?php endif; ?>
     </div>
   </section>
-<main>
+</main>
 <?php
 get_footer();

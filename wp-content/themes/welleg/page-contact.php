@@ -19,7 +19,13 @@
           <form class="form" action="">
             <div class="form-fieldset">
               <label class="form-label">ご用件<span>*</span></label>
-              <input type="text" class="form-input">
+              <div class="form-select-wrapper">
+                <select class="form-select">
+                  <option value="inquiry1">inquiry1</option>
+                  <option value="inquiry2">inquiry2</option>
+                  <option value="inquiry3">inquiry2</option>
+                </select>
+              </div>
             </div>
             <div class="form-fieldset">
               <label class="form-label">お名前<span>*</span></label>

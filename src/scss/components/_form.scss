@@ -22,7 +22,8 @@
 }
 
 .form-input,
-.form-textarea {
+.form-textarea,
+.form-select {
   width: 100%;
   display: block;
   background-color: $zircon;
@@ -35,9 +36,31 @@
   }
 }
 
-.form-input {
+.form-input,
+.form-select {
   height: 56px;
   padding: 0 23px;
+}
+
+.form-select {
+  appearance: none;
+}
+
+.form-select-wrapper {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 25px;
+    right: 27px;
+    content: '';
+    z-index: 1;
+    display: block;
+    border-style: solid;
+    border-width: 6px 3px 0 3px;
+    border-color: $echo-blue transparent transparent transparent;
+    pointer-events: none;
+  }
 }
 
 .form-textarea {

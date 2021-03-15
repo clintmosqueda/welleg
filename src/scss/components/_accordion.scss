@@ -34,9 +34,10 @@
 .accordion-wrap {
   position: relative;
   bottom: 0;
-  overflow: hidden;
-  height: 0;
-  transition: all 300ms ease-out;
+  display: none;
+  // overflow: hidden;
+  // height: 0;
+  // transition: all 300ms ease-out;
 }
 
 .accordion-body {

@@ -1,28 +1,16 @@
 import CONST from '../constants/index';
+import $ from 'jquery';
 
-export default class HeaderNav {
-  constructor(parent, content) {
-    this.parent = document.querySelectorAll(parent);
-    this.content = document.querySelectorAll(content);
-    this.init();
-  }
-
-  init() {
-    this.parent.forEach((item) => {
-      item.addEventListener('click', () => {
-        let contentHeight = item.querySelector('.js-accordion-body').offsetHeight
-        
-        this.parent.forEach((item) => {
-          item.classList.remove(CONST.OPEN_CLASS)
-        })
-        
-        this.content.forEach((item) => {
-          item.style.height = ''
-        })
-        
-        item.classList.add(CONST.OPEN_CLASS);
-        item.querySelector('.js-accordion-wrap').style.height = `${contentHeight}px`
-      })
-    })
-  }
+export default function accordion() {
+  $('.js-accordion-trigger').on('click', function(){
+    if($(this).hasClass(CONST.ACTIVE_CLASS)) {
+      $(this).parents('.js-accordion').removeClass(CONST.OPEN_CLASS)
+      $(this).next().slideUp()
+      $(this).removeClass(CONST.ACTIVE_CLASS)
+    } else {
+      $(this).parents('.js-accordion').addClass(CONST.OPEN_CLASS)
+      $(this).next().slideDown();
+      $(this).addClass(CONST.ACTIVE_CLASS)
+    }
+  })
 }
