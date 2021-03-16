@@ -3,8 +3,8 @@
   <?php import_part('side-copyright'); ?>
   <?php import_part('heading-page', array(
     'modifier' => '',
-    'image' => '/images/heading-privacy.svg',
-    'heading' => 'プライバシーポリシー'
+    'heading' => 'プライバシーポリシー',
+    'heading_en' => 'PRIVACY POLICY'
   ));?>
   <section class="privacy">
     <div class="wrapper">

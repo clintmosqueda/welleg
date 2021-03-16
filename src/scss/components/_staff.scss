@@ -26,10 +26,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @include viewport($breakpoint-mobile) {
+    justify-content: center;
+  }
 }
 
 .staff-member {
-  width: 460px;
+  max-width: 460px;
+  width: 100%;
 
   @include viewport($breakpoint-mobile) {
     margin-bottom: 40px;

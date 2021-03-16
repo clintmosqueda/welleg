@@ -3,8 +3,8 @@
   <?php import_part('side-copyright'); ?>
   <?php import_part('heading-page', array(
     'modifier' => '',
-    'image' => '/images/heading-news.svg',
-    'heading' => 'お知らせ'
+    'heading' => 'お知らせ',
+    'heading_en' => 'News News News'
   ));?>
   <section class="news">
     <div class="news-wrapper wrapper">

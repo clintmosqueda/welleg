@@ -3,8 +3,8 @@
 <?php import_part('side-copyright'); ?>
   <?php import_part('heading-page', array(
     'modifier' => '',
-    'image' => '/images/heading-making.svg',
-    'heading' => '靴づくりのこと'
+    'heading' => '靴づくりのこと',
+    'heading_en' => 'MAKING THINGS'
   ));?>
   <section class="making">
     <div class="making-process">

@@ -49,19 +49,8 @@
     color: $jordy-blue;
   }
   &:nth-of-type(2) {
-    animation-delay: 100ms;
+    animation-delay: 0.5s;
     color: $solitude;
-  }
-}
-
-@keyframes footsteps {
-  0% {
-    opacity: 0;
-    transform: scale(1.5);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
   }
 }
 
@@ -70,9 +59,28 @@
   font-weight: 600;
   position: relative;
   letter-spacing: 0.04em;
+  // font-family: 'A-OTF Gothic BBB Pr6N Medium';
+  // font-family: 'A-OTF Midashi Go MB31 Pr6N';
 
   @include viewport($breakpoint-mobile) {
     font-size: 20px;
     padding-left: 3px;
   }
+}
+
+.heading-en {
+  position: absolute;
+  top: 186px;
+  left: 50%;
+  line-height: 1;
+  font-family: $ttcommons;
+  font-size: 128px;
+  color: $white;
+  -webkit-text-fill-color: $white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $gainsboro;
+  white-space: nowrap;
+  letter-spacing: 0.051em;
+  text-transform: uppercase;
+  animation: fade-in-bottom 1.5s ease-in-out forwards;
 }

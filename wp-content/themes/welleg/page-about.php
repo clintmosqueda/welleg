@@ -3,8 +3,8 @@
   <?php import_part('side-copyright'); ?>
   <?php import_part('heading-page', array(
     'modifier' => '',
-    'image' => '/images/heading-about.svg',
-    'heading' => '靴づくりのこと'
+    'heading' => '靴づくりのこと',
+    'heading_en' => 'About US About US'
   ));?>
   <section class="about-slider">
     <div class="swiper-container">

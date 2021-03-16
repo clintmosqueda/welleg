@@ -3,8 +3,8 @@
   <?php import_part('side-copyright'); ?>
   <?php import_part('heading-page', array(
     'modifier' => '',
-    'image' => '/images/heading-contact.svg',
-    'heading' => 'お問い合わせ'
+    'heading' => 'お問い合わせ',
+    'heading_en' => 'Contact Contact'
   ));?>
   <section class="contact">
     <div class="wrapper">

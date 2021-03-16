@@ -5,8 +5,8 @@ global $post;
 <?php import_part('side-copyright'); ?>
   <?php import_part('heading-page', array(
     'modifier' => '',
-    'image' => '/images/heading-recruit.svg',
-    'heading' => '採用情報'
+    'heading' => '採用情報',
+    'heading_en' => 'RECRUIT RECRUIT'
   ));?>
   <section class="department">
     <div class="wrapper">

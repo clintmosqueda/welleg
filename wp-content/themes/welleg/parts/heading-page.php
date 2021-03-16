@@ -1,7 +1,7 @@
 <?php
 if ( empty( $modifier ) ) { $modifier = ''; }
-if ( empty( $image ) ) { $image = ''; }
 if ( empty( $heading ) ) { $heading = ''; }
+if ( empty( $heading_en ) ) { $heading_en = ''; }
 ?>
 
 <section class="heading-page <?php echo $modifier;?>">
@@ -11,8 +11,8 @@ if ( empty( $heading ) ) { $heading = ''; }
         <span class="heading-footprint icon icon-footprint"></span>
         <span class="heading-footprint icon icon-footprint"></span>
       </div>
-      <img class="heading-image" src="<?php echo resolve_asset_url($image);?>" alt="">
       <h1 class="heading-title"><?php echo $heading;?></h1>
+      <p class="heading-en"><?php echo $heading_en?></p>
     </div>
   </div>
 </section>
