@@ -5,6 +5,7 @@ import BaseController from './base-controller';
 import Modal from '../components/modal.js';
 import popState from '../components/popstate.js';
 import singleRedirectModal from '../components/single-redirect-modal.js';
+import closeModal from '../components/close-modal.js';
 
 export default class AboutController extends BaseController {
   init() {
@@ -32,7 +33,6 @@ export default class AboutController extends BaseController {
 
     singleRedirectModal();
 
-
     let historyBtn = document.querySelector('.js-history-btn');
     const showMore = () => {
       let listData = Array.prototype.slice.call(document.querySelectorAll('.js-about-history dl:not(.shown)')).slice(0, 4);
@@ -58,11 +58,7 @@ export default class AboutController extends BaseController {
     window.addEventListener('load', showMore);
     historyBtn.addEventListener('click', showMore);
 
-    let modal = document.querySelector('.js-modal');
-    let sdgSingleBtn = document.querySelector('.js-single-sdg-btn');
-    sdgSingleBtn.addEventListener('click', () => {
-      modal.classList.remove('is-open');
-    })
+    closeModal('.js-modal', '.js-single-sdg-btn');
 
   }
 }

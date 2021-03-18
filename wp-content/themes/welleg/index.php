@@ -13,11 +13,13 @@ get_header(); ?>
   <?php import_part('side-copyright'); ?>
   <section class="banner js-observe">
     <div class="banner-content">
-      <img class="banner-img show-pc" src="<?php echo resolve_asset_url('/images/mv-new.jpg');?>" alt=""/>
-      <img class="banner-img show-sp" src="<?php echo resolve_asset_url('/images/mv-new-sp.jpg');?>" alt=""/>
-      <p class="banner-text">てくてく、いい靴と、いい人生。</p>
-      <div class="banner-scroll">
-        <img class="banner-scroll-img" src="<?php echo resolve_asset_url('/images/banner-scroll.png');?>" alt=""/>
+      <div class="banner-content-bg">
+        <img class="banner-img show-pc" src="<?php echo resolve_asset_url('/images/banner-img.jpg');?>" alt=""/>
+        <img class="banner-img show-sp" src="<?php echo resolve_asset_url('/images/mv-new-sp.jpg');?>" alt=""/>
+        <p class="banner-text">てくてく、いい靴と、いい人生。</p>
+        <div class="banner-scroll">
+          <img class="banner-scroll-img" src="<?php echo resolve_asset_url('/images/banner-scroll.png');?>" alt=""/>
+        </div>
       </div>
     </div>
   </section>
@@ -48,7 +50,7 @@ get_header(); ?>
                 'text' => '靴づくりのこと',
                 'back_circle_color' => '#e5e5e5',
                 'front_circle_color' => '#84ADC3',
-                'link' => '/',
+                'link' => get_home_url() . '/making',
                 'arrow_color' => '#84B5C5',
               ));
             ?>
@@ -62,7 +64,7 @@ get_header(); ?>
     <div class="index-news-wrapper wrapper">
       <div class="index-news-heading-wrap">
         <h2 class="index-news-heading">新着情報</h2>
-        <a class="index-news-btn" href="">お知らせ一覧</a>
+        <a class="index-news-btn" href="<?php echo get_home_url() . '/news' ?>">お知らせ一覧</a>
       </div>
       <ul class="index-news-list js-observe">
         <?php
@@ -109,7 +111,7 @@ get_header(); ?>
                 'text' => '私たちについて',
                 'back_circle_color' => '#e5e5e5',
                 'front_circle_color' => '#fff',
-                'link' => '/',
+                'link' => get_home_url() . '/about',
                 'arrow_color' => '#fff',
               ));
             ?>

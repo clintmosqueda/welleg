@@ -26,18 +26,14 @@
 }
 
 .sdg-article-heading {
-  padding: 20px 0 4px;
+  padding: 15px 0 4px;
   font-size: 15px;
   position: relative;
   display: inline-block;
   transition: transform 0.5s $sec-timing-function;
+  line-height: 2;
 
-  &:after {
-    content: '';
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 1px;
+  span {
     border-bottom: 1px solid $nero;
   }
 }

@@ -24,7 +24,7 @@
             'text' => '採用情報',
             'back_circle_color' => '#e5e5e5',
             'front_circle_color' => '#84ADC3',
-            'link' => '/',
+            'link' => get_home_url() . '/recruit',
             'arrow_color' => '#84B5C5',
           ));
         ?>

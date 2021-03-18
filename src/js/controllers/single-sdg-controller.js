@@ -9,8 +9,7 @@ export default class SingleSdgController extends BaseController {
       the_arr.pop();
       the_arr.pop();
       let finalUrl = the_arr.join('/');
-
-      window.location.href = `${finalUrl}/about`;
+      window.location.href = `${finalUrl}/about#sdg`;
     });
   }
 }

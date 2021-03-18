@@ -13,7 +13,9 @@
   min-height: 607px;
   display: flex;
   justify-content: space-between;
-  background-color: $echo-blue;
+  background-image: url('../images/index-about-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 
   @include viewport($breakpoint-mobile) {
     padding: 50px 40px;

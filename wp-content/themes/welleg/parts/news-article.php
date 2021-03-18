@@ -24,6 +24,7 @@
 
   <div id="news-<?php echo the_ID(); ?>" class="article-modal js-modal">
     <div class="article-modal-content js-modal-content">
+      <div class="article-modal-overlay"></div>
       <div class="single-wrap">
         <div class="single-wrapper">
           <div class="single-heading">
@@ -40,10 +41,12 @@
             <p class="single-share-heading">記事をシェアする</p>
             <ul class="social-icon-list">
               <li class="social-icon-item">
-                <a href=""><span class="social-icon-icon icon-facebook"></span></a>
+                <a target="_blank" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_permalink();?>" class="sns-link"><i class="social-icon-icon icon-facebook"></i></a>
               </li>
               <li class="social-icon-item">
-                <a href=""><span class="social-icon-icon icon-twitter"></span></a>
+                <a class="sns-link" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" href="https://twitter.com/share?url=<?php echo get_permalink();?>" data-show-count="false"><i class="social-icon-icon icon-twitter"></i>
+                </a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
               </li>
             </ul>
           </div>
@@ -51,9 +54,9 @@
             <?php import_part('button', array(
                 'back_circle_color' => '#e5e5e5',
                 'front_circle_color' => '#84ADC3',
-                'link' => '/',
                 'arrow_color' => '#84B5C5',
                 'circle_text' => '一覧に戻る',
+                'class_name' => 'js-single-news-btn',
               ));
             ?>
           </div>

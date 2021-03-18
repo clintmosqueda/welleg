@@ -20,6 +20,16 @@
       }
     }
   }
+
+  &:hover {
+    .social-icon-icon {
+      background-color: $nero;
+
+      &:before {
+        color: $white;
+      }
+    }
+  }
 }
 
 .social-icon-icon {
@@ -31,9 +41,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 0.5s ease-in-out;
 
   &:before {
     font-size: 35px;
+    transition: color 0.5s ease-in-out;
   }
 }
 

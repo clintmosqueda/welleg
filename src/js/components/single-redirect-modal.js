@@ -6,7 +6,9 @@ export default function singleRedirectModal() {
     let href = item.href;
     let nextEl = item.nextElementSibling;
     if(finalReferrer.toLowerCase() === href) {
-      item.click();
+      setTimeout(() => {
+        item.click();
+      }, 500)
     }
   });
 }
