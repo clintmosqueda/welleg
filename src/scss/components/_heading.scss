@@ -59,7 +59,7 @@
   font-weight: 600;
   position: relative;
   letter-spacing: 0.04em;
-  // font-family: 'A-OTF Gothic BBB Pr6N Medium';
+  font-family: $gothic-bbb;
   // font-family: 'A-OTF Midashi Go MB31 Pr6N';
 
   @include viewport($breakpoint-mobile) {

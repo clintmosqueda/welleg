@@ -24,7 +24,7 @@ if ( empty( $url ) ) { $url = ''; }
             <div class="accordion-text">
               <?php echo $qualifications?>
             </div>
-            <a class="accordion-button" href="<?php echo $url?>"><??>質問・応募する</a>
+            <a class="accordion-button" href="<?php echo resolve_url('contact');?>"><??>質問・応募する</a>
           </div>
         </div>
       </div>
