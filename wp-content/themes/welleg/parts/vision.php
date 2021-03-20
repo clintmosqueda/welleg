@@ -7,7 +7,7 @@
     <div class="vision-content-mainwrap js-observe">
       <div class="vision-content">
         <div class="vision-content-left">
-          <img class="vision-footprint" src="<?php echo resolve_asset_url('/images/footprint.svg');?>" alt=""/>
+          <?php import_part('footprints') ?>
           <h2 class="vision-heading">
             みんなで、<br/>
             キレイなあしを創る。

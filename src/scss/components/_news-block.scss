@@ -5,7 +5,7 @@
   flex-shrink: 0;
   flex-grow: 0;
   opacity: 0;
-  transition: opacity 1s $sec-timing-function;
+  transition: opacity 1s ease-in-out;
 
   .is-active & {
     //animation: fade-in $fade-duration $fade-timing-function forwards;

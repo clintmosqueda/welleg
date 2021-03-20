@@ -60,25 +60,20 @@
   font-size: 24px;
   line-height: 1.8;
   margin: 43px 0 0;
+  opacity: 0;
+
+  .is-active & {
+    animation: fade-in 1s 1.3s $sec-timing-function both;
+  }
 
   @include viewport($breakpoint-mobile) {
     font-size: 20px;
   }
 }
 
-.vision-content-left {
-  .is-active & {
-    animation: fade-in 1s 0.3s $sec-timing-function both;
-  }
-}
-
 .vision-content-right {
   width: 420px;
   padding: 15px 0 0;
-
-  .is-active & {
-    animation: fade-in 1s 0.6s $sec-timing-function both;
-  }
 
   @include viewport($breakpoint-mobile) {
     width: auto;
@@ -87,6 +82,11 @@
 
 .vision-text {
   line-height: 1.7;
+  opacity: 0;
+
+  .is-active & {
+    animation: fade-in 1s 1.6s $sec-timing-function both;
+  }
 
   @include viewport($breakpoint-mobile) {
     font-size: 13px;
@@ -95,9 +95,10 @@
 
 .vision-btn {
   text-align:center;
+  opacity: 0;
 
   .is-active & {
-    animation: fade-in 1s 0.9s $sec-timing-function both;
+    animation: fade-in 1s 1.9s $sec-timing-function both;
   }
 
   @include viewport($breakpoint-mobile) {

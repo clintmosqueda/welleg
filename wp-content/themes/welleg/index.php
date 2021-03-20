@@ -16,10 +16,10 @@ get_header(); ?>
       <div class="banner-content-bg">
         <img class="banner-img show-pc" src="<?php echo resolve_asset_url('/images/banner-img.jpg');?>" alt=""/>
         <img class="banner-img show-sp" src="<?php echo resolve_asset_url('/images/mv-new-sp.jpg');?>" alt=""/>
-        <p class="banner-text">てくてく、いい靴と、いい人生。</p>
-        <div class="banner-scroll">
-          <img class="banner-scroll-img" src="<?php echo resolve_asset_url('/images/banner-scroll.png');?>" alt=""/>
-        </div>
+      </div>
+      <p class="banner-text">てくてく、いい靴と、いい人生。</p>
+      <div class="banner-scroll">
+        <img class="banner-scroll-img" src="<?php echo resolve_asset_url('/images/banner-scroll.png');?>" alt=""/>
       </div>
     </div>
   </section>
@@ -37,7 +37,7 @@ get_header(); ?>
           <img class="aim-img-img show-sp" src="<?php echo resolve_asset_url('/images/aim-img2-sp.jpg');?>" alt=""/>
         </div>
         <div class="aim-text-wrap">
-          <img class="aim-text-img" src="<?php echo resolve_asset_url('/images/footprint.svg');?>" alt=""/>
+          <?php import_part('footprints') ?>
           <h2 class="aim-heading">
             目指すのは、<br/>
             最高の1足です。
@@ -102,7 +102,9 @@ get_header(); ?>
           </div>
         </div>
         <div class="index-about-text-content">
-          <img class="index-about-footprint" src="<?php echo resolve_asset_url('/images/footprint-light.svg');?>" alt=""/>
+          <?php import_part('footprints', array(
+            'modifier' => 'dark',
+          )) ?>
           <h2 class="index-about-heading">
             1925年から、靴のことばかりを<br/>考えてきました。
           </h2>

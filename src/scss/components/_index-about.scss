@@ -45,7 +45,7 @@
   padding: 44px 0 66px;
 
   .is-active & {
-    animation: fade-in 1s 0.3s $sec-timing-function both;
+    animation: fade-in 1s 1.3s $sec-timing-function both;
   }
 
   @include viewport($breakpoint-mobile) {
@@ -60,7 +60,7 @@
   }
 
   .is-active & {
-    animation: fade-in 1s 0.6s $sec-timing-function both;
+    animation: fade-in 1s 1.6s $sec-timing-function both;
   }
 }
 

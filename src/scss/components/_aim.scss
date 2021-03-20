@@ -39,6 +39,7 @@
 
 .aim-img-wrap {
   flex: 0 0 600px;
+  opacity: 0;
 
   .is-active & {
     animation: fade-in-bottom 1s $sec-timing-function both;
@@ -58,6 +59,11 @@
   font-size: 24px;
   line-height: 1.7;
   padding: 40px 0 60px;
+  opacity: 0;
+
+  .is-active & {
+    animation: fade-in 1s 1.3s $sec-timing-function both;
+  }
 
   @include viewport($breakpoint-mobile) {
     font-size: 20px;
@@ -81,10 +87,6 @@
 .aim-text-wrap {
   padding: 20px 0 0 120px;
 
-  .is-active & {
-    animation: fade-in-bottom 1s $sec-timing-function both;
-  }
-
   @include viewport($breakpoint-mobile) {
     padding: 50px 37px 0 0;
   }
@@ -92,6 +94,11 @@
 
 .aim-text {
   line-height: 1.7;
+  opacity: 0;
+
+  .is-active & {
+    animation: fade-in 1s 1.6s $sec-timing-function both;
+  }
 
   @include viewport($breakpoint-mobile) {
     font-size: 13px;
@@ -100,4 +107,9 @@
 
 .aim-btn {
   margin: 50px 0 0;
+  opacity: 0;
+
+  .is-active & {
+    animation: fade-in 1s 1.9s $sec-timing-function both;
+  }
 }
