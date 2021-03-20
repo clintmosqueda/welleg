@@ -83,6 +83,13 @@ function loadmore_ajax_handler(){
         $message = get_field('message', get_the_ID());
         $staf_position = get_field('staf_position', get_the_ID());
         $staff_picture = get_sub_field('staff_picture', get_the_ID());
+        if( have_rows('staff_info', get_the_ID()) ):
+          while( have_rows('staff_info', get_the_ID()) ): the_row();
+            $staff_picture = get_sub_field('staff_picture', get_the_ID());
+            break;
+          endwhile;
+        endif;
+
         import_part('member', array(
           'modifier' => 'staff-member js-animateIn',
           'url' => get_permalink(),

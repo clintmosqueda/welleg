@@ -1,5 +1,5 @@
 .staff {
- 
+
 }
 
 .staff-block {
@@ -58,14 +58,15 @@
 
   &:nth-child(2n+4) {
     margin-top: 89px;
-    
+
     @include viewport($breakpoint-mobile) {
       margin-top: 0;
     }
   }
 }
 
-.staff-button {
+.staff-button,
+.staff-members-btn {
   margin-top: 85px;
 
   @include viewport($breakpoint-mobile) {
@@ -95,7 +96,7 @@
   width: 1440px;
   // width: 100%;
   position: relative;
-  
+
   // padding-left: 12.4%;
 
   @include viewport($breakpoint-mobile) {
@@ -119,7 +120,7 @@
 .staff-related-members {
   display: flex;
   position: relative;
-  
+
   .slick-slide {
     &:focus,
     &:active {
@@ -189,7 +190,7 @@
     align-items: center;
     position: static;
     transform: none;
-  } 
+  }
 
   .slick-prev,
   .slick-next {
@@ -266,7 +267,7 @@
     &::before {
       transform: translate(-50%, -50%) scale(-1,1);
     }
-  } 
+  }
 }
 
 .staff-related-member {

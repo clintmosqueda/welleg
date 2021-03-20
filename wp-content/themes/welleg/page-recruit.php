@@ -51,7 +51,7 @@ global $post;
         <?php
           if (  $staff_query->max_num_pages > 1 )
             import_part('button-round', array(
-            'modifier' => 'js-staff-members-btn',
+            'modifier' => 'staff-members-btn js-staff-members-btn',
             'back_circle_color' => '#e5e5e5',
             'front_circle_color' => '#84ADC3',
             'text' => '読み込む',

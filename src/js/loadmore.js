@@ -39,7 +39,7 @@ jQuery(function($){
       };
 
       $.ajax({
-        url : '/welleg/wp-admin/admin-ajax.php',
+        url : misha_loadmore_params.ajaxurl,
         data : data,
         type : 'POST',
         // beforeSend : function ( xhr ) {
