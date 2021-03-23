@@ -12,15 +12,6 @@
   background-color: $white;
   min-width: 1280px;
 
-  // &.sticky {
-  //   position: fixed;
-  //   left: 0;
-  //   top: 0;
-  //   z-index: 19;
-  //   width: 100%;
-  //   background-color: $white;
-  // }
-
   @include viewport($breakpoint-mobile) {
     padding: 25px 19px;
     display: block;

@@ -51,10 +51,15 @@
   }
 }
 
+.single-date {
+  font-family: $ttcommons;
+}
+
 .single-title {
   font-size: 22px;
   line-height: 1.7;
   flex: 0 0 70%;
+  font-weight: 600;
 
   &.single-title-sdg {
     flex: 0 0 100%;
@@ -78,6 +83,11 @@
   p {
     font-size: 17px;
     line-height: 1.7;
+
+    a {
+      color: $echo-blue;
+      text-decoration: underline;
+    }
 
     @include viewport($breakpoint-mobile) {
       font-size: 13px;
@@ -136,6 +146,7 @@
 .single-share-heading {
   font-size: 15px;
   padding: 0 0 27px;
+  font-weight: 600;
 }
 
 .single-btn {

@@ -101,9 +101,10 @@
     color: $white;
     font-size: 60px;
     display: block;
-    height: 45px;
-    line-height: 45px;
+    height: 26px;
+    line-height: 26px;
     transition: color 0.5s ease-out;
+    transform: translateY(-8px);
   }
 
   .instagram-btn-text {
@@ -112,6 +113,8 @@
     text-transform: uppercase;
     padding: 10px 0 0;
     transition: color 0.5s ease-out;
+    font-size: 14px;
+    font-family: $ttcommons;
   }
 }
 
