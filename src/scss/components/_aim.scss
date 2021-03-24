@@ -57,8 +57,8 @@
 
 .aim-heading {
   font-size: 24px;
-  line-height: 1.7;
-  padding: 40px 0 60px;
+  line-height: 2;
+  padding: 26px 0 43px;
   opacity: 0;
   font-weight: 600;
 
@@ -68,33 +68,32 @@
 
   @include viewport($breakpoint-mobile) {
     font-size: 20px;
-    padding: 30px 0;
+    padding: 22px 0 23px;
   }
 }
 
 .aim-content-wrap {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-top: -20px;
 
   @include viewport($breakpoint-mobile) {
     display: block;
     margin: 0;
-    padding: 40px 0 0 37px;
+    padding: 56px 0 0 37px;
   }
 }
 
 .aim-text-wrap {
-  padding: 20px 0 0 120px;
+  padding: 176px 0 0 120px;
 
   @include viewport($breakpoint-mobile) {
-    padding: 50px 37px 0 0;
+    padding: 55px 37px 0 0;
   }
 }
 
 .aim-text {
-  line-height: 1.7;
+  line-height: 2.2;
   opacity: 0;
 
   .is-active & {
@@ -107,10 +106,14 @@
 }
 
 .aim-btn {
-  margin: 50px 0 0;
+  margin: 31px 0 0 -15px;
   opacity: 0;
 
   .is-active & {
     animation: fade-in 1s 1.9s $sec-timing-function both;
+  }
+
+  @include viewport($breakpoint-mobile) {
+    margin: 30px 0 0 -8px;
   }
 }

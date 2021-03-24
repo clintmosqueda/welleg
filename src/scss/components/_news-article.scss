@@ -31,16 +31,29 @@
 }
 
 .news-article-heading {
-  line-height: 1.7;
-  padding: 20px 0;
+  line-height: 2;
+  padding: 15px 0 21px;
   transition: opacity 0.5s ease-in-out;
   font-weight: 600;
+
+  span {
+    border-bottom: 1px solid $nero;
+  }
+
+  @include viewport($breakpoint-mobile) {
+    padding: 13px 18px 17px;
+  }
 }
 
 .news-article-date {
   font-size: 14px;
   transition: opacity 0.5s ease-in-out;
   font-family: $ttcommons;
+  letter-spacing: 0.08em;
+
+  @include viewport($breakpoint-mobile) {
+    padding: 0 20px;
+  }
 }
 
 .news-article-textwrap {

@@ -1,6 +1,6 @@
 .button-svg-wrap {
-  width: 96px;
-  height: 96px;
+  width: 127px;
+  height: 127px;
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -32,15 +32,15 @@
   }
 
   @include viewport($breakpoint-mobile) {
-    width: 56px;
-    height: 56px;
+    width: 74px;
+    height: 74px;
   }
 }
 
 .button-arrow {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 47%;
   transform: translate(-50%, -50%);
 }
 
@@ -66,10 +66,14 @@
 .button-text {
   font-size: 15px;
   color: #84B5C5;
-  padding: 0 0 0 10px;
+  padding: 0 0 0 8px;
   display: inline-block;
   vertical-align: middle;
   font-weight: 600;
+
+  @include viewport($breakpoint-mobile) {
+    padding: 0;
+  }
 }
 
 @keyframes strokeDefaultCircle{

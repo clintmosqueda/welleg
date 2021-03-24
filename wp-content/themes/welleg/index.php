@@ -111,7 +111,7 @@ get_header(); ?>
             'modifier' => 'dark',
           )) ?>
           <h2 class="index-about-heading">
-            1925年から、靴のことばかりを<br/>考えてきました。
+            1925年から、靴のことばかりを<br class="show-pc"/>考えてきました。
           </h2>
           <div class="index-about-btn">
             <?php import_part('button', array(

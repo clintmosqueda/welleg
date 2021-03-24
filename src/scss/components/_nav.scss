@@ -4,7 +4,7 @@
 }
 
 .nav-item {
-  padding: 0 10px;
+  margin: 0 0 0 28px;
   display: inline-block;
   position: relative;
 
@@ -16,7 +16,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    bottom: -13px;
+    bottom: -17px;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -35,9 +35,32 @@
     }
   }
 
+  &:last-of-type {
+    margin: 0 0 0 46px;
+
+    &:after {
+      content: "";
+      width: 1px;
+      height: 23px;
+      background-color: #bbb;
+      position: absolute;
+      left: -24px;
+      top: -3px;
+
+      @include viewport($breakpoint-mobile) {
+        content: normal;
+      }
+    }
+
+    @include viewport($breakpoint-mobile) {
+      margin: 0;
+    }
+  }
+
   @include viewport($breakpoint-mobile) {
     display: block;
-    padding: 8px 0;
+    padding: 0 0 24px;
+    margin: 0;
   }
 }
 

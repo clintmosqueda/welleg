@@ -10,8 +10,16 @@
     opacity: 0;
     transform: scale(1.5);
 
+    @include viewport($breakpoint-mobile) {
+      width: 7px;
+    }
+
     &:last-of-type {
       animation-delay: 1s;
+
+      @include viewport($breakpoint-mobile) {
+        width: 8px;
+      }
     }
   }
 }

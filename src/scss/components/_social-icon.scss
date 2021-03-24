@@ -51,17 +51,22 @@
 
 .social-icon-sub-item {
   position: absolute;
-  left: -50px;
+  left: -42px;
   width: 146px;
   bottom: 0;
-  padding: 0 0 50px 0;
+  padding: 0 0 59px 0;
   visibility: hidden;
   //transition: visibility 0.5s ease-in-out;
+
+  @include viewport($breakpoint-mobile) {
+    left: -55px;
+    padding: 0 0 55px 0;
+  }
 }
 
 .social-icon-sub-item-content {
   background-color: #939DA2;
-  padding: 15px;
+  padding: 14px 15px;
   border-radius: 5px;
   position: relative;
 
@@ -75,13 +80,13 @@
     position: absolute;
     left: 50%;
     right: 0;
-    bottom: -10px;
+    bottom: -8px;
     transform: translateX(-50%);
   }
 }
 
 .social-icon-sub-list-item {
-  padding: 5px 0;
+  padding: 0 0 10px;
 }
 
 .social-icon-sub-list-link {
@@ -89,6 +94,7 @@
   font-size: 12px;
   text-decoration: underline;
   transition: opacity 0.5s ease-in-out;
+  letter-spacing: 0;
 
   &:hover {
     opacity: 0.6;

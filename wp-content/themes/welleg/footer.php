@@ -19,7 +19,7 @@
           <a class="footer-social-text" href="<?php echo get_home_url() . '/privacy' ?>">プライバシーポリシー</a>
           <?php import_part('social-icons'); ?>
         </div>
-        <p class="footer-copyright show-sp">&copy; Welleg inc. 2021</p>
+        <p class="footer-copyright show-sp">&copy; Welleg Inc. 2021</p>
       </div>
     </div>
   </footer>

@@ -1,13 +1,15 @@
 .footer {
-  padding: 200px 0 160px;
+  padding: 200px 0 167px;
 
   @include viewport($breakpoint-mobile) {
-    padding: 120px 0 83px;
+    padding: 130px 0 83px;
+    position: relative;
+    z-index: 1;
   }
 }
 
 .footer-top {
-  overflow: hidden;
+  //overflow: hidden;
   position: relative;
 }
 
@@ -17,7 +19,7 @@
 }
 
 .footer-top-text {
-  font-family: $alegreya;
+  font-family: $ttcommons;
   font-size: 120px;
   color: $white;
   width: 1706px;
@@ -33,10 +35,11 @@
     -1px 1px 0 $gainsboro,
      1px 1px 0 $gainsboro;
   transition: bottom 1s 1s $sec-timing-function;
+  letter-spacing: 0.08em;
 
 
   .is-active & {
-    bottom: 10px;
+    bottom: 21px;
   }
 
 
@@ -54,6 +57,7 @@
   position: relative;
   z-index: 2;
   opacity: 0;
+  transform: translate(-2px, -2px);
 
   .is-active & {
     animation: fade-in 1s 0.3s $sec-timing-function both;
@@ -61,6 +65,7 @@
 
   @include viewport($breakpoint-mobile) {
     width: 102px;
+    transform: translate(-2px, 0)
   }
 }
 
@@ -71,6 +76,10 @@
 
   .is-active & {
     animation: fade-in 1s 0.6s $sec-timing-function both;
+  }
+
+  @include viewport($breakpoint-mobile) {
+    margin: 0 0 27px;
   }
 }
 
@@ -91,11 +100,29 @@
 }
 
 .footer-bottom {
-  padding: 100px 0 0;
+  padding: 92px 0 0;
+
+  @include viewport($breakpoint-mobile) {
+    padding: 97px 20px 0;
+  }
 }
 
 .footer-shoplist {
-  width: 420px;
+  width: 397px;
+
+  .shoplist-list {
+    margin-left: -2px;
+
+    @include viewport($breakpoint-mobile) {
+      margin-left: 0;
+    }
+  }
+
+  .shoplist-title { 
+    @include viewport($breakpoint-mobile) {
+      padding: 0 0 20px;
+    }
+  }
 
   .shoplist-title,
   .shoplist-link {
@@ -103,13 +130,14 @@
   }
 
   @include viewport($breakpoint-mobile) {
-    width: 280px;
+    width: 290px;
   }
 }
 
 .footer-social {
   display: flex;
   align-items: center;
+  transform: translate(10px, -4px);
 
   .footer-social-text {
     font-size: 12px;
@@ -117,6 +145,7 @@
     padding: 0 25px 0 0;
     text-decoration: underline;
     transition: opacity 0.5s ease-in-out;
+    letter-spacing: 0.05em;
 
     &:hover {
       opacity: 0.5;
@@ -124,11 +153,13 @@
 
     @include viewport($breakpoint-mobile) {
       text-decoration: underline;
-      padding: 0 0 40px 0;
+      padding: 0 0 34px 0;
     }
   }
 
   .social-icon-item {
+    padding: 0 0 0 15px;
+
     &:last-of-type {
       padding-right: 0;
     }
@@ -141,6 +172,10 @@
           color: $white;
         }
       }
+    }
+
+    @include viewport($breakpoint-mobile) {
+      padding: 0 15px 0 0;
     }
   }
 
@@ -157,14 +192,16 @@
   @include viewport($breakpoint-mobile) {
     display: block;
     border-top: 1px solid $gainsboro;
-    margin: 57px 0 0;
-    padding: 57px 0 0;
+    margin: 41px 0 0;
+    padding: 55px 0 0;
+    transform: none;
   }
 }
 
 .footer-copyright {
-  font-family: $alegreya;
+  font-family: $ttcommons;
   font-size: 12px;
   color: #bbb;
   padding: 37px 0 0;
+  letter-spacing: 0.05em;
 }

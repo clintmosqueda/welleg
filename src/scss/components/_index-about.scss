@@ -1,5 +1,5 @@
 .index-about {
-  padding: 160px 0;
+  padding: 159px 0;
   background-color: $zircon;
 
   @include viewport($breakpoint-mobile) {
@@ -18,18 +18,19 @@
   background-repeat: no-repeat;
 
   @include viewport($breakpoint-mobile) {
-    padding: 50px 40px;
+    padding: 50px 38px 31px;
     display: block;
-  }
-
-  @include viewport($breakpoint-mobile-l) {
-    padding: 50px 30px;
+    min-height: 0;
   }
 }
 
 .index-about-text-content {
   order: 1;
-  padding: 50px 0 0;
+  padding: 60px 0 0;
+
+  @include viewport($breakpoint-mobile) {
+    padding: 21px 0 0;
+  }
 }
 
 .index-about-footprint {
@@ -40,9 +41,9 @@
 
 .index-about-heading {
   font-size: 24px;
-  line-height: 1.7;
+  line-height: 2.1;
   color: $white;
-  padding: 44px 0 66px;
+  padding: 24px 0 39px;
   font-weight: 600;
 
   .is-active & {
@@ -51,11 +52,12 @@
 
   @include viewport($breakpoint-mobile) {
     font-size: 20px;
-    padding: 26px 0 42px;
+    padding: 20px 0 29px;
   }
 }
 
 .index-about-btn {
+  margin: 0 0 0 -17px;
   .button-text {
     color: $white;
   }
@@ -63,23 +65,22 @@
   .is-active & {
     animation: fade-in 1s 1.6s $sec-timing-function both;
   }
+
+  @include viewport($breakpoint-mobile) {
+    margin: 0 0 0 -10px;
+  }
 }
 
 .index-about-image-content {
   position: relative;
-  width: 501px;
+  width: 502px;
   height: 416px;
   order: 2;
 
   @include viewport($breakpoint-mobile) {
-    width: 270px;
+    width: 271px;
     height: 227px;
     margin: 0 auto;
-  }
-
-  @include viewport($breakpoint-mobile-l) {
-    width: 214px;
-    height: 177px;
   }
 }
 
@@ -88,45 +89,63 @@
   opacity: 0;
 
   &:first-of-type {
-    left: 8%;
-    top: 47px;
+    left: 0%;
+    top: 3%;
     z-index: 1;
 
     .is-active & {
       animation: index-image1 $fade-duration 0.9s $sec-timing-function both;
     }
 
+    @include viewport($breakpoint-mobile) {
+      top: 7%;
+      left: -2%;
+    }
+
   }
 
   &:nth-of-type(2) {
-    left: 20%;
+    left: 12.6%;
     top: 0;
     z-index: 2;
+
+    .index-about-image-img {
+      width: 376px;
+
+      @include viewport($breakpoint-mobile) {
+        width: 187px;
+      }
+    }
 
     .is-active & {
       animation: index-image2 $fade-duration 1.3s $sec-timing-function both;
     }
+
+    @include viewport($breakpoint-mobile) {
+      left: 12.6%;
+    }
   }
 
   &:last-of-type {
-    right: 2%;
-    top: 19%;
+    right: 0%;
+    top: 15%;
     z-index: 3;
 
     .is-active & {
       animation: index-image3 $fade-duration 1.6s $sec-timing-function both;
     }
+
+    @include viewport($breakpoint-mobile) {
+      top: 23%;
+      right: 2%;
+    }
   }
 }
 
 .index-about-image-img {
-  width: 376px;
+  width: 427px;
 
   @include viewport($breakpoint-mobile) {
-    width: 187px;
-  }
-
-  @include viewport($breakpoint-mobile-l) {
-    width: 150px;
+    width: 213px;
   }
 }
