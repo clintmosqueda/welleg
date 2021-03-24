@@ -9,15 +9,35 @@
 .banner-content {
   position: relative;
   overflow: hidden;
+  min-height: calc((100vh - 111px) + 143px);
+  background-image: url('../images/texture.jpg');
+  background-repeat: repeat;
+  background-position: 0 0;
+
+  @include viewport($breakpoint-mobile) {
+    min-height: calc((100vh - 74px) + 194px);
+  }
 }
 
 .banner-content-bg {
-  min-height: 843px;
-  background-image: url('../images/texture.jpg');
-  background-repeat: repeat;
+  height: calc(100vh - 111px);
+  min-height: 509px;
+  position: relative;
+
+  @include viewport($breakpoint-mobile) {
+    height: calc(100vh - 74px);
+    min-height: 490px;
+  }
+}
+
+.banner-content-img-wrap {
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
   transform: scale(1.1);
   opacity: 0;
   transition: opacity 1s 1s $sec-timing-function,transform 1.6s 1s $sec-timing-function;
+  background-position: center 100%;
 
   .is-active & {
     opacity: 1;
@@ -25,18 +45,7 @@
   }
 
   @include viewport($breakpoint-mobile) {
-    min-height: 684px;
-  }
-}
-
-.banner-content-img-wrap {
-  height: 700px;
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  @include viewport($breakpoint-mobile) {
-    height: 490px;
-    background-position: 0 0;
+    background-position: center 100%;
   }
 }
 
@@ -48,8 +57,7 @@
   color: $white;
   font-size: 28px;
   position: absolute;
-  //top: calc((100vh - 111px) - 14px);
-  bottom: calc(843px - 711px);
+  bottom: -12px;
   left: 60px;
   font-weight: 600;
 
@@ -58,7 +66,7 @@
     left: 0;
     right: 0;
     text-align: center;
-    bottom: 27.5%;
+    bottom: -6px;
     top: auto;
   }
 
@@ -70,7 +78,7 @@
 .banner-scroll {
   position: absolute;
   right: 60px;
-  bottom: calc((843px - 700px) - 62.5px);
+  bottom: -62.5px;
   width: 124px;
 
   @include viewport($breakpoint-mobile) {
