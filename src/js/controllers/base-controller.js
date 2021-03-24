@@ -26,6 +26,11 @@ export default class BaseController {
     //   node.innerHTML = el;
     //   footerTopText.appendChild(node);
     // })
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.body.classList.add('loaded');
+      }, 800);
+    });
 
     this.init();
   }

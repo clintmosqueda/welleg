@@ -14,11 +14,16 @@ get_header(); ?>
   <section class="banner js-observe">
     <div class="banner-content">
       <div class="banner-content-bg">
-        <img class="banner-img show-pc" src="<?php echo resolve_asset_url('/images/banner-img.jpg');?>" alt=""/>
-        <img class="banner-img show-sp" src="<?php echo resolve_asset_url('/images/mv-new-sp.jpg');?>" alt=""/>
+        <div class="banner-content-img-wrap show-pc" style="background-image: url(<?php echo resolve_asset_url('/images/banner-img.jpg');?>);">
+        </div>
+        <div class="banner-content-img-wrap show-sp" style="background-image: url(<?php echo resolve_asset_url('/images/banner-img-sp.jpg');?>);">
+        </div>
+        <p class="banner-text">てくてく、いい靴と、いい人生。</p>
+        <div class="banner-scroll show-pc">
+          <img class="banner-scroll-img" src="<?php echo resolve_asset_url('/images/banner-scroll.png');?>" alt=""/>
+        </div>
       </div>
-      <p class="banner-text">てくてく、いい靴と、いい人生。</p>
-      <div class="banner-scroll">
+      <div class="banner-scroll show-sp">
         <img class="banner-scroll-img" src="<?php echo resolve_asset_url('/images/banner-scroll.png');?>" alt=""/>
       </div>
     </div>

@@ -61,6 +61,7 @@
   line-height: 1.8;
   margin: 43px 0 0;
   opacity: 0;
+  font-weight: 600;
 
   .is-active & {
     animation: fade-in 1s 1.3s $sec-timing-function both;

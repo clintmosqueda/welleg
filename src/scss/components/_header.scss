@@ -12,17 +12,8 @@
   background-color: $white;
   min-width: 1280px;
 
-  // &.sticky {
-  //   position: fixed;
-  //   left: 0;
-  //   top: 0;
-  //   z-index: 19;
-  //   width: 100%;
-  //   background-color: $white;
-  // }
-
   @include viewport($breakpoint-mobile) {
-    padding: 25px 19px;
+    padding: 0 19px;
     display: block;
     z-index: 2;
     position: fixed;
@@ -31,12 +22,17 @@
     width: 100%;
     background-color: $white;
     min-width: 0;
+    height: 74px;
   }
 }
 
 .header-logo {
   display: flex;
   align-items: center;
+
+  @include viewport($breakpoint-mobile) {
+    height: 74px;
+  }
 }
 
 .header-logo-link {

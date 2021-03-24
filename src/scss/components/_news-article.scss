@@ -34,11 +34,13 @@
   line-height: 1.7;
   padding: 20px 0;
   transition: opacity 0.5s ease-in-out;
+  font-weight: 600;
 }
 
 .news-article-date {
   font-size: 14px;
   transition: opacity 0.5s ease-in-out;
+  font-family: $ttcommons;
 }
 
 .news-article-textwrap {
