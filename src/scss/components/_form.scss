@@ -18,6 +18,10 @@
 
   span {
     color: $echo-blue;
+
+    .mw_wp_form_confirm & {
+      display: none;
+    }
   }
 }
 
@@ -60,6 +64,10 @@
     border-width: 6px 3px 0 3px;
     border-color: $echo-blue transparent transparent transparent;
     pointer-events: none;
+
+    .mw_wp_form_confirm & {
+      display: none;
+    }
   }
 }
 
@@ -83,6 +91,10 @@
   @include viewport($breakpoint-mobile) {
     padding: 24px 21px 27px;
     margin-bottom: 58px;
+  }
+
+  .mw_wp_form_confirm & {
+    display: none;
   }
 }
 
@@ -157,5 +169,44 @@
 
   &:focus {
     outline: none;
+  }
+
+  .mw_wp_form_confirm &[name="submit"] {
+    display: none;
+  } 
+}
+
+.form-select-wrapper,
+.form-input-wrapper,
+.form-textarea-wrapper {
+  .mw_wp_form_confirm & {
+    background-color: $zircon;
+  }
+}
+
+.form-select-wrapper,
+.form-input-wrapper {
+  .mw_wp_form_confirm & {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    padding: 0 23px
+  }
+}
+
+.form-textarea-wrapper {
+  .mw_wp_form_confirm & {
+    height: 270px;
+    padding: 20px 23px;
+  }
+}
+
+.js-form-submit {
+  pointer-events: none;
+  opacity: 0.5;
+
+  &.is-active {
+    pointer-events: auto;
+    opacity: 1;
   }
 }

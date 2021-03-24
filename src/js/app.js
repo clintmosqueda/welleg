@@ -13,6 +13,7 @@ import AboutController from './controllers/about-controller';
 import SingleSdgController from './controllers/single-sdg-controller';
 import SingleStaffController from './controllers/single-staff-controller';
 import MakingController from './controllers/making-controller';
+import ContactController from './controllers/contact-controller';
 
 new Hack();
 
@@ -48,6 +49,10 @@ let routes = [
   {
     id: 'making-page',
     controller: MakingController,
+  },
+  {
+    id: 'contact-page',
+    controller: ContactController,
   },
 ];
 

@@ -9,12 +9,57 @@ global $post;
     'heading_en' => 'RECRUIT RECRUIT'
   ));?>
 
+<section class="department">
+    <div class="wrapper">
+      <div class="department-block">
+        <h2 class="department-heading is-hidden js-animateIn">部署紹介</h2>
+        <div class="department-wrap">
+          <?php import_part('branch', array(
+            'modifier' => 'department-branch is-hidden js-animateIn',
+            'image' => '/images/department-image.png',
+            'heading' => '商品部',
+            'text' => 'ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。',
+          ))?>
+          <?php import_part('branch', array(
+            'modifier' => 'department-branch is-hidden js-animateIn',
+            'image' => '/images/department-image.png',
+            'heading' => 'クリエイティブ',
+            'text' => 'ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。',
+          ))?>
+          <?php import_part('branch', array(
+            'modifier' => 'department-branch is-hidden js-animateIn',
+            'image' => '/images/department-image.png',
+            'heading' => 'セールス',
+            'text' => 'ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。',
+          ))?>
+          <?php import_part('branch', array(
+            'modifier' => 'department-branch is-hidden js-animateIn',
+            'image' => '/images/department-image.png',
+            'heading' => 'カスタマー＆デリバリー',
+            'text' => 'ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。',
+          ))?>
+          <?php import_part('branch', array(
+            'modifier' => 'department-branch is-hidden js-animateIn',
+            'image' => '/images/department-image.png',
+            'heading' => 'システム',
+            'text' => 'ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。',
+          ))?>
+          <?php import_part('branch', array(
+            'modifier' => 'department-branch is-hidden js-animateIn',
+            'image' => '/images/department-image.png',
+            'heading' => '経理・総務',
+            'text' => 'ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。',
+          ))?>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <?php
   $staff_query = query_staff();
-
   if($staff_query->have_posts()): ?>
-  <section class="staff">
+  <section class="staff <?php echo $staff_query->max_num_pages > 1 ? '' : 'is-max-post'; ?>">
     <div class="wrapper">
       <div class="staff-block">
         <h2 class="staff-heading is-hidden js-animateIn">スタッフ紹介</h2>
@@ -61,6 +106,32 @@ global $post;
     </div>
   </section>
   <?php endif; ?>
+
+  <section class="position">
+    <div class="wrapper">
+      <h2 class="position-heading is-hidden js-animateIn">募集職種</h2>
+    </div>
+    <div class="position-accordions">
+      <?php if( have_rows('recruitment', 'option') ): ?>
+        <?php while( have_rows('recruitment', 'option') ): the_row();
+        $title = get_sub_field('job_title', 'option');
+        $description = get_sub_field('job_description', 'option');
+        $qualifications = get_sub_field('job_qualifications', 'option');
+        $qualifications_clean = str_replace(array('<p>','</p>', '<br>'),'',$qualifications);
+        $url = get_sub_field('url', 'option');
+        ?>
+        <div class="is-hidden js-animateIn">
+        <?php import_part('accordion', array(
+          'modifier' => '',
+          'title' => $title,
+          'description' => $description,
+          'qualifications' => $qualifications,
+        ))?>
+        </div>
+        <?php endwhile; ?>
+      <?php endif; ?>
+    </div>
+  </section>
 
 </main>
 <script>
