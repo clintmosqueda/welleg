@@ -12,7 +12,7 @@ export default class AboutController extends BaseController {
     console.log('about');
 
     const swiper = new Swiper('.swiper-container', {
-      slidesPerView: 3,
+      slidesPerView: 'auto',
       spaceBetween: 20,
       loop: true,
       autoplay: {

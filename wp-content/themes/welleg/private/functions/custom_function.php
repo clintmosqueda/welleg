@@ -64,6 +64,9 @@ function loadmore_ajax_handler(){
   if($args['post_type'] === 'news') {
     $args['posts_per_page'] = 5;
   }
+  else if($args['post_type'] === 'sdg') {
+    $args['posts_per_page'] = 4;
+  }
   else {
     $args['posts_per_page'] = 2;
   }
@@ -77,6 +80,11 @@ function loadmore_ajax_handler(){
       if($args['post_type'] === 'news') {
         echo '<li class="news-block">';
           import_part('news-article');
+        echo '</li>';
+      }
+      else if($args['post_type'] === 'sdg') {
+        echo '<li class="about-sdg-block">';
+          import_part('sdg-article');
         echo '</li>';
       }
       else {

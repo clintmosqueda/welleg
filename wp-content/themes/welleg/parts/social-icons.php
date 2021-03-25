@@ -1,12 +1,12 @@
 <ul class="social-icon-list">
   <li class="social-icon-item">
-    <a href=""><span class="social-icon-icon icon-twitter"></span></a>
+    <a class="social-icon-links" href="https://twitter.com/welleg_shoes" target="_blank"><span class="social-icon-icon icon-twitter"></span></a>
   </li>
   <li class="social-icon-item">
-    <a href=""><span class="social-icon-icon icon-facebook"></span></a>
+    <a class="social-icon-links" href="https://www.facebook.com/welleg.shoes.official/" target="_blank"><span class="social-icon-icon icon-facebook"></span></a>
   </li>
   <li class="social-icon-item">
-    <a href=""><span class="social-icon-icon icon-instagram"></span></a>
+    <a class="social-icon-links" href="https://www.instagram.com/welleg_shoes/" target="_blank"><span class="social-icon-icon icon-instagram"></span></a>
   </li>
   <li class="social-icon-item social-icon-item-line">
     <strong><span class="social-icon-icon icon-line"></span></strong>

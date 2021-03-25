@@ -7,7 +7,7 @@
   position: relative;
 
   @include viewport($breakpoint-mobile) {
-    padding: 68px 15px 100px
+    padding: 68px 15px 87px
   }
 }
 
@@ -83,4 +83,10 @@
   letter-spacing: 0.051em;
   text-transform: uppercase;
   animation: fade-in-bottom 1.5s ease-in-out forwards;
+
+  @include viewport($breakpoint-mobile) {
+    font-size: 88px;
+    top: 156px;
+    left: -191px;
+  }
 }

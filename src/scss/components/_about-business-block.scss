@@ -1,5 +1,5 @@
 .about-business-block {
-  padding: 30px 0;
+  padding: 30px 0 57px;
   border-top: 1px solid $gainsboro;
   opacity: 0;
 
@@ -16,6 +16,10 @@
   &:last-of-type {
     border-bottom: 1px solid $gainsboro;
   }
+
+  @include viewport($breakpoint-mobile) {
+    padding: 21px 0 41px;
+  }
 }
 
 .about-business-block-tag {
@@ -31,23 +35,25 @@
 
   @include viewport($breakpoint-mobile) {
     display: block;
+    padding: 42px 0 0;
   }
 }
 
 .about-business-block-title {
   font-size: 22px;
   flex: 0 0 auto;
-  padding: 20px 0 0 20px;
+  padding: 11px 0 0 59px;
   font-weight: 600;
 
   @include viewport($breakpoint-mobile) {
     font-size: 17px;
-    padding: 0 0 20px;
+    padding: 0 0 23px;
   }
 }
 
 .about-business-block-text {
   font-size: 13px;
-  line-height: 1.5;
+  line-height: 1.8;
   flex: 0 0 300px;
+  letter-spacing: 0.004em;
 }

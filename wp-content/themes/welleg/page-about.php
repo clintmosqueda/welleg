@@ -27,7 +27,7 @@
         </div>
         <div class="about-slider-item swiper-slide">
           <div class="about-slider-image-wrap show-pc">
-            <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider1.jpg');?>" alt=""/>
+            <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider3.jpg');?>" alt=""/>
           </div>
           <div class="about-slider-image-wrap show-sp">
             <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider3-sp.jpg');?>" alt=""/>
@@ -35,7 +35,7 @@
         </div>
         <div class="about-slider-item swiper-slide">
           <div class="about-slider-image-wrap show-pc">
-            <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider2.jpg');?>" alt=""/>
+            <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider4.jpg');?>" alt=""/>
           </div>
           <div class="about-slider-image-wrap show-sp">
             <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider3-sp.jpg');?>" alt=""/>
@@ -70,21 +70,21 @@
           私たちはそう信じてやみません。
         </p>
         <p class="about-statement-text">
-          いい人生を歩む、なんて言い方をすることがあります。<br/>
-          今日もいい一日だったな、とお客さまに思っていただくこと。<br/>
+          いい人生を歩む、<br class="show-sp"/>なんて言い方をすることがあります。<br/>
+          今日もいい一日だったな、<br class="show-sp"/>とお客さまに思っていただくこと。<br/>
           そんな毎日を、人生を、歩んでいただくこと。<br/>
           靴をあつかう私たちにとっての「歩く」とは、<br/>
           そういうことなのかもしれません。
         </p>
         <p class="about-statement-text">
-          履きやすくて、疲れにくくて、コーディネートが楽しくなるような。<br/>
+          履きやすくて、疲れにくくて、<br class="show-sp"/>コーディネートが楽しくなるような。<br/>
           それでいて、とってもリーズナブルな商品を、<br/>
           少しでも多くの方に届けたい。<br/>
-          情熱をこめた靴づくりと、画面越しでも温もりを感じられるおもてなしで、<br/>
+          情熱をこめた靴づくりと、<br class="show-sp"/>画面越しでも温もりを感じられるおもてなしで、<br/>
           ぴったりの靴と出会うよろこびを提供する。
         </p>
         <p class="about-statement-text">
-          何年経っても変わらない、私たちの使命です。
+          何年経っても変わらない、<br class="show-sp"/>私たちの使命です。
         </p>
         <p class="about-statement-slogan">キレイなあしを創る</p>
       </div>
@@ -242,7 +242,7 @@
   <section class="about-sdg" id="sdg">
     <div class="about-sdg-wrapper wrapper">
       <h2 class="about-sdg-heading">SDGsの取り組み</h2>
-      <ul class="about-sdg-news-list js-observe">
+      <ul class="about-sdg-news-list js-about-sdg-news-list js-observe">
         <?php
           $args = array(
             'post_type'      => SDG_POST_TYPE,
@@ -261,8 +261,22 @@
         <?php endwhile; ?>
       </ul>
       <?php wp_reset_postdata(); ?>
+      <?php
+        if (  $index_sdg->max_num_pages > 1 )
+          import_part('button-round', array(
+          'modifier' => 'about-sdg-btn js-about-sdg-btn',
+          'back_circle_color' => '#84B5C5',
+          'front_circle_color' => '#84B5C5',
+          'text' => '読み込む',
+        ));
+      ?>
     </div>
   </section>
 </main>
+<script>
+  var posts_sdg = '<?php echo json_encode( $index_sdg->query_vars ) ?>',
+    current_page_sdg = 1,
+    max_page_sdg = '<?php echo $index_sdg->max_num_pages ?>';
+</script>
 <?php
 get_footer();

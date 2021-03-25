@@ -116,7 +116,7 @@ get_header(); ?>
           <div class="index-about-btn">
             <?php import_part('button', array(
                 'text' => '私たちについて',
-                'back_circle_color' => '#e5e5e5',
+                'back_circle_color' => 'rgba(255,255,255,0.5)',
                 'front_circle_color' => '#fff',
                 'link' => get_home_url() . '/about',
                 'arrow_color' => '#fff',

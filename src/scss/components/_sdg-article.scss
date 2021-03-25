@@ -26,15 +26,19 @@
 }
 
 .sdg-article-heading {
-  padding: 15px 0 4px;
+  padding: 14px 0 4px;
   font-size: 15px;
   position: relative;
   display: inline-block;
   transition: transform 0.5s $sec-timing-function;
-  line-height: 2;
+  line-height: 1.8;
   font-weight: 600;
 
   span {
     border-bottom: 1px solid $nero;
+  }
+
+  @include viewport($breakpoint-mobile) {
+    padding: 14px 15px 4px;
   }
 }

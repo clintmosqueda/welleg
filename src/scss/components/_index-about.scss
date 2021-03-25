@@ -76,6 +76,7 @@
   width: 502px;
   height: 416px;
   order: 2;
+  z-index: 1;
 
   @include viewport($breakpoint-mobile) {
     width: 271px;

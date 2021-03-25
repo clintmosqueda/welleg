@@ -9,6 +9,14 @@
 
     &.swiper-container-initialized {
       opacity: 1;
+
+      .swiper-slide {
+        width: 560px;
+
+        @include viewport($breakpoint-mobile) {
+          width: 320px;
+        }
+      }
     }
   }
 }
@@ -27,10 +35,10 @@
 }
 
 .about-statement {
-  padding: 100px 0 150px;
+  padding: 183px 0 150px;
 
   @include viewport($breakpoint-mobile) {
-    padding: 100px 0 80px;
+    padding: 66px 0 91px;
   }
 }
 
@@ -49,6 +57,7 @@
   font-size: 20px;
   font-weight: 600;
   opacity: 0;
+  letter-spacing: 0;
 
   .is-active & {
     animation: fade-in-bottom 1s 0.3s $sec-timing-function both;
@@ -56,14 +65,15 @@
 
   @include viewport($breakpoint-mobile) {
     font-size: 16px;
-    padding: 0 0 48px;
+    padding: 0 0 59px;
+    letter-spacing: 0.05em;
   }
 }
 
 .about-statement-image {
   position: absolute;
-  left: 0;
-  bottom: -20px;
+  left: 33px;
+  bottom: -18px;
   width: 139px;
   opacity: 0;
 
@@ -74,40 +84,55 @@
   @include viewport($breakpoint-mobile) {
     position: static;
     margin: 50px auto 0;
-    display: block;
   }
 }
 
 .about-statement-content {
   opacity: 0;
+  flex: 0 0 66.3%;
+  margin: -12px 0 0;
 
   .is-active & {
     animation: fade-in-bottom 1s 0.3s $sec-timing-function both;
+  }
+
+  @include viewport($breakpoint-mobile) {
+    flex: 0 0  auto;
   }
 }
 
 .about-statement-text {
   font-size: 17px;
-  line-height: 1.7;
-  padding: 0 0 50px;
+  line-height: 2.2;
+  padding: 0 0 34px;
+  letter-spacing: 0.05em;
 
   @include viewport($breakpoint-mobile) {
     font-size: 13px;
+    letter-spacing: 0.01em;
+    padding: 0 0 26px;
+    line-height: 2;
   }
 }
 
 .about-statement-slogan {
   font-size: 36px;
   font-weight: 600;
+  padding: 40px 0 0;
 
   @include viewport($breakpoint-mobile) {
     font-size: 20px;
+    padding: 27px 0 0;
   }
 }
 
 .about-banner {
-  margin: 0 0 50px;
+  margin: 0 0 170px;
   overflow: hidden;
+
+  @include viewport($breakpoint-mobile) {
+    margin: 0 0 60px;
+  }
 }
 
 .about-banner-image {
@@ -134,8 +159,8 @@
 
 .about-business-image {
   position: absolute;
-  right: 0;
-  bottom: -20px;
+  right: 23px;
+  bottom: 16px;
   width: 210px;
   opacity: 0;
 
@@ -145,14 +170,15 @@
 
   @include viewport($breakpoint-mobile) {
     position: static;
-    margin: 50px auto 0;
+    margin: 77px auto 0;
     display: block;
     width: 214px;
+    transform: translate(-5px, 0);
   }
 }
 
 .about-business-wrap {
-  width: 60%;
+  width: 67%;
 
   @include viewport($breakpoint-mobile) {
     width: 100%;
@@ -160,23 +186,25 @@
 }
 
 .about-action {
-  padding: 150px 0;
-  margin: 100px 0;
+  padding: 169px 0 160px;
+  margin: 160px 0 169px;
   background-color: $zircon;
 
   @include viewport($breakpoint-mobile) {
-    padding: 70px 0;
+    padding: 67px 0 80px;
+    margin: 118px 0 67px;
   }
 }
 
 .about-action-heading {
   font-size: 20px;
-  padding: 0 0 130px;
+  padding: 0 0 135px;
   font-weight: 600;
 
   @include viewport($breakpoint-mobile) {
     font-size: 16px;
-    padding: 0 19px 60px;
+    padding: 0 19px 49px;
+    letter-spacing: 0.1em;
   }
 }
 
@@ -227,16 +255,59 @@
   flex: 0 0 47%;
 }
 
+.about-intelligence-content-right {
+  .description-list {
+    padding: 26px 0 28px;
+
+    dt {
+      width: 150px;
+
+      @include viewport($breakpoint-mobile) {
+        width: 93px;
+        flex: 0 0 auto;
+      }
+    }
+
+    &:first-of-type {
+      @include viewport($breakpoint-mobile) {
+        border-top: 0;
+      }
+    }
+  }
+}
+
 .about-history {
-  margin: 100px 0 0;
+  margin: 189px 0 0;
 
   @include viewport($breakpoint-mobile) {
-    margin: 80px 0 0;
+    margin: 67px 0 0;
   }
 }
 
 .about-history-wrapper {
   opacity: 0;
+
+  .description-list {
+    padding: 30px 0 25px;
+    border-bottom: 1px solid $gainsboro;
+    border-top: 0;
+
+    // dt {
+    //   letter-spacing: 0;
+    // }
+
+    dd {
+      letter-spacing: 0.02em;
+    }
+
+    &:first-of-type {
+      border-top: 1px solid $gainsboro;
+    }
+
+    @include viewport($breakpoint-mobile) {
+      padding: 17px 0 19px;
+    }
+  }
 
   &.is-active {
     animation: fade-in-bottom 1s 0.3s $sec-timing-function both;
@@ -249,37 +320,44 @@
 
 .about-history-btn {
   text-align: center;
-  margin: 80px 0 0;
+  margin: 53px 0 0 -20px;
 
   .button-svg-wrap {
-    width: 214px;
-    height: 214px;
+    width: 285px;
+    height: 285px;
 
     @include viewport($breakpoint-mobile) {
-      width: 150px;
-      height: 150px;
+      width: 200px;
+      height: 200px;
     }
+  }
+
+  @include viewport($breakpoint-mobile) {
+    margin: 36px 0 0 -1px;
   }
 }
 
 .about-sdg {
-  margin: 100px 0 0;
-  padding: 100px 0;
+  margin: 124px 0 0;
+  padding: 158px 0 67px;
   background-color: $zircon;
 
   @include viewport($breakpoint-mobile) {
-    padding: 60px 0 20px;
+    padding: 66px 0 80px;
+    margin: 55px 0 0;
   }
 }
 
 .about-sdg-heading {
   font-size: 20px;
   font-weight: 600;
-  margin: 0 0 80px;
+  margin: 0 0 76px;
+  letter-spacing: 0.04em;
 
   @include viewport($breakpoint-mobile) {
     font-size: 16px;
     padding: 0 19px;
+    margin: 0 0 41px;
   }
 }
 
@@ -294,7 +372,7 @@
 }
 
 .about-sdg-block {
-  padding: 0 0 100px 0;
+  padding: 0 0 94px 0;
   display: inline-block;
   opacity: 0;
   transition: opacity 1s $sec-timing-function;
@@ -312,7 +390,7 @@
   }
 
   &:nth-child(3) {
-    padding-top: 124px;
+    padding-top: 121px;
     transition-delay: 0.6s;
 
     @include viewport($breakpoint-mobile) {
@@ -325,6 +403,17 @@
   }
 
   @include viewport($breakpoint-mobile) {
-    padding: 0 0 50px 0;
+    padding: 0 0 38px 0;
+  }
+}
+
+.about-sdg-btn {
+  &.button-round {
+    margin: 19px 0 0 0;
+    display: none;
+
+    @include viewport($breakpoint-mobile) {
+      display: flex;
+    }
   }
 }

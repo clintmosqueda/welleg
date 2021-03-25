@@ -2,7 +2,7 @@
   width: 314px;
   height: 314px;
   background-color: $white;
-  padding: 40px 30px;
+  padding: 38px 30px 33px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -19,7 +19,7 @@
   }
 
   &:nth-of-type(2) {
-    margin-top: -56px;
+    margin-top: -60px;
 
     @include viewport($breakpoint-mobile) {
       margin-top: 23px;
@@ -30,6 +30,7 @@
     width: auto;
     height: 337px;
     margin: 23px 0 0;
+    padding: 38px 37px 40px;
 
     &:first-of-type {
       margin-top: 0;
@@ -42,14 +43,19 @@
   font-size : 32px;
   color: $white;
   text-transform: uppercase;
+  letter-spacing: 0.1em;
   text-shadow:
    -1px -1px 0 $echo-blue,
     1px -1px 0 $echo-blue,
     -1px 1px 0 $echo-blue,
      1px 1px 0 $echo-blue;
+
+  @include viewport($breakpoint-mobile) {
+    font-size: 28px;
+  }
 }
 
 .about-action-block-text {
   font-size: 13px;
-  line-height: 1.5;
+  line-height: 1.8;
 }
