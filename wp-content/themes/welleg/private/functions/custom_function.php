@@ -68,7 +68,7 @@ function loadmore_ajax_handler(){
     $args['posts_per_page'] = 4;
   }
   else {
-    $args['posts_per_page'] = 2;
+    $args['posts_per_page'] = 5;
   }
 
   query_posts( $args );
