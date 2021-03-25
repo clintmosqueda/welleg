@@ -11,7 +11,12 @@ if ( empty( $url ) ) { $url = ''; }
     <div class="accordion-block">
       <div class="accordion-top js-accordion-trigger">
         <div class="accordion-left">
-          <h2 class="accordion-title"><span class="accordion-title-icon"></span><?php echo $title?></h2>
+          <h2 class="accordion-title">
+            <span class="accordion-title-icon">
+              <span class="accordion-title-icon-wrap"></span>
+            </span>
+            <?php echo $title?>
+          </h2>
         </div>
         <div class="accordion-right">
           <p class="accordion-description"><?php echo $description?></p>

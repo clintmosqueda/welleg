@@ -45,6 +45,7 @@
   color: $white;
   padding: 24px 0 39px;
   font-weight: 600;
+  font-family: $midashi-go;
 
   .is-active & {
     animation: fade-in 1s 1.3s $sec-timing-function both;

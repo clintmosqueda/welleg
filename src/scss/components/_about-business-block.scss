@@ -44,6 +44,7 @@
   flex: 0 0 auto;
   padding: 11px 0 0 59px;
   font-weight: 600;
+  font-family: $midashi-go;
 
   @include viewport($breakpoint-mobile) {
     font-size: 17px;

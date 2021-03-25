@@ -14,6 +14,7 @@
   padding: 0 0 24px;
   font-weight: 600;
   letter-spacing: 0;
+  font-family: $midashi-go;
 
   @include viewport($breakpoint-mobile) {
     padding: 0 0 16px;

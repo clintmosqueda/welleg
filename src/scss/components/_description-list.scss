@@ -21,6 +21,7 @@
     width: 180px;
     font-size: 13px;
     font-weight: 600;
+    font-family: $midashi-go;
 
     @include viewport($breakpoint-mobile) {
       width: 93px;

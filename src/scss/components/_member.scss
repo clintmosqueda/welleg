@@ -53,6 +53,7 @@
   line-height: 2;
   max-width: 225px;
   display: inline-block;
+  font-family: $midashi-go;
 
   @include viewport($breakpoint-mobile) {
     font-size: 15px;

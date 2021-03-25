@@ -126,6 +126,7 @@
   font-weight: 600;
   line-height: 2;
   letter-spacing: 0.04em;
+  font-family: $midashi-go;
 
   @include viewport($breakpoint-mobile) {
     font-size: 15px;

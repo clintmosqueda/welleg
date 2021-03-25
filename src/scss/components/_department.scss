@@ -15,6 +15,7 @@
   margin-bottom: 74px;
   font-weight: 600;
   letter-spacing: 0.09em;
+  font-family: $midashi-go;
 
   @include viewport($breakpoint-mobile) {
     font-size: 16px;

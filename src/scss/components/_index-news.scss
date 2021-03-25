@@ -41,6 +41,7 @@
 .index-news-heading {
   font-size: 20px;
   font-weight: 600;
+  font-family: $midashi-go;
 
   @include viewport($breakpoint-mobile) {
     font-size: 16px;

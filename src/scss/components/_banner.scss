@@ -63,6 +63,7 @@
   left: 60px;
   font-weight: 600;
   letter-spacing: 0;
+  font-family: $midashi-go;
 
   @include viewport($breakpoint-mobile) {
     font-size: 21px;
