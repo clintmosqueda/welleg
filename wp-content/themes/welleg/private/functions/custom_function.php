@@ -19,7 +19,7 @@ function query_staff() {
   $args = array(
     'post_type'      => STAFF_POST_TYPE,
     'post_status'    => 'publish',
-    'posts_per_page' => 2,
+    'posts_per_page' => 5,
     'order'          => 'DESC',
     'orderby'        => 'post_date',
   );

@@ -3,10 +3,10 @@
 }
 
 .staff-block {
-  padding: 169px 0 171px;
+  padding: 169px 0 0;
 
   @include viewport($breakpoint-mobile) {
-    padding: 68px 0 87px;
+    padding: 68px 0 0;
   }
 }
 
@@ -71,6 +71,14 @@
 
   @include viewport($breakpoint-mobile) {
     margin-top: 19px;
+  }
+}
+
+.stff-members-btn {
+  margin-bottom: 171px;
+
+  @include viewport($breakpoint-mobile) {
+    margin-bottom: 87px;
   }
 }
 
