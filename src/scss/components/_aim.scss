@@ -96,6 +96,7 @@
 .aim-text {
   line-height: 2.2;
   opacity: 0;
+  font-size: 15px;
 
   .is-active & {
     animation: fade-in 1s 1.6s $sec-timing-function both;

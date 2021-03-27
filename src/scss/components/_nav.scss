@@ -9,12 +9,22 @@
   position: relative;
 
   &:before {
-    content: '';
-    width: 6px;
-    height: 6px;
-    background-image: url(#{$image-path}/nav-hover-icon.png);
-    background-size: contain;
-    background-repeat: no-repeat;
+    content: "\e904";
+    width: 100%;
+    // height: 6px;
+    color: $jordy-blue;
+    font-size: 6px;
+    text-align: center;
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    // background-image: url(#{$image-path}/nav-hover-icon.png);
+    // background-size: contain;
+    // background-repeat: no-repeat;
     position: absolute;
     bottom: -17px;
     left: 0;
