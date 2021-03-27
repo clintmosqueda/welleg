@@ -59,13 +59,18 @@
   }
 }
 
-.process-image {
+.process-inner-frame {
   width: 360px;
-  display: block;
+  flex-shrink: 0;
 
   @include viewport($breakpoint-mobile) {
     width: 100%;
   }
+}
+
+.process-image {
+  width: 100%;
+  display: block;
 }
 
 .process-image-text {

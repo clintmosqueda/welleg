@@ -1,5 +1,4 @@
 .accordion {
-  cursor: pointer;
   transition: background-color 300ms ease-out;
   
   &.is-open {
@@ -21,6 +20,7 @@
 
 .accordion-top {
   padding: 62px 0 62px;
+  cursor: pointer;
 
   @include viewport($breakpoint-mobile) {
     padding: 49px 0 44px;

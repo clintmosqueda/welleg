@@ -11,7 +11,9 @@ if ( empty( $process_name_image ) ) { $process_name_image = ''; }
   <div class="wrapper">
     <div class="process-block">
       <div class="process-frame">
-        <img class="process-image is-hidden js-animateIn" src="<?php echo resolve_asset_url($image)  ?>" alt="">
+        <div class="process-inner-frame is-hidden js-animateIn">
+          <img class="process-image" src="<?php echo resolve_asset_url($image)  ?>" alt="">
+        </div>
         <img class="process-image-text js-translate-right is-hidden js-animateIn" src="<?php echo resolve_asset_url($process_name_image)  ?>" alt="">
       </div>
       <div class="process-content">
