@@ -14,42 +14,20 @@ global $post;
       <div class="department-block">
         <h2 class="department-heading is-hidden js-animateIn">部署紹介</h2>
         <div class="department-wrap">
-          <?php import_part('branch', array(
-            'modifier' => 'department-branch is-hidden js-animateIn',
-            'image' => '/images/department-image.png',
-            'heading' => '商品部',
-            'text' => 'ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。',
-          ))?>
-          <?php import_part('branch', array(
-            'modifier' => 'department-branch is-hidden js-animateIn',
-            'image' => '/images/department-image.png',
-            'heading' => 'クリエイティブ',
-            'text' => 'ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。',
-          ))?>
-          <?php import_part('branch', array(
-            'modifier' => 'department-branch is-hidden js-animateIn',
-            'image' => '/images/department-image.png',
-            'heading' => 'セールス',
-            'text' => 'ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。',
-          ))?>
-          <?php import_part('branch', array(
-            'modifier' => 'department-branch is-hidden js-animateIn',
-            'image' => '/images/department-image.png',
-            'heading' => 'カスタマー＆デリバリー',
-            'text' => 'ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。',
-          ))?>
-          <?php import_part('branch', array(
-            'modifier' => 'department-branch is-hidden js-animateIn',
-            'image' => '/images/department-image.png',
-            'heading' => 'システム',
-            'text' => 'ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。',
-          ))?>
-          <?php import_part('branch', array(
-            'modifier' => 'department-branch is-hidden js-animateIn',
-            'image' => '/images/department-image.png',
-            'heading' => '経理・総務',
-            'text' => 'ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。ダミー文章です。商品部の業務内容を簡単に説明します。',
-          ))?>
+          <?php if( have_rows('department', 'option') ): ?>
+            <?php while( have_rows('department', 'option') ): the_row();
+              $image = get_sub_field('image', 'option');
+              $title = get_sub_field('title', 'option');
+              $content = get_sub_field('content', 'option');
+            ?>
+              <?php import_part('branch', array(
+                'modifier' => 'department-branch is-hidden js-animateIn',
+                'image' => $image,
+                'heading' => $title,
+                'text' => $content,
+              ))?>
+            <?php endwhile;?>
+          <?php endif;?>
         </div>
       </div>
     </div>
@@ -117,8 +95,6 @@ global $post;
         $title = get_sub_field('job_title', 'option');
         $description = get_sub_field('job_description', 'option');
         $qualifications = get_sub_field('job_qualifications', 'option');
-        $qualifications_clean = str_replace(array('<p>','</p>', '<br>'),'',$qualifications);
-        $url = get_sub_field('url', 'option');
         ?>
         <div class="is-hidden js-animateIn">
         <?php import_part('accordion', array(
