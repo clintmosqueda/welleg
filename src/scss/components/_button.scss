@@ -21,8 +21,12 @@
 
   .button-circle-blue {
     z-index: 2;
-    stroke-dasharray: 105 350;
+    stroke-dasharray: 0 471.305;
     animation: strokeDefaultCircleBack 0.5s linear forwards;
+
+    @include viewport($breakpoint-mobile) {
+      opacity: 0;
+    }
   }
 
   &:hover {
@@ -78,7 +82,7 @@
 
 @keyframes strokeDefaultCircle{
     0%{
-      stroke-dasharray: 105 471.305;
+      stroke-dasharray: 0 471.305;
     }
     100%{
       stroke-dasharray: 471.305 0;
@@ -93,7 +97,7 @@
     //stroke-dashoffset: 135;
     }
     100%{
-    stroke-dasharray: 105 471.305;
+    stroke-dasharray: 0 471.305;
     //stroke-dashoffset: 471.305;
     }
 }

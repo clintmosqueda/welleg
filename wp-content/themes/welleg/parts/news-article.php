@@ -14,7 +14,7 @@
 <article class="news-article">
   <a class="news-article-link js-article-link" href="<?php echo $url; ?>">
     <figure class="news-article-image-wrap">
-      <img class="news-article-image" src="<?php echo get_eyecatch_data(get_the_id()); ?>" alt=""/>
+      <img class="news-article-image" src="<?php echo get_eyecatch_data(get_the_id(), 'full', resolve_asset_url('/images/no-image.jpeg')); ?>" alt=""/>
     </figure>
     <h3 class="news-article-heading"><span><?php echo string_limit(get_the_title(), 41); ?></span></h3>
     <time class="news-article-date" datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
@@ -24,7 +24,7 @@
 
   <div id="news-<?php echo the_ID(); ?>" class="article-modal js-modal">
     <div class="article-modal-content js-modal-content">
-      <div class="article-modal-overlay"></div>
+      <div class="article-modal-overlay js-article-modal-overlay"></div>
       <div class="single-wrap">
         <div class="single-wrapper">
           <div class="single-heading">

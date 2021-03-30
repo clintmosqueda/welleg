@@ -19,7 +19,7 @@ function query_staff() {
   $args = array(
     'post_type'      => STAFF_POST_TYPE,
     'post_status'    => 'publish',
-    'posts_per_page' => 5,
+    'posts_per_page' => 2,
     'order'          => 'DESC',
     'orderby'        => 'post_date',
   );
@@ -58,18 +58,21 @@ function load_more_post() {
 add_action( 'wp_enqueue_scripts', 'load_more_post' );
 
 function loadmore_ajax_handler(){
+
   $args = json_decode( stripslashes( $_POST['query'] ), true );
   $args['paged'] = $_POST['page'] + 1;
   $args['post_status'] = 'publish';
-  if($args['post_type'] === 'news') {
-    $args['posts_per_page'] = 5;
-  }
-  else if($args['post_type'] === 'sdg') {
-    $args['posts_per_page'] = 4;
-  }
-  else {
-    $args['posts_per_page'] = 5;
-  }
+  
+  // if($args['post_type'] === 'news') {
+  //   $args['posts_per_page'] = $_POST['ppp'];
+  //   $args['offset'] = 6;
+  // }
+  // else if($args['post_type'] === 'sdg') {
+  //   $args['posts_per_page'] = 4;
+  // }
+  // else {
+  //   $args['posts_per_page'] = 5;
+  // }
 
   query_posts( $args );
 
@@ -109,9 +112,11 @@ function loadmore_ajax_handler(){
       }
 
     endwhile;
+    
   endif;
 
-  die;
+  die();
+
 }
 
 add_action('wp_ajax_loadmore', 'loadmore_ajax_handler');

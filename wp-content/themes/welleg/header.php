@@ -82,10 +82,10 @@
             <li class="nav-item <?php echo (is_page(ABOUT_PAGE)) ? 'is-active' : ''; ?>">
               <a class="nav-link js-nav-link" href="<?php echo resolve_url('about');?>"> 私たちについて</a>
             </li>
-            <li class="nav-item <?php echo (is_page(RECRUIT_PAGE)) ? 'is-active' : ''; ?>">
+            <li class="nav-item <?php echo (is_page(RECRUIT_PAGE) || is_singular(STAFF_POST_TYPE)) ? 'is-active' : ''; ?>">
               <a class="nav-link js-nav-link" href="<?php echo resolve_url('recruit');?>"> 採用情報</a>
             </li>
-            <li class="nav-item <?php echo ( is_archive(NEWS_SLUG)) ? 'is-active' : ''; ?>">
+            <li class="nav-item <?php echo ( is_archive(NEWS_SLUG) ) ? 'is-active' : ''; ?>">
               <a class="nav-link js-nav-link" href="<?php echo resolve_url('news');?>">お知らせ </a>
             </li>
             <li class="nav-item <?php echo (is_page(CONTACT_PAGE)) ? 'is-active' : ''; ?>">

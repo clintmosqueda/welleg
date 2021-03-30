@@ -1,47 +1,36 @@
 import CONST from '../constants/index';
 import { scrollAble, scrollLock } from "./scroll-able-lock";
+import $ from 'jquery';
 
-export default class Modal {
-  constructor(target, btn) {
-    this.target = document.querySelectorAll(target);
-    this.btn = document.querySelectorAll(btn);
-    this.init();
-  }
+export default function modal(wrapper, target, overlay, btn) {
+  $(wrapper).on('click', target, function(event) {
+    event.preventDefault();
+    console.log($(this));
+    let nextEl = $(this).next();
+    let href = $(this).attr('href');
 
-  init() {
-    this.target.forEach((item) => {
-      let nextEl = item.nextElementSibling;
-      let href = item.href;
+    nextEl.toggleClass(CONST.OPEN_CLASS);
+    history.pushState({ 'prevUrl': window.location.href }, '', href);
+    if(nextEl.hasClass(CONST.OPEN_CLASS)) {
+      scrollLock();
+    }
+    else {
+      scrollAble();
+    }
+    console.log('the item was clicked');
+  });
 
-      item.addEventListener('click', (e) => {
-        e.preventDefault();
-        nextEl.classList.toggle(CONST.OPEN_CLASS);
-        history.pushState({ 'prevUrl': window.location.href }, '', href);
-        if(nextEl.classList.contains(CONST.OPEN_CLASS)) {
-          scrollLock();
-        } else {
-          scrollAble();
-        }
-      });
+  $(wrapper).on('click', overlay, function() {
+    console.log('here');
+    $(this).parents('.js-modal').removeClass(CONST.OPEN_CLASS);
+    history.back();
+    scrollAble();
+  });
 
-      nextEl.firstElementChild.firstElementChild.addEventListener('click', () => {
-        nextEl.classList.remove(CONST.OPEN_CLASS);
-        //history.replaceState(null, null, window.location.href);
-        history.back();
-        scrollAble();
-      })
-
-
-    });
-
-    this.btn.forEach((item) => {
-      item.addEventListener('click', () => {
-        item.parentElement.classList.remove(CONST.OPEN_CLASS);
-        //history.replaceState(null, null, window.location.href);
-        history.back();
-        scrollAble();
-      });
-    });
-
-  }
+  $(wrapper).on('click', btn, function() {
+    console.log('here');
+    $(this).parents('.js-modal').removeClass(CONST.OPEN_CLASS);
+    history.back();
+    scrollAble();
+  });
 }

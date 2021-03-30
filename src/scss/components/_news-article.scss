@@ -10,6 +10,12 @@
     .news-article-date {
       opacity: 0.7;
     }
+
+    .news-article-heading {
+      span {
+        border-color: $nero;
+      }
+    }
   }
 
   @include viewport($breakpoint-mobile) {
@@ -19,15 +25,18 @@
 
 .news-article-link {
   color: $nero;
+  display: block;
 }
 
 .news-article-image {
   width: 100%;
   transition: transform 0.5s $sec-timing-function;
+  pointer-events: none;
 }
 
 .news-article-image-wrap {
   overflow: hidden;
+  pointer-events: none;
 }
 
 .news-article-heading {
@@ -37,9 +46,11 @@
   font-weight: 600;
   font-family: $midashi-go;
   font-size: 15px;
+  pointer-events: none;
 
   span {
-    border-bottom: 1px solid $nero;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.5s ease-in-out;
   }
 
   @include viewport($breakpoint-mobile) {
@@ -52,6 +63,7 @@
   transition: opacity 0.5s ease-in-out;
   font-family: $ttcommons;
   letter-spacing: 0.08em;
+  pointer-events: none;
 
   @include viewport($breakpoint-mobile) {
     padding: 0 20px;

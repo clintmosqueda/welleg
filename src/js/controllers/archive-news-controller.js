@@ -1,14 +1,15 @@
 import BaseController from './base-controller';
-import Modal from '../components/modal.js';
+import modal from '../components/modal.js';
 import popState from '../components/popstate.js';
 import singleRedirectModal from '../components/single-redirect-modal.js';
 import closeModal from '../components/close-modal.js';
+import $ from 'jquery';
 
 export default class ArchiveNewsController extends BaseController {
   init() {
-    new Modal('.js-article-link', '.js-modal-close');
+   	modal('.js-news-list', '.js-article-link', '.js-article-modal-overlay', '.js-modal-close');
 
-    popState();
+ 	popState();
 
     singleRedirectModal();
 
