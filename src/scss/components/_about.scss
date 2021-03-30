@@ -35,7 +35,7 @@
 }
 
 .about-statement {
-  padding: 183px 0 150px;
+  padding: 183px 0 180px;
 
   @include viewport($breakpoint-mobile) {
     padding: 66px 0 91px;
@@ -200,7 +200,7 @@
 
 .about-action-heading {
   font-size: 20px;
-  padding: 0 0 135px;
+  padding: 0 0 100px;
   font-weight: 600;
   font-family: $midashi-go;
 

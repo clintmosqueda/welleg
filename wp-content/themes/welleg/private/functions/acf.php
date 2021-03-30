@@ -9,7 +9,18 @@ if( function_exists('acf_add_options_page') ) {
 		'redirect'		=> false,
     'update_button' => 'Update',
     'icon_url' => 'dashicons-businessman',
-    'position' => 7
+    'position' => 8
+  ));
+
+	acf_add_options_page(array(
+		'page_title' 	=> 'Department',
+		'menu_title'	=> 'DEPARTMENT',
+		'menu_slug' 	=> 'department',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false,
+    'update_button' => 'Update',
+    'icon_url' => 'dashicons-groups',
+    'position' => 8
   ));
 }
 

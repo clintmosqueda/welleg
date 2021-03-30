@@ -75,9 +75,25 @@
   height: 270px;
   resize: none;
   padding: 20px 23px;
+  font-family: $gothic-bbb;
 
   &::placeholder {
     word-break: break-all;
+  }
+} 
+
+#input-checkbox {
+  display: none;
+
+  &:checked + .form-agree .form-custom-checkbox {
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &:checked ~ .form-submit{
+    opacity: 1;
+    pointer-events: auto;
   }
 }
 
@@ -161,6 +177,8 @@
   margin: 0 auto;
   cursor: pointer;
   font-size: 15px;
+  pointer-events: none;
+  opacity: 0.5;
 
   @include viewport($breakpoint-mobile) {
     width: 150px;
@@ -174,6 +192,11 @@
   .mw_wp_form_confirm &[name="submit"] {
     display: none;
   } 
+
+  .mw_wp_form_confirm & {
+    pointer-events: auto;
+    opacity: 1;
+  }
 }
 
 .form-select-wrapper,
