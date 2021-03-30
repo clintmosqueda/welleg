@@ -16,3 +16,11 @@
     margin-bottom: 48px;
   }
 }
+
+.position-accordion {
+  &:last-child {
+    .accordion-block {
+      border-bottom: 1px solid $gainsboro
+    }
+  }
+}

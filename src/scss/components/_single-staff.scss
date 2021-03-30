@@ -16,7 +16,7 @@
   text-align: center;
   padding: 142px 54px 123px;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 
   @include viewport($breakpoint-mobile) {
     padding: 105px 54px 65px;
@@ -81,11 +81,24 @@
   margin-bottom: 159px;
   position: relative;
   padding-top: 54px;
+  z-index: 1;
 
   @include viewport($breakpoint-mobile) {
     padding: 0 28px;
     height: 319px;
     margin-bottom: 59px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100%;
+    content: '';
+    background-color: $zumthor;
+    z-index: -1;
   }
 }
 

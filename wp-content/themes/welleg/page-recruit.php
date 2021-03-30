@@ -96,7 +96,7 @@ global $post;
         $description = get_sub_field('job_description', 'option');
         $qualifications = get_sub_field('job_qualifications', 'option');
         ?>
-        <div class="is-hidden js-animateIn">
+        <div class="is-hidden js-animateIn position-accordion">
         <?php import_part('accordion', array(
           'modifier' => '',
           'title' => $title,
