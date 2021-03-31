@@ -19,7 +19,7 @@
 }
 
 .accordion-top {
-  padding: 62px 0 62px;
+  padding: 56px 0;
   cursor: pointer;
 
   @include viewport($breakpoint-mobile) {
@@ -67,6 +67,7 @@
   padding-left: 90px;
   position: relative;
   font-family: $midashi-go;
+  line-height: 1.6;
 
   @include viewport($breakpoint-mobile) {
     font-size: 15px;
@@ -130,6 +131,7 @@
 
 .accordion-description {
   font-size: 15px;
+  line-height: 1.6;
 }
 
 .accordion-label {

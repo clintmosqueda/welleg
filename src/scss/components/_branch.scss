@@ -9,15 +9,18 @@
   }
 }
 
-.branch-image {
-  display: block;
-  width: 111px;
+.branch-frame {
+  min-height: 190px;
   margin-bottom: 46px;
 
   @include viewport($breakpoint-mobile) {
-    margin: 0 auto 26px;
-    width: 83px;
+    margin-bottom: 26px;
+    text-align: center;
   }
+}
+
+.branch-image {
+  display: inline-block;
 }
 
 .branch-heading {
