@@ -107,6 +107,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 214px;
+  margin: 85px auto 0;
+  cursor: pointer;
 }
 
 .button-round-block {
@@ -145,7 +148,7 @@
 }
 .button-round-blue {
   stroke-dasharray: 669;
-  stroke-dashoffset: 565;
+  stroke-dashoffset: 699;
   transform: rotate(197deg);
   animation: strokeProgressReverse 0.7s linear forwards;
 }
@@ -158,7 +161,7 @@
 
 @keyframes strokeProgress{
   0%{
-    stroke-dashoffset: 565;
+    stroke-dashoffset: 669;
   }
   100%{
     stroke-dashoffset: 0;
@@ -170,6 +173,6 @@
     stroke-dashoffset: 0;
   }
   100%{
-    stroke-dashoffset: 565;
+    stroke-dashoffset: 669;
   }
 }

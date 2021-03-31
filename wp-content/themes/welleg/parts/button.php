@@ -11,10 +11,10 @@
 <?php endif; ?>
     <div class="button-svg-wrap <?php echo (empty($link) && !empty($class_name)) ? "$class_name" : null; ?>">
       <svg class="button-circle button-circle-gray" viewBox="0 0 200 200">
-          <path d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0" stroke="<?php echo $back_circle_color; ?>" stroke-width="1" fill="none" />
+          <path d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0" stroke="<?php echo $back_circle_color; ?>" stroke-width="1.5" fill="none" />
       </svg>
       <svg class="button-circle button-circle-blue" viewBox="0 0 200 200">
-          <path d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0" stroke="<?php echo $front_circle_color; ?>" stroke-width="1" fill="none" />
+          <path d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0" stroke="<?php echo $front_circle_color; ?>" stroke-width="1.5" fill="none" />
       </svg>
       <?php if (!empty($circle_text)) : ?>
         <p class="button-circle-text"><?php echo $circle_text; ?></p>
