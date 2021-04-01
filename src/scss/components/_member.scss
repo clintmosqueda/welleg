@@ -67,6 +67,7 @@
   max-width: 225px;
   display: inline-block;
   font-family: $midashi-go;
+  max-height: 60px;
 
   @include viewport($breakpoint-mobile) {
     font-size: 15px;

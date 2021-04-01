@@ -64,7 +64,8 @@
   font-family: $midashi-go;
 
   .is-active & {
-    animation: fade-in 1s 0.5s $sec-timing-function both;
+    //animation: fade-in 1s 0.5s $sec-timing-function both;
+    animation: fade-in 0.3s 1.3s $sec-timing-function both;
   }
 
   @include viewport($breakpoint-mobile) {
@@ -100,7 +101,8 @@
   letter-spacing: 0;
 
   .is-active & {
-    animation: fade-in 1s 1s $sec-timing-function both;
+    //animation: fade-in 1s 1s $sec-timing-function both;
+    animation: fade-in 0.5s 1.6s $sec-timing-function both;
   }
 
   @include viewport($breakpoint-mobile) {
