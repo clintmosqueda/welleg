@@ -13,7 +13,8 @@
       }
 
       .member-image {
-        transform: scale(1.1);
+        transform: scale(1.025);
+        filter: brightness(115%)
       }
     }
   }
@@ -36,7 +37,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.5s cubic-bezier(0.38, 0.18, 0.43, 1), filter 0.5s cubic-bezier(0.38, 0.18, 0.43, 1);
 }
 
 .member-content {

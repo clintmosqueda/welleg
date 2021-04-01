@@ -7,17 +7,6 @@
     'heading_en' => 'News News News'
   ));?>
 
-<?php
-  $content = get_post('16');
-  $post_content = $content->post_content;
-  $the_content = apply_filters('the_content', $post_content);
-  
-  echo '<pre>';
-  print_r($content);
-  echo '</pre>';
-  echo $the_content;
-  ?>
-
   <section class="news">
     <div class="news-wrapper wrapper">
       <div class="news-content-wrap">
