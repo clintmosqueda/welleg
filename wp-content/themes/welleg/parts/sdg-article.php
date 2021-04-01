@@ -12,7 +12,7 @@
     <figure class="sdg-article-image-wrap">
       <img class="sdg-article-image" src="<?php echo get_eyecatch_data(get_the_id(), 'full', resolve_asset_url('/images/no-image.jpeg')); ?>" alt=""/>
     </figure>
-    <h3 class="sdg-article-heading"><span><?php echo string_limit(get_the_title(), 59); ?></span></h3>
+    <h3 class="sdg-article-heading js-post-heading"><span><?php echo get_the_title(); ?></span></h3>
   </span>
 
   <div id="sdg-<?php echo the_ID(); ?>" class="article-modal js-modal">

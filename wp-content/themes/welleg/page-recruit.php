@@ -70,6 +70,7 @@ global $post;
           <?php endwhile; ?>
           <?php wp_reset_postdata(); ?>
         </div>
+        <p class="loading">Loading....</p>
         <?php
           if (  $staff_query->max_num_pages > 1 )
             import_part('button-round', array(

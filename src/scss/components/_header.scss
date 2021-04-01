@@ -1,9 +1,8 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 40px 60px;
+  padding: 35px 60px 20px;
   align-items: center;
-  transition: position 0.5s ease-in-out;
   position: fixed;
   left: 0;
   top: 0;
@@ -11,8 +10,16 @@
   width: 100%;
   background-color: $white;
   min-width: 1280px;
-  height: 116px;
+  transition: opacity 0.5s ease-in-out;
 
+  .scroll-down & {
+    opacity: 0;
+  }
+
+  .scroll-up & {
+    opacity: 1;
+  }
+  
   @include viewport($breakpoint-mobile) {
     padding: 0 19px;
     display: block;
@@ -67,13 +74,21 @@
 .header-menu-btn {
   font-family: $ttcommons;
   font-size: 14px;
-  position: absolute;
+  position: fixed;
   right: 19px;
-  top: 50%;
-  z-index: 6;
-  transform: translateY(-50%);
+  top: 27px;
+  z-index: 25;
+  transition: opacity 0.5s ease-in-out;
 
-  .is-open & {
+  .scroll-down & {
+    opacity: 0;
+  }
+
+  .scroll-up & {
+    opacity: 1;
+  }
+  
+  &.is-open {
     font-size: 0;
     width: 37px;
     height: 10px;
@@ -111,13 +126,13 @@
     height: 100vh;
     background-color: #939DA2;
     padding: 40px 37px 90px;
-    z-index: 5;
+    z-index: 24;
     overflow-y: scroll;
     opacity: 0;
     visibility: hidden;
     transition: opacity $duration $timing-function, visibility $duration $timing-function;
 
-    .is-open & {
+    &.is-open {
       opacity: 1;
       visibility: visible;
       pointer-events: all;
@@ -139,8 +154,10 @@
 .header-nav-img {
   position: absolute;
   right: -6px;
-  top: -24px;
+  top: -8px;
   z-index: 1;
+  width: 42px;
+  height: 31px;
 }
 
 .header-social {

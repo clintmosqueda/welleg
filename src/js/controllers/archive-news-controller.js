@@ -4,6 +4,7 @@ import popState from '../components/popstate.js';
 import singleRedirectModal from '../components/single-redirect-modal.js';
 import closeModal from '../components/close-modal.js';
 import $ from 'jquery';
+import dotdotdot from '../components/dotdotdot';
 
 export default class ArchiveNewsController extends BaseController {
   init() {
@@ -14,5 +15,7 @@ export default class ArchiveNewsController extends BaseController {
     singleRedirectModal();
 
     closeModal('.js-modal', '.js-single-news-btn');
+
+    dotdotdot();
   }
 }

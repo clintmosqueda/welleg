@@ -9,25 +9,26 @@
 .banner-content {
   position: relative;
   overflow: hidden;
-  min-height: calc((100vh - 116px) + 143px);
+  height: calc((90vh - 136px) + 200px);
+  //min-height: 823px;
   background-image: url('../images/texture.jpg');
   background-repeat: repeat;
   background-position: 0 0;
 
   @include viewport($breakpoint-mobile) {
-    min-height: calc((100vh - 74px) + 194px);
+    height: calc((90vh - 74px) + 194px);
     background-image: none;
     background-color: $echo-blue;
   }
 }
 
 .banner-content-bg {
-  height: calc(100vh - 116px);
-  min-height: 509px;
+  height: calc(90vh - 136px);
+  //min-height: 623px;
   position: relative;
 
   @include viewport($breakpoint-mobile) {
-    height: calc(100vh - 74px);
+    height: calc(90vh - 74px);
     min-height: 490px;
   }
 }
@@ -72,6 +73,13 @@
     text-align: center;
     bottom: -6px;
     top: auto;
+  }
+}
+
+.banner-text-img {
+  @include viewport($breakpoint-mobile) {
+    width: 304px;
+    margin: 0 auto;
   }
 }
 

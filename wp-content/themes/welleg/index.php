@@ -18,7 +18,10 @@ get_header(); ?>
         </div>
         <div class="banner-content-img-wrap show-sp" style="background-image: url(<?php echo resolve_asset_url('/images/banner-img-sp.jpg');?>);">
         </div>
-        <p class="banner-text">てくてく、いい靴と、いい人生。</p>
+        <p class="banner-text">
+          <img class="banner-text-img show-pc" src="<?php echo resolve_asset_url('/images/mv-text.svg');?>" alt="てくてく、いい靴と、いい人生。"/>
+          <img class="banner-text-img show-sp" src="<?php echo resolve_asset_url('/images/mv-text-sp.svg');?>" alt="てくてく、いい靴と、いい人生。"/>
+        </p>
         <div class="banner-scroll show-pc">
           <img class="banner-scroll-img" src="<?php echo resolve_asset_url('/images/banner-scroll.png');?>" alt=""/>
         </div>

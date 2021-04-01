@@ -16,7 +16,7 @@
     <figure class="news-article-image-wrap">
       <img class="news-article-image" src="<?php echo get_eyecatch_data(get_the_id(), 'full', resolve_asset_url('/images/no-image.jpeg')); ?>" alt=""/>
     </figure>
-    <h3 class="news-article-heading"><span><?php echo string_limit(get_the_title(), 41); ?></span></h3>
+    <h3 class="news-article-heading js-post-heading"><span><?php echo get_the_title(); ?></span></h3>
     <time class="news-article-date" datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
 
 
@@ -29,7 +29,7 @@
         <div class="single-wrapper">
           <div class="single-heading">
             <h1 class="single-title"><?php the_title(); ?></h1>
-            <time class="single-date" datetime="<?php echo get_the_date('Y.m.d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
+            <time class="single-date" datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
           </div>
           <div class="single-content">
             <figure class="single-content-img-wrap">

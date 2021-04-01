@@ -6,6 +6,7 @@ import modal from '../components/modal.js';
 import popState from '../components/popstate.js';
 import singleRedirectModal from '../components/single-redirect-modal.js';
 import closeModal from '../components/close-modal.js';
+import dotdotdot from '../components/dotdotdot';
 
 export default class AboutController extends BaseController {
   init() {
@@ -59,6 +60,8 @@ export default class AboutController extends BaseController {
     historyBtn.addEventListener('click', showMore);
 
     closeModal('.js-modal', '.js-single-sdg-btn');
+
+    dotdotdot();
 
   }
 }

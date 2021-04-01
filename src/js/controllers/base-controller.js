@@ -1,12 +1,13 @@
 import HeaderNav from '../components/header-nav';
 import ScrollSection from '../components/scroll-section';
 import Chillax from '../components/chillax';
-import stickyHeader from '../components/sticky-header';
+import scrollHeader from '../components/scroll-header';
 
 export default class BaseController {
   constructor() {
-    new HeaderNav('.js-menu', '.js-header', '.js-nav-link');
-    stickyHeader();
+    new HeaderNav('.js-menu', '.js-header-main-wrap', '.js-nav-link', '.js-header-content');
+    
+    scrollHeader();
 
     new ScrollSection('.js-observe');
 

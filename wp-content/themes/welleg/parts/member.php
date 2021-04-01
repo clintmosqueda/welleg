@@ -12,7 +12,7 @@ if ( empty( $position ) ) { $position = ''; }
     <div class="member-image" style="background-image: url('<?php echo $image;?>')"></div>
   </div>
   <div class="member-content">
-    <h3 class="member-heading"><?php echo string_limit($heading, 32); ?></h3>
+    <h3 class="member-heading js-post-heading"><?php echo $heading; ?></h3>
     <div class="member-info">
       <span class="member-name"><?php echo $name;?></span>
       <span class="member-position"><?php echo $position;?></span>

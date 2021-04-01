@@ -41,6 +41,7 @@
             <?php endif; ?>
           </ul>
         </div>
+        <p class="loading">Loading....</p>
         <div class="news-btn">
           <?php
             global $wp_query; // you can remove this line if everything works for you

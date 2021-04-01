@@ -261,6 +261,7 @@
         <?php endwhile; ?>
       </ul>
       <?php wp_reset_postdata(); ?>
+      <p class="loading">Loading....</p>
       <?php
         if (  $index_sdg->max_num_pages > 1 )
           import_part('button-round', array(

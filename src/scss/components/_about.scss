@@ -419,6 +419,7 @@
 
     @include viewport($breakpoint-mobile) {
       display: flex;
+      margin: 19px auto 0;
     }
   }
 }
