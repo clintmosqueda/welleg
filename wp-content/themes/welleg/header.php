@@ -61,46 +61,27 @@
 <input id="base-url" type="hidden" value="<?php echo resolve_url(); ?>" />
 
 <div class="wrap js-wrap">
-  <header class="header js-header">
+  <div class="header-main-wrap js-header-main-wrap js-hide-scroll">
+  <header class="header">
     <div class="header-logo">
       <a href="<?php echo resolve_url();?>" class="header-logo-link">
         <img class="header-logo-img" alt="" src="<?php echo resolve_asset_url('/images/logo.svg');?>"/>
       </a>
       <span class="header-logo-text">キレイなあしを創る。</span>
     </div>
-    <div class="header-menu-btn js-menu show-sp">MENU</div>
-    <div class="header-content">
-      <div class="header-nav">
-        <nav class="nav">
-          <ul class="nav-list">
-            <li class="nav-item <?php echo (is_front_page()) ? 'is-active' : ''; ?>">
-              <a class="nav-link js-nav-link" href="<?php echo resolve_url();?>">トップページ</a>
-            </li>
-            <li class="nav-item <?php echo (is_page(MAKING_PAGE)) ? 'is-active' : ''; ?>">
-              <a class="nav-link js-nav-link" href="<?php echo resolve_url('making');?>"> 靴づくりのこと</a>
-            </li>
-            <li class="nav-item <?php echo (is_page(ABOUT_PAGE)) ? 'is-active' : ''; ?>">
-              <a class="nav-link js-nav-link" href="<?php echo resolve_url('about');?>"> 私たちについて</a>
-            </li>
-            <li class="nav-item <?php echo (is_page(RECRUIT_PAGE) || is_singular(STAFF_POST_TYPE)) ? 'is-active' : ''; ?>">
-              <a class="nav-link js-nav-link" href="<?php echo resolve_url('recruit');?>"> 採用情報</a>
-            </li>
-            <li class="nav-item <?php echo ( is_archive(NEWS_SLUG) ) ? 'is-active' : ''; ?>">
-              <a class="nav-link js-nav-link" href="<?php echo resolve_url('news');?>">お知らせ </a>
-            </li>
-            <li class="nav-item <?php echo (is_page(CONTACT_PAGE)) ? 'is-active' : ''; ?>">
-              <a class="nav-link js-nav-link" href="<?php echo resolve_url('contact');?>">お問い合わせ</a>
-            </li>
-          </ul>
-        </nav>
-        <img class="header-nav-img show-pc" alt="" src="<?php echo resolve_asset_url('/images/nav-img.png');?>"/>
-      </div>
-      <div class="header-shoplist show-sp">
-        <?php import_part('shoplist'); ?>
-      </div>
-      <div class="header-social show-sp">
-        <?php import_part('social-icons'); ?>
-      </div>
-    </div>
+    <?php
+      import_part('header-content', array(
+        'modifier' => 'show-pc',
+      ));
+    ?>
   </header>
+  <div class="header-menu-sp show-sp">
+    <div class="header-menu-btn js-menu">MENU</div>
+    <?php
+      import_part('header-content', array(
+        'modifier' => 'show-sp js-header-content',
+      ));
+    ?>
+  </div>
+  </div>
 

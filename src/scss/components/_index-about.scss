@@ -96,7 +96,7 @@
     z-index: 1;
 
     .is-active & {
-      animation: index-image1 $fade-duration 0.9s $sec-timing-function both;
+      animation: fade-in $fade-duration 0.9s $sec-timing-function both;
     }
 
     @include viewport($breakpoint-mobile) {
@@ -120,7 +120,7 @@
     }
 
     .is-active & {
-      animation: index-image2 $fade-duration 1.3s $sec-timing-function both;
+      animation: fade-in $fade-duration 1.3s $sec-timing-function both;
     }
 
     @include viewport($breakpoint-mobile) {
@@ -134,7 +134,7 @@
     z-index: 3;
 
     .is-active & {
-      animation: index-image3 $fade-duration 1.6s $sec-timing-function both;
+      animation: fade-in $fade-duration 1.6s $sec-timing-function both;
     }
 
     @include viewport($breakpoint-mobile) {

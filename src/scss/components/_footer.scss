@@ -109,15 +109,15 @@
 }
 
 .footer-shoplist {
-  width: 397px;
+  width: 400px;
 
-  .shoplist-list {
-    margin-left: -2px;
+  // .shoplist-list {
+  //   margin-left: -2px;
 
-    @include viewport($breakpoint-mobile) {
-      margin-left: 0;
-    }
-  }
+  //   @include viewport($breakpoint-mobile) {
+  //     margin-left: 0;
+  //   }
+  // }
 
   .shoplist-title { 
     @include viewport($breakpoint-mobile) {
