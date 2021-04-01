@@ -209,10 +209,10 @@
       <h2 class="about-history-heading">沿革</h2>
       <div class="about-history-content js-about-history">
         <?php
-          if( have_rows('history') ):
-            while( have_rows('history') ) : the_row();
-              $history_year = get_sub_field('history_year');
-              $history_description = get_sub_field('history_description');
+          if( have_rows('history', 'option') ):
+            while( have_rows('history', 'option') ) : the_row();
+              $history_year = get_sub_field('history_year', 'option');
+              $history_description = get_sub_field('history_description', 'option');
           ?>
             <dl class="description-list hidden">
               <dt><?php echo $history_year; ?></dt>
