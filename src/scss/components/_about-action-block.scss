@@ -44,11 +44,14 @@
   color: $white;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  text-shadow:
-   -1px -1px 0 $echo-blue,
-    1px -1px 0 $echo-blue,
-    -1px 1px 0 $echo-blue,
-     1px 1px 0 $echo-blue;
+  -webkit-text-fill-color: $white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $echo-blue;
+  // text-shadow:
+  //  -1px -1px 0 $echo-blue,
+  //   1px -1px 0 $echo-blue,
+  //   -1px 1px 0 $echo-blue,
+  //    1px 1px 0 $echo-blue;
 
   @include viewport($breakpoint-mobile) {
     font-size: 28px;
