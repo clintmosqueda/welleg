@@ -1,14 +1,19 @@
 .sdg-article {
   width: 460px;
+  cursor: pointer;
 
   &:hover {
     .sdg-article-image {
       transform: scale(1.05);
-      filter: brightness(110%);
+      filter: brightness(115%);
     }
 
     .sdg-article-heading {
       opacity: 0.7;
+
+      span {
+        border-color: $nero;
+      }
     }
   }
 
@@ -27,7 +32,7 @@
 }
 
 .sdg-article-heading {
-  padding: 14px 0 4px;
+  margin: 14px 0 4px;
   font-size: 15px;
   position: relative;
   display: inline-block;
@@ -35,12 +40,15 @@
   line-height: 1.8;
   font-weight: 600;
   font-family: $midashi-go;
+  max-height: 60px;
 
   span {
-    border-bottom: 1px solid $nero;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.5s ease-in-out;
   }
 
   @include viewport($breakpoint-mobile) {
-    padding: 14px 15px 4px;
+    margin: 14px 0 4px;
+    padding: 0 15px;
   }
 }

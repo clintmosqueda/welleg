@@ -1,7 +1,7 @@
 import Dotdotdot from 'dotdotdot-js';
 
 export default function dotdotdot() {
-  let trimTitle = document.querySelectorAll(".member-heading");
+  let trimTitle = document.querySelectorAll('.js-post-heading');
 
   if(trimTitle) {
     let optionTitle = {

@@ -18,7 +18,7 @@ body {
 	word-break: break-all;
 	overflow-x: hidden;
 	min-width: 1320px;
-  opacity: 0;
+  	opacity: 0;
 
   &.loaded {
     animation: fade-in 1s ease-in-out both;
@@ -36,6 +36,11 @@ body {
     top: 0;
     left: 0;
     right: 0;
+    min-width: 1320px;
+
+    @include viewport($breakpoint-mobile) {
+    	min-width: 0;
+    }
   }
 }
 

@@ -30,6 +30,10 @@ jQuery(function($){
       url : misha_loadmore_params.ajaxurl,
       data : data,
       type : 'POST',
+      beforeSend : function ( xhr ) {
+        button.text('Loading...');
+        $('.loading').show();
+      },
       success : function( data ){
         if( data ) {
           $('.js-news-list').append(data);
@@ -62,9 +66,9 @@ jQuery(function($){
       url : misha_loadmore_params.ajaxurl,
       data : data,
       type : 'POST',
-      // beforeSend : function ( xhr ) {
-      //   button.text('Loading...');
-      // },
+      beforeSend : function ( xhr ) {
+        button.text('Loading...');
+      },
       success : function( data ){
         if( data ) {
           $('.js-staff-members').append(data);

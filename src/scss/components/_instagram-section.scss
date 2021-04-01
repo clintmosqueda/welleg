@@ -10,11 +10,12 @@
   }
 
   .swiper-slide {
-    width: 195px;
-    margin: 0 4px 0 0;
+    width: 240px;
+    margin: 0 48px 0 0;
 
     @include viewport($breakpoint-mobile) {
       width: 164px;
+      margin: 0 4px 0 0;
     }
   }
 
@@ -41,13 +42,17 @@
       img {
         display: none;
       }
+
+      &:hover {
+        opacity: 1 !important;
+      }
     }
 
   }
 
   #sb_instagram #sbi_images .sbi_item {
-    width: 195px !important;
-    height: 195px !important;
+    width: 240px !important;
+    height: 240px !important;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
