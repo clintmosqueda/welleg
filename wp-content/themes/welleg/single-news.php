@@ -6,7 +6,5 @@
  */
 get_header(); ?>
 
-<div id="<?php echo get_the_id(); ?>" class="hidden single-post-id"></div>
-
 <?php
 get_footer();
