@@ -25,7 +25,10 @@
         </li>
       </ul>
     </nav>
-    <img class="header-nav-img show-pc" alt="" src="<?php echo resolve_asset_url('/images/header-img.svg');?>"/>
+    <a class="header-nav-img show-pc" href="<?php echo resolve_url('contact');?>">
+      <img alt="" src="<?php echo resolve_asset_url('/images/header-img.svg');?>"/>
+    </a>
+    
   </div>
   <div class="header-shoplist show-sp">
     <?php import_part('shoplist'); ?>

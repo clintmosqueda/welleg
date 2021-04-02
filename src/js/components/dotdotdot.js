@@ -11,6 +11,6 @@ export default function dotdotdot() {
     
     trimTitle.forEach( el => {
       new Dotdotdot( el, optionTitle );
-    })
+    })  
   }
 }

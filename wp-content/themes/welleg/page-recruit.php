@@ -32,8 +32,7 @@ global $post;
       </div>
     </div>
   </section>
-
-
+  
   <?php
   $staff_query = query_staff();
   if($staff_query->have_posts()): ?>

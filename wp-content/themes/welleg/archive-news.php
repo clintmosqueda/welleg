@@ -6,6 +6,7 @@
     'heading' => 'お知らせ',
     'heading_en' => 'News News News'
   ));?>
+
   <section class="news">
     <div class="news-wrapper wrapper">
       <div class="news-content-wrap">

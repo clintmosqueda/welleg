@@ -158,6 +158,12 @@
   z-index: 1;
   width: 42px;
   height: 31px;
+  display: inline-block;
+
+  img {
+    width: 100%;
+    display: block;
+  }
 }
 
 .header-social {

@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import 'slick-carousel/slick/slick';
 import BaseController from './base-controller';
+import dotdotdot from '../components/dotdotdot';
 
 export default class SingleStaffController extends BaseController {
   init() {
@@ -19,5 +20,6 @@ export default class SingleStaffController extends BaseController {
       })
     })
     
+    dotdotdot();
   }
 }
