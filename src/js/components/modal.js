@@ -5,7 +5,6 @@ import $ from 'jquery';
 export default function modal(wrapper, target, overlay, btn) {
   $(wrapper).on('click', target, function(event) {
     event.preventDefault();
-    console.log($(this));
     let nextEl = $(this).next();
     let href = $(this).attr('href');
 
@@ -17,19 +16,18 @@ export default function modal(wrapper, target, overlay, btn) {
     else {
       scrollAble();
     }
-    console.log('the item was clicked');
   });
 
   $(wrapper).on('click', overlay, function() {
-    console.log('here');
     $(this).parents('.js-modal').removeClass(CONST.OPEN_CLASS);
+    $('.js-ajax-dummy-post-list').empty();
     history.back();
     scrollAble();
   });
 
   $(wrapper).on('click', btn, function() {
-    console.log('here');
     $(this).parents('.js-modal').removeClass(CONST.OPEN_CLASS);
+    $('.js-ajax-dummy-post-list').empty();
     history.back();
     scrollAble();
   });

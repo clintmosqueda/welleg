@@ -10,9 +10,11 @@ export default class ArchiveNewsController extends BaseController {
   init() {
    	modal('.js-news-list', '.js-article-link', '.js-article-modal-overlay', '.js-modal-close');
 
+   	modal('.js-ajax-dummy-post-list', '.js-article-link', '.js-article-modal-overlay', '.js-modal-close');
+
  	popState();
 
-    singleRedirectModal();
+    singleRedirectModal('news', '.js-news-list');
 
     closeModal('.js-modal', '.js-single-news-btn');
 

@@ -4,16 +4,16 @@
         $url = '';
 ?>
 <?php
-  $url = get_site_url() . '/sdg/' . $post_slug;
+  $url = get_site_url() . '/sdg/' . get_the_id();
 ?>
 
-<article class="sdg-article">
-  <span class="sdg-article-link js-article-link" data-href="<?php echo $url; ?>">
+<article class="sdg-article sdg-article-<?php echo the_ID(); ?>">
+  <a class="sdg-article-link sdg-article-link-<?php echo the_ID(); ?> js-article-link" href="<?php echo $url; ?>">
     <figure class="sdg-article-image-wrap">
       <img class="sdg-article-image" src="<?php echo get_eyecatch_data(get_the_id(), 'full', resolve_asset_url('/images/no-image.jpeg')); ?>" alt=""/>
     </figure>
     <h3 class="sdg-article-heading js-post-heading"><span><?php echo get_the_title(); ?></span></h3>
-  </span>
+  </a>
 
   <div id="sdg-<?php echo the_ID(); ?>" class="article-modal js-modal">
     <div class="article-modal-content js-modal-content">
@@ -44,7 +44,7 @@
           </div>
           <div class="single-content">
             <figure class="single-content-img-wrap single-content-img-wrap-sdg">
-              <img class="single-content-img" src="<?php echo get_eyecatch_data(get_the_id()); ?>" alt=""/>
+              <img class="single-content-img" src="<?php echo get_eyecatch_data(get_the_id(), 'full', resolve_asset_url('/images/no-image.jpeg')); ?>" alt=""/>
             </figure>
             <?php the_content(); ?>
           </div>

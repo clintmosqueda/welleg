@@ -2,7 +2,6 @@ import { scrollAble, scrollLock } from "./scroll-able-lock";
 
 export default function popState() {
   window.addEventListener('popstate', (event) => {
-    console.log(event.state);
     let url = window.location.href;
     let newsArticles = document.querySelectorAll('.js-article-link')
     

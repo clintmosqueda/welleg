@@ -62,20 +62,8 @@ function loadmore_ajax_handler(){
   $args = json_decode( stripslashes( $_POST['query'] ), true );
   $args['paged'] = $_POST['page'] + 1;
   $args['post_status'] = 'publish';
-  
-  // if($args['post_type'] === 'news') {
-  //   $args['posts_per_page'] = $_POST['ppp'];
-  //   $args['offset'] = 6;
-  // }
-  // else if($args['post_type'] === 'sdg') {
-  //   $args['posts_per_page'] = 4;
-  // }
-  // else {
-  //   $args['posts_per_page'] = 5;
-  // }
 
   query_posts( $args );
-
 
   if( have_posts() ) :
     while( have_posts() ): the_post();
@@ -121,5 +109,44 @@ function loadmore_ajax_handler(){
 
 add_action('wp_ajax_loadmore', 'loadmore_ajax_handler');
 add_action('wp_ajax_nopriv_loadmore', 'loadmore_ajax_handler');
+
+
+function get_ajax_posts() {
+  $args = array(
+    'post_type' => 'news',
+    'p' => $_POST['id'],
+  );
+
+  $ajaxposts = new WP_Query( $args );
+
+  $response = '';
+
+  if ( $ajaxposts->have_posts() ) {
+    while ( $ajaxposts->have_posts() ) {
+        $ajaxposts->the_post();
+        echo '<li class="news-block">';
+          import_part('news-article');
+        echo '</li>';
+    }
+  } else {
+    $response .= get_template_part('none');
+  }
+
+  //echo $response;
+
+  exit; // leave ajax call
+}
+add_action('wp_ajax_get_ajax_posts', 'get_ajax_posts');
+add_action('wp_ajax_nopriv_get_ajax_posts', 'get_ajax_posts');
+
+
+add_action( 'pre_get_posts', 'change_posts_per_page' );
+function change_posts_per_page( $query ) {
+  if( !$query->is_post_type_archive('sdg') || is_admin() ) return;
+
+  $posts_per_page = wp_is_mobile() ? 3 : 4;
+  $query->set( 'posts_per_page', $posts_per_page );
+  return;
+}
 
 

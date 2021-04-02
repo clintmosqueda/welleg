@@ -243,13 +243,14 @@
     <div class="about-sdg-wrapper wrapper">
       <h2 class="about-sdg-heading">SDGsの取り組み</h2>
       <ul class="about-sdg-news-list js-about-sdg-news-list js-observe">
+        <li class="gutter-sizer"></li>
         <?php
           $args = array(
             'post_type'      => SDG_POST_TYPE,
             'orderby'        => 'post_date',
             'order'          => 'DESC',
             'post_status'    => 'publish',
-            'posts_per_page' => 4
+            'posts_per_page' => 4,
           );
 
           $index_sdg = new WP_Query( $args );
@@ -259,6 +260,7 @@
             <?php import_part('sdg-article'); ?>
           </li>
         <?php endwhile; ?>
+
       </ul>
       <?php wp_reset_postdata(); ?>
       <p class="loading">Loading....</p>
@@ -273,6 +275,10 @@
       ?>
     </div>
   </section>
+  <div class="ajax-dummy">
+    <ul class="js-ajax-dummy-post-list is-active">
+    </ul>
+  </div>
 </main>
 <script>
   var posts_sdg = '<?php echo json_encode( $index_sdg->query_vars ) ?>',

@@ -5,14 +5,14 @@
 ?>
 <?php
   if(is_front_page()) {
-    $url = get_site_url() . '/news/' . $post_slug;
+    $url = get_site_url() . '/news/' . get_the_id();
   } else {
-    $url = $post_slug;
+    $url = get_the_id();
   }
 ?>
 
-<article class="news-article">
-  <a class="news-article-link js-article-link" href="<?php echo $url; ?>">
+<article class="news-article news-article-<?php echo the_ID(); ?>">
+  <a class="news-article-link news-article-link-<?php echo the_ID(); ?> js-article-link" href="<?php echo $url; ?>">
     <figure class="news-article-image-wrap">
       <img class="news-article-image" src="<?php echo get_eyecatch_data(get_the_id(), 'full', resolve_asset_url('/images/no-image.jpeg')); ?>" alt=""/>
     </figure>
@@ -33,7 +33,7 @@
           </div>
           <div class="single-content">
             <figure class="single-content-img-wrap">
-              <img class="single-content-img" src="<?php echo get_eyecatch_data(get_the_id()); ?>" alt=""/>
+              <img class="single-content-img" src="<?php echo get_eyecatch_data(get_the_id(), 'full', resolve_asset_url('/images/no-image.jpeg')); ?>" alt=""/>
             </figure>
             <?php the_content(); ?>
           </div>

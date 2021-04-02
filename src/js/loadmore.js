@@ -1,3 +1,7 @@
+import dotdotdot from './components/dotdotdot';
+import masonry from './components/masonry';
+
+
 jQuery(function($){
 
   function isDoubleClicked(element) {
@@ -19,19 +23,18 @@ jQuery(function($){
     
     var button = $(this),
         data = {
-      'action': 'loadmore',
-      'query': misha_loadmore_params.posts,
-      'page' : misha_loadmore_params.current_page,
-      'post' : 'news',
-      'ppp' : 6,
-    };
+          'action': 'loadmore',
+          'query': misha_loadmore_params.posts,
+          'page' : misha_loadmore_params.current_page,
+          'post' : 'news',
+          'ppp' : 6,
+        };
 
     $.ajax({
       url : misha_loadmore_params.ajaxurl,
       data : data,
       type : 'POST',
       beforeSend : function ( xhr ) {
-        button.text('Loading...');
         $('.loading').show();
       },
       success : function( data ){
@@ -41,10 +44,14 @@ jQuery(function($){
           
           if ( misha_loadmore_params.current_page == misha_loadmore_params.max_page )
             button.remove();
+            $('.loading').hide();
         } else {
           button.remove();
+          $('.loading').hide();
         }
       }
+    }).done(function(){
+      dotdotdot();
     });
     
   });
@@ -56,18 +63,18 @@ jQuery(function($){
 
     var button = $(this),
         data = {
-      'action': 'loadmore',
-      'query': posts_myajax,
-      'page' : current_page_myajax,
-      'post' : 'staff',
-    };
+          'action': 'loadmore',
+          'query': posts_myajax,
+          'page' : current_page_myajax,
+          'post' : 'staff',
+        };
 
     $.ajax({
       url : misha_loadmore_params.ajaxurl,
       data : data,
       type : 'POST',
       beforeSend : function ( xhr ) {
-        button.text('Loading...');
+        $('.loading').show();
       },
       success : function( data ){
         if( data ) {
@@ -76,10 +83,14 @@ jQuery(function($){
 
           if ( current_page_myajax == max_page_myajax )
             button.remove();
+            $('.loading').hide();
         } else {
           button.remove();
+          $('.loading').hide();
         }
       },
+    }).done(function(){
+      dotdotdot();
     });
   });
 
@@ -88,30 +99,36 @@ jQuery(function($){
 
     var button = $(this),
         data = {
-      'action': 'loadmore',
-      'query': posts_sdg,
-      'page' : current_page_sdg,
-      'post' : 'sdg',
-    };
+          'action': 'loadmore',
+          'query': posts_sdg,
+          'page' : current_page_sdg,
+          'post' : 'sdg',
+        };
 
     $.ajax({
       url : misha_loadmore_params.ajaxurl,
       data : data,
       type : 'POST',
-      // beforeSend : function ( xhr ) {
-      //   button.text('Loading...');
-      // },
+      beforeSend : function ( xhr ) {
+        $('.loading').show();
+      },
       success : function( data ){
         if( data ) {
           $('.js-about-sdg-news-list').append(data);
           current_page_sdg++;
-
-          if ( current_page_sdg == max_page_sdg )
+          
+          if ( current_page_sdg == max_page_sdg ) {
             button.remove();
+            $('.loading').hide();
+          }
         } else {
           button.remove();
+          $('.loading').hide();
         }
       },
+    }).done(function(data){
+      dotdotdot();
+      masonry();
     });
   });
 

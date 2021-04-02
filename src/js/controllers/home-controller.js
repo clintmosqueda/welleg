@@ -18,9 +18,9 @@ export default class HomeController extends BaseController {
       slidesPerView: 'auto',
       spaceBetween: 48,
       loop: true,
-      // autoplay: {
-      //   delay: 2500,
-      // },
+      autoplay: {
+        delay: 2500,
+      },
       breakpoints: {
         320: {
           spaceBetween: 3,

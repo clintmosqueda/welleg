@@ -58,5 +58,9 @@
       </div>
     </div>
   </section>
+  <div class="ajax-dummy">
+    <ul class="js-ajax-dummy-post-list is-active">
+    </ul>
+  </div>
 </main>
 <?php get_footer(); ?>

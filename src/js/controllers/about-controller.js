@@ -7,6 +7,7 @@ import popState from '../components/popstate.js';
 import singleRedirectModal from '../components/single-redirect-modal.js';
 import closeModal from '../components/close-modal.js';
 import dotdotdot from '../components/dotdotdot';
+import masonry from '../components/masonry';
 
 export default class AboutController extends BaseController {
   init() {
@@ -30,9 +31,10 @@ export default class AboutController extends BaseController {
     });
 
     modal('.js-about-sdg-news-list', '.js-article-link', '.js-article-modal-overlay', '.js-modal-close');
+    modal('.js-ajax-dummy-post-list', '.js-article-link', '.js-article-modal-overlay', '.js-modal-close');
     popState();
 
-    singleRedirectModal();
+    singleRedirectModal('sdg', 'js-about-sdg-news-list');
 
     let historyBtn = document.querySelector('.js-history-btn');
     const showMore = () => {
@@ -62,6 +64,8 @@ export default class AboutController extends BaseController {
     closeModal('.js-modal', '.js-single-sdg-btn');
 
     dotdotdot();
+
+    masonry();
 
   }
 }
