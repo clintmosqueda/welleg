@@ -5,7 +5,6 @@ export default function singleRedirectModal(postType, container) {
   let newsArticles = document.querySelectorAll('.js-article-link')
   
   if($(container).find(`.${postType}-article-${postId}`).length === 0 && finalReferrer.includes(`/${postType}/`)) {
-    //console.log('not found and from single page');
     $.ajax({
       type: 'POST',
       url: `${siteUrl}/wp-admin/admin-ajax.php`,
@@ -20,8 +19,6 @@ export default function singleRedirectModal(postType, container) {
     newsArticles.forEach((item) => {
       let href = item.href;
       let nextEl = item.nextElementSibling;
-      console.log(finalReferrer.toLowerCase() === href);
-      
       if(finalReferrer.toLowerCase() === href) {
         setTimeout(() => {
           item.click();
@@ -29,4 +26,9 @@ export default function singleRedirectModal(postType, container) {
       }
     });
   }
+  
+
+  
+
+  
 }

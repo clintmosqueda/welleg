@@ -11,8 +11,6 @@ import masonry from '../components/masonry';
 
 export default class AboutController extends BaseController {
   init() {
-    console.log('about');
-
     const swiper = new Swiper('.swiper-container', {
       slidesPerView: 'auto',
       spaceBetween: 20,
@@ -30,11 +28,13 @@ export default class AboutController extends BaseController {
       }
     });
 
+    masonry();
+
     modal('.js-about-sdg-news-list', '.js-article-link', '.js-article-modal-overlay', '.js-modal-close');
     modal('.js-ajax-dummy-post-list', '.js-article-link', '.js-article-modal-overlay', '.js-modal-close');
     popState();
 
-    singleRedirectModal('sdg', 'js-about-sdg-news-list');
+    singleRedirectModal('sdg', '.js-about-sdg-news-list');
 
     let historyBtn = document.querySelector('.js-history-btn');
     const showMore = () => {
@@ -65,7 +65,7 @@ export default class AboutController extends BaseController {
 
     dotdotdot();
 
-    masonry();
+    
 
   }
 }

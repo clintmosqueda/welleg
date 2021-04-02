@@ -113,7 +113,7 @@ add_action('wp_ajax_nopriv_loadmore', 'loadmore_ajax_handler');
 
 function get_ajax_posts() {
   $args = array(
-    'post_type' => 'news',
+    'post_type' => $_POST['post_type'],
     'p' => $_POST['id'],
   );
 
@@ -124,9 +124,17 @@ function get_ajax_posts() {
   if ( $ajaxposts->have_posts() ) {
     while ( $ajaxposts->have_posts() ) {
         $ajaxposts->the_post();
-        echo '<li class="news-block">';
-          import_part('news-article');
-        echo '</li>';
+        if($_POST['post_type'] === 'news') {
+          echo '<li class="news-block">';
+            import_part('news-article');
+          echo '</li>';
+        }
+        else {
+          echo '<li class="about-sdg-block">';
+            import_part('sdg-article');
+          echo '</li>';
+        }
+        
     }
   } else {
     $response .= get_template_part('none');
