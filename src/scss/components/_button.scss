@@ -46,6 +46,10 @@
   left: 50%;
   top: 47%;
   transform: translate(-50%, -50%);
+
+  @include viewport($breakpoint-mobile) {
+    transform: translate(-50%, -50%) scale(0.8)
+  }
 }
 
 .button-circle-text {
