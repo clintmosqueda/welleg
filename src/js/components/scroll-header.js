@@ -1,16 +1,23 @@
-export default function scrollHeader() {
-  let scrollPos = 0;
-  let el = document.querySelector('.js-hide-scroll');
+import $ from 'jquery';
 
-  window.addEventListener('scroll', function(){
-    if ((document.body.getBoundingClientRect()).top > scrollPos) {
-      el.classList.remove('scroll-down');
-      el.classList.add('scroll-up');
-    }
-    else {
-      el.classList.remove('scroll-up');
-      el.classList.add('scroll-down');
-    }
-    scrollPos = (document.body.getBoundingClientRect()).top;
+export default function scrollHeader() {
+  let position = $(window).scrollTop(); 
+
+  $(window).scroll(function() {
+      let scroll = $(window).scrollTop();
+      
+      if(scroll > position) {
+        $('.js-hide-scroll').addClass('is-hidden');
+      }
+      else {
+        $('.js-hide-scroll').removeClass('is-hidden');
+      }
+      //console.log(scroll,position);
+      position = scroll;
+      //console.log(scroll,position);
+      if(scroll === 0 || position === -1) {
+        $('.js-hide-scroll').removeClass('is-hidden');
+      }
   });
+  
 }

@@ -336,6 +336,10 @@
     }
   }
 
+  .button-circle-text {
+    font-size: 15px;
+  }
+
   @include viewport($breakpoint-mobile) {
     margin: 36px 0 0 -1px;
   }
@@ -396,30 +400,18 @@
     opacity: 1;
   }
 
-  &:nth-child(1) {
-    transition-delay: 0.3s;
-  }
-
-  &:nth-child(2) {
-    //padding-top: 112px;
-    transition-delay: 0.9s;
-
-    // @include viewport($breakpoint-mobile) {
-    //   padding-top: 0;
-    // }
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}n) {
+      transition-delay: #{$i * 0.3}s;
+    }
   }
 
   &:nth-child(3) {
     padding-top: 112px;
-    transition-delay: 0.6s;
-
+    
     @include viewport($breakpoint-mobile) {
       padding-top: 0;
     }
-  }
-
-  &:nth-child(4) {
-    transition-delay: 1.2s;
   }
 
   @include viewport($breakpoint-mobile) {

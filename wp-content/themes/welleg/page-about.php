@@ -14,7 +14,7 @@
             <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider1.jpg');?>" alt=""/>
           </div>
           <div class="about-slider-image-wrap show-sp">
-            <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider3-sp.jpg');?>" alt=""/>
+            <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider1.jpg');?>" alt=""/>
           </div>
         </div>
         <div class="about-slider-item swiper-slide">
@@ -22,7 +22,7 @@
             <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider2.jpg');?>" alt=""/>
           </div>
           <div class="about-slider-image-wrap show-sp">
-            <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider3-sp.jpg');?>" alt=""/>
+            <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider2.jpg');?>" alt=""/>
           </div>
         </div>
         <div class="about-slider-item swiper-slide">
@@ -30,7 +30,7 @@
             <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider3.jpg');?>" alt=""/>
           </div>
           <div class="about-slider-image-wrap show-sp">
-            <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider3-sp.jpg');?>" alt=""/>
+            <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider3.jpg');?>" alt=""/>
           </div>
         </div>
         <div class="about-slider-item swiper-slide">
@@ -38,7 +38,7 @@
             <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider4.jpg');?>" alt=""/>
           </div>
           <div class="about-slider-image-wrap show-sp">
-            <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider3-sp.jpg');?>" alt=""/>
+            <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider4.jpg');?>" alt=""/>
           </div>
         </div>
         <div class="about-slider-item swiper-slide">
@@ -46,7 +46,7 @@
             <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider1.jpg');?>" alt=""/>
           </div>
           <div class="about-slider-image-wrap show-sp">
-            <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider3-sp.jpg');?>" alt=""/>
+            <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider1.jpg');?>" alt=""/>
           </div>
         </div>
         <div class="about-slider-item swiper-slide">
@@ -54,7 +54,7 @@
             <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider2.jpg');?>" alt=""/>
           </div>
           <div class="about-slider-image-wrap show-sp">
-            <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider3-sp.jpg');?>" alt=""/>
+            <img class="about-slider-image" src="<?php echo resolve_asset_url('/images/about-slider2.jpg');?>" alt=""/>
           </div>
         </div>
       </div>
@@ -91,10 +91,10 @@
       <img class="about-statement-image show-pc js-observe" src="<?php echo resolve_asset_url('/images/boy-girl.png') ?>" alt=""/>
     </div>
   </section>
-  <section class="about-banner js-observe">
+  <div class="about-banner js-observe">
     <img class="about-banner-image show-pc" src="<?php echo resolve_asset_url('/images/about-banner.jpg') ?>" alt=""/>
     <img class="about-banner-image show-sp" src="<?php echo resolve_asset_url('/images/about-banner-sp.jpg') ?>" alt=""/>
-  </section>
+  </div>
   <section class="about-business">
     <div class="about-business-wrapper wrapper">
       <div class="about-business-wrap js-observe">
@@ -167,7 +167,7 @@
             <dt>所在地</dt>
             <dd>
               〒760-0064　香川県高松市朝日新町18-22 <br/>
-              <a href="">GoogleMap</a>
+              <a href="https://goo.gl/maps/gibkvMGva1WQd7yD9" target="_blank">GoogleMap</a>
             </dd>
           </dl>
           <dl class="description-list">

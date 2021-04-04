@@ -14,7 +14,7 @@
 <article class="news-article news-article-<?php echo the_ID(); ?>">
   <a class="news-article-link news-article-link-<?php echo the_ID(); ?> js-article-link" href="<?php echo $url; ?>">
     <figure class="news-article-image-wrap">
-      <img class="news-article-image" src="<?php echo get_eyecatch_data(get_the_id(), 'full', resolve_asset_url('/images/no-image.jpeg')); ?>" alt=""/>
+      <img class="news-article-image" src="<?php echo get_eyecatch_data(get_the_id(), 'full', resolve_asset_url('/images/no-image2.jpeg')); ?>" alt=""/>
     </figure>
     <h3 class="news-article-heading js-post-heading"><span><?php echo get_the_title(); ?></span></h3>
     <time class="news-article-date" datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>

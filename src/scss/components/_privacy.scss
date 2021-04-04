@@ -1,5 +1,9 @@
-.privacy {
-
+.privacy-page {
+  .heading-en {
+    @include viewport($breakpoint-mobile) {
+      top: 150px;
+    }
+  }
 }
 
 .privacy-block {

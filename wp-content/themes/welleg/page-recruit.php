@@ -16,7 +16,11 @@ global $post;
         <div class="department-wrap">
           <?php if( have_rows('department', 'option') ): ?>
             <?php while( have_rows('department', 'option') ): the_row();
-              $image = get_sub_field('image', 'option');
+              if (!get_sub_field('image', 'option')) {
+                $image = resolve_asset_url('/images/no-image2.jpeg');
+              } else {
+                $image = get_sub_field('image', 'option');
+              }
               $title = get_sub_field('title', 'option');
               $content = get_sub_field('content', 'option');
             ?>

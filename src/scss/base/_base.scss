@@ -45,9 +45,9 @@ body {
 }
 
 main {
-  margin: 136px 0 0;
+  padding: 136px 0 0;
 
   @include viewport($breakpoint-mobile) {
-    margin: 74px 0 0;
+    padding: 74px 0 0;
   }
 }

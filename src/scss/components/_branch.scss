@@ -21,6 +21,7 @@
 
 .branch-image {
   display: inline-block;
+  max-height: 190px;
 }
 
 .branch-heading {
@@ -28,6 +29,7 @@
   margin-bottom: 19px;
   font-weight: 600;
   font-family: $midashi-go;
+  line-height: 1.3;
 
   @include viewport($breakpoint-mobile) {
     font-size: 15px;
