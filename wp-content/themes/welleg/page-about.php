@@ -3,7 +3,7 @@
   <?php import_part('side-copyright'); ?>
   <?php import_part('heading-page', array(
     'modifier' => '',
-    'heading' => '靴づくりのこと',
+    'heading' => '私たちについて',
     'heading_en' => 'About US About US'
   ));?>
   <section class="about-slider">

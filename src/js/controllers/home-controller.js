@@ -34,6 +34,31 @@ export default class HomeController extends BaseController {
     closeModal('.js-modal', '.js-single-news-btn');
 
     dotdotdot();
+
+    function setBannerHeight() {
+      let bannerEl = document.querySelector('.js-banner-content-bg');
+      let bannerContent = document.querySelector('.js-banner-content');
+      let headerHeight = document.querySelector('.header').offsetHeight;
+      if(window.innerWidth <= 767 && window.matchMedia("(orientation: portrait)").matches) {
+        bannerEl.style.height = `${(window.innerHeight - headerHeight) - 85}px`;
+        bannerContent.style.height = `${((window.innerHeight - headerHeight) - 85) + 200}px`;
+        console.log((window.innerHeight - headerHeight) + 100);
+      }
+      else {
+        bannerEl.style.height = `657px`;
+        bannerContent.style.height = `${657 + 200}px`;
+      }
+    };
+
+    window.addEventListener('resize', function () {
+      setBannerHeight();
+    });
+    
+    window.addEventListener('orientationchange', function () {
+      setBannerHeight();
+    });
+
+    setBannerHeight();
   }
 }
 
