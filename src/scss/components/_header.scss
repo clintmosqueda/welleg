@@ -157,6 +157,11 @@
   width: 42px;
   height: 31px;
   display: inline-block;
+  pointer-events: auto;
+
+  @include viewport($breakpoint-mobile) {
+    pointer-events: none;
+  }
 
   img {
     width: 100%;
@@ -164,6 +169,7 @@
 
     @include viewport($breakpoint-mobile) {
       display: none;
+
     }
   }
 }
