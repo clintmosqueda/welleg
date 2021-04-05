@@ -1,0 +1,47 @@
+.preload {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $white;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  transition-property: opacity, transform;
+  transition-duration: 1s;
+  transition-timing-function: $sec-timing-function;
+  transform: scale(1.6);
+
+  &.is-loading {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.preload-letters {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 263px;
+  flex-shrink: 0;
+
+  span {
+    display: block;
+  }
+}
+
+.preload-image {
+  flex-shrink: 0;
+  width: 133px;
+  margin-top: 30px;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}

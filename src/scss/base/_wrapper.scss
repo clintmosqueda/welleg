@@ -8,3 +8,13 @@
     padding: 0 19px
   }
 }
+
+.wrap {
+  position: relative;
+  z-index: 1;
+
+  &.is-loading {
+    overflow: hidden;
+    height: 100vh;
+  }
+}

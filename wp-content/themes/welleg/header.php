@@ -66,8 +66,8 @@
 
 <body <?php body_class(); ?>>
 <input id="base-url" type="hidden" value="<?php echo resolve_url(); ?>" />
-
-<div class="wrap js-wrap">
+<?php import_part('preload');?>
+<div class="wrap js-wrap is-loading">
   <div class="header-main-wrap js-header-main-wrap js-hide-scroll">
   <header class="header">
     <div class="header-logo">
