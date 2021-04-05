@@ -74,7 +74,8 @@ get_header(); ?>
         <h2 class="index-news-heading">新着情報</h2>
         <a class="index-news-btn" href="<?php echo get_home_url() . '/news' ?>">お知らせ一覧</a>
       </div>
-      <ul class="index-news-list js-observe">
+      <ul class="index-news-list js-index-news-list js-observe">
+        <li class="gutter-sizer"></li>
         <?php
           $args = array(
             'post_type'      => NEWS_POST_TYPE,

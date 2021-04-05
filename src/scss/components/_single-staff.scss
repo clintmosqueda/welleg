@@ -146,6 +146,7 @@
 .single-staff-content-heading {
   width: 360px;
   flex-shrink: 0;
+  padding-right: 80px;
 
   @include viewport($breakpoint-mobile) {
     padding: 0 18px;

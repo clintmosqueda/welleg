@@ -15,7 +15,7 @@ export default function scrollHeader() {
       //console.log(scroll,position);
       position = scroll;
       //console.log(scroll,position);
-      if(scroll === 0 || position === -1) {
+      if(scroll <= 0 || position <= 0) {
         $('.js-hide-scroll').removeClass('is-hidden');
       }
   });
