@@ -40,6 +40,7 @@
   //    1px 1px 0 $gainsboro;
   transition: bottom 1s 1s $sec-timing-function;
   letter-spacing: 0.03em;
+  cursor: default;
 
 
   .is-active & {
@@ -160,6 +161,7 @@
       text-decoration: underline;
       padding: 0 0 34px 0;
       flex: 0 0 auto;
+      width: 150px;
     }
   }
 

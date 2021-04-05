@@ -14,6 +14,7 @@
   position: relative;
   z-index: 2;
   overflow: scroll;
+  cursor: default;
 
   @include viewport($breakpoint-mobile) {
     width: 90%;

@@ -69,7 +69,7 @@
 
 <div class="wrap js-wrap">
   <div class="header-main-wrap js-header-main-wrap js-hide-scroll">
-  <header class="header">
+  <header class="header js-header">
     <div class="header-logo">
       <a href="<?php echo resolve_url();?>" class="header-logo-link">
         <img class="header-logo-img" alt="" src="<?php echo resolve_asset_url('/images/logo.svg');?>"/>
