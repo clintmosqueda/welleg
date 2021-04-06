@@ -33,7 +33,8 @@ export default function preload() {
 
   function onProgress(event) {
     let progress = Math.round(event.loaded * 100);
-    console.log(progress);
+    console.log(event.loaded.toFixed(1));
+    // console.log(progress);
     // if(progress >= 70) { 
     //   $('.loading-smile').removeClass('is-shake');
     // }
