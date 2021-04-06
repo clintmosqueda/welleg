@@ -414,6 +414,12 @@
     }
   }
 
+  &:nth-child(5) {
+    @include viewport($breakpoint-mobile) {
+      display: none;
+    }
+  }
+
   @include viewport($breakpoint-mobile) {
     margin: 0 0 38px 0;
     width: auto;

@@ -36,7 +36,6 @@
 .single-heading {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 0 0 100px;
 
   &.single-heading-sdg {
@@ -54,6 +53,11 @@
 
 .single-date {
   font-family: $ttcommons;
+  padding: 12px 0 0;
+
+  @include viewport($breakpoint-mobile) {
+    padding: 0;
+  }
 }
 
 .single-title {

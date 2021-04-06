@@ -148,13 +148,13 @@ add_action('wp_ajax_get_ajax_posts', 'get_ajax_posts');
 add_action('wp_ajax_nopriv_get_ajax_posts', 'get_ajax_posts');
 
 
-add_action( 'pre_get_posts', 'change_posts_per_page' );
-function change_posts_per_page( $query ) {
-  if( !$query->is_post_type_archive('sdg') || is_admin() ) return;
+// add_action( 'pre_get_posts', 'change_posts_per_page' );
+// function change_posts_per_page( $query ) {
+//   if( !$query->is_post_type_archive('sdg') || is_admin() ) return;
 
-  $posts_per_page = wp_is_mobile() ? 3 : 4;
-  $query->set( 'posts_per_page', $posts_per_page );
-  return;
-}
+//   $posts_per_page = wp_is_mobile() ? 3 : 4;
+//   $query->set( 'posts_per_page', $posts_per_page );
+//   return;
+// }
 
 

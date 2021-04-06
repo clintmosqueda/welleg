@@ -30,6 +30,10 @@ export default class AboutController extends BaseController {
 
     masonry();
 
+    window.addEventListener('orientationchange', function () {
+      masonry();
+    });
+
     modal('.js-about-sdg-news-list', '.js-article-link', '.js-article-modal-overlay', '.js-modal-close');
     modal('.js-ajax-dummy-post-list', '.js-article-link', '.js-article-modal-overlay', '.js-modal-close');
     popState();

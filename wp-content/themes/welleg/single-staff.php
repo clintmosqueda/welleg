@@ -3,6 +3,7 @@ get_header();
 global $post;
 ?>
 <main class="main">
+  <?php import_part('side-copyright'); ?>
   <section class="single-staff">
     <div class="single-staff-wrapper">
       <div class="single-staff-body">

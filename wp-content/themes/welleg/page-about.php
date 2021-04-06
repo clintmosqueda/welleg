@@ -64,8 +64,13 @@
     <div class="about-statement-wrapper wrapper js-observe">
       <h2 class="about-statement-heading">ステートメント</h2>
       <div class="about-statement-content">
-        <p class="about-statement-text">
+        <p class="about-statement-text show-pc">
           1925年から、靴のことばかりを考えてきました。<br/>
+          いい靴とは、素敵な一日へと連れていってくれる存在である。 <br/>
+          私たちはそう信じてやみません。
+        </p>
+        <p class="about-statement-text show-sp">
+          95年間、靴のことばかりを考えてきました。<br/>
           いい靴とは、素敵な一日へと連れていってくれる存在である。 <br/>
           私たちはそう信じてやみません。
         </p>

@@ -52,6 +52,7 @@ jQuery(function($){
       }
     }).done(function(){
       dotdotdot();
+      $('.loading').hide();
     });
     
   });
@@ -91,6 +92,7 @@ jQuery(function($){
       },
     }).done(function(){
       dotdotdot();
+      $('.loading').hide();
     });
   });
 
@@ -115,6 +117,7 @@ jQuery(function($){
       success : function( data ){
         if( data ) {
           $('.js-about-sdg-news-list').append(data);
+
           current_page_sdg++;
           
           if ( current_page_sdg == max_page_sdg ) {
@@ -125,10 +128,14 @@ jQuery(function($){
           button.remove();
           $('.loading').hide();
         }
+        console.log('success');
       },
     }).done(function(data){
       dotdotdot();
+      $('.about-sdg-block:nth-child(5)').css('display','block');
       masonry();
+
+      $('.loading').hide();
     });
   });
 
