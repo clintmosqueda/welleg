@@ -87,9 +87,44 @@
     font-family: $midashi-go;
   }
 
+  h3 {
+    font-size: 18px;
+    line-height: 1.7;
+    padding: 0 0 50px;
+    font-weight: 600;
+    font-family: $midashi-go;
+  }
+
+  blockquote {
+    padding: 0 50px;
+  }
+
+  ul {
+    padding: 0 0 50px 30px;
+    list-style-type: disc;
+    list-style-position: inside;
+    
+    li {
+      padding: 0 0 20px;
+      font-size: 17px;
+    }
+  }
+
+  ol {
+    padding: 0 0 50px 30px;
+    list-style-type: decimal;
+    list-style-position: inside;
+    
+    li {
+      padding: 0 0 20px;
+      font-size: 17px;
+    }
+  }
+
   p {
     font-size: 17px;
     line-height: 1.7;
+    padding: 0 0 50px;
 
     a {
       color: $echo-blue;

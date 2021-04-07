@@ -1,5 +1,7 @@
 import dotdotdot from './components/dotdotdot';
 import masonry from './components/masonry';
+import Isotope from 'isotope-layout';
+import imagesLoaded from 'imagesloaded';
 
 
 jQuery(function($){
@@ -56,8 +58,6 @@ jQuery(function($){
     });
     
   });
-
-
 
   $('.js-staff-members-btn').click(function(){
     if (isDoubleClicked($(this))) return;
@@ -116,25 +116,32 @@ jQuery(function($){
       },
       success : function( data ){
         if( data ) {
-          $('.js-about-sdg-news-list').append(data);
-
+          $('.about-sdg-block:nth-child(5)').css('opacity','0');
+          let item = $(data).css('opacity','0');
+          $('.js-about-sdg-news-list').append(item);
+          
           current_page_sdg++;
           
           if ( current_page_sdg == max_page_sdg ) {
             button.remove();
             $('.loading').hide();
           }
+
         } else {
           button.remove();
           $('.loading').hide();
         }
+
         console.log('success');
       },
     }).done(function(data){
+      $('.about-sdg-block').css({'display':'block'});
+      setTimeout(() => {
+        $('.about-sdg-block').css({'opacity':'1','transition-delay': '0s'});
+      }, 500)
+      
       dotdotdot();
-      $('.about-sdg-block:nth-child(5)').css('display','block');
       masonry();
-
       $('.loading').hide();
     });
   });
