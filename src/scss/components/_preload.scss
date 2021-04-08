@@ -20,18 +20,27 @@
   &.is-loading {
     opacity: 1;
     transform: scale(1);
+    pointer-events: auto;
   }
 }
 
 .preload-letters {
-  display: flex;
+  display: inline-flex;
   align-items: flex-end;
   justify-content: space-between;
-  width: 263px;
+  width: 263px; 
   flex-shrink: 0;
+  animation: slideUpEnter 1s ease-out forwards;
+  transform: translateY(45px);
+  opacity: 0;
 
   span {
-    display: block;
+    display: inline-block;
+    vertical-align: bottom;
+  }
+
+  .is-slideOut & {
+    animation: slideUpOut 1s ease-out forwards;
   }
 }
 
@@ -39,9 +48,41 @@
   flex-shrink: 0;
   width: 133px;
   margin-top: 30px;
+  display: block;
+  animation: slideUpEnter 1s 0.5s ease-out forwards;
+  transform: translateY(45px);
+  opacity: 0;
 
   img {
     display: block;
     width: 100%;
+  }
+
+  .is-slideOut & {
+    transform: translateY(0);
+    opacity: 1;
+    animation: slideUpOut 1s 0.3s ease-out forwards;
+  }
+}
+
+@keyframes slideUpEnter {
+  0% {
+    transform: translateY(45px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUpOut {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-45px);
+    opacity: 0;
   }
 }

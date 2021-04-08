@@ -6,6 +6,7 @@ export default function preload() {
   const wrap = document.querySelector('.js-wrap');
   const banner = document.querySelector('.js-banner');
   let queue = new createjs.LoadQueue();
+  const timeout = 3000
 
   queue.on('complete', onComplete);
   queue.on('progress', onProgress);
@@ -24,16 +25,24 @@ export default function preload() {
   ]);
 
   function onComplete() { 
-    wrap.classList.remove('is-loading');
-    preload.classList.remove('is-loading');
+    setTimeout(() => {
+      preload.classList.add('is-slideOut');
+    }, timeout/1.8);
+
+    setTimeout(() => {
+      wrap.classList.remove('is-loading');
+      preload.classList.remove('is-loading');
+    }, timeout);
+
     setTimeout(() => {
       banner.classList.add('is-active');
-    }, 350);    
+    }, timeout + 340);    
   }
 
   function onProgress(event) {
     let progress = Math.round(event.loaded * 100);
     console.log(event.loaded.toFixed(1));
+
     // console.log(progress);
     // if(progress >= 70) { 
     //   $('.loading-smile').removeClass('is-shake');
