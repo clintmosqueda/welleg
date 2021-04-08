@@ -6,7 +6,7 @@ $args = array(
 
     'labels' => array(
         'singular_name' => NEWS_POST_TYPE,
-        'menu_name' => strtoupper(NEWS_POST_TYPE),
+        'menu_name' => 'お知らせ',
         'add_new_item' => 'Add New News Post Title',
         'add_new' => 'Add News' ,
         'new_item' => 'New Item',
@@ -57,7 +57,7 @@ $args = array(
 
     'labels' => array(
         'singular_name' => SDG_POST_TYPE,
-        'menu_name' => strtoupper(SDG_POST_TYPE),
+        'menu_name' => 'SDGs',
         'add_new_item' => 'Add New SDGsの取り組み',
         'add_new' => 'Add New SDGsの取り組み' ,
         'new_item' => 'New Item',
@@ -107,7 +107,7 @@ $args = array(
 
   'labels' => array(
       'singular_name' => STAFF_POST_TYPE,
-      'menu_name' => strtoupper(STAFF_POST_TYPE),
+      'menu_name' => 'スタッフ紹介',
       'add_new_item' => 'Add New Staff Post Title',
       'add_new' => 'Add Staff' ,
       'new_item' => 'New Item',
