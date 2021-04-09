@@ -10,7 +10,7 @@
     height: 100%;
     background-color: $zircon; 
     width: 100vw;
-    position: absolute;
+    position: absolute; 
     top: 0;
     right: 50%;
     z-index: -1;
@@ -132,6 +132,7 @@
   line-height: 2;
   letter-spacing: 0.04em;
   font-family: $midashi-go;
+  position: relative;
 
   @include viewport($breakpoint-mobile) {
     font-size: 15px;
