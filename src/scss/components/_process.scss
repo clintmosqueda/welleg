@@ -14,7 +14,7 @@
     top: 0;
     right: 50%;
     z-index: -1;
-    content: '';
+    content: ''; 
 
     @include viewport($breakpoint-mobile) {
       display: none;
