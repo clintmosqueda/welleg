@@ -45,10 +45,15 @@ export default class HomeController extends BaseController {
         bannerEl.style.height = `${(window.innerHeight - headerHeight) - 85}px`;
         bannerContent.style.height = `${((window.innerHeight - headerHeight) - 85) + 200}px`;
         console.log((window.innerHeight - headerHeight) + 100);
+        console.log('true');
       }
-      else {
+      else if(window.innerWidth <= 767 && window.matchMedia("(orientation: landscape)").matches) {
         bannerEl.style.height = `657px`;
         bannerContent.style.height = `${657 + 200}px`;
+      }
+      else {
+        bannerEl.removeAttribute("style");
+        bannerContent.removeAttribute("style");
       }
     };
 

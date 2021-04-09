@@ -14,7 +14,7 @@
 
   @for $i from 1 through 10 {
     &:nth-child(#{$i}n) {
-      transition-delay: #{$i * 0.3}s;
+      transition-delay: #{$i * 0.3 + 1}s;
     }
   }
 
