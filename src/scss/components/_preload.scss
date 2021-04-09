@@ -17,6 +17,10 @@
   transition-timing-function: $sec-timing-function;
   transform: scale(1.6);
 
+  @include viewport($breakpoint-mobile) {
+    width: 100%;
+  }
+
   &.is-loading {
     opacity: 1;
     transform: scale(1);

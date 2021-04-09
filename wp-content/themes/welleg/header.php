@@ -46,6 +46,22 @@
         document.getElementById('js-viewport').setAttribute('content', 'width=375, initial-scale=' + 320 / 375 + ', user-scalable=no');
       }
     }
+
+    if(screen.availWidth > screen.availHeight ){
+      document.querySelector("meta[name='viewport']").setAttribute('content', 'width=1280');
+    } else {
+     document.querySelector("meta[name='viewport']").setAttribute('content', 'width=device-width,initial-scale=1.0');
+    }
+
+
+    window.addEventListener("orientationchange", function(event) {
+      let orientation = event.target.screen.orientation.angle
+      if(screen.availWidth > screen.availHeight ){
+        document.querySelector("meta[name='viewport']").setAttribute('content', 'width=1280');
+      } else {
+        document.querySelector("meta[name='viewport']").setAttribute('content', 'width=device-width,initial-scale=1.0');
+      }
+    });
   </script>
   <script>
     (function(d) {
