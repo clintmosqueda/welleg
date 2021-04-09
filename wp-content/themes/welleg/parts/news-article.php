@@ -28,7 +28,7 @@
       <div class="single-wrap">
         <div class="single-wrapper">
           <div class="single-heading">
-            <h1 class="single-title"><?php the_title(); ?></h1>
+            <h2 class="single-title"><?php the_title(); ?></h2>
             <time class="single-date" datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
           </div>
           <div class="single-content">

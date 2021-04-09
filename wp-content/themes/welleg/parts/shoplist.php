@@ -1,5 +1,5 @@
 <div class="shoplist">
-  <h4 class="shoplist-title">ショップリスト</h4>
+  <h3 class="shoplist-title">ショップリスト</h3>
   <ul class="shoplist-list">
     <li class="shoplist-item">
       <a class="shoplist-link" href="https://welleg.jp/" target="_blank">wellegオンラインストア</a>

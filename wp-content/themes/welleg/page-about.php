@@ -6,7 +6,7 @@
     'heading' => '私たちについて',
     'heading_en' => 'About US About US'
   ));?>
-  <section class="about-slider">
+  <div class="about-slider">
     <div class="swiper-container">
       <div class="about-slider-list swiper-wrapper">
         <div class="about-slider-item swiper-slide">
@@ -59,7 +59,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
   <section class="about-statement">
     <div class="about-statement-wrapper wrapper js-observe">
       <h2 class="about-statement-heading">ステートメント</h2>

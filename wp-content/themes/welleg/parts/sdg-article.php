@@ -21,7 +21,7 @@
       <div class="single-wrap">
         <div class="single-wrapper">
           <div class="single-heading single-heading-sdg">
-            <h1 class="single-title single-title-sdg"><?php the_title(); ?></h1>
+            <h2 class="single-title single-title-sdg"><?php the_title(); ?></h2>
           </div>
           <?php
             if( have_rows('sdg-logo') ):

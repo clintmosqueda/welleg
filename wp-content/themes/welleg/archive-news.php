@@ -7,7 +7,7 @@
     'heading_en' => 'News News News'
   ));?>
 
-  <section class="news">
+  <div class="news">
     <div class="news-wrapper wrapper">
       <div class="news-content-wrap">
         <!-- <div class="news-heading-wrap">
@@ -58,7 +58,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
   <div class="ajax-dummy">
     <ul class="js-ajax-dummy-post-list is-active">
     </ul>
