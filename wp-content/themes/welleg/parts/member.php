@@ -1,7 +1,7 @@
 <?php
 if ( empty( $modifier ) ) { $modifier = ''; }
 if ( empty( $url ) ) { $url = ''; }
-if ( empty( $image ) ) { $image = ''; }
+if ( empty( $image ) ) { $image = resolve_asset_url('/images/no-image2.jpeg'); }
 if ( empty( $heading ) ) { $heading = ''; }
 if ( empty( $name ) ) { $name = ''; }
 if ( empty( $position ) ) { $position = ''; }

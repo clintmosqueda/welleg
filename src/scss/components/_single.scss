@@ -14,6 +14,7 @@
   position: relative;
   z-index: 2;
   overflow: scroll;
+  cursor: default;
 
   @include viewport($breakpoint-mobile) {
     width: 90%;
@@ -35,7 +36,6 @@
 .single-heading {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 0 0 100px;
 
   &.single-heading-sdg {
@@ -53,6 +53,11 @@
 
 .single-date {
   font-family: $ttcommons;
+  padding: 12px 0 0;
+
+  @include viewport($breakpoint-mobile) {
+    padding: 0;
+  }
 }
 
 .single-title {
@@ -82,9 +87,85 @@
     font-family: $midashi-go;
   }
 
+  h3 {
+    font-size: 18px;
+    line-height: 1.7;
+    padding: 0 0 50px;
+    font-weight: 600;
+    font-family: $midashi-go;
+  }
+
+  h4 {
+    font-size: 16px;
+    line-height: 1.7;
+    padding: 0 0 50px;
+    font-weight: 600;
+    font-family: $midashi-go;
+  }
+
+  h5 {
+    font-size: 14px;
+    line-height: 1.7;
+    padding: 0 0 50px;
+    font-weight: 600;
+    font-family: $midashi-go;
+  }
+
+  h6 {
+    font-size: 12px;
+    line-height: 1.7;
+    padding: 0 0 50px;
+    font-weight: 600;
+    font-family: $midashi-go;
+  }
+
+  blockquote {
+    padding: 35px 35px 35px 50px;
+    position: relative;
+    background: #eaeaea;
+    margin: 0 0 50px;
+    border-left: 10px solid #ccc;
+
+    &:before {
+      content: "“";
+      position: absolute;
+      left: 3px;
+      top: 2px;
+      font-size: 67px;
+      font-style: italic;
+    }
+
+    ul {
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  ul {
+    padding: 0 0 50px 30px;
+    list-style-type: disc;
+    
+    li {
+      padding: 0 0 20px;
+      font-size: 17px;
+    }
+  }
+
+  ol {
+    padding: 0 0 50px 30px;
+    list-style-type: decimal;
+    
+    li {
+      padding: 0 0 20px;
+      font-size: 17px;
+    }
+  }
+
   p {
     font-size: 17px;
     line-height: 1.7;
+    padding: 0 0 50px;
 
     a {
       color: $echo-blue;
@@ -94,6 +175,26 @@
     @include viewport($breakpoint-mobile) {
       font-size: 13px;
     }
+  }
+
+  pre {
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+    margin: 0 0 50px;
+    font-family: monospace;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  code {
+    font-family: monospace;
+    background-color: #eaeaea;
+    padding: 15px;
+    border-radius: 7px;
+    display: block;
   }
 
   .wp-caption {

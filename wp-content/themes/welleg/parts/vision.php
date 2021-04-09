@@ -8,14 +8,21 @@
       <div class="vision-content">
         <div class="vision-content-left">
           <?php import_part('footprints') ?>
-          <h2 class="vision-heading">
+          <h2 class="vision-heading show-pc">
             みんなで、<br/>
             キレイなあしを創る。
           </h2>
+          <h2 class="vision-heading show-sp">
+            目指すのは、<br/>
+            最高の1足です。
+          </h2>
         </div>
         <div class="vision-content-right">
-          <p class="vision-text">
+          <p class="vision-text show-pc">
             企画や製造、デザイン、販売、サポート、経理など。それぞれの立場でお客様に寄り添い、考え、動いていくことが私たちの靴づくりだと思っています。そんな思いに共感してくれる方は、私たちといっしょに働いてみませんか。
+          </p>
+          <p class="vision-text show-sp">
+            見た目も機能もぴったりな1足に出会うよろこびを私たちは知っています。だからこそ一人でも多くの方にお届けし、体感いただき、その感動をいっしょに分かち合いたい。私たちの靴づくりは、つねにこの思いから発想しています。
           </p>
           <div class="vision-btn">
             <?php import_part('button', array(

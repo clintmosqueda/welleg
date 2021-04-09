@@ -383,17 +383,16 @@
     }
   }
   
-  // @include viewport($breakpoint-mobile) {
-  //   columns: initial;
-  //   column-gap: 0;
-  // }
+  @include viewport($breakpoint-mobile) {
+    height: auto !important;
+  }
 }
 
 .about-sdg-block {
   margin: 0 0 94px 0;
   display: block;
   opacity: 0;
-  transition: opacity 1s $sec-timing-function;
+  transition: opacity 1s $sec-timing-function, visibility 1s $sec-timing-function;
   width: 460px;
 
   .is-active & {
@@ -414,9 +413,18 @@
     }
   }
 
+  &:nth-child(5) {
+    @include viewport($breakpoint-mobile) {
+      display: none;
+      //opacity: 1;
+    }
+  }
+
   @include viewport($breakpoint-mobile) {
     margin: 0 0 38px 0;
     width: auto;
+    position: static !important;
+    transform: none !important;
   }
 }
 

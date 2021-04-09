@@ -3,7 +3,7 @@ if( function_exists('acf_add_options_page') ) {
 
 	acf_add_options_page(array(
 		'page_title' 	=> 'Recruitment',
-		'menu_title'	=> 'RECRUITMENT',
+		'menu_title'	=> '募集職種',
 		'menu_slug' 	=> 'recruitment',
 		'capability'	=> 'edit_posts',
 		'redirect'		=> false,
@@ -14,7 +14,7 @@ if( function_exists('acf_add_options_page') ) {
 
 	acf_add_options_page(array(
 		'page_title' 	=> 'Department',
-		'menu_title'	=> 'DEPARTMENT',
+		'menu_title'	=> '部署紹介',
 		'menu_slug' 	=> 'department',
 		'capability'	=> 'edit_posts',
 		'redirect'		=> false,
@@ -25,7 +25,7 @@ if( function_exists('acf_add_options_page') ) {
 
 	acf_add_options_page(array(
 		'page_title' 	=> 'History',
-		'menu_title'	=> 'HISTORY',
+		'menu_title'	=> '沿革',
 		'menu_slug' 	=> 'history',
 		'capability'	=> 'edit_posts',
 		'redirect'		=> false,

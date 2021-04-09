@@ -9,12 +9,12 @@
   &::before {
     height: 100%;
     background-color: $zircon; 
-    width: 50vw;
-    position: absolute;
+    width: 100vw;
+    position: absolute; 
     top: 0;
-    left: 0;
+    right: 50%;
     z-index: -1;
-    content: '';
+    content: ''; 
 
     @include viewport($breakpoint-mobile) {
       display: none;
@@ -23,8 +23,8 @@
 
   &.is-even {
     &::before {
-      left: auto;
-      right: 0;
+      left: 50%;
+      right: auto;
     }
   }
 }
@@ -132,6 +132,7 @@
   line-height: 2;
   letter-spacing: 0.04em;
   font-family: $midashi-go;
+  position: relative;
 
   @include viewport($breakpoint-mobile) {
     font-size: 15px;

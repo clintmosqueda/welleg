@@ -25,8 +25,8 @@
         </li>
       </ul>
     </nav>
-    <!-- <a class="header-nav-img show-pc" href="<?php echo resolve_url('contact');?>">
-      <img alt="" src="<?php echo resolve_asset_url('/images/header-img.svg');?>"/>
+    <!-- <a class="header-nav-img show-pc" href="<?php //echo resolve_url('contact');?>">
+      <img alt="" src="<?php //echo resolve_asset_url('/images/header-img.svg');?>"/>
     </a> -->
     
   </div>

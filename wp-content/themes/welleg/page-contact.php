@@ -14,11 +14,7 @@
         <?php endwhile; ?>
         <aside class="contact-aside">
           <h3 class="contact-label">株式会社Welleg</h3>
-          <p class="contact-info">〒760-0064 
-            香川県高松市朝日新町18-22 
-            0120-006-911 (9:00~18:00) 
-            info@dummy.jp 
-            www.dummy.jp</p>
+          <a href="tel:087-851-6599" class="contact-info">087-851-6599</a>
           <hr class="contact-hr">
           <div class="contact-sns">
             <h3 class="contact-label">フォローはこちら</h3>

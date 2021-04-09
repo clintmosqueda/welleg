@@ -16,7 +16,6 @@
   background-position: 0 0;
 
   @include viewport($breakpoint-mobile) {
-    height: calc((90vh - 74px) + 194px);
     background-image: none;
     background-color: $echo-blue;
   }
@@ -26,11 +25,6 @@
   height: calc(90vh - 136px);
   //min-height: 623px;
   position: relative;
-
-  @include viewport($breakpoint-mobile) {
-    height: calc(90vh - 74px);
-    //min-height: 490px;
-  }
 }
 
 .banner-content-img-wrap {
