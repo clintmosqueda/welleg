@@ -19,7 +19,7 @@
 
   @include viewport($breakpoint-mobile) {
     width: 100%;
-  }
+  } 
 
   &.is-loading {
     opacity: 1;

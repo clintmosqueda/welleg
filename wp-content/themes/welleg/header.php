@@ -47,20 +47,20 @@
       }
     }
 
-    if(screen.availWidth > screen.availHeight ){
-      document.querySelector("meta[name='viewport']").setAttribute('content', 'width=1280');
-    } else {
-     document.querySelector("meta[name='viewport']").setAttribute('content', 'width=device-width,initial-scale=1.0');
-    }
+    if(screen.availWidth > screen.availHeight ) document.querySelector("meta[name='viewport']").setAttribute('content', 'width=1280');
 
-
-    window.addEventListener("orientationchange", function(event) {
-      let orientation = event.target.screen.orientation.angle
-      if(screen.availWidth > screen.availHeight ){
-        document.querySelector("meta[name='viewport']").setAttribute('content', 'width=1280');
+    window.addEventListener("orientationchange", function() {
+      let orientation = window.orientation
+      if(orientation == 0) {
+        document.querySelector("meta[name='viewport']").setAttribute('content', 'width=device-width,initial-scale=1.0,user-scalable=no' );
       } else {
-        document.querySelector("meta[name='viewport']").setAttribute('content', 'width=device-width,initial-scale=1.0');
+        document.querySelector("meta[name='viewport']").setAttribute('content', 'width=1280');
       }
+      // if(screen.availWidth > screen.availHeight ){
+      //   document.querySelector("meta[name='viewport']").setAttribute('content', 'width=1280');
+      // } else {
+      //   document.querySelector("meta[name='viewport']").setAttribute('content', 'width=device-width,initial-scale=1.0');
+      // }
     });
   </script>
   <script>
