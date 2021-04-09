@@ -2,7 +2,7 @@ import $ from 'jquery';
 import Swiper from 'swiper/bundle';
 import 'swiper/swiper-bundle.css';
 import BaseController from './base-controller';
-import Modal from '../components/modal.js';
+import modal from '../components/modal.js';
 import popState from '../components/popstate.js';
 import closeModal from '../components/close-modal.js';
 import dotdotdot from '../components/dotdotdot';
@@ -12,7 +12,7 @@ import imagesLoaded from 'imagesloaded';
 export default class HomeController extends BaseController {
   init() {
     console.log('home');
-    new Modal('.js-article-link', '.js-modal-close');
+    modal('.js-index-news-list', '.js-article-link', '.js-article-modal-overlay', '.js-modal-close');
 
     popState();
 
@@ -60,7 +60,10 @@ export default class HomeController extends BaseController {
       setBannerHeight();
     });
 
-    setBannerHeight();
+    if(window.innerWidth <= 767) {
+      setBannerHeight();
+    }
+    
 
     let grid = document.querySelector('.js-index-news-list');
     let iso;

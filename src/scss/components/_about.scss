@@ -383,10 +383,9 @@
     }
   }
   
-  // @include viewport($breakpoint-mobile) {
-  //   columns: initial;
-  //   column-gap: 0;
-  // }
+  @include viewport($breakpoint-mobile) {
+    height: auto !important;
+  }
 }
 
 .about-sdg-block {
@@ -417,12 +416,15 @@
   &:nth-child(5) {
     @include viewport($breakpoint-mobile) {
       display: none;
+      //opacity: 1;
     }
   }
 
   @include viewport($breakpoint-mobile) {
     margin: 0 0 38px 0;
     width: auto;
+    position: static !important;
+    transform: none !important;
   }
 }
 

@@ -23,12 +23,14 @@
           <div class="single-heading single-heading-sdg">
             <h1 class="single-title single-title-sdg"><?php the_title(); ?></h1>
           </div>
+          <?php
+            if( have_rows('sdg-logo') ):
+          ?>
           <div class="single-sdg-logo">
             <ul class="single-sdg-logo-list">
-            <?php
-              if( have_rows('sdg-logo') ):
+              <?php
                 while( have_rows('sdg-logo') ) : the_row();
-                  $image = get_sub_field('logo_image');
+                $image = get_sub_field('logo_image');
               ?>
               <li class="single-sdg-logo-item">
                 <span class="single-sdg-logo-link">
@@ -37,11 +39,12 @@
               </li>
               <?php
                 endwhile;
-                else :
-              endif;
-            ?>
+              ?>
             </ul>
           </div>
+          <?php
+            endif;
+          ?>
           <div class="single-content">
             <figure class="single-content-img-wrap single-content-img-wrap-sdg">
               <img class="single-content-img" src="<?php echo get_eyecatch_data(get_the_id(), 'full', resolve_asset_url('/images/no-image.jpeg')); ?>" alt=""/>
