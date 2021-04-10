@@ -1,15 +1,11 @@
 import CONST from '../constants/index';
 import { scrollAble } from "./scroll-able-lock";
+import $ from 'jquery';
 
-export default function closeModal(modalEl, btn) {
-  let modal = document.querySelectorAll(modalEl);
-  let sdgSingleBtn = document.querySelector(btn);
-  modal.forEach((item, index) => {
-    let button = item.querySelector(btn);
-    button.addEventListener('click', () => {
-      item.classList.remove(CONST.OPEN_CLASS);
-      history.back();
-      scrollAble();
-    })
-  })
+export default function closeModal(wrapper, modalEl, btn) {
+  $(wrapper).on('click', btn, function() {
+    $(modalEl).removeClass(CONST.OPEN_CLASS);
+    history.back();
+    scrollAble();
+  });
 }

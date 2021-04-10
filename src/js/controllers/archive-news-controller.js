@@ -16,7 +16,7 @@ export default class ArchiveNewsController extends BaseController {
 
     singleRedirectModal('news', '.js-news-list');
 
-    closeModal('.js-modal', '.js-single-news-btn');
+    closeModal('.js-news-list', '.js-modal', '.js-single-news-btn');
 
     dotdotdot();
   }

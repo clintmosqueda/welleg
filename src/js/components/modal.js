@@ -28,6 +28,7 @@ export default function modal(wrapper, target, overlay, btn) {
   $(wrapper).on('click', btn, function() {
     $(this).parents('.js-modal').removeClass(CONST.OPEN_CLASS);
     $('.js-ajax-dummy-post-list').empty();
+    console.log('here');
     history.back();
     scrollAble();
   });

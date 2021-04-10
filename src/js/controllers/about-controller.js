@@ -65,7 +65,7 @@ export default class AboutController extends BaseController {
     window.addEventListener('load', showMore);
     historyBtn.addEventListener('click', showMore);
 
-    closeModal('.js-modal', '.js-single-sdg-btn');
+    closeModal('.js-about-sdg-news-list', '.js-modal', '.js-single-sdg-btn');
 
     dotdotdot();
 

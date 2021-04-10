@@ -44,6 +44,7 @@ jQuery(function($){
         $('.js-news-list').append(data);
         dotdotdot();
         misha_loadmore_params.current_page++;
+        $('.loading').hide();
         
         if ( misha_loadmore_params.current_page == misha_loadmore_params.max_page )
           button.remove();
@@ -79,6 +80,7 @@ jQuery(function($){
         $('.js-staff-members').append(data);
         dotdotdot();
         current_page_myajax++;
+        $('.loading').hide();
 
         if ( current_page_myajax == max_page_myajax )
           button.remove();
@@ -116,6 +118,7 @@ jQuery(function($){
         //$('.about-sdg-block').css({'display':'block'});
         dotdotdot();
         
+        
         // setTimeout(() => {
         //   //masonry();
         //   $('.about-sdg-block').css({'opacity':'1','transition-delay': '0s'});
@@ -125,8 +128,10 @@ jQuery(function($){
         
         
         current_page_sdg++;
+        $('.loading').hide();
         
         if ( current_page_sdg == max_page_sdg ) {
+          console.log('equal');
           button.remove();
           $('.loading').hide();
         }

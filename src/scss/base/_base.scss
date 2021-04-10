@@ -17,14 +17,9 @@ body {
 	background-color: $base-background-color;
 	word-break: break-all;
 	overflow-x: hidden;
-	//min-width: 1320px;
-  	opacity: 0;
-
-  &.loaded {
-    animation: fade-in 1s ease-in-out both;
-  }
-
-	@include viewport($breakpoint-mobile) {
+  min-width: 1320px;
+  
+  @include viewport($breakpoint-mobile) {
 		min-width: initial ;
   }
 }

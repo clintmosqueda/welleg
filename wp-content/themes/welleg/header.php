@@ -46,6 +46,22 @@
         document.getElementById('js-viewport').setAttribute('content', 'width=375, initial-scale=' + 320 / 375 + ', user-scalable=no');
       }
     }
+
+    if(screen.availWidth > screen.availHeight ) document.querySelector("meta[name='viewport']").setAttribute('content', 'width=1280');
+
+    window.addEventListener("orientationchange", function() {
+      let orientation = window.orientation
+      if(orientation == 0) {
+        document.querySelector("meta[name='viewport']").setAttribute('content', 'width=device-width,initial-scale=1.0,user-scalable=no' );
+      } else {
+        document.querySelector("meta[name='viewport']").setAttribute('content', 'width=1280');
+      }
+      // if(screen.availWidth > screen.availHeight ){
+      //   document.querySelector("meta[name='viewport']").setAttribute('content', 'width=1280');
+      // } else {
+      //   document.querySelector("meta[name='viewport']").setAttribute('content', 'width=device-width,initial-scale=1.0');
+      // }
+    });
   </script>
   <script>
     (function(d) {
@@ -66,8 +82,8 @@
 
 <body <?php body_class(); ?>>
 <input id="base-url" type="hidden" value="<?php echo resolve_url(); ?>" />
-
-<div class="wrap js-wrap">
+<?php import_part('preload');?>
+<div class="wrap js-wrap is-loading">
   <div class="header-main-wrap js-header-main-wrap js-hide-scroll">
   <header class="header js-header">
     <div class="header-logo">
