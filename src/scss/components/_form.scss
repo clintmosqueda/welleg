@@ -178,7 +178,6 @@
   margin: 0 auto;
   cursor: pointer;
   font-size: 15px;
-  pointer-events: none;
 
   @include viewport($breakpoint-mobile) {
     width: 150px;
@@ -201,6 +200,7 @@
 
 .form-submit {
   opacity: 0.5;
+  pointer-events: none;
 }
 
 .form-select-wrapper,
