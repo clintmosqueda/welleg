@@ -164,7 +164,8 @@
   }
 }
 
-.form-submit {
+.form-submit,
+.form-back-top {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -178,7 +179,6 @@
   cursor: pointer;
   font-size: 15px;
   pointer-events: none;
-  opacity: 0.5;
 
   @include viewport($breakpoint-mobile) {
     width: 150px;
@@ -197,6 +197,10 @@
     pointer-events: auto;
     opacity: 1;
   }
+}
+
+.form-submit {
+  opacity: 0.5;
 }
 
 .form-select-wrapper,
