@@ -9,7 +9,7 @@
   <section class="contact">
     <div class="wrapper">
       <div class="contact-block">
-        <div class="contact-form">
+        <div class="contact-form contact-form-success">
           <p class="contact-text">お問い合わせいただきありがとうございます。<br>担当より3営業日内にご連絡いたします。</p>
           <a class="form-back-top" href="<?php echo resolve_url();?>">トップページへ戻る</a>
         </div>
