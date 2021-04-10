@@ -13,6 +13,7 @@ import preload from '../components/preload';
 export default class HomeController extends BaseController {
   init() {
     console.log('home');
+    
     modal('.js-index-news-list', '.js-article-link', '.js-article-modal-overlay', '.js-modal-close');
 
     popState();
@@ -35,7 +36,7 @@ export default class HomeController extends BaseController {
       }
     });
 
-    closeModal('.js-modal', '.js-single-news-btn');
+    closeModal('.js-news-list', '.js-modal', '.js-single-news-btn');
 
     dotdotdot();
 
