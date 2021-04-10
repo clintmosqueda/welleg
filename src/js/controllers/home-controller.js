@@ -8,6 +8,7 @@ import closeModal from '../components/close-modal.js';
 import dotdotdot from '../components/dotdotdot';
 import Isotope from 'isotope-layout';
 import imagesLoaded from 'imagesloaded';
+import preload from '../components/preload';
 
 export default class HomeController extends BaseController {
   init() {
@@ -15,6 +16,7 @@ export default class HomeController extends BaseController {
     modal('.js-index-news-list', '.js-article-link', '.js-article-modal-overlay', '.js-modal-close');
 
     popState();
+    preload();
 
     const swiper = new Swiper('.swiper-container', {
       slidesPerView: 'auto',

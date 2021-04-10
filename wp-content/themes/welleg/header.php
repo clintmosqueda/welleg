@@ -82,8 +82,10 @@
 
 <body <?php body_class(); ?>>
 <input id="base-url" type="hidden" value="<?php echo resolve_url(); ?>" />
-<?php import_part('preload');?>
-<div class="wrap js-wrap is-loading">
+<?php if(is_front_page()) : ?>
+  <?php import_part('preload');?>
+<?php endif?>
+<div class="wrap js-wrap <?php echo is_front_page() ? 'is-loading' : ''; ?>">
   <div class="header-main-wrap js-header-main-wrap js-hide-scroll">
   <header class="header js-header">
     <div class="header-logo">
