@@ -4,6 +4,7 @@ const IS_SCROLLABLE = 'is-scrollable',
 let scrollTop = null;
 export const ableScroll = () => {
    wrap.classList.remove(IS_SCROLLABLE);
+   wrap.removeAttribute('style')
    window.scrollTo(0, scrollTop);
    wrap.style.top = `0`;
  }
