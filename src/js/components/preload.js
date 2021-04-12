@@ -5,8 +5,9 @@ export default function preload() {
   const preload = document.querySelector('.js-preload');
   const wrap = document.querySelector('.js-wrap');
   const banner = document.querySelector('.js-banner');
+  const preloadMask = document.querySelector('.js-preload-mask');
   let queue = new createjs.LoadQueue();
-  const timeout = 3000
+  const timeout = 4000
 
   queue.on('complete', onComplete);
   queue.on('progress', onProgress);
@@ -27,7 +28,10 @@ export default function preload() {
   function onComplete() { 
     setTimeout(() => {
       preload.classList.add('is-slideOut');
-    }, timeout/1.8);
+    }, timeout/2.3);
+    setTimeout(() => {
+      preloadMask.classList.add('is-reveal');
+    }, timeout/1.5);
 
     setTimeout(() => {
       wrap.classList.remove('is-loading');
@@ -36,11 +40,8 @@ export default function preload() {
 
     if(banner) {
       setTimeout(() => {
-        
-          banner.classList.add('is-active');
-       
-        
-      }, timeout + 340);  
+        banner.classList.add('is-active');
+      }, timeout);  
     }  
   }
 
