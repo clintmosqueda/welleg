@@ -19,12 +19,20 @@
     background-image: none;
     background-color: $echo-blue;
   }
+
+  // @media screen and ( min-width: 768px ) and ( min-height: 414px ) {
+  //  min-height: calc(657px + 200px);
+  // }
 }
 
 .banner-content-bg {
   height: calc(90vh - 136px);
   //min-height: 623px;
   position: relative;
+
+  // @media screen and ( min-width: 768px ) and ( min-height: 414px ) {
+  //  min-height: 657px;
+  // }
 }
 
 .banner-content-img-wrap {
@@ -86,7 +94,7 @@
   @include viewport($breakpoint-mobile) {
     width: 84px;
     right: 37px;
-    bottom: 54px;
+    bottom: 65px;
     top: auto;
   }
 

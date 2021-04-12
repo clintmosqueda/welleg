@@ -36,7 +36,7 @@ export default class HomeController extends BaseController {
       }
     });
 
-    closeModal('.js-news-list', '.js-modal', '.js-single-news-btn');
+    closeModal('.js-index-news-list', '.js-modal', '.js-single-news-btn');
 
     dotdotdot();
 
@@ -58,6 +58,11 @@ export default class HomeController extends BaseController {
         bannerEl.removeAttribute("style");
         bannerContent.removeAttribute("style");
       }
+
+      if(window.outerHeight < 657 && window.matchMedia("(orientation: landscape)").matches) {
+        bannerEl.style.height = `657px`;
+        bannerContent.style.height = `${657 + 200}px`;
+      }
     };
 
     window.addEventListener('resize', function () {
@@ -68,9 +73,9 @@ export default class HomeController extends BaseController {
       setBannerHeight();
     });
 
-    if(window.innerWidth <= 767) {
+    //if(window.innerWidth <= 767) {
       setBannerHeight();
-    }
+    //}
     
 
     let grid = document.querySelector('.js-index-news-list');
