@@ -17,7 +17,7 @@ export default class HomeController extends BaseController {
     modal('.js-index-news-list', '.js-article-link', '.js-article-modal-overlay', '.js-modal-close');
 
     popState();
-    preload();
+    //preload();
 
     const swiper = new Swiper('.swiper-container', {
       slidesPerView: 'auto',
