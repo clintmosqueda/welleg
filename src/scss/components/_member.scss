@@ -27,7 +27,7 @@
 
   @include viewport($breakpoint-mobile) {
     height: 200px;
-    margin-bottom: 30px;
+    margin-bottom: 0;
   }
 }
 
@@ -49,6 +49,7 @@
   @include viewport($breakpoint-mobile) {
     display: block;
     padding-left: 18px;
+    padding-top: 14px;
   }
 }
 
