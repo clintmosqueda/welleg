@@ -22,6 +22,10 @@ body {
   @include viewport($breakpoint-mobile) {
 		min-width: initial ;
   }
+
+  @media (orientation: landscape) {
+    min-width: initial ;
+  }
 }
 
 .wrap {
@@ -35,6 +39,10 @@ body {
 
     @include viewport($breakpoint-mobile) {
     	min-width: 0;
+    }
+
+    @media (orientation: landscape) {
+      min-width: 0;
     }
   }
 }
