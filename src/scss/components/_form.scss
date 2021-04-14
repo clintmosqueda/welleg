@@ -201,6 +201,7 @@
 .form-submit {
   opacity: 0.5;
   pointer-events: none;
+  appearance: none;
 }
 
 .form-select-wrapper,
@@ -242,3 +243,9 @@
     opacity: 1;
   }
 }
+
+.mw_wp_form {
+  .error {
+    margin-top: 10px;
+  }
+} 

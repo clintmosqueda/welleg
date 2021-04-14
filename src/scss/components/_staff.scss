@@ -97,7 +97,8 @@
 
 .staff-related-wrap {
   position: relative;
-  width: 1080px;
+  // width: 1080px;
+  width: 100%;
   margin: 0 auto;
 
   @include viewport($breakpoint-mobile) {
@@ -106,8 +107,8 @@
 }
 
 .staff-related-block {
-  width: 1440px;
-  // width: 100%;
+  // width: 1440px;
+  width: 100%;
   position: relative;
 
   // padding-left: 12.4%;
@@ -254,8 +255,8 @@
   .slick-next {
     top: 41%;
     transform: translateY(-50%);
-    right: auto;
-    left: 88.3%;
+    right: 270px;
+    left: auto;
 
     @include viewport($breakpoint-mobile) {
       position: relative;
@@ -287,11 +288,11 @@
 .staff-related-member {
   width: 460px;
   flex-shrink: 0;
-  margin-right: 80px;
+  margin: 0 40px;
 
   @include viewport($breakpoint-mobile) {
     width: 300px;
-    margin-right: 36px;
+    margin: 0 0 0 36px;
   }
 
   .member-heading {
