@@ -81,6 +81,7 @@
 
   @include viewport($breakpoint-mobile) {
     color: $white;
-    font-size: 17px;
+    // font-size: 17px;
+    font-size: 18px;
   }
 }

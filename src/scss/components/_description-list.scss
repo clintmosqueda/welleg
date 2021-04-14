@@ -22,6 +22,7 @@
     font-size: 13px;
     font-weight: 600;
     font-family: $midashi-go;
+    flex-shrink: 0;
 
     @include viewport($breakpoint-mobile) {
       width: 93px;
@@ -34,21 +35,29 @@
     font-weight: 300;
     line-height: 2;
     letter-spacing: 0.01em;
+    flex-shrink: 0;
+    width: calc(100% - 180px);
 
-    li {
-      display: block;
-      position: relative;
-      padding: 0 0 0 8px;
+    p {
+      padding: 0 0 30px;
+    }
 
-      &:before {
-        content: '';
-        width: 2px;
-        height: 2px;
-        border-radius: 50%;
-        background-color: $nero;
-        position: absolute;
-        left: 0;
-        top: 9px;
+    ul {
+      li {
+        display: block;
+        position: relative;
+        padding: 0 0 0 8px;
+
+        &:before {
+          content: '';
+          width: 2px;
+          height: 2px;
+          border-radius: 50%;
+          background-color: $nero;
+          position: absolute;
+          left: 0;
+          top: 12px;
+        }
       }
     }
 
@@ -67,8 +76,62 @@
       height: auto;
     }
 
+    blockquote {
+      padding: 35px 35px 35px 50px;
+      position: relative;
+      background: #eaeaea;
+      margin: 0 0 50px;
+      border-left: 10px solid #ccc;
+
+      &:before {
+        content: "“";
+        position: absolute;
+        left: 3px;
+        top: -18px;
+        font-size: 67px;
+        font-style: italic;
+      }
+
+      ul {
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    ol {
+      padding: 0 0 10px 30px;
+      list-style-type: decimal;
+      
+      li {
+        padding: 0 0 20px;
+        font-size: 13px;
+      }
+    }
+
+    pre {
+      padding: 20px;
+      background-color: #000;
+      color: #fff;
+      margin: 0 0 50px;
+      font-family: monospace;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    code {
+      font-family: monospace;
+      background-color: #eaeaea;
+      padding: 15px;
+      border-radius: 7px;
+      display: block;
+    }
+
     @include viewport($breakpoint-mobile) {
       line-height: 1.8;
+      width: calc(100% - 93px);
     }
   }
 

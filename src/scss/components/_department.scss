@@ -1,5 +1,10 @@
 .department {
   background-color: $zircon;
+  position: relative;
+
+  @include viewport($breakpoint-mobile) {
+    margin-top: -36px;
+  }
 }
 
 .department-block {

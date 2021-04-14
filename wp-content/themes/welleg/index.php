@@ -99,7 +99,7 @@ get_header(); ?>
   <section class="index-about">
     <div class="index-about-wrapper wrapper js-observe">
       <div class="index-about-content">
-        <div class="index-about-image-content">
+        <div class="index-about-image-content show-pc">
           <div class="index-about-image-item">
             <img class="index-about-image-img" src="<?php echo resolve_asset_url('/images/about-img1.png');?>" alt=""/>
           </div>
@@ -117,6 +117,17 @@ get_header(); ?>
           <h2 class="index-about-heading">
             1925年から、靴のことばかりを<br class="show-pc"/>考えてきました。
           </h2>
+          <div class="index-about-image-content show-sp">
+            <div class="index-about-image-item">
+              <img class="index-about-image-img" src="<?php echo resolve_asset_url('/images/about-img1.png');?>" alt=""/>
+            </div>
+            <div class="index-about-image-item">
+              <img class="index-about-image-img" src="<?php echo resolve_asset_url('/images/about-img2.png');?>" alt=""/>
+            </div>
+            <div class="index-about-image-item">
+              <img class="index-about-image-img" src="<?php echo resolve_asset_url('/images/about-img3.png');?>" alt=""/>
+            </div>
+          </div>
           <div class="index-about-btn">
             <?php import_part('button', array(
                 'text' => '私たちについて',
