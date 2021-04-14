@@ -68,6 +68,10 @@
   //transform: translateY(45px);
   //opacity: 0;
 
+  @include viewport($breakpoint-mobile) {
+    transform: scale(0.82);
+  }
+
   span {
     display: inline-block;
     vertical-align: bottom;
@@ -131,6 +135,11 @@
   //transform: translateY(45px);
   opacity: 0;
   animation: puff-in-center 0.7s 1s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+
+  @include viewport($breakpoint-mobile) {
+    width: 109px;
+    margin-top: 22px;
+  }
 
   img {
     display: block;

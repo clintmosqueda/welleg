@@ -31,7 +31,7 @@ export default function preload() {
     }, timeout/2.3);
     setTimeout(() => {
       preloadMask.classList.add('is-reveal');
-    }, timeout/1.5);
+    }, timeout/1.65);
 
     setTimeout(() => {
       wrap.classList.remove('is-loading');
@@ -47,8 +47,6 @@ export default function preload() {
 
   function onProgress(event) {
     let progress = Math.round(event.loaded * 100);
-    console.log(event.loaded.toFixed(1));
-
     // console.log(progress);
     // if(progress >= 70) { 
     //   $('.loading-smile').removeClass('is-shake');
