@@ -38,6 +38,10 @@
   &:focus {
     outline: none;
   }
+
+  .is-ios & {
+    font-size: 16px;
+  }
 }
 
 .form-input,
