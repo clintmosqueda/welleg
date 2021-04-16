@@ -121,13 +121,16 @@
 .staff-related-title {
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 74px;
+  margin: 0 auto 74px;
   letter-spacing: 0.08em;
   font-family: $midashi-go;
+  width: 1140px;
+
 
   @include viewport($breakpoint-mobile) {
     font-size: 16px;
-    margin-bottom: 49px;
+    width: auto;
+    margin: 0 0 49px;
     padding-left: 20px;
   }
 }
@@ -263,6 +266,7 @@
       transform: none;
       top: auto;
       left: auto;
+      right: auto;
     }
   }
 

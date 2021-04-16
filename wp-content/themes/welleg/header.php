@@ -50,11 +50,18 @@
     if(screen.availWidth > screen.availHeight ) document.querySelector("meta[name='viewport']").setAttribute('content', 'width=1280');
 
     window.addEventListener("orientationchange", function() {
-      let orientation = window.orientation
+      let orientation = window.orientation;
+      console.log(orientation);
       if(orientation == 0) {
         document.querySelector("meta[name='viewport']").setAttribute('content', 'width=device-width,initial-scale=1.0,user-scalable=no' );
-      } else {
+      } 
+      else {
         document.querySelector("meta[name='viewport']").setAttribute('content', 'width=1280');
+      }
+
+      const htmlEl = document.querySelector('html');
+      if (window.matchMedia("(orientation: landscape)").matches && htmlEl.classList.contains('is-ios')) {
+        document.querySelector("meta[name='viewport']").setAttribute('content', 'width=device-width,initial-scale=1.0,user-scalable=no' );
       }
       // if(screen.availWidth > screen.availHeight ){
       //   document.querySelector("meta[name='viewport']").setAttribute('content', 'width=1280');

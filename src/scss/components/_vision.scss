@@ -11,6 +11,11 @@
 
 .vision-img-wrap {
   overflow: hidden;
+  height: 780px;
+
+  @include viewport($breakpoint-mobile) {
+    height: 250px;
+  }
 }
 
 .vision-img-img {
@@ -26,10 +31,9 @@
 }
 
 .vision-wrapper {
-  background-color: $white;
   margin-top: -100px;
   position: relative;
-  padding-bottom: 55px;
+  //padding-bottom: 55px;
 
   @include viewport($breakpoint-mobile) {
     background: none;
@@ -40,11 +44,14 @@
 }
 
 .vision-content-mainwrap {
-  padding: 0 90px;
+  padding: 0 120px 54px;
+  background-color: $white;
+  min-height: 427px;
 
   @include viewport($breakpoint-mobile) {
     background-color: $white;
     padding: 0 38px 30px;
+    min-height: 0;
   }
 }
 
@@ -88,7 +95,7 @@
 }
 
 .vision-text {
-  line-height: 2.2;
+  line-height: 2;
   opacity: 0;
   font-size: 15px;
 
