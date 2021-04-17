@@ -92,6 +92,10 @@
     width: auto;
     padding: 23px 0 0;
   }
+
+  @include viewport($breakpoint-large, min) {
+    width: 50%;
+  }
 }
 
 .vision-text {

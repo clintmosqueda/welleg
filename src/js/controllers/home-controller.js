@@ -87,7 +87,7 @@ export default class HomeController extends BaseController {
         itemSelector: '.news-block',
         percentPosition: true,
         masonry: {
-          columnWidth: 314,
+          //columnWidth: 314,
           gutter: '.gutter-sizer',
           horizontalOrder: true,
           fitWidth: true,

@@ -6,6 +6,10 @@
   @include viewport($breakpoint-mobile) {
     width: auto;
   }
+
+  @include viewport($breakpoint-large, min) {
+    width: $site-size-large;
+  }
 }
 
 .aim-img-top-wrapper {
@@ -31,6 +35,10 @@
     width: 50%;
     margin-top: -105px;
   }
+
+  @include viewport($breakpoint-large, min) {
+    width: 39%;
+  }
 }
 
 .aim-img-top-img {
@@ -48,6 +56,10 @@
   @include viewport($breakpoint-mobile) {
     flex: 0;
     width: auto;
+  }
+
+  @include viewport($breakpoint-large, min) {
+    flex: 0 0 52.5%;
   }
 }
 
@@ -91,6 +103,11 @@
 
   @include viewport($breakpoint-mobile) {
     padding: 55px 37px 0 0;
+  }
+
+  @include viewport($breakpoint-large, min) {
+    width: 39%;
+    padding-left: 0;
   }
 }
 
