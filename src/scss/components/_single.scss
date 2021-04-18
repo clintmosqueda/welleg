@@ -262,8 +262,8 @@
 .single-share {
   border-top: 1px solid $gainsboro;
   border-bottom: 1px solid $gainsboro;
-  margin: 100px 0;
-  padding: 100px 0;
+  margin: 100px 0 51px;
+  padding: 100px 0 60px;
   text-align: center;
 
   .social-icon-icon {
@@ -287,8 +287,8 @@
   text-align: center;
 
   .button-svg-wrap {
-    width: 214px;
-    height: 214px;
+    width: 284px;
+    height: 284px;
 
     @include viewport($breakpoint-mobile) {
       width: 200px;
