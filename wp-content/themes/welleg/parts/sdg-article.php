@@ -67,3 +67,6 @@
     <div class="article-modal-close-btn js-modal-close"></div>
   </div>
 </article>
+<script>
+  var image_ogp = '<?php echo get_eyecatch_data(get_the_id(), 'full', resolve_asset_url('/images/no-image2.jpeg')); ?>';
+</script>

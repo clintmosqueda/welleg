@@ -28,7 +28,10 @@ export default function singleRedirectModal(postType, container) {
   }
   
 
+  //console.log(image_ogp);
+  if(image_ogp) {
+    document.head.innerHTML += `<meta property="og:image" content='${image_ogp}' />`;
+  }
   
-
   
 }

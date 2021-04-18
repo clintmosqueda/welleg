@@ -200,6 +200,8 @@
 
     @include viewport($breakpoint-mobile) {
       font-size: 13px;
+      padding: 0 17px 50px;
+      line-height: 2;
     }
   }
 
@@ -251,7 +253,7 @@
   margin: 0 0 100px;
 
   @include viewport($breakpoint-mobile) {
-    margin: 0 0 50px;
+    margin: 0 0 61px;
   }
 }
 
@@ -263,7 +265,7 @@
   border-top: 1px solid $gainsboro;
   border-bottom: 1px solid $gainsboro;
   margin: 100px 0 51px;
-  padding: 100px 0 60px;
+  padding: 65px 0 60px;
   text-align: center;
 
   .social-icon-icon {
@@ -297,7 +299,11 @@
   }
 
   &.single-btn-sdg {
-    margin: 70px 0 0;
+    margin: 10px 0 0;
+
+    @include viewport($breakpoint-mobile) {
+      margin: -13px 0 0;
+    }
   }
 }
 
