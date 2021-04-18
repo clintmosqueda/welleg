@@ -47,28 +47,31 @@
       }
     }
 
-    if(screen.availWidth > screen.availHeight ) document.querySelector("meta[name='viewport']").setAttribute('content', 'width=1280');
-  
-    window.addEventListener("orientationchange", function() {
-      let orientation = window.orientation;
-      console.log(orientation);
-      if(orientation == 0) {
-        document.querySelector("meta[name='viewport']").setAttribute('content', 'width=device-width,initial-scale=1.0,user-scalable=no' );
-      } 
-      else {
-        document.querySelector("meta[name='viewport']").setAttribute('content', 'width=1280');
-      }
+    let navigatorUserAgent = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+    if(navigator.userAgent.includes('Mobile')) {
+      console.log('using mobile device');
+      if(screen.availWidth > screen.availHeight ) document.querySelector("meta[name='viewport']").setAttribute('content', 'width=1280');
 
-      const htmlEl = document.querySelector('html');
-      if (window.matchMedia("(orientation: landscape)").matches && htmlEl.classList.contains('is-ios')) {
-        document.querySelector("meta[name='viewport']").setAttribute('content', 'width=device-width,initial-scale=1.0,user-scalable=no' );
-      }
-      // if(screen.availWidth > screen.availHeight ){
-      //   document.querySelector("meta[name='viewport']").setAttribute('content', 'width=1280');
-      // } else {
-      //   document.querySelector("meta[name='viewport']").setAttribute('content', 'width=device-width,initial-scale=1.0');
-      // }
-    });
+      window.addEventListener("orientationchange", function() {
+        let orientation = window.orientation;
+        console.log(orientation);
+        if(orientation == 0) {
+          document.querySelector("meta[name='viewport']").setAttribute('content', 'width=device-width,initial-scale=1.0,user-scalable=no' );
+        } 
+        else {
+          document.querySelector("meta[name='viewport']").setAttribute('content', 'width=1280');
+        }
+
+        const htmlEl = document.querySelector('html');
+        if (window.matchMedia("(orientation: landscape)").matches && htmlEl.classList.contains('is-ios')) {
+          document.querySelector("meta[name='viewport']").setAttribute('content', 'width=device-width,initial-scale=1.0,user-scalable=no' );
+        }
+
+      });
+      
+    } else {
+      console.log('not using mobile device');
+    }
   </script>
   <script>
     (function(d) {

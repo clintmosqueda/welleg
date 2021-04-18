@@ -93,6 +93,7 @@
  overflow: hidden;
  padding-top: 170px;
  padding-bottom: 158px;
+ position: relative;
 
  @include viewport($breakpoint-mobile) {
    padding-top: 67px;
@@ -111,10 +112,35 @@
   }
 }
 
+.staff-related-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 178px;
+  background-color: $zircon;
+  height: 100%;
+  z-index: 1;
+  transition: transform 0.15s ease-out;
+
+  @media screen and (max-width: 1024px) {
+    width: 120px;
+  }
+
+  @include viewport($breakpoint-mobile) {
+    display: none;
+  }
+
+  .is-autoPlay & {
+    transform: translateX(-100%);
+  }
+}
+
 .staff-related-block {
   // width: 1440px;
-  width: 100%;
+  width: 1080px;
+  margin: 0 auto;
   position: relative;
+  z-index: 2;
 
   // padding-left: 12.4%;
 
@@ -129,8 +155,8 @@
   margin: 0 auto 74px;
   letter-spacing: 0.08em;
   font-family: $midashi-go;
-  width: 1080px;
-
+  // width: 1140px;
+  // width: 1080px;
 
   @include viewport($breakpoint-mobile) {
     font-size: 16px;
@@ -141,8 +167,21 @@
 }
 
 .staff-related-members {
+  width: 150%;
   display: flex;
   position: relative;
+  transform: translateX(-50%);
+  left: 47.3%;
+
+  @include viewport(1024px) {
+    left: 43.3%;
+  }
+
+  @include viewport($breakpoint-mobile) {
+    width: 100%;
+    transform: none;
+    left: auto
+  }
 
   .slick-slide {
     &:focus,
@@ -263,8 +302,12 @@
   .slick-next {
     top: 41%;
     transform: translateY(-50%);
-    right: 270px;
+    right: 17.5%;
     left: auto;
+
+    @include viewport($breakpoint-ipad) {
+      right: 7%;
+    }
 
     @include viewport($breakpoint-mobile) {
       position: relative;
@@ -297,7 +340,7 @@
 .staff-related-member {
   width: 460px;
   flex-shrink: 0;
-  margin: 0 40px;
+  margin-right: 80px;
 
   @include viewport($breakpoint-mobile) {
     width: 300px;
