@@ -11,7 +11,7 @@ export default function masonry() {
       itemSelector: '.about-sdg-block',
       percentPosition: true,
       masonry: {
-        columnWidth: 460,
+        //columnWidth: 460,
         gutter: '.gutter-sizer',
         horizontalOrder: true,
         fitWidth: true,

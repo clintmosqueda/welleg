@@ -372,6 +372,7 @@
 
 .about-sdg-news-list {
   width: 100% !important;
+  //background-color: red;
   //columns: 2;
   //column-gap: 14.8%;
 
@@ -425,6 +426,10 @@
     width: auto;
     position: static !important;
     transform: none !important;
+  }
+
+  @include viewport($breakpoint-large, min) {
+    width: 42.5%;
   }
 }
 

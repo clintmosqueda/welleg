@@ -72,6 +72,10 @@
     @include viewport($breakpoint-mobile) {
       margin: 0 0 45px;
     }
+
+    @include viewport($breakpoint-large, min) {
+      width: 29%;
+    }
   }
 
   @include viewport($breakpoint-mobile) {
