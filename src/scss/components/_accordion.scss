@@ -102,7 +102,7 @@
   blockquote {
     padding: 35px 35px 35px 50px;
     position: relative;
-    background: #eaeaea;
+    background: #d9dcdc;
     margin: 0 0 50px;
     border-left: 10px solid #ccc;
 
@@ -180,10 +180,14 @@
 
   code {
     font-family: monospace;
-    background-color: #eaeaea;
+    background-color: #d9dcdc;
     padding: 15px;
     border-radius: 7px;
     display: block;
+  }
+
+  img {
+    max-width: 100%;
   }
 }
 

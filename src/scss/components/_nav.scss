@@ -85,3 +85,11 @@
     font-size: 18px;
   }
 }
+
+.is-windows {
+  .nav-item {
+    &:before {
+      font-size: 4px;
+    }
+  }
+}
