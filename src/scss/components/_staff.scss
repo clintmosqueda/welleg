@@ -99,35 +99,6 @@
    padding-top: 67px;
    padding-bottom: 81px;
  }
-
- &::before {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 178px;
-   background-color: $zircon;
-   height: 100%;
-   content: '';
-   z-index: 1;
-   transition: transform 0.15s ease-out;
-
-   @media screen and (max-width: 1024px) {
-    width: 120px;
-   }
-  //  @include viewport(1024px, min) {
-  //   width: 120px;
-  //  }
-
-   @include viewport($breakpoint-mobile) {
-     display: none;
-   }
- }
-
- &.is-autoPlay {
-   &::before {
-      transform: translateX(-100%);
-   }
- }
 }
 
 .staff-related-wrap {
@@ -141,11 +112,35 @@
   }
 }
 
+.staff-related-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 178px;
+  background-color: $zircon;
+  height: 100%;
+  z-index: 1;
+  transition: transform 0.15s ease-out;
+
+  @media screen and (max-width: 1024px) {
+    width: 120px;
+  }
+
+  @include viewport($breakpoint-mobile) {
+    display: none;
+  }
+
+  .is-autoPlay & {
+    transform: translateX(-100%);
+  }
+}
+
 .staff-related-block {
   // width: 1440px;
   width: 1080px;
   margin: 0 auto;
   position: relative;
+  z-index: 2;
 
   // padding-left: 12.4%;
 
@@ -161,7 +156,7 @@
   letter-spacing: 0.08em;
   font-family: $midashi-go;
   // width: 1140px;
-
+  // width: 1080px;
 
   @include viewport($breakpoint-mobile) {
     font-size: 16px;
@@ -307,8 +302,12 @@
   .slick-next {
     top: 41%;
     transform: translateY(-50%);
-    right: 270px;
+    right: 17.5%;
     left: auto;
+
+    @include viewport($breakpoint-ipad) {
+      right: 7%;
+    }
 
     @include viewport($breakpoint-mobile) {
       position: relative;

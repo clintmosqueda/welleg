@@ -62,6 +62,7 @@ global $post;
   </section>
   <div class="staff-related">
     <div class="staff-related-wrap">
+      <div class="staff-related-box"></div>
       <div class="staff-related-block">
         <h2 class="staff-related-title">他のスタッフも読む</h2>
       </div>
