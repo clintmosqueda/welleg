@@ -20,6 +20,10 @@
   @include viewport($breakpoint-mobile) {
     width: auto;
   }
+
+  @include viewport($breakpoint-large, min) {
+    width: 100%;
+  }
 }
 
 .sdg-article-image {

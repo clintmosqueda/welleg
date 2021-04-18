@@ -7,6 +7,10 @@
     width: 100%;
     padding: 0 19px
   }
+
+  @include viewport($breakpoint-large, min) {
+    width: $site-size-large;
+  }
 }
 
 .wrap {

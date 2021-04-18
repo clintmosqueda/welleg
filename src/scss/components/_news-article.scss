@@ -23,6 +23,10 @@
   @include viewport($breakpoint-mobile) {
     width: auto;
   }
+
+  @include viewport($breakpoint-large, min) {
+    width: 100%;
+  }
 }
 
 .news-article-link {
@@ -78,3 +82,11 @@
     padding: 0 20px;
   }
 }
+
+// .is-mac {
+//   .news-article {
+//     @include viewport($breakpoint-large, min) {
+//       width: 100%;
+//     }
+//   }
+// }

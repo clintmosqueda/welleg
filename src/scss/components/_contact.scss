@@ -4,6 +4,12 @@
   display: flex;
   justify-content: space-between;
 
+  .mw_wp_form.mw_wp_form_input {
+    @include viewport($breakpoint-large, min) {
+      width: 60%;
+    }
+  }
+
   @include viewport($breakpoint-mobile) {
     display: block;
     padding: 38px 18px 0;
@@ -14,6 +20,10 @@
   max-width: 660px;
   width: 100%;
   flex-shrink: 0;
+
+  @include viewport($breakpoint-large, min) {
+    max-width: 100%;
+  }
 }
 
 .contact-aside {

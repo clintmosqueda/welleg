@@ -84,6 +84,11 @@
     height: 227px;
     margin: 20px auto;
   }
+
+  @include viewport($breakpoint-large, min) {
+    width: 55%;
+    height: 500px;
+  }
 }
 
 .index-about-image-item {
@@ -104,6 +109,11 @@
       left: -2%;
     }
 
+    @include viewport($breakpoint-large, min) {
+      left: 50%;
+      transform: translateX(-70%);
+    }
+
   }
 
   &:nth-of-type(2) {
@@ -117,6 +127,11 @@
       @include viewport($breakpoint-mobile) {
         width: 187px;
       }
+
+      @include viewport($breakpoint-large, min) {
+        width: 100%;
+        min-width: 432px;
+      }
     }
 
     .is-active & {
@@ -125,6 +140,11 @@
 
     @include viewport($breakpoint-mobile) {
       left: 12.6%;
+    }
+
+    @include viewport($breakpoint-large, min) {
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 
@@ -141,6 +161,11 @@
       top: 23%;
       right: 2%;
     }
+
+    @include viewport($breakpoint-large, min) {
+      right: 50%;
+      transform: translateX(58%);
+    }
   }
 }
 
@@ -149,5 +174,10 @@
 
   @include viewport($breakpoint-mobile) {
     width: 213px;
+  }
+
+  @include viewport($breakpoint-large, min) {
+    width: 100%;
+    min-width: 483px;
   }
 }

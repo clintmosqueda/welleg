@@ -29,11 +29,13 @@ $base-background-color: $white;
 
 $breakpoint-mobile: 767px;
 $breakpoint-mobile-l: 425px;
+$breakpoint-large: 1440px;
 
 $image-path: '../images';
 $font-path: '../lib/fonts';
 
 $site-size: 1080px + 60px;
+$site-size-large: 75%;
 
 $timing-function: ease-out;
 $sec-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);

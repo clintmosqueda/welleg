@@ -64,6 +64,11 @@
       margin-top: 0;
     }
   }
+
+  @include viewport($breakpoint-large, min) {
+    width: 44%;
+    max-width: 44%;
+  }
 }
 
 .staff-button,
