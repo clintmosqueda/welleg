@@ -21,3 +21,11 @@
   writing-mode: vertical-lr;
   margin: 0 auto;
 }
+
+.about-page,
+.recruit-page,
+.making-page {
+  .side-copyright {
+    transform: translateY(-29px);
+  }
+}
