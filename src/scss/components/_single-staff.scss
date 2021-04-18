@@ -90,6 +90,10 @@
     margin-bottom: 59px;
   }
 
+  @include viewport($breakpoint-large, min) {
+    height: 946px;
+  }
+
   &::before {
     position: absolute;
     top: 0;
@@ -122,6 +126,11 @@
 
   @include viewport($breakpoint-mobile) {
     height: 186px;
+  }
+
+  @include viewport($breakpoint-large, min) {
+    height: 699px;
+    max-width: 80%;
   }
 }
 

@@ -47,10 +47,8 @@
       }
     }
 
-    if(navigator.userAgent.includes('Mobile')) {
-      if(screen.availWidth > screen.availHeight ) document.querySelector("meta[name='viewport']").setAttribute('content', 'width=1280');
-    }
-
+    if(screen.availWidth > screen.availHeight ) document.querySelector("meta[name='viewport']").setAttribute('content', 'width=1280');
+  
     window.addEventListener("orientationchange", function() {
       let orientation = window.orientation;
       console.log(orientation);
