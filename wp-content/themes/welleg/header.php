@@ -24,11 +24,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Poppins&display=swap" rel="stylesheet">
 
   <script>
-  let isIOS = /iPad/.test(navigator.platform) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-  let checkVersion = /Version\/13/;
-  let isIpad = navigator.userAgent.match(/iPad/i) !== null;
+    let isIOS = /iPad/.test(navigator.platform) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    let checkVersion = /Version\/13/;
+    let isIpad = navigator.userAgent.match(/iPad/i) !== null;
 
-  console.log({isIOS})
+    console.log({isIOS})
 
     if(isIpad) {
         document.querySelector("meta[name='viewport']").setAttribute('content', 'width=1280');
@@ -47,7 +47,9 @@
       }
     }
 
-    if(screen.availWidth > screen.availHeight ) document.querySelector("meta[name='viewport']").setAttribute('content', 'width=1280');
+    if(navigator.userAgent.includes('Mobile')) {
+      if(screen.availWidth > screen.availHeight ) document.querySelector("meta[name='viewport']").setAttribute('content', 'width=1280');
+    }
 
     window.addEventListener("orientationchange", function() {
       let orientation = window.orientation;
