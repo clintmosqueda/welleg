@@ -66,6 +66,10 @@
   @include viewport($breakpoint-mobile) {
     width: 100%;
   }
+
+  @include viewport($breakpoint-large, min) {
+    width: 75%;
+  }
 }
 
 .process-image {
