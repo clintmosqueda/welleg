@@ -93,24 +93,33 @@ global $post;
     <div class="wrapper">
       <h2 class="position-heading is-hidden js-animateIn">募集職種</h2>
     </div>
-    <div class="position-accordions">
-      <?php if( have_rows('recruitment', 'option') ): ?>
-        <?php while( have_rows('recruitment', 'option') ): the_row();
-        $title = get_sub_field('job_title', 'option');
-        $description = get_sub_field('job_description', 'option');
-        $qualifications = get_sub_field('job_qualifications', 'option');
-        ?>
-        <div class="is-hidden js-animateIn position-accordion">
-        <?php import_part('accordion', array(
-          'modifier' => '',
-          'title' => $title,
-          'description' => $description,
-          'qualifications' => $qualifications,
-        ))?>
-        </div>
-        <?php endwhile; ?>
-      <?php endif; ?>
-    </div>
+    <?php if( have_rows('job_opening', 'option') ): ?>
+      <?php $vacancy = get_field('job_opening', 'option');?>
+    <?php endif;?>
+    <?php if( $vacancy ) {?>
+      <div class="wrapper">
+        <p class="position-vacancy is-hidden js-animateIn">現在、求人募集は行っておりません。</p>
+      </div>
+    <?php } else { ?>
+      <div class="position-accordions">
+        <?php if( have_rows('recruitment', 'option') ): ?>
+          <?php while( have_rows('recruitment', 'option') ): the_row();
+          $title = get_sub_field('job_title', 'option');
+          $description = get_sub_field('job_description', 'option');
+          $qualifications = get_sub_field('job_qualifications', 'option');
+          ?>
+          <div class="is-hidden js-animateIn position-accordion">
+          <?php import_part('accordion', array(
+            'modifier' => '',
+            'title' => $title,
+            'description' => $description,
+            'qualifications' => $qualifications,
+          ))?>
+          </div>
+          <?php endwhile; ?>
+        <?php endif; ?>
+      </div>
+    <?php }?>
   </section>
 
 </main>
