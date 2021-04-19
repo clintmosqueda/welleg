@@ -147,7 +147,7 @@ get_header(); ?>
   <div class="instagram-section-wrap js-observe">
     <?php echo do_shortcode( '[instagram-feed showheader=false showfollow=false]' ); ?>
     <div class="instagram-section-wrapper wrapper">
-      <a class="instagram-btn" href="https://www.instagram.com/shashaligaya/" target="_blank">
+      <a class="instagram-btn" href="https://www.instagram.com/welleg_shoes/" target="_blank">
         <span class="instagram-btn-icon icon-instagram"></span>
         <span class="instagram-btn-text">Instagram</span>
       </a>

@@ -5,6 +5,12 @@
   justify-content: space-between;
 
   .mw_wp_form.mw_wp_form_input {
+    width: 662px;
+
+    @include viewport($breakpoint-mobile) {
+      width: auto;
+    }
+
     @include viewport($breakpoint-large, min) {
       width: 60%;
     }
@@ -17,7 +23,7 @@
 }
 
 .contact-form {
-  max-width: 660px;
+  max-width: 100%;
   width: 100%;
   flex-shrink: 0;
 

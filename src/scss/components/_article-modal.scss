@@ -38,8 +38,8 @@
 
 .article-modal-close-btn {
   position: absolute;
-  top: 49px;
-  right: 72%;
+  top: 48px;
+  right: 929px;
   z-index: 6;
   width: 38px;
   height: 10px;
@@ -71,5 +71,9 @@
     right: 87%;
     transform: scale(0.82);
     top: 29px;
+  }
+
+  @include viewport($breakpoint-large, min) {
+    right: 72%;
   }
 }
