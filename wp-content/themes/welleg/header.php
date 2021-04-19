@@ -18,6 +18,7 @@
   <meta name="keywords" content="">
   <meta name="viewport" content="width=device-width,initial-scale=1.0" id="js-viewport">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og:image" content='<?php echo resolve_asset_url('/images/ogp.jpg'); ?>' />
 
   <link rel="shortcut icon" href="<?php echo resolve_asset_url('/images/favicon/favicon.ico'); ?>">
   <link rel="stylesheet" href="<?php echo resolve_asset_url('/css/app.css'); ?>">

@@ -14,7 +14,7 @@ get_header(); ?>
   <section class="banner js-banner">
     <div class="banner-content js-banner-content">
       <div class="banner-content-bg js-banner-content-bg">
-        <div class="banner-content-img-wrap show-pc" style="background-image: url(<?php echo resolve_asset_url('/images/banner-img.jpg');?>);">
+        <div class="banner-content-img-wrap show-pc" style="background-image: url(<?php echo resolve_asset_url('/images/key.jpg');?>);">
         </div>
         <div class="banner-content-img-wrap show-sp" style="background-image: url(<?php echo resolve_asset_url('/images/banner-img-sp.jpg');?>);">
         </div>
