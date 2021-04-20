@@ -26,11 +26,17 @@
 }
 
 .position-vacancy {
-  color: red;
   font-size: 16px;
-  font-weight: bold;
+  padding: 55px 0;
+  border-color: $gainsboro;
+  border-style: solid;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
 
   @include viewport($breakpoint-mobile) {
+    font-size: 14px;
     padding-left: 20px;
+    font-weight: normal;
+    padding: 45px 0 45px 20px
   }
 }

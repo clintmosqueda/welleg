@@ -93,9 +93,7 @@ global $post;
     <div class="wrapper">
       <h2 class="position-heading is-hidden js-animateIn">募集職種</h2>
     </div>
-    <?php if( have_rows('job_opening', 'option') ): ?>
-      <?php $vacancy = get_field('job_opening', 'option');?>
-    <?php endif;?>
+    <?php if( have_rows('job_opening', 'option') ) $vacancy = get_field('job_opening', 'option');?>
     <?php if( $vacancy ) {?>
       <div class="wrapper">
         <p class="position-vacancy is-hidden js-animateIn">現在、求人募集は行っておりません。</p>
