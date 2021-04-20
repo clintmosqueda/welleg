@@ -19,6 +19,7 @@ export default function singleRedirectModal(postType, container) {
     newsArticles.forEach((item) => {
       let href = item.href;
       let nextEl = item.nextElementSibling;
+      let featureImage = item.querySelector(`.${postType}-article-image`).src;
       if(finalReferrer.toLowerCase() === href) {
         setTimeout(() => {
           item.click();
@@ -26,12 +27,5 @@ export default function singleRedirectModal(postType, container) {
       }
     });
   }
-  
-
-  //console.log(image_ogp);
-  if(image_ogp) {
-    document.head.innerHTML += `<meta property="og:image" content='${image_ogp}' />`;
-  }
-  
   
 }

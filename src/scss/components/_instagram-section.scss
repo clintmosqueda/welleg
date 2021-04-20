@@ -53,8 +53,11 @@
         transition: opacity 1s ease-in-out;
       }
 
-      img {
-        display: none;
+      // img {
+      //   display: none;
+      // }
+      .sbi_lightbox_carousel_icon {
+        display: none !important;
       }
 
       &:hover {
