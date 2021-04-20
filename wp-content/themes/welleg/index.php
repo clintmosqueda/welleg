@@ -12,16 +12,17 @@ get_header(); ?>
 <main class="main">
   <?php import_part('side-copyright'); ?>
   <section class="banner js-banner">
+    <h1 class="hidden">てくてく、いい靴と、いい人生。</h1>
     <div class="banner-content js-banner-content">
       <div class="banner-content-bg js-banner-content-bg">
         <div class="banner-content-img-wrap show-pc" style="background-image: url(<?php echo resolve_asset_url('/images/key.jpg');?>);">
         </div>
         <div class="banner-content-img-wrap show-sp" style="background-image: url(<?php echo resolve_asset_url('/images/banner-img-sp.jpg');?>);">
         </div>
-        <h1 class="banner-text">
+        <p class="banner-text">
           <img class="banner-text-img show-pc" src="<?php echo resolve_asset_url('/images/mv-text.svg');?>" alt="てくてく、いい靴と、いい人生。"/>
           <img class="banner-text-img show-sp" src="<?php echo resolve_asset_url('/images/mv-text-sp.svg');?>" alt="てくてく、いい靴と、いい人生。"/>
-        </h1>
+        </p>
         <div class="banner-scroll show-pc">
           <img class="banner-scroll-img" src="<?php echo resolve_asset_url('/images/banner-scroll.png');?>" alt=""/>
         </div>

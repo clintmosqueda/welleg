@@ -9,7 +9,7 @@
 <html <?php language_attributes(); ?>>
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
-  <title>お知らせ | 株式会社Welleg(ウェレッグ) | 1925年創業。香川県のレディースシューズメーカー</title>
+  <title><?php wp_title('|'); ?></title>
   <meta name="description" content="目指すのは、最高の1足。私たちWellegは「キレイなあしを創る」を理念に、履きやすく、見た目もよく、種類も豊富で、それでいてお求めやすい靴づくりをモットーにしています。">
   <meta name="keywords" content="">
   <meta name="viewport" content="width=device-width,initial-scale=1.0" id="js-viewport">
