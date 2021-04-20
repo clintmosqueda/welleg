@@ -10,7 +10,7 @@
   position: relative;
   overflow: hidden;
   height: calc((90vh - 136px) + 200px);
-  min-height: calc(580px + 200px);
+  
   background-image: url('../images/texture.jpg');
   background-repeat: repeat;
   background-position: 0 0;
@@ -18,6 +18,11 @@
   @include viewport($breakpoint-mobile) {
     background-image: none;
     background-color: $echo-blue;
+    min-height: 0;
+  }
+
+  @media screen and (max-height: 798px) and (min-width: 768px) {
+    min-height: calc(580px + 200px);
   }
 
   // @media screen and ( min-width: 768px ) and ( min-height: 414px ) {
@@ -27,13 +32,21 @@
 
 .banner-content-bg {
   height: calc(90vh - 136px);
-  min-height: 580px;
+  
   //min-height: 623px;
   position: relative;
 
   // @media screen and ( min-width: 768px ) and ( min-height: 414px ) {
   //  min-height: 657px;
   // }
+
+  @include viewport($breakpoint-mobile) {
+    min-height: 0;
+  }
+
+  @media screen and (max-height: 798px) and (min-width: 768px) {
+    min-height: 580px;
+  }
 }
 
 .banner-content-img-wrap {
