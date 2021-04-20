@@ -28,7 +28,7 @@ export default function preload() {
   function onComplete() { 
     setTimeout(() => {
       preload.classList.add('is-slideOut');
-    }, timeout/2.3);
+    }, timeout/2.7);
     setTimeout(() => {
       preloadMask.classList.add('is-reveal');
     }, timeout/1.65);
