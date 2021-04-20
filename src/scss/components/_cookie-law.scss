@@ -11,7 +11,7 @@
 
 .cookie-law-container {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
   background-color: $white;
   padding: 22px 25px 24px 73px;
   position: relative;
@@ -67,8 +67,17 @@
 }
 
 .cookie-law-btn {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-top: 4px;
+
+  @include viewport($breakpoint-mobile) {
+    padding-top: 0;
+  }
+
   a {
     font-size: 14px;
+    white-space: nowrap;
   }
 
   .cookie_action_close_header {
