@@ -90,9 +90,11 @@
     font-size: 88px;
     top: 156px;
     left: 0;
-    animation: none;
-    transform: translateX(55%);
-    animation: marquee 20s linear infinite;
+    animation: none
   }
+}
 
+.marquee {
+  overflow: hidden;
+  width: 100%;
 }

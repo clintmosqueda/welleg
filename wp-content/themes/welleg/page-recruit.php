@@ -6,7 +6,7 @@ global $post;
   <?php import_part('heading-page', array(
     'modifier' => '',
     'heading' => '採用情報',
-    'heading_en' => 'RECRUIT RECRUIT'
+    'heading_en' => 'RECRUIT'
   ));?>
 
 <section class="department">

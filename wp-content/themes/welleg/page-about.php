@@ -4,7 +4,7 @@
   <?php import_part('heading-page', array(
     'modifier' => '',
     'heading' => '私たちについて',
-    'heading_en' => 'About US About US'
+    'heading_en' => 'About US'
   ));?>
   <div class="about-slider">
     <div class="swiper-container">

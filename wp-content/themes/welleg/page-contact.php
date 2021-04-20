@@ -4,7 +4,7 @@
   <?php import_part('heading-page', array(
     'modifier' => '',
     'heading' => 'お問い合わせ',
-    'heading_en' => 'Contact Contact'
+    'heading_en' => 'Contact'
   ));?>
   <section class="contact">
     <div class="wrapper">

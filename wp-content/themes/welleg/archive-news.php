@@ -4,7 +4,7 @@
   <?php import_part('heading-page', array(
     'modifier' => '',
     'heading' => 'お知らせ',
-    'heading_en' => 'News News News'
+    'heading_en' => 'News'
   ));?>
 
   <div class="news">
