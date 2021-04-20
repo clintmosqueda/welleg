@@ -9,22 +9,8 @@
 <html <?php language_attributes(); ?>>
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
-  <?php if(!is_archive(NEWS_SLUG)) : ?>
   <title><?php wp_title('|'); ?></title>
-  <?php endif; ?>
-  <?php if(is_front_page()) : ?>
-    <meta property="og:title" content="株式会社Welleg(ウェレッグ) | 1925年創業。香川県のレディースシューズメーカー">
-  <?php endif; ?>
-  <?php if(is_singular(STAFF_POST_TYPE)) : ?>
-    <meta property="og:title" content="スタッフ紹介 | 株式会社Welleg(ウェレッグ) | 1925年創業。香川県のレディースシューズメーカー">
-  <?php endif; ?>
-  <?php if(is_archive(NEWS_SLUG)) : ?>
-    <title>お知らせ | 株式会社Welleg(ウェレッグ) | 1925年創業。香川県のレディースシューズメーカー</title>
-    <meta property="og:title" content="お知らせ | 株式会社Welleg(ウェレッグ) | 1925年創業。香川県のレディースシューズメーカー">
-  <?php endif; ?>
-  <?php if(is_404()) : ?>
-    <meta property="og:title" content="404 | 株式会社Welleg(ウェレッグ) | 1925年創業。香川県のレディースシューズメーカー">
-  <?php endif; ?>
+  
   <meta name="keywords" content="">
   <meta name="viewport" content="width=device-width,initial-scale=1.0" id="js-viewport">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
