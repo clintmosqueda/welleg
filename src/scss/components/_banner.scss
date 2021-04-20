@@ -40,8 +40,9 @@
   background-size: cover;
   background-repeat: no-repeat;
   transform: scale(1.1);
+  transform-origin: center;
   opacity: 0;
-  transition: opacity 1s $sec-timing-function,transform 1s $sec-timing-function;
+  transition: opacity 1.5s ease-in-out,transform 1.5s ease-in-out;
   background-position: center 100%;
 
   .is-active & {
