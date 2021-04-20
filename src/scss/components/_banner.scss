@@ -10,7 +10,7 @@
   position: relative;
   overflow: hidden;
   height: calc((90vh - 136px) + 200px);
-  //min-height: 823px;
+  min-height: calc(580px + 200px);
   background-image: url('../images/texture.jpg');
   background-repeat: repeat;
   background-position: 0 0;
@@ -27,6 +27,7 @@
 
 .banner-content-bg {
   height: calc(90vh - 136px);
+  min-height: 580px;
   //min-height: 623px;
   position: relative;
 
