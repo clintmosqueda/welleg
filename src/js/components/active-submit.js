@@ -8,7 +8,6 @@ export default function activeSubmit() {
     //   console.log('true');
     // } else {
       button.classList.add('is-active')
-      console.log('false');
     // }
   })
 }

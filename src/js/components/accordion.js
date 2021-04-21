@@ -4,7 +4,7 @@ import $ from 'jquery';
 export default function accordion() {
   $('.js-accordion-trigger').on('click', function(){
     let indx = $(this).parents('.js-animateIn').index()
-    console.log(indx);
+
     if($(this).hasClass(CONST.ACTIVE_CLASS)) {
       $(this).parents('.js-accordion').removeClass(CONST.OPEN_CLASS)
       $(this).next().slideUp()

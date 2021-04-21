@@ -83,7 +83,7 @@
   white-space: nowrap;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  animation: fade-in-bottom 1.5s ease-in-out forwards;
+  animation: fade-in-bottom 2.5s ease-in-out forwards;
   cursor: default;
 
   @include viewport($breakpoint-mobile) {
@@ -95,6 +95,6 @@
 }
 
 .marquee {
-  overflow: hidden;
+  // overflow: hidden;
   width: 100%;
 }
