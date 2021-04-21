@@ -177,11 +177,13 @@
     }
 
     &:hover {
-      .social-icon-icon {
-        background-color: $nero;
+      @include viewport($breakpoint-mobile, min) {
+        .social-icon-icon {
+          background-color: $nero;
 
-        &:before {
-          color: $white;
+          &:before {
+            color: $white;
+          }
         }
       }
     }
