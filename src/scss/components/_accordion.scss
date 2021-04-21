@@ -135,6 +135,10 @@
         font-size: 13px;
       }
     }
+
+    @include viewport($breakpoint-mobile) {
+      padding: 0 0 10px 30px;
+    }
   }
 
   ol {
@@ -197,7 +201,7 @@
   @include viewport($breakpoint-mobile) {
     padding-bottom: 80px;
     .accordion-right {
-      padding: 22px 22px 0 56px;
+      padding: 22px 22px 0 22px;
     }
   }
 }
@@ -312,6 +316,10 @@
   br {
     display: block;
   }
+
+  @include viewport($breakpoint-mobile) {
+    padding-left: 34px;
+  }
 }
 
 .accordion-button {
@@ -330,6 +338,7 @@
     width: 150px;
     height: 150px;
     margin-top: 59px;
-    margin-left: 39px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

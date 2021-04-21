@@ -11,11 +11,6 @@
 
 .vision-img-wrap {
   overflow: hidden;
-  height: 780px;
-
-  @include viewport($breakpoint-mobile) {
-    height: 250px;
-  }
 }
 
 .vision-img-img {
@@ -23,10 +18,18 @@
   transform: scale(1.1);
   opacity: 0;
   transition: opacity 1s $sec-timing-function,transform 1.6s $sec-timing-function;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 54%;
 
   .is-active & {
     opacity: 1;
     transform: scale(1);
+  }
+
+  @include viewport($breakpoint-mobile) {
+    padding-top: 66.7%;
   }
 }
 
@@ -37,7 +40,7 @@
 
   @include viewport($breakpoint-mobile) {
     background: none;
-    margin-top: -40px;
+    margin-top: -10.6%;
     padding-bottom: 80px;
 
   }

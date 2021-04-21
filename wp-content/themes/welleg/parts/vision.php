@@ -1,8 +1,9 @@
 <section class="vision">
   <div class="vision-img-wrap js-observe">
-    <img class="vision-img-img show-pc" src="<?php echo resolve_asset_url('/images/vision-img.jpg');?>" alt=""/>
-    <img class="vision-img-img show-sp" src="<?php echo resolve_asset_url('/images/vision-img-sp.jpg');?>" alt=""/>
+    <div class="vision-img-img show-pc" style="background-image: url(<?php echo resolve_asset_url('/images/vision-img.jpg');?>);"></div>
+    <div class="vision-img-img show-sp" style="background-image: url(<?php echo resolve_asset_url('/images/vision-img-sp.jpg');?>);"></div>
   </div>
+
   <div class="vision-wrapper wrapper">
     <div class="vision-content-mainwrap js-observe">
       <div class="vision-content">
