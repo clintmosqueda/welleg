@@ -204,7 +204,7 @@
 
     @include viewport($breakpoint-mobile) {
       font-size: 13px;
-      padding: 0 17px 50px;
+      padding: 0 17px 16px;
       line-height: 2;
     }
   }
