@@ -42,10 +42,11 @@
   }
 
   @include viewport($breakpoint-mobile-l) {
-    height: 100vh;
-    width: 150vw;
+    height: 150vh;
+    width: 200vh;
     left: 50%;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
