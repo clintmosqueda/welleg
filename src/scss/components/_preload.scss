@@ -37,13 +37,13 @@
     animation: mask-play 1.8s steps(22) forwards;
 
     @include viewport($breakpoint-mobile-l) {
-      // animation-duration: 2.5s;
+      animation-duration: 3s;
     }
   }
 
   @include viewport($breakpoint-mobile-l) {
-    height: 150vh;
-    width: 200vh;
+    height: 120vh;
+    width: 750px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);

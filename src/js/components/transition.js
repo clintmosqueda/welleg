@@ -3,7 +3,7 @@ export default function transition() {
     const animateIn = document.querySelectorAll('.js-animateIn')
     let settings = {
       rootMargin: '0px 0px 0px 0px',
-      threshold: 0.2
+      threshold: 0.25
     }
   
     let animateInObserver = new IntersectionObserver(cardCallBack, settings)
