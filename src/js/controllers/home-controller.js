@@ -12,7 +12,6 @@ import preload from '../components/preload';
 
 export default class HomeController extends BaseController {
   init() {
-    console.log('home');
     
     modal('.js-index-news-list', '.js-article-link', '.js-article-modal-overlay', '.js-modal-close');
 

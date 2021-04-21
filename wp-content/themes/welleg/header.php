@@ -26,8 +26,6 @@
     let checkVersion = /Version\/13/;
     let isIpad = navigator.userAgent.match(/iPad/i) !== null;
 
-    console.log({isIOS})
-
     if(isIpad) {
         document.querySelector("meta[name='viewport']").setAttribute('content', 'width=1280');
     } else {
@@ -52,7 +50,7 @@
 
       window.addEventListener("orientationchange", function() {
         let orientation = window.orientation;
-        console.log(orientation);
+
         if(orientation == 0) {
           document.querySelector("meta[name='viewport']").setAttribute('content', 'width=device-width,initial-scale=1.0,user-scalable=no' );
         } 
@@ -68,7 +66,7 @@
       });
       
     } else {
-      console.log('not using mobile device');
+
     }
   </script>
   <script>

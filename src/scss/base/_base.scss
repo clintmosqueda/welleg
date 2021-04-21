@@ -54,3 +54,14 @@ main {
     padding: 74px 0 0;
   }
 }
+
+.page,
+.archive,
+.single {
+  opacity: 0;
+  transition: opacity 0.3s $fade-timing-function;
+
+  &.loaded {
+    opacity: 1;
+  }
+}

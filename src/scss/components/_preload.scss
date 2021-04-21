@@ -35,6 +35,17 @@
 
   &.is-reveal {
     animation: mask-play 1.8s steps(22) forwards;
+
+    @include viewport($breakpoint-mobile-l) {
+      // animation-duration: 2.5s;
+    }
+  }
+
+  @include viewport($breakpoint-mobile-l) {
+    height: 100vh;
+    width: 150vw;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 

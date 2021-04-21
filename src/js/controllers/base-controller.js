@@ -18,11 +18,16 @@ export default class BaseController {
       new Chillax(el);
     });
 
-    // window.addEventListener('load', () => {
-    //   setTimeout(() => {
-    //     document.querySelector('.js-wrap').classList.add('loaded');
-    //   }, 800);
-    // });
+    let body = document.body
+    if(!body.classList.contains('home')) {
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          body.classList.add('loaded');
+        }, 800);
+      });
+    }
+
+
 
     this.init();
   }
