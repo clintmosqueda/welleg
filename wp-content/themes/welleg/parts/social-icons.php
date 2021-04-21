@@ -14,13 +14,13 @@
       <div class="social-icon-sub-item-content">
         <ul class="social-icon-sub-list">
           <li class="social-icon-sub-list-item">
-            <a class="social-icon-sub-list-link" href="">@Account</a>
+            <a class="social-icon-sub-list-link" href="https://page.line.me/welleg" target="_blank">公式 @welleg</a>
           </li>
           <li class="social-icon-sub-list-item">
-            <a class="social-icon-sub-list-link" href="">@AccountAccount</a>
+            <a class="social-icon-sub-list-link" href="https://page.line.me/welleg_r" target="_blank">楽天 @welleg_r</a>
           </li>
           <li class="social-icon-sub-list-item">
-            <a class="social-icon-sub-list-link" href="">@Account</a>
+            <a class="social-icon-sub-list-link" href="https://page.line.me/welleg_p" target="_blank">PayPay @welleg_p</a>
           </li>
         </ul>
       </div>
