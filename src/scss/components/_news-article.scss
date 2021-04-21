@@ -6,16 +6,29 @@
     .news-article-image {
       transform: scale(1.025);
       filter: brightness(115%);
+
+      @include viewport($breakpoint-mobile) {
+        transform: none;
+        filter: none;
+      }
     }
 
     .news-article-heading,
     .news-article-date {
       opacity: 0.7;
+
+      @include viewport($breakpoint-mobile) {
+        opacity: 1;
+      }
     }
 
     .news-article-heading {
       span {
         border-color: $nero;
+
+        @include viewport($breakpoint-mobile) {
+          border-color: transparent;
+        }
       }
     }
   }
