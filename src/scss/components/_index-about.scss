@@ -55,6 +55,10 @@
     font-size: 20px;
     padding: 20px 0 29px;
   }
+
+  @include viewport($breakpoint-large, min) {
+    font-size: 26px;
+  }
 }
 
 .index-about-btn {
@@ -69,6 +73,12 @@
 
   @include viewport($breakpoint-mobile) {
     margin: 0 0 0 -10px;
+  }
+
+  .button-text {
+    @include viewport($breakpoint-large, min) {
+      font-size: 17px;
+    }
   }
 }
 
