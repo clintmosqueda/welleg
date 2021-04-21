@@ -81,7 +81,7 @@
     animation: slideUpOut 1s ease-out forwards;
   }
 
-  img {
+  img, path {
     opacity: 0;
     
     &:nth-of-type(10) {
