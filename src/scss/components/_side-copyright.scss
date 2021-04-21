@@ -27,5 +27,9 @@
 .making-page {
   .side-copyright {
     transform: translateY(-29px);
+
+    @include viewport($breakpoint-large, min) {
+      transform: translateY(-89px);
+    }
   }
 }
