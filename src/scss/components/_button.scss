@@ -30,8 +30,10 @@
   }
 
   &:hover {
-    .button-circle-blue {
-      animation: strokeDefaultCircle 0.5s linear forwards;
+    @include viewport($breakpoint-mobile, min) {
+      .button-circle-blue {
+        animation: strokeDefaultCircle 0.5s linear forwards;
+      }
     }
   }
 
@@ -65,8 +67,10 @@
   display: inline-block;
 
   &:hover {
-    .button-circle-blue {
-      animation: strokeDefaultCircle 0.5s linear forwards;
+    @include viewport($breakpoint-mobile, min) {
+      .button-circle-blue {
+        animation: strokeDefaultCircle 0.5s linear forwards;
+      }
     }
   }
 }
@@ -132,9 +136,11 @@
   }
 
   &:hover {
-    .button-round-blue {
-      stroke-dashoffset: 0;
-      animation: strokeProgress 0.7s linear forwards;
+    @include viewport($breakpoint-mobile, min) {
+      .button-round-blue {
+        stroke-dashoffset: 0;
+        animation: strokeProgress 0.7s linear forwards;
+      }
     }
   }
 }
