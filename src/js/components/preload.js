@@ -12,7 +12,7 @@ export default function preload() {
   queue.on('complete', onComplete);
   queue.on('progress', onProgress);
   queue.loadManifest([
-    { src: baseUrl +'banner-img.jpg'},
+    { src: baseUrl +'key.jpg'},
     { src: baseUrl +'aim-img1.jpg'},
     { src: baseUrl +'aim-img1-sp.jpg'},
     { src: baseUrl +'aim-img2.jpg'},
