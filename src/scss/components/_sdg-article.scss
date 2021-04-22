@@ -17,7 +17,7 @@
       opacity: 0.7;
 
       @include viewport($breakpoint-mobile) {
-        opacity: 0;
+        opacity: 1;
       }
 
       span {
