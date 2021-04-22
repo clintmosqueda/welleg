@@ -8,6 +8,11 @@
   align-items: center;
   z-index: 5;
   min-height: 796px;
+  transform: translateY(25px);
+
+  @include viewport($breakpoint-large, min) {
+    transform: translateY(-89px);
+  }
 
   @include viewport($breakpoint-mobile) {
     display: none;
@@ -26,10 +31,6 @@
 .recruit-page,
 .making-page {
   .side-copyright {
-    transform: translateY(-29px);
-
-    @include viewport($breakpoint-large, min) {
-      transform: translateY(-89px);
-    }
+    
   }
 }
