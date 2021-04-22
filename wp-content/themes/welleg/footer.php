@@ -1,5 +1,5 @@
 
-  <footer class="footer">
+  <footer class="footer" id="footer">
     <div class="footer-top js-observe">
       <div class="footer-top-heading">
         <img class="footer-top-heading-text" src="<?php echo resolve_asset_url('/images/footer-top-title.svg') ?>" alt=""/>
