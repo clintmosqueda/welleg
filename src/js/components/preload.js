@@ -5,6 +5,7 @@ export default function preload() {
   const preload = document.querySelector('.js-preload');
   const wrap = document.querySelector('.js-wrap');
   const banner = document.querySelector('.js-banner');
+  const bannerContent = document.querySelector('.js-banner-content');
   const preloadMask = document.querySelector('.js-preload-mask');
   let queue = new createjs.LoadQueue();
   const timeout = 4000
@@ -28,6 +29,7 @@ export default function preload() {
   function onComplete() { 
     setTimeout(() => {
       preload.classList.add('is-slideOut');
+      bannerContent.classList.remove('is-loading');
     }, timeout/2.7);
     setTimeout(() => {
       preloadMask.classList.add('is-reveal');

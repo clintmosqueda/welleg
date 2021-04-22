@@ -28,6 +28,10 @@
   // @media screen and ( min-width: 768px ) and ( min-height: 414px ) {
   //  min-height: calc(657px + 200px);
   // }
+
+  &.is-loading {
+    background-image: none;
+  }
 }
 
 .banner-content-bg {

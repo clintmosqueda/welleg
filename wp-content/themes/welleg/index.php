@@ -13,7 +13,7 @@ get_header(); ?>
   <?php import_part('side-copyright'); ?>
   <section class="banner js-banner">
     <h1 class="hidden">てくてく、いい靴と、いい人生。</h1>
-    <div class="banner-content js-banner-content">
+    <div class="banner-content js-banner-content is-loading">
       <div class="banner-content-bg js-banner-content-bg">
         <div class="banner-content-img-wrap show-pc" style="background-image: url(<?php echo resolve_asset_url('/images/key.jpg');?>);">
         </div>
