@@ -3,7 +3,8 @@ export default function singleRedirectModal(postType, container) {
   let finalReferrer = referrer.substring(0, referrer.lastIndexOf('/'));
   let postId = finalReferrer.split("/").pop();
   let newsArticles = document.querySelectorAll('.js-article-link')
-  
+
+  if(!finalReferrer.includes(`/${postType}/`)) return;
   if($(container).find(`.${postType}-article-${postId}`).length === 0 && finalReferrer.includes(`/${postType}/`)) {
     $.ajax({
       type: 'POST',
