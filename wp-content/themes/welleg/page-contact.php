@@ -14,7 +14,7 @@
         <?php endwhile; ?>
         <aside class="contact-aside">
           <p class="contact-label">株式会社Welleg</p>
-          <a href="tel:087-851-6599" class="contact-info">087-851-6599</a>
+          <a href="tel:087-851-6400" class="contact-info">087-851-6400</a>
           <hr class="contact-hr">
           <div class="contact-sns">
             <p class="contact-label">フォローはこちら</p>
