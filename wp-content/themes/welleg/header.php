@@ -17,6 +17,11 @@
   <meta property="og:image" content='<?php echo resolve_asset_url('/images/ogp.jpg'); ?>' />
   <meta name="description" content="目指すのは、最高の1足。私たちWellegは「キレイなあしを創る」を理念に、履きやすく、見た目もよく、種類も豊富で、それでいてお求めやすい靴づくりをモットーにしています。">
 
+  <?php if(is_404()) : ?>
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="目指すのは、最高の1足。私たちWellegは「キレイなあしを創る」を理念に、履きやすく、見た目もよく、種類も豊富で、それでいてお求めやすい靴づくりをモットーにしています。">
+  <?php endif; ?>
+
   <link rel="shortcut icon" href="<?php echo resolve_asset_url('/images/favicon/favicon.ico'); ?>">
   <link rel="stylesheet" href="<?php echo resolve_asset_url('/css/app.css'); ?>">
   <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Poppins&display=swap" rel="stylesheet">
