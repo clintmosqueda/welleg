@@ -33,6 +33,17 @@ if( function_exists('acf_add_options_page') ) {
     'icon_url' => 'dashicons-clock',
     'position' => 8
   ));
+
+  acf_add_options_page(array(
+    'page_title'  => 'Shoplist',
+    'menu_title'  => 'ショップリスト',
+    'menu_slug'   => 'shoplist',
+    'capability'  => 'edit_posts',
+    'redirect'    => false,
+    'update_button' => 'Update',
+    'icon_url' => 'dashicons-products',
+    'position' => 8
+  ));
 }
 
 function my_acf_admin_head() { 
