@@ -64,33 +64,24 @@
     <div class="about-statement-wrapper wrapper js-observe">
       <h2 class="about-statement-heading">ステートメント</h2>
       <div class="about-statement-content">
-        <p class="about-statement-text show-pc">
-          1925年から、靴のことばかりを考えてきました。<br/>
-          いい靴とは、素敵な一日へと連れていってくれる存在である。 <br/>
-          私たちはそう信じてやみません。
-        </p>
-        <p class="about-statement-text show-sp">
-          95年間、靴のことばかりを考えてきました。<br/>
-          いい靴とは、素敵な一日へと連れていってくれる存在である。 <br/>
-          私たちはそう信じてやみません。
-        </p>
-        <p class="about-statement-text">
-          いい人生を歩む、<br class="show-sp"/>なんて言い方をすることがあります。<br/>
-          今日もいい一日だったな、<br class="show-sp"/>とお客さまに思っていただくこと。<br/>
-          そんな毎日を、人生を、歩んでいただくこと。<br/>
-          靴をあつかう私たちにとっての「歩く」とは、<br/>
-          そういうことなのかもしれません。
-        </p>
-        <p class="about-statement-text">
-          履きやすくて、疲れにくくて、<br class="show-sp"/>コーディネートが楽しくなるような。<br/>
-          それでいて、とってもリーズナブルな商品を、<br/>
-          少しでも多くの方に届けたい。<br/>
-          情熱をこめた靴づくりと、<br class="show-sp"/>画面越しでも温もりを感じられるおもてなしで、<br/>
-          ぴったりの靴と出会うよろこびを提供する。
-        </p>
-        <p class="about-statement-text">
-          何年経っても変わらない、<br class="show-sp"/>私たちの使命です。
-        </p>
+      <p class="about-statement-text">
+      1925年から、靴のことばかりを考えてきました。 
+      いい靴とは、素敵な一日へと連れていってくれる存在である。 
+      私たちはそう信じてやみません。 </p>
+
+      <p class="about-statement-text">いい人生を歩む、なんて言い方をすることがあります。 
+      今日もいい一日だったな、とお客さまに思っていただくこと。 
+      そんな毎日を、人生を、歩んでいただくこと。 
+      靴をあつかう私たちにとっての「歩く」とは、 
+      そういうことなのかもしれません。 </p>
+
+      <p class="about-statement-text">履きやすくて、疲れにくくて、コーディネートが楽しくなるような。 
+      それでいて、とってもリーズナブルな商品を、 
+      少しでも多くの方に届けたい。 
+      情熱をこめた靴づくりと、画面越しでも温もりを感じられるおもてなしで、 
+      ぴったりの靴と出会うよろこびを提供する。 </p>
+
+      <p class="about-statement-text">何年経っても変わらない、私たちの使命です。</p>
         <p class="about-statement-slogan">キレイなあしを創る</p>
       </div>
       <img class="about-statement-image show-pc js-observe" src="<?php echo resolve_asset_url('/images/boy-girl.png') ?>" alt=""/>
