@@ -13,6 +13,8 @@
   transition-duration: 1s;
   transition-timing-function: $sec-timing-function;
   transform: scale(1.6);
+  background-color: rgba($white, 1);
+  animation: toTransparent 300ms 300ms ease-in-out forwards;
 
   @include viewport($breakpoint-mobile) {
     width: 100%;
@@ -22,6 +24,15 @@
     opacity: 1;
     transform: scale(1);
     pointer-events: auto;
+  }
+}
+
+@keyframes toTransparent {
+  0% {
+    background-color: rgba($white, 1);
+  }
+  100% {
+    background-color: rgba($white, 0);
   }
 }
 
